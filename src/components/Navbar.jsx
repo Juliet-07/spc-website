@@ -16,11 +16,12 @@ const Navbar = () => {
   };
   const activeStyleMobile = ({ isActive }) => {
     return {
-      color: isActive ? "#057d99" : "black",
+      color: isActive ? "#471A52" : "#475467",
+      // borderBottom: isActive ? "2px solid #471A52" : "none",
     };
   };
   return (
-    <div className="w-full flex justify-between items-center h-20 mx-auto px-4 md:px-20 text-gray-600 fixed z-10 bg-white">
+    <div className="w-full flex justify-between items-center h-20 mx-auto px-4 md:px-10 2xl:px-20 text-gray-600 fixed z-10 bg-white">
       <div className="w-[148px] h-[38px]">
         <img src={Logo} alt="SPC Logo" />
       </div>
@@ -67,62 +68,41 @@ const Navbar = () => {
       <div
         className={
           nav
-            ? "fixed left-0 top-20 w-[414px] h-[621px] ease-in-out duration-500 bg-white z-10"
+            ? "fixed left-0 top-20 w-[414px] h-[532px] ease-in-out duration-500 bg-white z-10"
             : "fixed left-[-100%]"
         }
       >
-        <div className="flex flex-col p-4">
-          <NavLink
-            to="/"
-            className="w-20 p-4 font-semibold"
-            style={activeStyleMobile}
-          >
+        <div className="grid grid-cols-1 gap-4 px-4 font-semibold">
+          <NavLink to="/" style={activeStyleMobile} className="p-2">
             Home
           </NavLink>
-          <NavLink
-            to="/aboutus"
-            className="w-26 p-4 font-semibold"
-            style={activeStyleMobile}
-          >
+          <NavLink to="/about-spc" style={activeStyleMobile} className="p-2">
             About us
           </NavLink>
-          <NavLink
-            to="/investmentPlans"
-            className="w-[141px] p-4 font-semibold"
-            style={activeStyleMobile}
-          >
-            investments
+          <NavLink to="/community" style={activeStyleMobile} className="p-2">
+            Community
           </NavLink>
-          <NavLink
-            to="/faq"
-            className="w-[65px] p-4 font-semibold"
-            style={activeStyleMobile}
-          >
-            faq
+          <NavLink to="/events" style={activeStyleMobile} className="p-2">
+            Events
           </NavLink>
-          <NavLink
-            to="/courses"
-            className="w-22 p-4 font-semibold"
-            style={activeStyleMobile}
-          >
-            courses
+          <NavLink to="/trainings" style={activeStyleMobile} className="p-2">
+            Trainings
           </NavLink>
-          <NavLink
-            to="/contact-us"
-            className="w-20 p-4 font-semibold"
-            style={activeStyleMobile}
-          >
-            contact
+          <NavLink to="/team" style={activeStyleMobile} className="p-2">
+            Team
+          </NavLink>
+          <NavLink to="/contact-spc" style={activeStyleMobile} className="p-2">
+            Contact us
           </NavLink>
         </div>
-        <div className="w-[352px] h-[60px] p-4 m-6 bg-[#057d99] text-center text-white font-bold text-sm rounded-md">
+        {/* <div className="w-[352px] h-[60px] p-4 m-6 bg-[#057d99] text-center text-white font-bold text-sm rounded-md">
           {" "}
           <NavLink to="/signup">Register</NavLink>
         </div>
         <div className="w-[352px] h-[60px] p-4 m-6 border border-[#057d99] text-center text-[#057d99] font-bold text-sm">
           {" "}
           <NavLink to="/signin">Log in</NavLink>
-        </div>
+        </div> */}
       </div>
     </div>
   );

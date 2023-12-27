@@ -1,0 +1,15 @@
+/* Home.css */
+
+.animated-image {
+  filter: grayscale(100%) brightness(0%) invert(100%);
+  animation: rotateAnimation 10s linear infinite; /* Adjust the duration and timing function as needed */
+}
+
+@keyframes rotateAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg); /* Rotate 360 degrees for an infinite loop */
+  }
+}
