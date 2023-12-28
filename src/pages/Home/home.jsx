@@ -150,7 +150,7 @@ const Home = () => {
             </div>
           </NavLink>
         </div>
-        <div className="md:w-[592px] h-[293px] md:h-[577px] bg-black rounded-lg">
+        <div className="w-full md:w-[592px] h-[293px] md:h-[577px] bg-black rounded-lg">
           image
         </div>
       </div>
