@@ -6,7 +6,8 @@ const About = () => {
   const accordionItems = [
     {
       title: "Our Mission",
-      content: "Content for section 1 goes here.",
+      content:
+        "SPC Universe is on a mission to build a borderless world for digital innovators. We strive to connect, empower, and nurture a global community of startups and digital talents, fostering collaboration, knowledge sharing, and mutual support",
     },
     {
       title: "Our Services",

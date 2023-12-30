@@ -1,0 +1,15 @@
+.logo-container {
+    display: flex;
+    overflow: hidden;
+    animation: scrollAnimation 30s linear infinite; /* Adjust the duration as needed */
+  }
+  
+  @keyframes scrollAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
