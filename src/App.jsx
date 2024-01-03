@@ -8,6 +8,8 @@ import Trainings from "./pages/Trainings/trainings";
 import Team from "./pages/Team/team";
 import Contact from "./pages/Contact/contact";
 import Pass from "./pages/Events/pass-details";
+import AllStartUps from "./pages/Community/all-startup";
+import AllTalents from "./pages/Community/all-talent";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-spc" element={<About />} />
           <Route path="/community" element={<Community />} />
+          <Route path="/community/all-startups" element={<AllStartUps />} />
+          <Route path="/community/all-talents" element={<AllTalents />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/details" element={<Pass />} />
           <Route path="/trainings" element={<Trainings />} />

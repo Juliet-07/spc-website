@@ -2,16 +2,44 @@ import React from "react";
 import World from "../../assets/world.png";
 import ADIS from "../../assets/adis.png";
 import { FaArrowRight } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
-import PIX1 from "./moment1.png";
-import PIX2 from "./moment2.png";
-import PIX3 from "./moment3.png";
-import PIX4 from "./moment4.png";
-import PIX5 from "./moment5.png";
-import PIX6 from "./moment6.png";
-import PIX7 from "./moment7.png";
-import PIX8 from "./moment8.png";
-// import "./home.css";
+import { Link, NavLink } from "react-router-dom";
+import PIX1 from "./moment1.jpg";
+import PIX2 from "./moment2.jpg";
+import PIX3 from "./moment3.jpg";
+import PIX4 from "./moment4.jpg";
+import PIX5 from "./moment5.jpg";
+import PIX6 from "./moment6.jpg";
+import PIX7 from "./moment7.jpg";
+import PIX8 from "./moment8.jpg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const MomentsCarousel = () => {
+  const images = [PIX1, PIX2, PIX3, PIX4, PIX5, PIX6, PIX7, PIX8];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 1000,
+  };
+
+  return (
+    <Slider {...settings}>
+      {images.map((image, index) => (
+        <div key={index}>
+          <img src={image} alt={`Moment ${index + 1}`} className="w-full" />
+        </div>
+      ))}
+    </Slider>
+  );
+};
 
 const Home = () => {
   const todos = [
@@ -49,9 +77,12 @@ const Home = () => {
                 a limitless and innovative tomorrow
               </p>
             </div>
-            <button className="w-full md:w-[125px] h-10 text-[#471A52] font-semibold md:font-medium bg-white rounded-xl">
+            <Link
+              to="/about-spc"
+              className="w-full md:w-[125px] h-10 text-[#471A52] font-semibold md:font-medium bg-white rounded-xl flex items-center justify-center"
+            >
               Learn more
-            </button>
+            </Link>
           </div>
           <div className="w-[390px] md:w-[500px]">
             <img
@@ -61,32 +92,32 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="w-full flex items-center justify-center absolute -bottom-4 md:-bottom-16 2xl:-bottom-10">
+        <div className="w-full flex items-center justify-center absolute -bottom-4 md:-bottom-24 2xl:-bottom-16">
           <div className="w-full flex items-center justify-evenly md:mx-10 2xl:mx-20 bg-gray-800 text-white font-bold rounded-xl">
             <div className="flex flex-col items-center justify-center md:p-6">
               <p className="text-3xl md:text-6xl">25k +</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300">
+              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Community members
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
             <div className="flex flex-col items-center justify-center md:p-6">
               <p className="text-3xl md:text-6xl">45 +</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300">
+              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Projects completed
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
             <div className="flex flex-col items-center justify-center md:p-6">
               <p className="text-3xl md:text-6xl">50 +</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300">
+              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Partnership secured
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
             <div className="flex flex-col items-center justify-center md:p-6">
               <p className="text-3xl md:text-6xl">6</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300">
+              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Award winning
               </p>
             </div>
@@ -94,7 +125,7 @@ const Home = () => {
         </div>
       </div>
       {/* something for everyone */}
-      <div className="w-full mt-10 pt-6 md:pt-10">
+      <div className="w-full mt-10 md:mt-20 mb-10 pt-6 md:pt-10">
         <div className="flex flex-col items-center justify-center">
           <div className="font-semibold text-3xl md:text-4xl text-gray-900">
             Something for everyone
@@ -195,41 +226,30 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* past events */}
       {/* moments */}
       <div className="w-full bg-white flex flex-col p-4 md:p-10 2xl:px-20">
         <div className="font-semibold text-3xl md:text-4xl text-gray-900">
-          Every moment captured
+          Moment captured from past events
         </div>
-        <div className="w-[254px] h-2 bg-[#471A52]"></div>
-        <div className="grid grid-cols-4 my-6 h-[741px]">
-          <div className="m-0 p-0">
-            <img src={PIX1} className="m-0 p-0" />
-          </div>
-          <div className="m-0 p-0">
-            <img src={PIX2} className="m-0 p-0" />
-          </div>
-          <div className="m-0 p-0">
-            <img src={PIX3} className="m-0 p-0" />
-          </div>
-          <div className="m-0 p-0">
-            <img src={PIX4} className="m-0 p-0" />
-          </div>
-          <div className="m-0 p-0">
-            <img src={PIX5} className="m-0 p-0" />
-          </div>
-          <div className="m-0 p-0">
-            <img src={PIX6} className="m-0 p-0" />
-          </div>
-          <div className="m-0 p-0">
-            <img src={PIX7} className="m-0 p-0" />
-          </div>
-          <div className="m-0 p-0">
-            <img src={PIX8} className="m-0 p-0" />
-          </div>
+        <div className="md:w-[400px] h-2 bg-[#471A52] mt-2"></div>
+        <div className="hidden md:grid grid-cols-4 my-6">
+          <img src={PIX1} />
+          <img src={PIX2} />
+          <img src={PIX3} />
+          <img src={PIX4} />
+          <img src={PIX5} />
+          <img src={PIX6} />
+          <img src={PIX7} />
+          <img src={PIX8} />
+        </div>
+        {/* Display carousel on smaller screens */}
+        <div className="md:hidden mt-10">
+          <MomentsCarousel />
         </div>
       </div>
       {/* read to explore */}
-      <div className="w-full bg-white flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20">
+      <div className="w-full bg-white flex flex-col items-center justify-center my-0 md:my-20 p-4 md:p-10 2xl:px-20">
         <p className="font-semibold text-2xl md:text-4xl text-gray-900">
           Ready to explore?
         </p>
@@ -237,9 +257,12 @@ const Home = () => {
           Through our various infrastructures, we are able to build on new
           transformative and digital solutions.
         </p>
-        <button className="w-full md:w-[120px] bg-[#471A52] h-10 rounded-xl p-2 m-6 font-semibold text-white">
+        <Link
+          to="/community"
+          className="w-full md:w-[120px] bg-[#471A52] h-10 rounded-xl p-2 m-6 font-semibold text-white flex items-center justify-center"
+        >
           Get Started
-        </button>
+        </Link>
       </div>
     </>
   );

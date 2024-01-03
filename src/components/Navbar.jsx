@@ -73,25 +73,60 @@ const Navbar = () => {
         }
       >
         <div className="grid grid-cols-1 gap-4 px-4 font-semibold">
-          <NavLink to="/" style={activeStyleMobile} className="p-2">
+          <NavLink
+            to="/"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
             Home
           </NavLink>
-          <NavLink to="/about-spc" style={activeStyleMobile} className="p-2">
+          <NavLink
+            to="/about-spc"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
             About us
           </NavLink>
-          <NavLink to="/community" style={activeStyleMobile} className="p-2">
+          <NavLink
+            to="/community"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
             Community
           </NavLink>
-          <NavLink to="/events" style={activeStyleMobile} className="p-2">
+          <NavLink
+            to="/events"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
             Events
           </NavLink>
-          <NavLink to="/trainings" style={activeStyleMobile} className="p-2">
+          <NavLink
+            to="/trainings"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
             Trainings
           </NavLink>
-          <NavLink to="/team" style={activeStyleMobile} className="p-2">
+          <NavLink
+            to="/team"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
             Team
           </NavLink>
-          <NavLink to="/contact-spc" style={activeStyleMobile} className="p-2">
+          <NavLink
+            to="/contact-spc"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
             Contact us
           </NavLink>
         </div>

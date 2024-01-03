@@ -11,6 +11,14 @@ import Hayden from "./hayden.png";
 import Juliet from "./juliet.png";
 import Video from "./Video.png";
 import Dummy from "./dummy.png";
+import PIX1 from "./moment1.jpg";
+import PIX2 from "./moment2.jpg";
+import PIX3 from "./moment3.jpg";
+import PIX4 from "./moment4.jpg";
+import PIX5 from "./moment5.jpg";
+import PIX6 from "./moment6.jpg";
+import PIX7 from "./moment7.jpg";
+import PIX8 from "./moment8.jpg";
 import { FaArrowRight } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
 import Slider from "react-slick";
@@ -23,7 +31,36 @@ import Boundlesspay from "./boundlesspay.png";
 import Pluralcode from "./pluralcode.png";
 import Sportrex from "./sportrex.png";
 import Manilla from "./manilla.png";
+import Tekedia from "./tekedia.png";
+import Altschool from "./altSchool.png";
 import "./events.css";
+
+
+const MomentsCarousel = () => {
+  const images = [PIX1, PIX2, PIX3, PIX4, PIX5, PIX6, PIX7, PIX8];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 1000,
+  };
+
+  return (
+    <Slider {...settings}>
+      {images.map((image, index) => (
+        <div key={index}>
+          <img src={image} alt={`Moment ${index + 1}`} className="w-full" />
+        </div>
+      ))}
+    </Slider>
+  );
+};
 
 const Events = () => {
   const navigate = useNavigate();
@@ -231,7 +268,7 @@ const Events = () => {
     },
     {
       image: <img src={Dummy} className="rounded-xl" />,
-      name: "N Ukpabi",
+      name: "Nduka Ukpabi",
       title: "CEO at Pluralcode",
     },
     {
@@ -275,6 +312,23 @@ const Events = () => {
       title: "Founder & CEO at BoundlessPay",
     },
   ];
+  const summits = [
+    {
+      initials: "EDIS",
+      title: "Europe Digital Innovation Summit",
+      month: "August",
+    },
+    {
+      initials: "AID",
+      title: "Africa Innovation Den",
+      month: "October",
+    },
+    {
+      initials: "DING",
+      title: "Digital Innovators Networking Gateway",
+      month: "December",
+    },
+  ];
   useEffect(() => {
     const eventDate = new Date("March 1, 2024 00:00:00 GMT+0000").getTime();
 
@@ -305,7 +359,7 @@ const Events = () => {
   const handleViewDetails = (pass) => {
     // Navigate to the new page and pass the data through state
     console.log("handleViewDetails called with:", pass);
-    navigate("/events/details", {state:{ pass }});
+    navigate("/events/details", { state: { pass } });
   };
 
   return (
@@ -508,7 +562,7 @@ const Events = () => {
         <img src={Video} className="h-[390px] md:h-full" />
       </div>
       {/* Delegate pass and sponsorship */}
-      <div className="hidden w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 my-6">
+      <div className="hidden w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 mt-6">
         <div className="font-semibold text-3xl md:text-4xl text-gray-900">
           Delegates pass and Sponsorship packages
         </div>
@@ -586,28 +640,126 @@ const Events = () => {
           ))}
         </div>
       </div>
-      {/* sponsors */}
-      <div className="w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20">
-        <p>Some past sponsors and partners</p>
-        <div className="logo-container my-4">
-          <img src={OneLiquidity} alt="OneLiquidity" className="mx-6" />
-          <img src={Obiex} alt="Obiex" className="mx-6" />
-          <img src={Traders} alt="Traders" className="mx-6" />
-          <img src={Boundlesspay} alt="Boundlesspay" className="mx-6" />
-          <img src={Pluralcode} alt="Pluralcode" className="mx-6" />
-          <img src={Sportrex} alt="Sportrex" className="mx-6" />
-          <img src={Manilla} alt="Manilla" className="mx-6" />
-          {/* <img src={Pluralcode} alt="Pluralcode" className="mx-6" /> */}
-          {/* <img src={Pluralcode} alt="Pluralcode" className="mx-6" /> */}
-          {/* <img src={Pluralcode} alt="Pluralcode" className="mx-6" /> */}
-          {/* <img src={Pluralcode} alt="Pluralcode" className="mx-6" /> */}
+      {/* mobile view for delegate passes */}
+      <div></div>
+      {/* upcoming events */}
+      <div className="w-full flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20">
+        <p className="font-semibold text-lg md:text-xl text-[#471A52] py-4">
+          Upcoming events
+        </p>
+        <p className="font-semibold text-3xl md:text-4xl text-gray-900 mb-10 text-center">
+          List of planned summit for 2024
+        </p>
+        <div className="w-full grid md:grid-cols-3 gap-4">
+          {summits.map((summit) => (
+            <div className="md:w-[417px] flex flex-col items-center justify-center border border-gray-200 bg-white shadow-md rounded-xl border-t-[20px] border-t-[#471A52] gap-6">
+              <p className="font-semibold text-2xl md:text-3xl text-[#471A52] pt-4">
+                {summit.initials}
+              </p>
+              <p className="font-normal md:text-xl text-gray-700">
+                {summit.title}
+              </p>
+              <p className="font-semibold text-sm md:text-base text-[#471A52] pb-4">
+                {summit.month}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
-      {/* moment */}
-      <div className="w-full md:p-10 2xl:px-20">
-        moments captured from past events
+      {/* past speakers */}
+      <div className="w-full flex flex-col md:items-center md:justify-center p-4 md:p-10 2xl:px-20 bg-[#F4EBFF]">
+        <div className="font-semibold text-3xl md:text-4xl text-gray-900">
+          Some speakers from past events
+        </div>
+        <div className="w-[254px] h-2 bg-[#471A52] mt-2 mb-4"></div>
+        <div className="w-full flex gap-4 overflow-x-auto">
+          {pastSpeakers.map((speaker) => (
+            <div>
+              <div className="w-[296px]">{speaker.image}</div>
+              <p className="font-semibold text-lg md:text-xl text-gray-900">{speaker.name}</p>
+              <p className="font-normal text-gray-500 py-2">{speaker.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
-      <div className="w-full md:p-10 2xl:px-20">
+      {/* sponsors */}
+      <div className="hidden w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20">
+        <p className="font-semibold text-2xl text-gray-500">
+          Some past sponsors and partners
+        </p>
+        <div className="grid grid-cols-4 gap-10 my-6">
+          <img src={OneLiquidity} alt="OneLiquidity" />
+          <img src={Obiex} alt="Obiex" />
+          <img src={Traders} alt="Traders" />
+          <img src={Boundlesspay} alt="Boundlesspay" />
+        </div>
+        <div className="grid grid-cols-5 gap-10 my-6">
+          <img src={Pluralcode} alt="Pluralcode" />
+          <img src={Sportrex} alt="Sportrex" />
+          <img src={Manilla} alt="Manilla" />
+          <img src={Tekedia} alt="Tekedia" />
+          <img src={Altschool} alt="Altschool" />
+        </div>
+      </div>
+      {/* mobile view for sponsors */}
+      <div className="w-full p-4 md:hidden">
+        <p className="w-full text-center text-lg font-semibold text-gray-500">
+          Some past sponsors and partners
+        </p>
+        <div className="my-6">
+          <Slider
+            dots={false}
+            infinite={true}
+            speed={500}
+            slidesToShow={1} // Set the number of sponsors to show at a time
+            slidesToScroll={1}
+            autoplay={true}
+            autoplaySpeed={3000}
+            cssEase="linear"
+          >
+            {[
+              OneLiquidity,
+              Obiex,
+              Traders,
+              Boundlesspay,
+              Pluralcode,
+              Sportrex,
+              Manilla,
+              Tekedia,
+              Altschool,
+            ].map((sponsor, index) => (
+              <div
+                key={index}
+                className="w-full flex flex-col items-center justify-center"
+              >
+                <img src={sponsor} alt={`Sponsor ${index}`} />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </div>
+      {/* moments */}
+      <div className="w-full bg-white flex flex-col p-4 md:p-10 2xl:px-20">
+        <div className="font-semibold text-3xl md:text-4xl text-gray-900">
+          Moment captured from past events
+        </div>
+        <div className="md:w-[400px] h-2 bg-[#471A52] mt-2"></div>
+        <div className="hidden md:grid grid-cols-4 my-6">
+          <img src={PIX1} />
+          <img src={PIX2} />
+          <img src={PIX3} />
+          <img src={PIX4} />
+          <img src={PIX5} />
+          <img src={PIX6} />
+          <img src={PIX7} />
+          <img src={PIX8} />
+        </div>
+        {/* Display carousel on smaller screens */}
+        <div className="md:hidden mt-10">
+          <MomentsCarousel />
+        </div>
+      </div>
+      <div className="w-full md:p-10 2xl:px-20 mt-10">
         <div className="bg-[#471A52] flex flex-col items-center justify-center md:rounded-2xl p-4">
           <p className="font-semibold text-3xl md:text-4xl text-gray-50">
             Sure I am ready to be a part

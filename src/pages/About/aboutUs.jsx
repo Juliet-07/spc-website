@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "./about-hero.png";
 import Accordion from "../../components/Accordion";
+import Star from "./Stars.png";
 
 const About = () => {
   const accordionItems = [
@@ -11,11 +12,13 @@ const About = () => {
     },
     {
       title: "Our Services",
-      content: "Content for section 2 goes here.",
+      content:
+        "Our Services includes Ecosystem building, Community Building, Startups Engagement, Investor Network, EdTech Initiatives, Softlanding,",
     },
     {
       title: "Our Resources",
-      content: "Content for section 2 goes here.",
+      content:
+        "We have multiple communities established in various countries serving as collaborative hubs.",
     },
     // Add more sections as needed
   ];
@@ -47,9 +50,11 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="mt-[200px] md:mt-[100px] pt-[300px] md:pt-0">star</div>
+      <div className="mt-[200px] md:mt-[100px] pt-[300px] md:pt-0">
+        <img src={Star} />
+      </div>
       {/* story */}
-      <div className="w-full bg-[#F4EBFF] flex flex-col md:flex-row items-center justify-between p-4 md:p-10 2xl:px-20 mt-[100px]">
+      <div className="w-full bg-[#F4EBFF] flex flex-col md:flex-row items-center justify-between p-4 md:p-10 2xl:px-20 mt-20">
         <div className="md:w-[600px] rounded-lg flex flex-col">
           <div className="font-semibold text-3xl md:text-4xl text-gray-900">
             Our Story
@@ -132,10 +137,15 @@ const About = () => {
             Softlanding
           </p>
           <p className="font-normal md:text-xl text-gray-500">
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis
-            suscipit laboriosam, nisi ut alUt enim ad minima veniam, quis
-            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-            al
+            SPC Universe's Soft Landing service is your gateway to a smooth
+            global expansion. From meticulous market research to customized
+            go-to-market strategies, business incorporation, and office setup,
+            we provide a comprehensive solution. Navigate permits, immigration,
+            and legal intricacies seamlessly with our expert guidance. Our
+            accounting services ensure financial compliance, while talent hunt
+            and hiring support help you build a dynamic team. Experience
+            stress-free international expansion with SPC Universe, unlocking the
+            potential for your business to thrive in diverse global markets.
           </p>
         </div>
       </div>
