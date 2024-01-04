@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
 
-const Pass = () => {
+const PartnerPass = () => {
   const location = useLocation();
   const passDetails = location.state && location.state.pass;
   console.log("passDetails:", passDetails);
@@ -21,7 +21,7 @@ const Pass = () => {
         <span className="text-gray-600 mx-2">Back</span>
       </Link>
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 my-6">
-        <div className="md:w-[648px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
+        <div className="md:w-[648px] md:h-[800px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
           <div className="font-semibold text-3xl md:text-4xl text-gray-900">
             Package Benefits
           </div>
@@ -40,7 +40,7 @@ const Pass = () => {
           </div>
         </div>
         {/* form */}
-        <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
+        <div className="w-full md:w-[593px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
           <p className="font-semibold text-4xl text-gray-900">
             {passDetails.price}
           </p>
@@ -53,7 +53,7 @@ const Pass = () => {
                 htmlFor="full-name"
                 className="block text-sm text-gray-700 font-medium "
               >
-                Full name
+                Company name
               </label>
               <input
                 type="text"
@@ -70,7 +70,7 @@ const Pass = () => {
                 htmlFor="email"
                 className="block text-sm text-gray-700 font-medium "
               >
-                Email address
+                Company email address
               </label>
               <input
                 type="text"
@@ -87,7 +87,7 @@ const Pass = () => {
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
               >
-                Phone number
+                Contact
               </label>
               <input
                 type="number"
@@ -97,6 +97,37 @@ const Pass = () => {
                 // value={password}
                 // onChange={handleChange}
               />
+            </div>
+            <div className="mt-6">
+              <label
+                htmlFor="phone-number"
+                className="block text-sm text-gray-700 font-medium"
+              >
+                Location
+              </label>
+              <input
+                type="text"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
+                placeholder="Enter company location"
+                // name="password"
+                // value={password}
+                // onChange={handleChange}
+              />
+            </div>
+            <div className="mt-6">
+              <label
+                htmlFor="phone-number"
+                className="block text-sm text-gray-700 font-medium"
+              >
+                Brief description
+              </label>
+              <textarea
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
+
+                // name="password"
+                // value={password}
+                // onChange={handleChange}
+              ></textarea>
             </div>
             <div className="mt-20">
               <button
@@ -114,4 +145,4 @@ const Pass = () => {
   );
 };
 
-export default Pass;
+export default PartnerPass;

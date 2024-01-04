@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { StartUpData, TalentData } from "./data";
 import Startup from "./startUp.png";
 import Talent from "./talent.png";
 
 // startUpData component
 export const StartUpDataComponent = () => {
+  const navigate = useNavigate();
+  const handleViewDetails = (pass) => {
+    // Assuming you are using React Router's `history` for navigation
+    // Replace '/startup/:id' with the appropriate URL structure for your application
+    navigate(`/community/startup/${pass.id}`);
+  };
+
   return (
     <div className="grid md:grid-cols-3 gap-4">
       {StartUpData.map((startup) => (
@@ -37,12 +44,12 @@ export const StartUpDataComponent = () => {
               </span>
             </p>
           </div>
-          <Link
-            to="/community/all-startups"
-            className="w-full flex items-center justify-center font-semibold text-[#471A52]"
+          <div
+            onClick={() => handleViewDetails(startup)}
+            className="w-full flex items-center justify-center font-semibold text-[#471A52] cursor-pointer"
           >
             View details
-          </Link>
+          </div>
         </div>
       ))}
     </div>
@@ -51,6 +58,12 @@ export const StartUpDataComponent = () => {
 
 // talentData component
 export const TalentDataComponent = () => {
+  const navigate = useNavigate();
+  const handleViewDetails = (pass) => {
+    // Assuming you are using React Router's `history` for navigation
+    // Replace '/startup/:id' with the appropriate URL structure for your application
+    navigate(`/community/talent/${pass.id}`);
+  };
   return (
     <div className="grid md:grid-cols-4 gap-4">
       {TalentData.map((talent) => (
@@ -79,12 +92,12 @@ export const TalentDataComponent = () => {
               </span>
             </p>
           </div>
-          <Link
-            to="/community/all-talents"
-            className="w-full flex items-center justify-center font-semibold text-[#471A52]"
+          <div
+            onClick={() => handleViewDetails(talent)}
+            className="w-full flex items-center justify-center font-semibold text-[#471A52] cursor-pointer"
           >
             View profile
-          </Link>
+          </div>
         </div>
       ))}
     </div>

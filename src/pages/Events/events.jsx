@@ -35,7 +35,6 @@ import Tekedia from "./tekedia.png";
 import Altschool from "./altSchool.png";
 import "./events.css";
 
-
 const MomentsCarousel = () => {
   const images = [PIX1, PIX2, PIX3, PIX4, PIX5, PIX6, PIX7, PIX8];
 
@@ -362,6 +361,12 @@ const Events = () => {
     navigate("/events/details", { state: { pass } });
   };
 
+  const handleViewPartnerDetails = (pass) => {
+    // Navigate to the new page and pass the data through state
+    console.log("handleViewDetails called with:", pass);
+    navigate("/events/partner-details", { state: { pass } });
+  };
+
   return (
     <>
       <div
@@ -562,7 +567,7 @@ const Events = () => {
         <img src={Video} className="h-[390px] md:h-full" />
       </div>
       {/* Delegate pass and sponsorship */}
-      <div className="hidden w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 mt-6">
+      <div className="w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 mt-6">
         <div className="font-semibold text-3xl md:text-4xl text-gray-900">
           Delegates pass and Sponsorship packages
         </div>
@@ -570,14 +575,14 @@ const Events = () => {
         <p className="font-normal text-lg text-orange-800">
           <b>NB:</b> All offers are on 50% discount till 15th of February, 2024
         </p>
-        <p className="font-semibold text-4xl text-[#471A52] my-4">
+        <p className="font-semibold text-2xl md:text-4xl text-[#471A52] mt-2 md:my-4">
           Delegates pass
         </p>
-        <div className="w-full grid grid-cols-3 gap-4">
+        <div className="w-full flex flex-col md:grid md:grid-cols-3 gap-4 overflow-x-auto">
           {delegatePass.map((pass) => (
             <div
               // key={pass.title}
-              className="w-[400px] h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 m-4"
+              className="w-full md:w-[400px] md:h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 md:m-4"
             >
               <p className="font-semibold text-5xl text-gray-900">
                 {pass.price}
@@ -585,7 +590,7 @@ const Events = () => {
               <p className="font-semibold uppercase text-gray-900 p-2">
                 {pass.title}
               </p>
-              <div className="flex-grow my-6">
+              <div className="flex-grow my-4 md:my-6">
                 {pass.reasons.map((reason) => (
                   <div key={reason} className="flex items-center p-2">
                     <span className="w-[24px] h-[24px] rounded-full bg-[#FBEDFF] mx-3 flex items-center justify-center">
@@ -606,19 +611,19 @@ const Events = () => {
             </div>
           ))}
         </div>
-        <p className="font-semibold text-4xl text-[#471A52] my-6">
+        <p className="font-semibold text-2xl md:text-4xl text-[#471A52] mt-4 md:my-6">
           Sponsorship/Partnership packages
         </p>
-        <div className="w-full grid grid-cols-3 gap-4">
+        <div className="w-full flex flex-col md:grid md:grid-cols-3 gap-4 overflow-x-auto">
           {partnerPackage.map((pass) => (
             <div
               // key={pass.title}
-              className="w-[400px] h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 m-4"
+              className="md:w-[400px] h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 m-4"
             >
               <p className="font-semibold text-5xl text-gray-900">
                 {pass.price}
               </p>
-              <p className="font-semibold uppercase text-gray-900 p-2">
+              <p className="font-semibold uppercase text-center text-gray-900 p-2">
                 {pass.title}
               </p>
               <div className="flex-grow my-4">
@@ -633,7 +638,10 @@ const Events = () => {
                   </div>
                 ))}
               </div>
-              <button className="w-full h-[48px] bg-[#471A52] rounded-lg text-white font-semibold">
+              <button
+                onClick={() => handleViewPartnerDetails(pass)}
+                className="w-full h-[48px] bg-[#471A52] rounded-lg text-white font-semibold"
+              >
                 View details
               </button>
             </div>
@@ -676,7 +684,9 @@ const Events = () => {
           {pastSpeakers.map((speaker) => (
             <div>
               <div className="w-[296px]">{speaker.image}</div>
-              <p className="font-semibold text-lg md:text-xl text-gray-900">{speaker.name}</p>
+              <p className="font-semibold text-lg md:text-xl text-gray-900">
+                {speaker.name}
+              </p>
               <p className="font-normal text-gray-500 py-2">{speaker.title}</p>
             </div>
           ))}
