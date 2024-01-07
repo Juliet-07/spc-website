@@ -9,6 +9,11 @@ import Frank from "./frank.png";
 import Yusuf from "./yusuf.png";
 import Hayden from "./hayden.png";
 import Juliet from "./juliet.png";
+import Janade from "./janade_du_plessis.jpg";
+import Adewale from "./yusuf_ade.jpeg";
+import Nduka from "./nduka.jpeg";
+import Rutherford from "./rutherford.jpeg"
+import Kwame from "./kwame.jpeg"
 import Video from "./Video.png";
 import Dummy from "./dummy.png";
 import PIX1 from "./moment1.jpg";
@@ -72,23 +77,23 @@ const Events = () => {
   const attendees = [
     {
       icon: <img src={Market} />,
-      title: "Global expansion across markets",
-      text: "Hosting the largest and most collaborative summit for digital innovators with the globally recognized speakers.",
+      title: "Strategic Digital Insights",
+      text: "Explore how digital technologies can be strategically leveraged to boost Africa's Free Trade Zone. Uncover the latest trends, strategies, and innovations that can propel your business or initiatives forward.",
     },
     {
       icon: <img src={Collaboration} />,
       title: "Fostering collaboration",
-      text: "Hosting the largest and most collaborative summit for digital innovators with the globally recognized speakers.",
+      text: "Connect with key players in the digital innovation space, including entrepreneurs, investors, and industry leaders. Forge valuable connections that can open doors to collaboration and new opportunities.",
     },
     {
       icon: <img src={Opportunities} />,
-      title: "Softlanding opportunities",
-      text: "Building the world’s most collaborative community for digital innovators to rub mind and achieve greater results.",
+      title: "Insightful Discussions",
+      text: " Engage in thought-provoking discussions and panels led by industry experts and visionaries. Gain deep insights into how digital transformation can drive and promote Africa's Free Trade Zone.",
     },
     {
       icon: <img src={Network} />,
-      title: "Building social capital",
-      text: "Training and empowering digital innovators across the world with industry experts coming to train them.",
+      title: "Collaborative Workshop",
+      text: "Participate in interactive workshops designed to provide practical skills and actionable strategies. Acquire tools that you can apply to foster digital transformation within your organization or sector.",
     },
   ];
   const speakers = [
@@ -98,53 +103,54 @@ const Events = () => {
       title: "Founder & CEO at BoundlessPay",
     },
     {
-      image: <img src={Yusuf} className="rounded-xl" />,
-      name: "Yussouf Ntwali",
-      title: "CEO at BAG",
-    },
-    {
       image: <img src={Hayden} />,
       name: "Charmaine Hayden",
       title: "Founding Partner at GOODsoil",
+    },
+    {
+      image: <img src={Hayden} />,
+      name: "King David",
+      title: "Founder & CEO at SPC Universe",
+    },
+    {
+      image: <img src={Janade} className="rounded-xl" />,
+      name: "Janade Du plessis",
+      title: "Investment Banker/ Founder & CEO Abrazo capital",
+    },
+    {
+      image: <img src={Adewale} className="rounded-xl" />,
+      name: "Yusuf Adewale",
+      title: "CEO at Altschool Africa",
+    },
+    {
+      image: <img src={Nduka} className="rounded-xl" />,
+      name: "Nduka Ukpabi",
+      title: "Founder & CEO at Pluralcode",
+    },
+    {
+      image: <img src={Rutherford} className="rounded-xl" />,
+      name: "Rutherford Atayobo",
+      title: "Founder & CEO Manilla Technologies",
+    },
+    {
+      image: <img src={Kwame} className="rounded-xl" />,
+      name: "Kwame AA Opoku",
+      title: "CEO Reset Global People",
+    },
+    {
+      image: <img src={Yusuf} className="rounded-xl" />,
+      name: "Yussouf Ntwali",
+      title: "CEO at BAG",
     },
     {
       image: <img src={Juliet} />,
       name: "Juliet Ibrahim",
       title: "Bilingual Actress",
     },
-    {
-      image: <img src={Frank} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Frank} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Frank} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Frank} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Frank} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Frank} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
   ];
   const delegatePass = [
     {
+      discount: "$40",
       price: "$80",
       title: "Virtual delegate pass",
       reasons: [
@@ -155,6 +161,7 @@ const Events = () => {
       ],
     },
     {
+      discount: "$100",
       price: "$200",
       title: "Country general delegate pass",
       reasons: [
@@ -165,6 +172,7 @@ const Events = () => {
       ],
     },
     {
+      discount: "$500",
       price: "$1,000",
       title: "country vip general delegate pass",
       reasons: [
@@ -174,6 +182,7 @@ const Events = () => {
       ],
     },
     {
+      discount: "$1,000",
       price: "$2,000",
       title: "General all access pass",
       reasons: [
@@ -186,6 +195,7 @@ const Events = () => {
       ],
     },
     {
+      discount: "$2,000",
       price: "$4,000",
       title: "vip all access pass",
       reasons: [
@@ -469,11 +479,17 @@ const Events = () => {
           </div>
           <div className="w-[254px] h-1 md:h-2 bg-[#471A52]"></div>
           <p className="font-normal md:text-lg text-gray-500 py-4">
+            Join us at the Africa Digital Innovation Summit for an unparalleled
+            experience that promises to shape the future of digital
+            transformation on the continent. Here's why your attendance is
+            crucial:
+          </p>
+          {/* <p className="font-normal md:text-lg text-gray-500 py-4">
             Get ready to make history with us by joining Africa’s largest and
             most collaborative summit for digital innovators. Foster
             collaborations, build social capital and access soft-landing
             opportunities by being a part of this revolutionary event.
-          </p>
+          </p> */}
         </div>
         <div>
           <div className="w-full grid md:grid-cols-2 gap-10 md:px-10 2xl:px-20">
@@ -515,8 +531,8 @@ const Events = () => {
             autoplaySpeed={3000} // Set autoplay speed in milliseconds (e.g., 3000ms or 3s)
           >
             {speakers.map((speak) => (
-              <div className="flex flex-col items-center">
-                <div className="w-[248.4px] h-[248.4px] my-2 md:my-4">
+              <div className="flex flex-col items-center bg-green-500">
+                <div className="w-full h-[248.4px] my-2 md:my-4">
                   {speak.image}
                 </div>
                 <p className="text-lg md:text-xl text-gray-900 font-semibold">
@@ -532,7 +548,7 @@ const Events = () => {
         <div className="hidden w-full md:grid grid-cols-5 gap-10">
           {speakers.map((speak) => (
             <div className="flex flex-col">
-              <div className="w-full h-[248.4px] my-2 md:my-4">
+              <div className="w-[248.4px] h-[248.4px] my-2 md:my-4">
                 {speak.image}
               </div>
               <p className="text-lg md:text-xl text-gray-900 font-semibold">
@@ -585,8 +601,11 @@ const Events = () => {
               className="w-full md:w-[400px] md:h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 md:m-4"
             >
               <p className="font-semibold text-5xl text-gray-900">
-                {pass.price}
+                {pass.discount}
               </p>
+              <del className="font-semibold text-2xl text-gray-400 my-2">
+                {pass.price}
+              </del>
               <p className="font-semibold uppercase text-gray-900 p-2">
                 {pass.title}
               </p>

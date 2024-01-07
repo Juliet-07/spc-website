@@ -103,15 +103,15 @@ const Contact = () => {
         </div>
         <div className="flex flex-col">
           <p className="font-semibold text-xl pt-6 md:pt-0">Telephone</p>
-          <p>(234) 81234765432</p>
+          <p className="font-normal text-white text-base">(+250) 792108551</p>
           <p className="font-semibold text-xl mt-4">Whatsapp</p>
-          <p>(234) 81234765432</p>
+          <p className="font-normal text-white text-base">(+250) 792108551</p>
         </div>
         <div className="flex flex-col">
           <p className="font-semibold text-xl pt-6 md:pt-0">Office</p>
-          <p>1612 Adeola Hopewell V.I</p>
+          <p className="font-normal text-white text-base">Norrsken house Kigali, Rwanda</p>
           <p className="font-semibold text-xl mt-4">Email</p>
-          <p>admin@spcuniverse.net</p>
+          <p className="font-normal text-white text-base">admin@spcuniverse.net</p>
         </div>
       </div>
     </>

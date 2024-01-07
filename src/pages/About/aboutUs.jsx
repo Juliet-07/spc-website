@@ -8,17 +8,17 @@ const About = () => {
     {
       title: "Our Mission",
       content:
-        "SPC Universe is on a mission to build a borderless world for digital innovators. We strive to connect, empower, and nurture a global community of startups and digital talents, fostering collaboration, knowledge sharing, and mutual support",
+        "Our mission is expansive, going beyond conventional boundaries. We are on a transformative journey, sowing the seeds for a connected digital landscape that transcends borders. At the core of our mission is an unwavering commitment to building a borderless world for digital innovators. We innovate, connect, and build thriving hubs that foster innovation and reinforce our dedication to interconnected ecosystems.",
     },
     {
       title: "Our Services",
       content:
-        "Our Services includes Ecosystem building, Community Building, Startups Engagement, Investor Network, EdTech Initiatives, Softlanding,",
+        "SPC Universe offers a comprehensive suite of services to empower businesses and individuals in the digital realm. From community building and event hosting that fosters collaboration to transformative training programs and seamless global expansion through Soft Landing services, we provide end-to-end support. Our services are not just about what we do; they are a reflection of who we are — a catalyst for innovation and growth.",
     },
     {
       title: "Our Resources",
       content:
-        "We have multiple communities established in various countries serving as collaborative hubs.",
+        "Our resources extend beyond the tangible. We harness the power of vibrant communities, insightful events, transformative training, and comprehensive soft landing services. These resources create an ecosystem where digital innovators can thrive, connect, and succeed globally. SPC Universe's resources are a testament to our commitment to providing the tools and support needed for success in the ever-evolving digital landscape.",
     },
     // Add more sections as needed
   ];
@@ -61,6 +61,32 @@ const About = () => {
           </div>
           <div className="w-[254px] h-2 bg-[#471A52]"></div>
           <p className="font-normal md:text-lg text-gray-700 py-4">
+            SPC Universe transcends the conventional role of a company; it is an
+            ecosystem builder with a grand vision for a connected digital
+            landscape. Our mission goes beyond borders as we strive to construct
+            the largest and most collaborative community for digital innovators.
+            <br />
+            <br />
+            Since our inception, SPC Universe has been on a transformative
+            journey, creating vibrant communities in numerous countries. These
+            serve as thriving hubs for collaboration, knowledge sharing, and
+            unwavering support among digital innovators.
+            <br />
+            <br /> At the heart of our mission is an unwavering commitment to
+            building a borderless world for digital visionaries. Our communities
+            stand as flourishing centers, fostering innovation and reinforcing
+            interconnected ecosystems. We facilitate opportunities for startups
+            to raise capital from an extensive network of venture capitalists
+            and investors. Through our EdTech initiatives, we empower talents
+            with skills that transcend borders, connecting them to global job
+            opportunities.
+            <br />
+            <br /> This isn't just what we do; it's who we are. As we continue
+            to innovate, connect, and build, the story of SPC Universe unfolds
+            as a narrative of forging a borderless future for digital innovators
+            — a story that resonates globally.
+          </p>
+          {/* <p className="font-normal md:text-lg text-gray-700 py-4">
             SPC Universe is not just a company; it's an ecosystem builder with a
             grand vision. Our focus extends beyond conventional boundaries, and
             we are on a mission to construct the largest and most collaborative
@@ -87,7 +113,7 @@ const About = () => {
             to innovate, connect and build, the story of SPC Universe is one of
             forging a borderless future for digital innovstors — a story that
             resonates globally.
-          </p>
+          </p> */}
         </div>
         <div className="w-full md:w-[592px] h-[293px] md:h-[577px] bg-black rounded-lg">
           image
@@ -104,10 +130,11 @@ const About = () => {
             Community
           </p>
           <p className="font-normal md:text-xl text-gray-500">
-            SPC Universe collaborates with startups from various sectors,
-            creating a dynamic and versatile ecosystem. The company’s engagement
-            spans a wide range of industries, showcasing its adaptability and
-            impact.
+            At SPC Universe, community building is at the core of our ethos. We
+            foster some of the largest and most collaborative startup
+            communities globally. These communities serve as dynamic hubs,
+            connecting like-minded visionaries, fostering collaboration, and
+            creating an ecosystem where innovation thrives.
           </p>
         </div>
         <div className="flex flex-col my-4">
@@ -115,9 +142,12 @@ const About = () => {
             Events
           </p>
           <p className="font-normal md:text-xl text-gray-500">
-            The fastest way the company provides a soft landing for
-            organizations is through events. SPC Universe uses its events to
-            provide global expansion opportunities.
+            Our events are curated to inspire and connect digital innovators.
+            SPC Universe hosts engaging events that transcend boundaries,
+            providing a platform for knowledge exchange, networking, and
+            meaningful connections. From insightful panels to interactive
+            workshops, our events empower participants to stay at the forefront
+            of digital innovation.
           </p>
         </div>
         <div className="flex flex-col my-4">
@@ -125,11 +155,11 @@ const About = () => {
             Training
           </p>
           <p className="font-normal md:text-xl text-gray-500">
-            Through its EdTech initiatives, SPC Universe is actively involved in
-            training and connecting talents to global job opportunities. This
-            commitment to talent development contributes not only to the growth
-            of startups but also to the overall advancement of skilled
-            professionals in the digital space.
+            SPC Universe is dedicated to empowering talents with skills that
+            transcend borders. Through cutting-edge EdTech initiatives, we offer
+            transformative training programs. Our goal is to equip individuals
+            with the expertise needed for global opportunities, fostering a
+            community of highly skilled and adaptable digital innovators.
           </p>
         </div>
         <div className="flex flex-col my-4">
@@ -137,15 +167,12 @@ const About = () => {
             Softlanding
           </p>
           <p className="font-normal md:text-xl text-gray-500">
-            SPC Universe's Soft Landing service is your gateway to a smooth
-            global expansion. From meticulous market research to customized
-            go-to-market strategies, business incorporation, and office setup,
-            we provide a comprehensive solution. Navigate permits, immigration,
-            and legal intricacies seamlessly with our expert guidance. Our
-            accounting services ensure financial compliance, while talent hunt
-            and hiring support help you build a dynamic team. Experience
-            stress-free international expansion with SPC Universe, unlocking the
-            potential for your business to thrive in diverse global markets.
+            Navigating global expansion becomes seamless with SPC Universe's
+            Soft Landing service. From comprehensive research and go-to-market
+            strategies to business incorporation and talent acquisition, we
+            provide end-to-end support. Our Soft Landing service ensures a
+            smooth transition for businesses entering new markets, laying the
+            foundation for success.
           </p>
         </div>
       </div>
@@ -154,6 +181,14 @@ const About = () => {
         <div className="font-semibold text-3xl md:text-4xl">
           What we represent
         </div>
+        <p className="font-normal md:text-xl text-white py-2">
+          At SPC Universe, we represent a dynamic force in the digital
+          landscape. We transcend the conventional role of a company and embody
+          an ecosystem builder with a grand vision. Our essence lies in
+          fostering the largest and most collaborative community for digital
+          innovators globally. We represent a commitment to forging a borderless
+          future for visionaries in the digital realm.
+        </p>
         <div className="flex flex-col my-4">
           <Accordion items={accordionItems} />
         </div>

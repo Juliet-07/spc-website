@@ -13,6 +13,7 @@ import AllTalents from "./pages/Community/all-talent";
 import PartnerPass from "./pages/Events/partner-pass-details";
 import StartupDetail from "./pages/Community/startup-details";
 import TalentDetail from "./pages/Community/talent-details";
+import Payment from "./pages/Events/payment";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/events" element={<Events />} />
           <Route path="/events/details" element={<Pass />} />
           <Route path="/events/partner-details" element={<PartnerPass />} />
+          <Route path="/events/payment-details" element={<Payment />} />
           <Route path="/trainings" element={<Trainings />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact-spc" element={<Contact />} />
