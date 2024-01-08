@@ -1,25 +1,42 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
+import Modal from "../../components/Modal";
+import Flutterwave from "./flutterwave.png";
+import CustomFlutterWaveButton from "../../components/Flutterwave";
 
-const Pass = () => {
-  const location = useLocation();
-  const passDetails = location.state && location.state.pass;
-  console.log("passDetails:", passDetails);
+const CountryDelegatePass = () => {
   const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
   const navigate = useNavigate();
   const { handleSubmit } = useForm();
   const [countries, setCountries] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState(null);
+  const [modal, setModal] = useState(false);
 
-  if (!passDetails) {
-    return <div>No details available</div>;
-  }
+  const passDetails = [
+    {
+      id: 1,
+      text: "Access to a physical event in any country of the delegate's choice",
+    },
+    {
+      id: 2,
+      text: "Access to the Live streaming for ADIS across all countries",
+    },
+    {
+      id: 3,
+      text: "1-year free membership with Africa Digital Innovation Community",
+    },
+    {
+      id: 4,
+      text: "Certificate of participation at the end of the summit",
+    },
+  ];
+
   const initialValues = {
     fullname: "",
     email: "",
@@ -31,10 +48,12 @@ const Pass = () => {
   const [formDetails, setFormDetails] = useState(initialValues);
   const { fullname, email, phone_number, country, amount, passType } =
     formDetails;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormDetails({ ...formDetails, [name]: value });
   };
+
   const handleCountryChange = (selectedOption) => {
     setSelectedCountry(selectedOption);
     setFormDetails({ ...formDetails, country: selectedOption.value });
@@ -42,21 +61,22 @@ const Pass = () => {
 
   const handlePassDetails = async () => {
     const url = `${apiURL}/events/delegates-pass`;
-    await axios
-      .post(url, {
+    try {
+      const response = await axios.post(url, {
         ...formDetails,
-        amount: passDetails.discount,
-        passType: passDetails.title,
-      })
-      .then((response) => {
-        console.log(response, "response");
-        let userDetail = JSON.stringify(response.data.newForm);
-        localStorage.setItem("delegate-pass-details", userDetail);
-        navigate("/events/payment-details", {
-          state: { passDetails: passDetails },
-        });
+        amount: "100",
+        passType: "COUNTRY DELEGATE PASS",
       });
+
+      console.log(response, "response");
+      let virtualPass = JSON.stringify(response.data.newForm);
+      localStorage.setItem("country-delegate-pass-details", virtualPass);
+      setModal(true);
+    } catch (error) {
+      console.error("Error in API call:", error);
+    }
   };
+
   useEffect(() => {
     const getCountries = async () => {
       try {
@@ -69,7 +89,6 @@ const Pass = () => {
         }));
         console.log(data, "country info");
         setCountries(detail);
-        return;
       } catch (error) {
         console.error("Error fetching countries:", error);
       }
@@ -78,6 +97,7 @@ const Pass = () => {
   }, []);
 
   const animatedComponents = makeAnimated();
+
   return (
     <div className="w-full flex flex-col p-4 2xl:px-20">
       <Link
@@ -93,29 +113,28 @@ const Pass = () => {
             Package Benefits
           </div>
           <div className="w-[254px] h-2 bg-[#471A52]"></div>
-          {/* <p>Price:{passDetails.price}</p> */}
-          {/* <p>Title:{passDetails.title}</p> */}
           <div className="flex-grow my-4">
-            {passDetails.reasons.map((reason, index) => (
-              <div key={index} className="flex items-center p-2">
+            {passDetails.map((reason, index) => (
+              <div key={index.id} className="flex items-center p-2">
                 <span className="w-[24px] h-[24px] rounded-full bg-[#FBEDFF] mr-3 flex items-center justify-center">
                   <IoMdCheckmark size={20} color="#471A52" />
                 </span>
-                <p className="text-gray-500 font-normal text-base">{reason}</p>
+                <p className="text-gray-500 font-normal text-base">
+                  {reason.text}
+                </p>
               </div>
             ))}
           </div>
         </div>
         {/* form */}
         <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <p className="font-semibold text-4xl text-gray-900">
-            ${passDetails.discount}
-          </p>
-          <p className="font-semibold text-gray-900 uppercase pt-3">
-            {passDetails.title}
+          <p className="font-semibold text-4xl text-gray-900">$100</p>
+          <del className="font-semibold text-2xl text-gray-400">$200</del>
+          <p className="font-semibold text-gray-900 uppercase">
+            country general delegate pass
           </p>
           <form onSubmit={handleSubmit(handlePassDetails)}>
-            <div className="mt-4">
+            <div className="mt-2">
               <label
                 htmlFor="full-name"
                 className="block text-sm text-gray-700 font-medium "
@@ -132,7 +151,7 @@ const Pass = () => {
                 required
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
               <label
                 htmlFor="email"
                 className="block text-sm text-gray-700 font-medium "
@@ -149,7 +168,7 @@ const Pass = () => {
                 required
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -190,7 +209,6 @@ const Pass = () => {
               <button
                 type="submit"
                 className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"
-                // onClick={() => setLoading(!loading)}
               >
                 Proceed
               </button>
@@ -198,8 +216,52 @@ const Pass = () => {
           </form>
         </div>
       </div>
+      <Modal
+        isVisible={modal}
+        onClose={() => {
+          setModal(false);
+        }}
+      >
+        <div className="w-full md:w-[500px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
+          <div className="flex items-center justify-between">
+            <div className="flex flex-col">
+              <p className="font-semibold text-4xl text-gray-900">$100</p>
+              <p className="font-semibold text-gray-900 uppercase pt-3">
+                country general delegate pass
+              </p>
+            </div>
+            <div>
+              <img src={Flutterwave} alt="Flutterwave Logo" />
+            </div>
+          </div>
+
+          <div>
+            <div className="mt-4 flex items-center">
+              <span className="block text-sm text-gray-700 font-medium ">
+                Full name:
+              </span>
+              <p>{fullname}</p>
+            </div>
+            <div className="mt-6 flex items-center">
+              <span className="block text-sm text-gray-700 font-medium ">
+                Email address:
+              </span>
+              <p>{email}</p>
+            </div>
+            <div className="mt-20">
+              <CustomFlutterWaveButton
+                className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"
+                name={fullname}
+                email={email}
+                amount="100"
+                phone_number={phone_number}
+              />
+            </div>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 };
 
-export default Pass;
+export default CountryDelegatePass;

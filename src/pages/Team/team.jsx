@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ComingSoon from "../../components/ComingSoon";
 
 const Team = () => {
   return (
-    <div className='text-xl font-bold'>Team</div>
-  )
-}
+    <div>
+      <ComingSoon />
+    </div>
+  );
+};
 
-export default Team
+export default Team;

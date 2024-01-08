@@ -9,11 +9,12 @@ import Frank from "./frank.png";
 import Yusuf from "./yusuf.png";
 import Hayden from "./hayden.png";
 import Juliet from "./juliet.png";
+import David from "./david.png";
 import Janade from "./janade_du_plessis.jpg";
 import Adewale from "./yusuf_ade.jpeg";
 import Nduka from "./nduka.jpeg";
-import Rutherford from "./rutherford.jpeg"
-import Kwame from "./kwame.jpeg"
+import Rutherford from "./rutherford.jpeg";
+import Kwame from "./kwame.jpeg";
 import Video from "./Video.png";
 import Dummy from "./dummy.png";
 import PIX1 from "./moment1.jpg";
@@ -39,6 +40,7 @@ import Manilla from "./manilla.png";
 import Tekedia from "./tekedia.png";
 import Altschool from "./altSchool.png";
 import "./events.css";
+import VideoComponent from "../../components/VideoComponent";
 
 const MomentsCarousel = () => {
   const images = [PIX1, PIX2, PIX3, PIX4, PIX5, PIX6, PIX7, PIX8];
@@ -105,17 +107,17 @@ const Events = () => {
     {
       image: <img src={Hayden} />,
       name: "Charmaine Hayden",
-      title: "Founding Partner at GOODsoil",
+      title: "Founding Partner at Goodsoil VC",
     },
     {
-      image: <img src={Hayden} />,
+      image: <img src={David} />,
       name: "King David",
       title: "Founder & CEO at SPC Universe",
     },
     {
       image: <img src={Janade} className="rounded-xl" />,
-      name: "Janade Du plessis",
-      title: "Investment Banker/ Founder & CEO Abrazo capital",
+      name: "Janade du plessis",
+      title: "Investment Banker/Co-founder at Launch Africa VC",
     },
     {
       image: <img src={Adewale} className="rounded-xl" />,
@@ -135,7 +137,7 @@ const Events = () => {
     {
       image: <img src={Kwame} className="rounded-xl" />,
       name: "Kwame AA Opoku",
-      title: "CEO Reset Global People",
+      title: "Futurist, Web 3.0 Builder",
     },
     {
       image: <img src={Yusuf} className="rounded-xl" />,
@@ -150,8 +152,8 @@ const Events = () => {
   ];
   const delegatePass = [
     {
-      discount: "$40",
-      price: "$80",
+      discount: "40",
+      price: "80",
       title: "Virtual delegate pass",
       reasons: [
         "Access to the live-streaming for ADIS across all countries",
@@ -161,8 +163,8 @@ const Events = () => {
       ],
     },
     {
-      discount: "$100",
-      price: "$200",
+      discount: "100",
+      price: "200",
       title: "Country general delegate pass",
       reasons: [
         "Access to a physical event in any country of the delegates choice",
@@ -172,8 +174,8 @@ const Events = () => {
       ],
     },
     {
-      discount: "$500",
-      price: "$1,000",
+      discount: "500",
+      price: "1,000",
       title: "country vip general delegate pass",
       reasons: [
         "All the benefits in the Country General Delegate Pass",
@@ -182,21 +184,21 @@ const Events = () => {
       ],
     },
     {
-      discount: "$1,000",
-      price: "$2,000",
+      discount: "1,000",
+      price: "2,000",
       title: "General all access pass",
       reasons: [
         "Access to all physical events in the four regions",
         "Access to the Live streaming for ADIS",
-        "2-years free membership with Africa Digital Innovation Community",
+        "2-years free membership with ADIC",
         "Access to VIP networking dinner in all countries",
         "Certificate of participation at the end of the summit",
-        "Access to the grand-finale + ADIS VIP AWARD NIGHT",
+        "Access to the grand-finale & VIP Award Night",
       ],
     },
     {
-      discount: "$2,000",
-      price: "$4,000",
+      discount: "2,000",
+      price: "4,000",
       title: "vip all access pass",
       reasons: [
         "All benefits in the General All Access Pass ",
@@ -271,24 +273,49 @@ const Events = () => {
   ];
   const pastSpeakers = [
     {
-      image: <img src={Dummy} className="rounded-xl" />,
-      name: "King David",
-      title: "Founder SPC Universe",
+      image: <img src={Frank} className="rounded-xl" />,
+      name: "Franklin Peters",
+      title: "Founder & CEO at BoundlessPay",
     },
     {
       image: <img src={Dummy} className="rounded-xl" />,
-      name: "Nduka Ukpabi",
-      title: "CEO at Pluralcode",
+      name: "Dr. Chris Baryomunsi",
+      title: "Minister of ICT & National Guidance, Uganda",
     },
     {
-      image: <img src={Dummy} />,
+      image: <img src={Adewale} className="rounded-xl" />,
+      name: "Yusuf Adewale",
+      title: "CEO at Altschool Africa",
+    },
+    {
+      image: <img src={Hayden} />,
       name: "Charmaine Hayden",
-      title: "Founding Partner at GOODsoil",
+      title: "Founding Partner at Goodsoil VC",
+    },
+    {
+      image: <img src={David} />,
+      name: "King David",
+      title: "Founder & CEO at SPC Universe",
+    },
+    {
+      image: <img src={Dummy} className="rounded-xl" />,
+      name: "Paula Tavengar",
+      title: "Investment Principal SwissBorg Ventures",
+    },
+    {
+      image: <img src={Yusuf} className="rounded-xl" />,
+      name: "Yussouf Ntwali",
+      title: "CEO at BAG",
     },
     {
       image: <img src={Dummy} />,
-      name: "Juliet Ibrahim",
-      title: "Bilingual Actress",
+      name: "Dr. Kelechi Okoro",
+      title: "The Healthertainer",
+    },
+    {
+      image: <img src={Dummy} />,
+      name: "Paul Ezeafulukwe",
+      title: "Co-founder, Mitroplus Labs, CBO Coinsher",
     },
     {
       image: <img src={Dummy} className="rounded-xl" />,
@@ -296,29 +323,14 @@ const Events = () => {
       title: "Founder & CEO at BoundlessPay",
     },
     {
-      image: <img src={Dummy} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
+      image: <img src={Kwame} className="rounded-xl" />,
+      name: "Kwame AA Opoku",
+      title: "Futurist, Web 3.0 Builder",
     },
     {
-      image: <img src={Dummy} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Dummy} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Dummy} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
-    },
-    {
-      image: <img src={Dummy} className="rounded-xl" />,
-      name: "Franklin Peters",
-      title: "Founder & CEO at BoundlessPay",
+      image: <img src={Nduka} className="rounded-xl" />,
+      name: "Nduka Ukpabi",
+      title: "Founder & CEO at Pluralcode",
     },
   ];
   const summits = [
@@ -518,7 +530,7 @@ const Events = () => {
           We present you with a platform where you can learn and also share the
           best
         </p>
-        <div className="w-full md:hidden">
+        <div className="w-full my-4 px-4 md:hidden">
           <Slider
             dots={true}
             infinite={true}
@@ -528,13 +540,11 @@ const Events = () => {
             fade={true} // Enable fade effect
             cssEase="linear" // Linear easing for smoother fades
             autoplay={true} // Enable autoplay
-            autoplaySpeed={3000} // Set autoplay speed in milliseconds (e.g., 3000ms or 3s)
+            autoplaySpeed={2000} // Set autoplay speed in milliseconds (e.g., 3000ms or 3s)
           >
             {speakers.map((speak) => (
-              <div className="flex flex-col items-center bg-green-500">
-                <div className="w-full h-[248.4px] my-2 md:my-4">
-                  {speak.image}
-                </div>
+              <div className="flex flex-col items-center justify-center">
+                <div className="w-full h-[248.4px]">{speak.image}</div>
                 <p className="text-lg md:text-xl text-gray-900 font-semibold">
                   {speak.name}
                 </p>
@@ -548,9 +558,7 @@ const Events = () => {
         <div className="hidden w-full md:grid grid-cols-5 gap-10">
           {speakers.map((speak) => (
             <div className="flex flex-col">
-              <div className="w-[248.4px] h-[248.4px] my-2 md:my-4">
-                {speak.image}
-              </div>
+              <div className="w-[248.4px] h-[248.4px] my-2">{speak.image}</div>
               <p className="text-lg md:text-xl text-gray-900 font-semibold">
                 {speak.name}
               </p>
@@ -558,12 +566,12 @@ const Events = () => {
             </div>
           ))}
         </div>
-        <div className="font-semibold text-[#471A52] mt-10 flex items-center">
+        {/* <div className="font-semibold text-[#471A52] mt-10 flex items-center">
           See more{" "}
           <span>
             <FaArrowRight size={20} className="mx-2" />
           </span>
-        </div>
+        </div> */}
       </div>
       {/* seen enough and video divs */}
       <div className="w-full md:p-10 2xl:px-20">
@@ -580,7 +588,8 @@ const Events = () => {
         </div>
       </div>
       <div className="w-full flex items-center justify-center p-4">
-        <img src={Video} className="h-[390px] md:h-full" />
+        <VideoComponent/>
+        {/* <img src={Video} className="h-[390px] md:h-full" /> */}
       </div>
       {/* Delegate pass and sponsorship */}
       <div className="w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 mt-6">
@@ -601,10 +610,10 @@ const Events = () => {
               className="w-full md:w-[400px] md:h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 md:m-4"
             >
               <p className="font-semibold text-5xl text-gray-900">
-                {pass.discount}
+                ${pass.discount}
               </p>
               <del className="font-semibold text-2xl text-gray-400 my-2">
-                {pass.price}
+                ${pass.price}
               </del>
               <p className="font-semibold uppercase text-gray-900 p-2">
                 {pass.title}
@@ -702,11 +711,11 @@ const Events = () => {
         <div className="w-full flex gap-4 overflow-x-auto">
           {pastSpeakers.map((speaker) => (
             <div>
-              <div className="w-[296px]">{speaker.image}</div>
-              <p className="font-semibold text-lg md:text-xl text-gray-900">
+              <div className="w-[296px] h-[296px]">{speaker.image}</div>
+              <p className="font-semibold text-lg md:text-xl text-gray-900 mt-2">
                 {speaker.name}
               </p>
-              <p className="font-normal text-gray-500 py-2">{speaker.title}</p>
+              <p className="font-normal text-gray-500">{speaker.title}</p>
             </div>
           ))}
         </div>

@@ -12,7 +12,7 @@ const CustomFlutterWaveButton = ({
     public_key: "FLWPUBK_TEST-bfa6ac065a0a03235ef4c2649111314e-X",
     tx_ref: Date.now(),
     amount: amount,
-    currency: "NGN",
+    currency: "USD",
     payment_options: "card, mobilemoney, ussd",
     customer: {
       email: email,
@@ -28,7 +28,7 @@ const CustomFlutterWaveButton = ({
 
   const fwConfig = {
     ...config,
-    text: `Pay ${amount} with Flutterwave!`,
+    text: `Pay $${amount} with Flutterwave!`,
     callback: (response) => {
       console.log(response);
       closePaymentModal(); // this will close the modal programmatically
