@@ -88,7 +88,7 @@ const Community = () => {
       icon: <img src={Business} />,
       title: "Business Incorporation",
       description:
-        "descrSeamless facilitation of the business incorporation process, guiding you through legal requirements and paperwork to establish a solid foundation for operations.iption",
+        "Seamless facilitation of the business incorporation process, guiding you through legal requirements and paperwork to establish a solid foundation for operations.iption",
     },
     {
       icon: <img src={Research} />,
@@ -160,7 +160,7 @@ const Community = () => {
           {globalExpansion.map((global) => (
             <div className="bg-white md:w-[300px] rounded-xl flex flex-col items-center justify-center border border-gray-50">
               <div className="w-[52px] h-[52px] my-4">{global.icon}</div>
-              <p className="text-sm md:text-2xl font-semibold text-black">
+              <p className="text-center p-1 text-sm md:text-2xl font-semibold text-black">
                 {global.title}
               </p>
               <p className="text-center p-2 text-black text-xs md:text-sm">
