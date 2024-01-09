@@ -8,12 +8,23 @@ import Legal from "./icons/legal.png";
 import Account from "./icons/account.png";
 import Talent from "./icons/talent.png";
 import { StartUpDataComponent, TalentDataComponent } from "./dataComponent";
+import Modal from "../../components/Modal";
 
 const Community = () => {
   const [activeTab, setActiveTab] = useState(1);
+  const [showWorkWithYouModal, setShowWorkWithYouModal] = useState(false);
+  const [showBecomeMemberModal, setShowBecomeMemberModal] = useState(false);
 
   const handleTabClick = (tabNumber) => {
     setActiveTab(tabNumber);
+  };
+
+  const handleWorkWithYouClick = () => {
+    setShowWorkWithYouModal(true);
+  };
+
+  const handleBecomeMemberClick = () => {
+    setShowBecomeMemberModal(true);
   };
 
   let registerButtonText = "";
@@ -127,7 +138,10 @@ const Community = () => {
             Building the world's largest and most collaborative community for
             digital innovators
           </p>
-          <button className="w-full md:w-[177px] h-[48px] text-white font-semibold md:font-medium bg-[#471A52] rounded-lg my-4">
+          <button
+            // onClick={() => handleBecomeMemberClick()}
+            className="w-full md:w-[177px] h-[48px] text-white font-semibold md:font-medium bg-[#471A52] rounded-lg my-4"
+          >
             Become a member
           </button>
         </div>
@@ -156,7 +170,10 @@ const Community = () => {
           ))}
         </div>
         <div className="w-full flex items-center justify-center">
-          <div className="bg-white w-[189px] h-[48px] border rounded-lg flex items-center justify-center text-[#471A52] font-semibold">
+          <div
+            onClick={() => handleWorkWithYouClick()}
+            className="bg-white w-[189px] h-[48px] border rounded-lg flex items-center justify-center text-[#471A52] font-semibold cursor-pointer"
+          >
             Lets work with you
           </div>
         </div>
@@ -177,6 +194,133 @@ const Community = () => {
           Become a member
         </div>
       </div>
+      <Modal
+        isVisible={showWorkWithYouModal}
+        onClose={() => setShowWorkWithYouModal(false)}
+      >
+        <div className="flex flex-col px-6 py-4 border border-t-8 border-t-[#471A52] md:w-[664px] rounded-xl">
+          <p className="font-semibold text-2xl text-gray-900">
+            Global Expansion
+          </p>
+          <p className="font-normal text-gray-500">
+            Become a member and enjoy our numerous benefits
+          </p>
+          <div>
+            <form className="w-full my-4">
+              <div className="flex flex-wrap -mx-3 mb-3">
+                <div className="w-full px-3">
+                  <label
+                    className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                    for="grid-password"
+                  >
+                    What do you want us to work on?
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                    type="text"
+                    placeholder="Choose"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-3">
+                <div className="w-full px-3">
+                  <label
+                    className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                    for="grid-password"
+                  >
+                    Company Name
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                    type="text"
+                    placeholder="Enter company name"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-3">
+                <div className="w-full px-3">
+                  <label
+                    className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                    for="grid-password"
+                  >
+                    Company Email
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                    type="email"
+                    placeholder="you@company.com"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-3">
+                <div className="w-full px-3">
+                  <label
+                    className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                    for="grid-password"
+                  >
+                    Contact Number
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                    type="number"
+                    placeholder="(+250)45654321345"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-3">
+                <div className="w-full px-3">
+                  <label
+                    className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                    for="grid-password"
+                  >
+                    Location
+                  </label>
+                  <input
+                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                    type="text"
+                    placeholder="Enter current location"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-wrap -mx-3 mb-3">
+                <div className="w-full px-3">
+                  <label
+                    for="message"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows="4"
+                    className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    // placeholder="Write your thoughts here..."
+                  ></textarea>
+                </div>
+              </div>
+              <div className="w-full flex items-center justify-between">
+                <button className="w-[129px] bg-gray-300 text-white rounded-lg p-3 text-center font-semibold">
+                  Cancel
+                </button>
+                <button className="w-[129px] bg-[#471A52] text-white rounded-lg p-3 text-center font-semibold">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </Modal>
+      <Modal
+        isVisible={showBecomeMemberModal}
+        onClose={() => setShowBecomeMemberModal(false)}
+      >
+        <div>form for becoming a member</div>
+      </Modal>
     </>
   );
 };

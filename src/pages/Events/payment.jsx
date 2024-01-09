@@ -22,7 +22,7 @@ const Payment = () => {
   return (
     <div className="w-full flex flex-col p-4 2xl:px-20">
       <Link
-        to="/events/details"
+        to="/events"
         className="flex items-center p-2 w-[85px] h-10 border border-gray-100 rounded-lg"
       >
         <TbArrowBackUp color="#475467" />

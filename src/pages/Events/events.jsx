@@ -15,6 +15,7 @@ import Adewale from "./yusuf_ade.jpeg";
 import Nduka from "./nduka.jpeg";
 import Rutherford from "./rutherford.jpeg";
 import Kwame from "./kwame.jpeg";
+import Kelechi from "./kelechi.jpeg";
 import Video from "./Video.png";
 import Dummy from "./dummy.png";
 import PIX1 from "./moment1.jpg";
@@ -656,7 +657,7 @@ const Events = () => {
               </p>
               <div className="flex-grow my-4">
                 {pass.reasons.map((reason) => (
-                  <div key={reason} className="flex items-center p-2">
+                  <div key={reason} className="flex items-center md:p-2">
                     <span className="w-[24px] h-[24px] rounded-full bg-[#FBEDFF] mx-3 flex items-center justify-center">
                       <IoMdCheckmark size={20} color="#471A52" />
                     </span>

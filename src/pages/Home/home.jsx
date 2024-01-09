@@ -11,6 +11,9 @@ import PIX5 from "./moment5.jpg";
 import PIX6 from "./moment6.jpg";
 import PIX7 from "./moment7.jpg";
 import PIX8 from "./moment8.jpg";
+import IconCommunity from "./icon-community.png";
+import IconEvents from "./icon-events.png";
+import IconTraining from "./icon-training.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -44,19 +47,19 @@ const MomentsCarousel = () => {
 const Home = () => {
   const todos = [
     {
-      icon: "icon",
+      icon: <img src={IconCommunity}/>,
       title: "Community",
       text: "Cultivating the world's most collaborative hub for digital innovators to unite with like-minded visionaries, fostering synergy and exchanging shared expertise.",
       path: "/community",
     },
     {
-      icon: "icon",
+      icon: <img src={IconEvents}/>,
       title: "Events",
       text: "Curate experiences that transcend borders, uniting innovators globally to inspire and learn.",
       path: "/events",
     },
     {
-      icon: "icon",
+      icon: <img src={IconTraining}/>,
       title: "Trainings",
       text: "Empower individuals with cutting-edge skills and knowledge, breaking barriers for a limitless digital landscape",
       path: "/trainings",
@@ -93,30 +96,30 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full flex items-center justify-center absolute -bottom-4 md:-bottom-24 2xl:-bottom-16">
-          <div className="w-full flex items-center justify-evenly md:mx-10 2xl:mx-20 bg-gray-800 text-white font-bold rounded-xl">
+          <div className="w-full flex items-center justify-evenly md:mx-10 2xl:mx-20 bg-gray-800 text-white font-bold rounded-xl p-4 md:p-0">
             <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-3xl md:text-6xl">25k +</p>
+              <p className="text-2xl md:text-6xl">25k +</p>
               <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Community members
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
             <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-3xl md:text-6xl">45 +</p>
+              <p className="text-2xl md:text-6xl">45 +</p>
               <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Projects completed
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
             <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-3xl md:text-6xl">50 +</p>
+              <p className="text-2xl md:text-6xl">50 +</p>
               <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Partnership secured
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
             <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-3xl md:text-6xl">6</p>
+              <p className="text-2xl md:text-6xl">6</p>
               <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
                 Award winning
               </p>
@@ -135,7 +138,7 @@ const Home = () => {
             pillars
           </p>
           <div className="w-full flex items-center justify-center">
-            <div className="w-full grid md:grid-cols-3 gap-10 p-4 md:px-10 2xl:px-20">
+            <div className="w-full grid md:grid-cols-3 gap-4 md:gap-10 p-4 md:px-10 2xl:px-20">
               {todos.map((todo) => (
                 <div className="bg-[#6E2880] md:w-[400px] rounded-xl flex flex-col items-center justify-center">
                   <div className="w-[52px] h-[52px] bg-[#F4EBFF] rounded-full flex items-center justify-center my-4">
@@ -145,7 +148,7 @@ const Home = () => {
                   <p className="text-center p-2 text-gray-50">{todo.text}</p>
                   <NavLink
                     to={todo.path}
-                    className="w-[348px] h-[44px] bg-[#471A52] rounded-lg my-4 text-white font-semibold flex items-center justify-center"
+                    className="w-[300px] md:w-[348px] h-[44px] bg-[#471A52] rounded-lg my-4 text-white font-semibold flex items-center justify-center"
                   >
                     Explore
                   </NavLink>

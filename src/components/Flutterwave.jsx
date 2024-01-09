@@ -9,7 +9,7 @@ const CustomFlutterWaveButton = ({
   className,
 }) => {
   const config = {
-    public_key: "FLWPUBK_TEST-bfa6ac065a0a03235ef4c2649111314e-X",
+    public_key: "FLWPUBK_TEST-94613899ad48523e9213a1351b5e9505-X",
     tx_ref: Date.now(),
     amount: amount,
     currency: "USD",
