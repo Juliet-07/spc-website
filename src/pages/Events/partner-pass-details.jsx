@@ -1,12 +1,60 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import axios from "axios";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
+import { useForm } from "react-hook-form";
 
 const PartnerPass = () => {
   const location = useLocation();
   const passDetails = location.state && location.state.pass;
   console.log("passDetails:", passDetails);
+  const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const { handleSubmit } = useForm();
+  const navigate = useNavigate();
+
+  const initialValues = {
+    company_Name: "",
+    company_email: "",
+    phone_number: "",
+    amount: "",
+    company_location: "",
+    passType: "",
+    brief_description: "",
+  };
+  const [formDetails, setFormDetails] = useState(initialValues);
+  const {
+    company_Name,
+    company_email,
+    phone_number,
+    company_location,
+    amount,
+    passType,
+    brief_description,
+  } = formDetails;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormDetails({ ...formDetails, [name]: value });
+  };
+
+  const handlePassDetails = async () => {
+    const url = `${apiURL}/events/sponsorship`;
+    await axios
+      .post(url, {
+        ...formDetails,
+        amount: passDetails.price,
+        passType: passDetails.title,
+      })
+      .then((response) => {
+        console.log(response, "response");
+        let userDetail = JSON.stringify(response.data.newForm);
+        localStorage.setItem("sponsorship-pass-details", userDetail);
+        navigate("/events/sponsorship-payment-details", {
+          state: { passDetails: passDetails },
+        });
+      });
+  };
 
   if (!passDetails) {
     return <div>No details available</div>;
@@ -21,7 +69,7 @@ const PartnerPass = () => {
         <span className="text-gray-600 mx-2">Back</span>
       </Link>
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 my-6">
-        <div className="md:w-[648px] md:h-[800px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
+        <div className="md:w-[648px] md:h-[750px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
           <div className="font-semibold text-3xl md:text-4xl text-gray-900">
             Package Benefits
           </div>
@@ -47,7 +95,7 @@ const PartnerPass = () => {
           <p className="font-semibold text-gray-900 uppercase pt-3">
             {passDetails.title}
           </p>
-          <form>
+          <form onSubmit={handleSubmit(handlePassDetails)}>
             <div className="mt-4">
               <label
                 htmlFor="full-name"
@@ -59,9 +107,9 @@ const PartnerPass = () => {
                 type="text"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
                 placeholder="Enter full name"
-                // name="userName"
-                // value={userName}
-                // onChange={handleChange}
+                name="company_Name"
+                value={company_Name}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -76,9 +124,9 @@ const PartnerPass = () => {
                 type="text"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
                 placeholder="@example.com"
-                // name="userName"
-                // value={userName}
-                // onChange={handleChange}
+                name="company_email"
+                value={company_email}
+                onChange={handleChange}
                 required
               />
             </div>
@@ -93,9 +141,9 @@ const PartnerPass = () => {
                 type="number"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
                 placeholder="Enter phone number"
-                // name="password"
-                // value={password}
-                // onChange={handleChange}
+                name="phone_number"
+                value={phone_number}
+                onChange={handleChange}
               />
             </div>
             <div className="mt-6">
@@ -109,9 +157,9 @@ const PartnerPass = () => {
                 type="text"
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
                 placeholder="Enter company location"
-                // name="password"
-                // value={password}
-                // onChange={handleChange}
+                name="company_location"
+                value={company_location}
+                onChange={handleChange}
               />
             </div>
             <div className="mt-6">
@@ -123,13 +171,12 @@ const PartnerPass = () => {
               </label>
               <textarea
                 className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
-
-                // name="password"
-                // value={password}
-                // onChange={handleChange}
+                name="brief_description"
+                value={brief_description}
+                onChange={handleChange}
               ></textarea>
             </div>
-            <div className="mt-20">
+            <div className="mt-10">
               <button
                 type="submit"
                 className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"

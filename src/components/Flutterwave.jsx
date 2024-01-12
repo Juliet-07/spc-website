@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { FlutterWaveButton, closePaymentModal } from "flutterwave-react-v3";
+import { useNavigate } from "react-router-dom";
 
 const CustomFlutterWaveButton = ({
   name,
@@ -8,11 +9,33 @@ const CustomFlutterWaveButton = ({
   phone_number,
   className,
 }) => {
+  const navigate = useNavigate();
+  const [selectedCurrency, setSelectedCurrency] = useState("USD");
+
+  // exchangeRates
+  const exchangeRates = {
+    USD: 1,
+    NGN: 410,
+    GHS: 11,
+    KES: 112,
+    RWF: 1200,
+    ZAR: 15,
+  };
+  // function to convert amount to the desired currency
+  const convertAmount = () => {
+    const exchangeRate = exchangeRates[selectedCurrency] || 1;
+    return amount * exchangeRate;
+  };
+
+  const handleCurrencyChange = (event) => {
+    setSelectedCurrency(event.target.value);
+  };
+
   const config = {
     public_key: "FLWPUBK_TEST-94613899ad48523e9213a1351b5e9505-X",
     tx_ref: Date.now(),
-    amount: amount,
-    currency: "USD",
+    amount: parseInt(convertAmount()),
+    currency: selectedCurrency,
     payment_options: "card, mobilemoney, ussd",
     customer: {
       email: email,
@@ -28,15 +51,37 @@ const CustomFlutterWaveButton = ({
 
   const fwConfig = {
     ...config,
-    text: `Pay $${amount} with Flutterwave!`,
+    text: `Pay ${selectedCurrency}${convertAmount()} with Flutterwave!`,
     callback: (response) => {
       console.log(response);
       closePaymentModal(); // this will close the modal programmatically
+      if (response.status === "successful" || "completed") {
+        navigate("/events/payment-sucessful");
+      }
     },
     onClose: () => {},
   };
 
-  return <FlutterWaveButton {...fwConfig} className={className} />;
+  return (
+    <div>
+      <label htmlFor="currency" className="font-semibold">
+        Select Currency:{" "}
+      </label>
+      <select
+        id="currency"
+        onChange={handleCurrencyChange}
+        value={selectedCurrency}
+      >
+        <option value="USD">USD</option>
+        <option value="NGN">NGN</option>
+        <option value="GHS">GHS</option>
+        <option value="KES">KES</option>
+        <option value="RWF">RWF</option>
+        <option value="ZAR">ZAR</option>
+      </select>
+      <FlutterWaveButton {...fwConfig} className={className} />
+    </div>
+  );
 };
 
 export default CustomFlutterWaveButton;

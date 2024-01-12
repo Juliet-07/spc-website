@@ -298,7 +298,7 @@ const About = () => {
           <p className="font-semibold text-xl pt-6 md:pt-0">Office</p>
           <p className="font-normal text-white text-base">Norrsken house Kigali, Rwanda</p>
           <p className="font-semibold text-xl mt-4">Email</p>
-          <p className="font-normal text-white text-base">admin@spcuniverse.net</p>
+          <p className="font-normal text-white text-base">support@silverspoonuniverse.com</p>
         </div>
       </div>
     </>

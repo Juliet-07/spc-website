@@ -1,27 +1,34 @@
+import Boundlesspay from "./boundlesspay.png";
+import Manilla from "./manilla.png";
+import Pluralcode from "./pluralcode.png";
+
 export const StartUpData = [
   {
     id: 1,
-    name: "Startup 1",
+    image: <img src={Boundlesspay} />,
+    name: "BoundlessPay",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Introducing BoundlessPay, a revolutionary application that transforms your smartphone into a powerful mobile bank. Seamlessly integrating a pre-installed digital wallet and debit card, BoundlessPay empowers you to store and spend digital currencies effortlessly at merchants worldwide. The key features are Global Transactions, Crypto Loans,Utility Payments, Digital Currency Investments, Decentralized Finance (DeFi) Features. Elevate your financial experience by making BoundlessPay your go-to mobile banking app.",
     amountRaised: "$19.2M",
     numOfInvestors: "100",
     minInvestments: "$500",
   },
   {
     id: 2,
-    name: "Startup 2",
+    image: <img src={Manilla} />,
+    name: "Manilla Technologies",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Embark on a transformative financial journey with Manilla Technologies, the ultimate bridge connecting traditional fintech to the revolutionary realm of Web 3.0. Our cutting-edge payment solutions redefine the way you manage your finances, providing a seamless transition from the conventional to the future of decentralized finance. Manilla Technologies is more than just a fintech solution; it's a gateway to a future where finance is decentralized, secure, and tailored to your individual preferences.",
     amountRaised: "$19.2M",
     numOfInvestors: "100",
     minInvestments: "$500",
   },
   {
     id: 3,
-    name: "Startup 3",
+    image: <img src={Pluralcode} />,
+    name: "Pluralcode Institute",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "At Pluralcode, we are driven by a profound mission: to build solutions for global impact. Dedicated to individuals, organizations, and corporates across Africa and beyond, we are pioneering a transformative journey to bridge the global talent gap. Our commitment is clear — to establish the largest and most impactful tech talent incubator on the continent, showcasing unparalleled skills and expertise to the world stage. At Pluralcode, we are not just building a talent pool; we are nurturing a community of innovators poised to shape the future. ",
     amountRaised: "$19.2M",
     numOfInvestors: "100",
     minInvestments: "$500",

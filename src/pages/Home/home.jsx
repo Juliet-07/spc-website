@@ -95,32 +95,32 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="w-full flex items-center justify-center absolute -bottom-4 md:-bottom-24 2xl:-bottom-16">
-          <div className="w-full flex items-center justify-evenly md:mx-10 2xl:mx-20 bg-gray-800 text-white font-bold rounded-xl p-4 md:p-0">
-            <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-2xl md:text-6xl">25k +</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
+        <div className="w-full flex items-center justify-center absolute -bottom-4 md:-bottom-20 2xl:-bottom-14 px-4">
+          <div className="w-full flex items-center justify-evenly md:mx-10 2xl:mx-20 bg-gray-800 text-white font-bold rounded-xl p-2">
+            <div className="flex flex-col items-center justify-center md:p-4">
+              <p className="text-xl md:text-5xl">25k +</p>
+              <p className="font-normal text-xs md:text-xl text-gray-300 px-2">
                 Community members
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
-            <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-2xl md:text-6xl">45 +</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
+            <div className="flex flex-col items-center justify-center md:p-4">
+              <p className="text-xl md:text-5xl">45 +</p>
+              <p className="font-normal text-xs md:text-xl text-gray-300 px-2">
                 Projects completed
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
-            <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-2xl md:text-6xl">50 +</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
+            <div className="flex flex-col items-center justify-center md:p-4">
+              <p className="text-xl md:text-5xl">50 +</p>
+              <p className="font-normal text-xs md:text-xl text-gray-300 px-2">
                 Partnership secured
               </p>
             </div>
             <div className="px-4 border border-gray-500 rotate-90"></div>
-            <div className="flex flex-col items-center justify-center md:p-6">
-              <p className="text-2xl md:text-6xl">6</p>
-              <p className="font-normal text-xs md:text-xl text-gray-300 p-2">
+            <div className="flex flex-col items-center justify-center md:p-4">
+              <p className="text-xl md:text-5xl">6</p>
+              <p className="font-normal text-xs md:text-xl text-gray-300 px-2">
                 Award winning
               </p>
             </div>
@@ -198,10 +198,10 @@ const Home = () => {
         </div>
         <div className="w-full rounded-2xl flex flex-col md:flex-row border my-6">
           <div className="md:w-[432.98px] 2xl:w-[50%]">
-            <img src={ADIS} alt="ADIS" className="rounded-xl h-full" />
+            <img src={ADIS} alt="ADIS" className="rounded-xl md:h-full" />
           </div>
           <div className="flex flex-col p-4 md:w-[782.07px] 2xl:w-[50%]">
-            <p className="text-lg text-[#471A52] font-semibold">
+            <p className="text-lg text-[#471A52] font-semibold text-center">
               4 regions . 10+ countries . March 2024
             </p>
             <p className="font-semibold text-gray-900 md:text-3xl text-center md:text-left">

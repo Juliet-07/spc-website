@@ -13,9 +13,12 @@ import AllTalents from "./pages/Community/all-talent";
 import PartnerPass from "./pages/Events/partner-pass-details";
 import StartupDetail from "./pages/Community/startup-details";
 import TalentDetail from "./pages/Community/talent-details";
-import Payment from "./pages/Events/payment";
+import Payment from "./pages/Events/payment-pass";
 import VirtualDelegatePass from "./pages/Events/virtualPass";
 import CountryDelegatePass from "./pages/Events/countryPass";
+import Emails from "./pages/email-template";
+import PaymentSuccessful from "./pages/Events/payment-successful";
+import SponsorshipPayment from "./pages/Events/payment-sponsorship";
 
 function App() {
   return (
@@ -33,11 +36,14 @@ function App() {
           <Route path="/events/details" element={<Pass />} />
           <Route path="/events/partner-details" element={<PartnerPass />} />
           <Route path="/events/payment-details" element={<Payment />} />
+          <Route path="/events/sponsorship-payment-details" element={<SponsorshipPayment />} />
           <Route path="/events/virtual-delegate-pass" element={<VirtualDelegatePass />} />
           <Route path="/events/country-delegate-pass" element={<CountryDelegatePass />} />
+          <Route path="/events/payment-sucessful" element={<PaymentSuccessful />} />
           <Route path="/trainings" element={<Trainings />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact-spc" element={<Contact />} />
+          <Route path="/email-newsletter" element={<Emails />} />
         </Routes>
       </Layout>
     </>
