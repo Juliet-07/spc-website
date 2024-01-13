@@ -15,11 +15,11 @@ const CustomFlutterWaveButton = ({
   // exchangeRates
   const exchangeRates = {
     USD: 1,
-    NGN: 410,
-    GHS: 11,
-    KES: 112,
-    RWF: 1200,
-    ZAR: 15,
+    NGN: 1279,
+    GHS: 13,
+    KES: 167,
+    RWF: 1345,
+    ZAR: 19,
   };
   // function to convert amount to the desired currency
   const convertAmount = () => {
@@ -32,6 +32,7 @@ const CustomFlutterWaveButton = ({
   };
 
   const config = {
+    // FLWPUBK-c6f724817c1f64161aca009fa198bb17-X
     public_key: "FLWPUBK_TEST-94613899ad48523e9213a1351b5e9505-X",
     tx_ref: Date.now(),
     amount: parseInt(convertAmount()),

@@ -256,21 +256,21 @@ const Events = () => {
         "Access to the grand-finale + ADIS VIP AWARD NIGHT",
       ],
     },
-    // {
-    //   price: "$50000",
-    //   title: "global expansion partner (africa)",
-    //   reasons: [
-    //     "Exhibition space across countries where ADIS is happening.",
-    //     "Award Presentation at the grand finale",
-    //     "Feature CEO in Africa Digital Innovation Magazine",
-    //     "Access to free softlanding service from SPC Universe post event",
-    //     "3 all access pass for representatives in all events across the summit",
-    //     "3-night paid accommodation for reps in Kigali for the grand-finale"
-    //   ],
-    // },
+    {
+      price: "$50000",
+      title: "global expansion partner (africa)",
+      reasons: [
+        "Exhibition space across countries where ADIS is happening.",
+        "Award Presentation at the grand finale",
+        "Feature CEO in Africa Digital Innovation Magazine",
+        "Access to free softlanding service from SPC Universe post event",
+        "3 all access pass for representatives in all events across the summit",
+        "3-night paid accommodation for reps in Kigali for the grand-finale"
+      ],
+    },
     {
       price: "$100000",
-      title: "global expansion partner",
+      title: "global expansion partner (intl)",
       reasons: [
         "Exhibition space across countries where ADIS is happening.",
         "Award Presentation at the grand finale",
@@ -447,7 +447,7 @@ const Events = () => {
           <div className="flex flex-col">
             <div className="flex flex-col items-center justify-center py-4">
               <p className="text-xl text-gray-300 font-semibold py-2">
-                Africa Digital Innovative Summit
+                Africa Digital Innovation Summit
               </p>
               {/* <p className="text-xl text-gray-300 font-semibold">
                 March 2024

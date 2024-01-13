@@ -1,6 +1,7 @@
 import React from "react";
 import World from "../../assets/world.png";
 import ADIS from "../../assets/adis.png";
+import WHO from "../../assets/whoWeAre.png";
 import { FaArrowRight } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
 import PIX1 from "./moment1.jpg";
@@ -47,19 +48,19 @@ const MomentsCarousel = () => {
 const Home = () => {
   const todos = [
     {
-      icon: <img src={IconCommunity}/>,
+      icon: <img src={IconCommunity} />,
       title: "Community",
       text: "Cultivating the world's most collaborative hub for digital innovators to unite with like-minded visionaries, fostering synergy and exchanging shared expertise.",
       path: "/community",
     },
     {
-      icon: <img src={IconEvents}/>,
+      icon: <img src={IconEvents} />,
       title: "Events",
       text: "Curate experiences that transcend borders, uniting innovators globally to inspire and learn.",
       path: "/events",
     },
     {
-      icon: <img src={IconTraining}/>,
+      icon: <img src={IconTraining} />,
       title: "Trainings",
       text: "Empower individuals with cutting-edge skills and knowledge, breaking barriers for a limitless digital landscape",
       path: "/trainings",
@@ -95,8 +96,8 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="w-full flex items-center justify-center absolute -bottom-4 md:-bottom-20 2xl:-bottom-14 px-4">
-          <div className="w-full flex items-center justify-evenly md:mx-10 2xl:mx-20 bg-gray-800 text-white font-bold rounded-xl p-2">
+        <div className="w-full flex items-center justify-center absolute -bottom-4 md:-bottom-20 2xl:-bottom-14 px-3">
+          <div className="w-full flex items-center justify-evenly md:mx-10 2xl:mx-20 bg-gray-800 text-white font-bold rounded-xl p-3">
             <div className="flex flex-col items-center justify-center md:p-4">
               <p className="text-xl md:text-5xl">25k +</p>
               <p className="font-normal text-xs md:text-xl text-gray-300 px-2">
@@ -184,8 +185,8 @@ const Home = () => {
             </div>
           </NavLink>
         </div>
-        <div className="w-full md:w-[592px] h-[293px] md:h-[577px] bg-black rounded-lg">
-          image
+        <div className="w-full md:w-[592px] rounded-lg">
+          <img src={WHO} className="object-cover rounded-lg" />
         </div>
       </div>
       {/* upcoming events */}
@@ -194,7 +195,7 @@ const Home = () => {
           Upcoming event
         </div>
         <div className="text-gray-900 text-lg md:text-5xl font-semibold">
-          Africa Digital Innovative Summit
+          Africa Digital Innovation Summit
         </div>
         <div className="w-full rounded-2xl flex flex-col md:flex-row border my-6">
           <div className="md:w-[432.98px] 2xl:w-[50%]">

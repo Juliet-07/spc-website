@@ -33,7 +33,11 @@ const Community = () => {
   } else if (activeTab === 2) {
     registerButtonText = "Register as a Talent";
   }
+  const [selectedOption, setSelectedOption] = useState("startup");
 
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+  };
   let viewToRender;
   viewToRender = (
     <>
@@ -139,7 +143,7 @@ const Community = () => {
             digital innovators
           </p>
           <button
-            // onClick={() => handleBecomeMemberClick()}
+            onClick={() => handleBecomeMemberClick()}
             className="w-full md:w-[177px] h-[48px] text-white font-semibold md:font-medium bg-[#471A52] rounded-lg my-4"
           >
             Become a member
@@ -319,10 +323,81 @@ const Community = () => {
         isVisible={showBecomeMemberModal}
         onClose={() => setShowBecomeMemberModal(false)}
       >
-        <div>form for becoming a member</div>
+        <div className="flex flex-col items-center justify-center">
+          <p className="font-semibold text-2xl text-gray-900">Membership</p>
+          <p className="font-normal text-gray-500">
+            Become a member and enjoy our numerous benefits
+          </p>
+          <div className="flex items-center justify-center my-4">
+            <div className="flex items-center">
+              <input
+                type="radio"
+                value="talent"
+                checked={selectedOption === "talent"}
+                onChange={handleOptionChange}
+                className="w-[20px] h-[20px] bg-[#471A52]"
+              />
+              <label className="ml-2">Talent</label>
+            </div>
+            <div className="flex items-center mx-3">
+              <input
+                type="radio"
+                value="startup"
+                checked={selectedOption === "startup"}
+                onChange={handleOptionChange}
+                className="w-[20px] h-[20px] bg-[#471A52]"
+              />
+              <label className="ml-2">Startup</label>
+            </div>
+            <div className="flex items-center">
+              <input
+                type="radio"
+                value="others"
+                checked={selectedOption === "others"}
+                onChange={handleOptionChange}
+                className="w-[20px] h-[20px] bg-[#471A52]"
+              />
+              <label className="ml-2">Others</label>
+            </div>
+          </div>
+          <div className="w-[110px] h-10 border border-[#471A52] rounded-xl flex items-center justify-center">
+            <p className="font-semibold text-2xl text-[#471A52]">$200</p><span className="text-gray-600 font-medium">/year</span>
+          </div>
+          <div>
+            {selectedOption === "startup" && <StartupForm />}
+            {selectedOption === "talent" && <TalentForm />}
+            {selectedOption === "others" && <OthersForm />}
+          </div>
+        </div>
       </Modal>
     </>
   );
 };
 
+const StartupForm = () => {
+  return (
+    <div className="my-10">
+      {/* Form fields for startup */}
+      <p>Startup Form Here</p>
+    </div>
+  );
+};
+
+const TalentForm = () => {
+  return (
+    <div className="my-10">
+      {/* Form fields for talent */}
+      <p>Talent Form Here</p>
+    </div>
+  );
+};
+
+const OthersForm = () => {
+  return (
+    <div className="my-10">
+      {/* Form fields for others */}
+      <p>Others Form Here</p>
+    </div>
+  );
+};
 export default Community;

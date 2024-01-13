@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "./about-hero.png";
 import Accordion from "../../components/Accordion";
 import Star from "./Stars.png";
+import Story from "./story.jpg"
 
 const About = () => {
   const accordionItems = [
@@ -115,8 +116,8 @@ const About = () => {
             resonates globally.
           </p> */}
         </div>
-        <div className="w-full md:w-[592px] h-[293px] md:h-[577px] bg-black rounded-lg">
-          image
+        <div className="w-full md:w-[592px] md:h-[577px] rounded-lg">
+          <img src={Story} className="object-cover rounded-lg md:h-full" />
         </div>
       </div>
       {/* how we do it */}
