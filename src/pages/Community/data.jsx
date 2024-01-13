@@ -1,11 +1,9 @@
-import Boundlesspay from "./boundlesspay.png";
-import Manilla from "./manilla.png";
-import Pluralcode from "./pluralcode.png";
-
 export const StartUpData = [
   {
     id: 1,
-    image: <img src={Boundlesspay} />,
+    image: (
+      <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/boundlesspay.png" />
+    ),
     name: "BoundlessPay",
     description:
       "Introducing BoundlessPay, a revolutionary application that transforms your smartphone into a powerful mobile bank. Seamlessly integrating a pre-installed digital wallet and debit card, BoundlessPay empowers you to store and spend digital currencies effortlessly at merchants worldwide. The key features are Global Transactions, Crypto Loans,Utility Payments, Digital Currency Investments, Decentralized Finance (DeFi) Features. Elevate your financial experience by making BoundlessPay your go-to mobile banking app.",
@@ -15,7 +13,9 @@ export const StartUpData = [
   },
   {
     id: 2,
-    image: <img src={Manilla} />,
+    image: (
+      <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/manilla.png" />
+    ),
     name: "Manilla Technologies",
     description:
       "Embark on a transformative financial journey with Manilla Technologies, the ultimate bridge connecting traditional fintech to the revolutionary realm of Web 3.0. Our cutting-edge payment solutions redefine the way you manage your finances, providing a seamless transition from the conventional to the future of decentralized finance. Manilla Technologies is more than just a fintech solution; it's a gateway to a future where finance is decentralized, secure, and tailored to your individual preferences.",
@@ -25,7 +25,9 @@ export const StartUpData = [
   },
   {
     id: 3,
-    image: <img src={Pluralcode} />,
+    image: (
+      <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/pluralcode.png" />
+    ),
     name: "Pluralcode Institute",
     description:
       "At Pluralcode, we are driven by a profound mission: to build solutions for global impact. Dedicated to individuals, organizations, and corporates across Africa and beyond, we are pioneering a transformative journey to bridge the global talent gap. Our commitment is clear — to establish the largest and most impactful tech talent incubator on the continent, showcasing unparalleled skills and expertise to the world stage. At Pluralcode, we are not just building a talent pool; we are nurturing a community of innovators poised to shape the future. ",

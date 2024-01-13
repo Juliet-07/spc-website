@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TbArrowBackUp } from "react-icons/tb";
 import { StartUpData } from "./data";
-import Startup from "./startUp.png";
 import ComingSoon from "../../components/ComingSoon";
 
 const StartupDetail = () => {

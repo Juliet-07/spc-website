@@ -4,7 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TbArrowBackUp } from "react-icons/tb";
 import { StartUpData } from "./data";
-import Talent from "./talent.png";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { FaTwitter, FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa6";
@@ -49,7 +48,7 @@ const TalentDetail = () => {
       <div className="bg-[#471A52] rounded-xl my-6 flex flex-col md:flex-row items-center justify-evenly px-6 py-4">
         <div className="w-[304px] h-[354px] bg-white border border-gray-200 shadow-md flex flex-col items-center justify-center p-4 rounded-xl">
           <div>
-            <img src={Talent} />
+            <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/person.png" />
           </div>
           <p className="font-medium text-sm md:text-xl text-gray-900 mt-4">
             Janet Goodwill

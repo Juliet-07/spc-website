@@ -1,12 +1,4 @@
 import React, { useState } from "react";
-import Hero from "./community.png";
-import Research from "./icons/research.png";
-import Goto from "./icons/go-to.png";
-import Business from "./icons/business.png";
-import Permit from "./icons/permit.png";
-import Legal from "./icons/legal.png";
-import Account from "./icons/account.png";
-import Talent from "./icons/talent.png";
 import { StartUpDataComponent, TalentDataComponent } from "./dataComponent";
 import Modal from "../../components/Modal";
 
@@ -77,49 +69,65 @@ const Community = () => {
   );
   const globalExpansion = [
     {
-      icon: <img src={Research} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/research.png" />
+      ),
       title: "Research",
       description:
         "In-depth market research tailored to your industry, providing valuable insights to inform strategic decision-making for a successful global expansion.",
     },
     {
-      icon: <img src={Goto} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/go-to.png" />
+      ),
       title: "Go-to Market Strategy",
       description:
         "Customized strategies designed to effectively position your business in new markets, ensuring a strong and targeted approach to maximize growth.",
     },
     {
-      icon: <img src={Business} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/business.png" />
+      ),
       title: "Business Incorporation",
       description:
         "Seamless facilitation of the business incorporation process, guiding you through legal requirements and paperwork to establish a solid foundation for operations.iption",
     },
     {
-      icon: <img src={Research} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/research.png" />
+      ),
       title: "Office Setup",
       description:
         "Full-service support for establishing your physical presence, including office space acquisition, design, and setup tailored to your specific business needs.",
     },
     {
-      icon: <img src={Permit} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/permit.png" />
+      ),
       title: "Permit & Immigration",
       description:
         "Expert assistance in navigating the complex landscape of permits and immigration processes, ensuring compliance and a smooth transition for your team.",
     },
     {
-      icon: <img src={Legal} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/legal.png" />
+      ),
       title: "Legal Consultancy",
       description:
         "Comprehensive legal guidance to safeguard your business interests, offering expert advice on contracts, regulations, and compliance in the new market.",
     },
     {
-      icon: <img src={Account} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/account.png" />
+      ),
       title: "Accounting Services",
       description:
         "Professional accounting services to manage financial aspects seamlessly, from tax planning and compliance to financial reporting, ensuring fiscal responsibility.",
     },
     {
-      icon: <img src={Talent} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/talent.png" />
+      ),
       title: "Talent Hunting & Hiring",
       description:
         "Strategic talent acquisition services to build a skilled and diverse team, including recruitment strategies, talent identification, and hiring processes tailored to your industry.",
@@ -130,7 +138,7 @@ const Community = () => {
       <div
         className="w-full h-[514px] md:h-[671px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
-          backgroundImage: `url(${Hero})`,
+          backgroundImage: `url(${"https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/community.png"})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>
@@ -361,7 +369,8 @@ const Community = () => {
             </div>
           </div>
           <div className="w-[110px] h-10 border border-[#471A52] rounded-xl flex items-center justify-center">
-            <p className="font-semibold text-2xl text-[#471A52]">$200</p><span className="text-gray-600 font-medium">/year</span>
+            <p className="font-semibold text-2xl text-[#471A52]">$200</p>
+            <span className="text-gray-600 font-medium">/year</span>
           </div>
           <div>
             {selectedOption === "startup" && <StartupForm />}

@@ -1,8 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import ComingSoon from "../../components/ComingSoon";
 import { StartUpData, TalentData } from "./data";
-import Startup from "./startUp.png";
-import Talent from "./talent.png";
+
 
 // startUpData component
 export const StartUpDataComponent = () => {
@@ -73,7 +72,7 @@ export const TalentDataComponent = () => {
     //       key={talent.id}
     //       className="md:w-[302px] bg-white rounded-xl shadow-lg p-4"
     //     >
-    //       <img src={Talent} className="w-full" />
+    //       <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/person.png" className="w-full" />
     //       <h2 className="text-xl font-semibold text-gray-900">{talent.name}</h2>
     //       <p className="font-semibold text-xs text-[#471A52]">
     //         {talent.jobDescription}

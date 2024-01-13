@@ -1,26 +1,37 @@
 import React from "react";
-import World from "../../assets/world.png";
-import ADIS from "../../assets/adis.png";
-import WHO from "../../assets/whoWeAre.png";
 import { FaArrowRight } from "react-icons/fa";
 import { Link, NavLink } from "react-router-dom";
-import PIX1 from "./moment1.jpg";
-import PIX2 from "./moment2.jpg";
-import PIX3 from "./moment3.jpg";
-import PIX4 from "./moment4.jpg";
-import PIX5 from "./moment5.jpg";
-import PIX6 from "./moment6.jpg";
-import PIX7 from "./moment7.jpg";
-import PIX8 from "./moment8.jpg";
-import IconCommunity from "./icon-community.png";
-import IconEvents from "./icon-events.png";
-import IconTraining from "./icon-training.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const MomentsCarousel = () => {
-  const images = [PIX1, PIX2, PIX3, PIX4, PIX5, PIX6, PIX7, PIX8];
+  const images = [
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment1.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment2.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment3.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment4.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment5.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment6.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment7.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment8.jpg",
+    },
+  ];
 
   const settings = {
     dots: true,
@@ -38,7 +49,7 @@ const MomentsCarousel = () => {
     <Slider {...settings}>
       {images.map((image, index) => (
         <div key={index}>
-          <img src={image} alt={`Moment ${index + 1}`} className="w-full" />
+          <img src={image.url} alt={`Moment ${index + 1}`} className="w-full" />
         </div>
       ))}
     </Slider>
@@ -48,19 +59,25 @@ const MomentsCarousel = () => {
 const Home = () => {
   const todos = [
     {
-      icon: <img src={IconCommunity} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/icon-community.png" />
+      ),
       title: "Community",
       text: "Cultivating the world's most collaborative hub for digital innovators to unite with like-minded visionaries, fostering synergy and exchanging shared expertise.",
       path: "/community",
     },
     {
-      icon: <img src={IconEvents} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/icon-events.png" />
+      ),
       title: "Events",
       text: "Curate experiences that transcend borders, uniting innovators globally to inspire and learn.",
       path: "/events",
     },
     {
-      icon: <img src={IconTraining} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/icon-training.png" />
+      ),
       title: "Trainings",
       text: "Empower individuals with cutting-edge skills and knowledge, breaking barriers for a limitless digital landscape",
       path: "/trainings",
@@ -90,7 +107,7 @@ const Home = () => {
           </div>
           <div className="w-[390px] md:w-[500px]">
             <img
-              src={World}
+              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/world.png"
               alt="Global Ecosystem"
               className="animated-image"
             />
@@ -186,7 +203,10 @@ const Home = () => {
           </NavLink>
         </div>
         <div className="w-full md:w-[592px] rounded-lg">
-          <img src={WHO} className="object-cover rounded-lg" />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/whoWeAre.png"
+            className="object-cover rounded-lg"
+          />
         </div>
       </div>
       {/* upcoming events */}
@@ -199,7 +219,11 @@ const Home = () => {
         </div>
         <div className="w-full rounded-2xl flex flex-col md:flex-row border my-6">
           <div className="md:w-[432.98px] 2xl:w-[50%]">
-            <img src={ADIS} alt="ADIS" className="rounded-xl md:h-full" />
+            <img
+              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/adis.png"
+              alt="ADIS"
+              className="rounded-xl md:h-full"
+            />
           </div>
           <div className="flex flex-col p-4 md:w-[782.07px] 2xl:w-[50%]">
             <p className="text-lg text-[#471A52] font-semibold text-center">
@@ -238,14 +262,14 @@ const Home = () => {
         </div>
         <div className="md:w-[400px] h-2 bg-[#471A52] mt-2"></div>
         <div className="hidden md:grid grid-cols-4 my-6">
-          <img src={PIX1} />
-          <img src={PIX2} />
-          <img src={PIX3} />
-          <img src={PIX4} />
-          <img src={PIX5} />
-          <img src={PIX6} />
-          <img src={PIX7} />
-          <img src={PIX8} />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment1.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment2.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment3.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment4.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment5.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment6.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment7.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment8.jpg" />
         </div>
         {/* Display carousel on smaller screens */}
         <div className="md:hidden mt-10">

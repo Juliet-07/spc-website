@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TbArrowBackUp } from "react-icons/tb";
 import { StartUpData } from "./data";
-import Startup from "./startUp.png";
 
 const AllStartUps = () => {
   return (
@@ -40,7 +39,7 @@ const AllStartUps = () => {
             key={startup.id}
             className="md:w-[400px] bg-white rounded-xl shadow-lg p-4"
           >
-            <img src={Startup} />
+            <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/startUp.png" />
             <h2 className="text-xl font-semibold text-gray-900 py-2">
               {startup.name}
             </h2>

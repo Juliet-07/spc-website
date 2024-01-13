@@ -1,52 +1,39 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Hero from "./events-hero.png";
-import Market from "./market.png";
-import Collaboration from "./collaboration.png";
-import Opportunities from "./opportunity.png";
-import Network from "./networking.png";
-import Frank from "./frank.png";
-import Yusuf from "./yusuf.png";
-import Hayden from "./hayden.png";
-import Juliet from "./juliet.png";
-import David from "./david.png";
-import Janade from "./janade_du_plessis.jpg";
-import Adewale from "./yusuf_ade.jpeg";
-import Nduka from "./nduka.jpeg";
-import Rutherford from "./rutherford.jpeg";
-import Kwame from "./kwame.jpeg";
-import Kelechi from "./kelechi.jpg";
-import Chris from "./chris.jpg";
-import Paula from "./paula.jpg";
-import Paul from "./paul.jpg";
-import Dummy from "./dummy.png";
-import PIX1 from "./moment1.jpg";
-import PIX2 from "./moment2.jpg";
-import PIX3 from "./moment3.jpg";
-import PIX4 from "./moment4.jpg";
-import PIX5 from "./moment5.jpg";
-import PIX6 from "./moment6.jpg";
-import PIX7 from "./moment7.jpg";
-import PIX8 from "./moment8.jpg";
-import { FaArrowRight } from "react-icons/fa";
 import { IoMdCheckmark } from "react-icons/io";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import OneLiquidity from "./Oneliquidity svg.png";
-import Obiex from "./obiex.png";
-import Traders from "./Consummate Traders svg.png";
-import Boundlesspay from "./boundlesspay.png";
-import Pluralcode from "./pluralcode.png";
-import Sportrex from "./sportrex.png";
-import Manilla from "./manilla.png";
-import Tekedia from "./tekedia.png";
-import Altschool from "./altSchool.png";
 import "./events.css";
 import VideoComponent from "../../components/VideoComponent";
 
 const MomentsCarousel = () => {
-  const images = [PIX1, PIX2, PIX3, PIX4, PIX5, PIX6, PIX7, PIX8];
+  const images = [
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment1.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment2.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment3.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment4.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment5.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment6.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment7.jpg",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment8.jpg",
+    },
+  ];
 
   const settings = {
     dots: true,
@@ -64,7 +51,7 @@ const MomentsCarousel = () => {
     <Slider {...settings}>
       {images.map((image, index) => (
         <div key={index}>
-          <img src={image} alt={`Moment ${index + 1}`} className="w-full" />
+          <img src={image.url} alt={`Moment ${index + 1}`} className="w-full" />
         </div>
       ))}
     </Slider>
@@ -81,79 +68,96 @@ const Events = () => {
   });
   const attendees = [
     {
-      icon: <img src={Market} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/market.png" />
+      ),
       title: "Strategic Digital Insights",
       text: "Explore how digital technologies can be strategically leveraged to boost Africa's Free Trade Zone. Uncover the latest trends, strategies, and innovations that can propel your business or initiatives forward.",
     },
     {
-      icon: <img src={Collaboration} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/collaboration.png" />
+      ),
       title: "Fostering collaboration",
       text: "Connect with key players in the digital innovation space, including entrepreneurs, investors, and industry leaders. Forge valuable connections that can open doors to collaboration and new opportunities.",
     },
     {
-      icon: <img src={Opportunities} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/opportunity.png" />
+      ),
       title: "Insightful Discussions",
       text: " Engage in thought-provoking discussions and panels led by industry experts and visionaries. Gain deep insights into how digital transformation can drive and promote Africa's Free Trade Zone.",
     },
     {
-      icon: <img src={Network} />,
+      icon: (
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/networking.png" />
+      ),
       title: "Collaborative Workshop",
       text: "Participate in interactive workshops designed to provide practical skills and actionable strategies. Acquire tools that you can apply to foster digital transformation within your organization or sector.",
     },
   ];
   const speakers = [
     {
-      image: Frank,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/frank.png",
       name: "Franklin Peters",
       title: "Founder & CEO at BoundlessPay",
     },
     {
-      image: Hayden,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/hayden.png",
       name: "Charmaine Hayden",
       title: "Founding Partner at Goodsoil VC",
     },
     {
-      image: David,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/david.png",
       name: "King David",
       title: "Founder & CEO at SPC Universe",
     },
     {
-      image: Janade,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/janade_du_plessis.jpg",
       name: "Janade du Plessis",
       title: "Investment Banker/Co-founder at Launch Africa VC",
     },
     {
-      image: Adewale,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf_ade.jpeg",
       name: "Yusuf Adewale",
       title: "CEO at Altschool Africa",
     },
     {
-      image: Nduka,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/nduka.jpeg",
       name: "Nduka Ukpabi",
       title: "Founder & CEO at Pluralcode",
     },
     {
-      image: Rutherford,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/rutherford.jpeg",
       name: "Rutherford Atayobo",
       title: "Founder & CEO Manilla Technologies",
     },
     {
-      image: Kwame,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kwame.jpeg",
       name: "Kwame AA Opoku",
       title: "Futurist, Web 3.0 Builder",
     },
     {
-      image: Yusuf,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf.png",
       name: "Yussouf Ntwali",
       title: "CEO at BAG",
     },
     {
-      image: Juliet,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/juliet.png",
       name: "Juliet Ibrahim",
       title: "Bilingual Actress",
     },
   ];
-
   const delegatePass = [
     {
       discount: "40",
@@ -213,7 +217,8 @@ const Events = () => {
   ];
   const partnerPackage = [
     {
-      price: "$3000",
+      discount: "1500",
+      price: "3000",
       title: "Exhibition Partner",
       reasons: [
         "Space to build and setup exhibition stand in any country/countries of choice",
@@ -223,7 +228,8 @@ const Events = () => {
       ],
     },
     {
-      price: "$10000",
+      discount: "5000",
+      price: "10000",
       title: "logo partner across the summit",
       reasons: [
         "Logo across all PR materials for the summit",
@@ -234,7 +240,8 @@ const Events = () => {
       ],
     },
     {
-      price: "$10000",
+      discount: "5000",
+      price: "10000",
       title: "impact founder partnership",
       reasons: [
         "Slot to speak at region of operation and grand finale",
@@ -245,7 +252,8 @@ const Events = () => {
       ],
     },
     {
-      price: "$20000",
+      discount: "10000",
+      price: "20000",
       title: "impact organization partnership",
       reasons: [
         "Access to all physical events in the four regions",
@@ -257,7 +265,8 @@ const Events = () => {
       ],
     },
     {
-      price: "$50000",
+      discount: "25000",
+      price: "50000",
       title: "global expansion partner (africa)",
       reasons: [
         "Exhibition space across countries where ADIS is happening.",
@@ -265,11 +274,12 @@ const Events = () => {
         "Feature CEO in Africa Digital Innovation Magazine",
         "Access to free softlanding service from SPC Universe post event",
         "3 all access pass for representatives in all events across the summit",
-        "3-night paid accommodation for reps in Kigali for the grand-finale"
+        "3-night paid accommodation for reps in Kigali for the grand-finale",
       ],
     },
     {
-      price: "$100000",
+      discount: "50000",
+      price: "100000",
       title: "global expansion partner (intl)",
       reasons: [
         "Exhibition space across countries where ADIS is happening.",
@@ -277,63 +287,74 @@ const Events = () => {
         "Feature CEO in Africa Digital Innovation Magazine",
         "Access to free softlanding service from SPC Universe post event",
         "3 all access pass for representatives in all events across the summit",
-        "3-night paid accommodation for reps in Kigali for the grand-finale"
+        "3-night paid accommodation for reps in Kigali for the grand-finale",
       ],
     },
   ];
   const pastSpeakers = [
     {
-      image: Frank,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/frank.png",
       name: "Franklin Peters",
       title: "Founder & CEO at BoundlessPay",
     },
     {
-      image: Chris,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/chris.jpg",
       name: "Dr. Chris Baryomunsi",
       title: "Minister of ICT & National Guidance, Uganda",
     },
     {
-      image: Adewale,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf_ade.jpeg",
       name: "Yusuf Adewale",
       title: "CEO at Altschool Africa",
     },
     {
-      image: Hayden,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/hayden.png",
       name: "Charmaine Hayden",
       title: "Founding Partner at Goodsoil VC",
     },
     {
-      image: David,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/david.png",
       name: "King David",
       title: "Founder & CEO at SPC Universe",
     },
     {
-      image: Paula,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/paula.jpg",
       name: "Paula Tavengar",
       title: "Investment Principal SwissBorg Ventures",
     },
     {
-      image: Yusuf,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf.png",
       name: "Yussouf Ntwali",
       title: "CEO at BAG",
     },
     {
-      image: Kelechi,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kelechi.jpg",
       name: "Dr. Kelechi Okoro",
       title: "The Healthertainer",
     },
     {
-      image: Paul,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/paul.jpg",
       name: "Paul Ezeafulukwe",
       title: "Co-founder, Mitroplus Labs, CBO Coinsher",
     },
     {
-      image: Kwame,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kwame.jpeg",
       name: "Kwame AA Opoku",
       title: "Futurist, Web 3.0 Builder",
     },
     {
-      image: Nduka,
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/nduka.jpeg",
       name: "Nduka Ukpabi",
       title: "Founder & CEO at Pluralcode",
     },
@@ -353,6 +374,35 @@ const Events = () => {
       initials: "DING",
       title: "Digital Innovators Networking Gateway",
       month: "December",
+    },
+  ];
+  const sponsors = [
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Oneliquidity%20svg.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/obiex.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Consummate%20Traders%20svg.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/boundlesspay.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/pluralcode.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/sportrex.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/manilla.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/tekedia.png",
+    },
+    {
+      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/altSchool.png",
     },
   ];
   useEffect(() => {
@@ -399,7 +449,7 @@ const Events = () => {
       <div
         className="hidden w-full h-[850px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
-          backgroundImage: `url(${Hero})`,
+          backgroundImage: `url(${"https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/events-hero.png"})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#000000]/40 to-[#1E1E1E]/50 z-[2]"></div>
@@ -487,7 +537,10 @@ const Events = () => {
             </div>
           </div>
           <div>
-            <img src={Hero} alt="ADIS" />
+            <img
+              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/events-hero.png"
+              alt="ADIS"
+            />
           </div>
         </div>
       </div>
@@ -609,7 +662,6 @@ const Events = () => {
       </div>
       <div className="w-full flex items-center justify-center p-4">
         <VideoComponent />
-        {/* <img src={Video} className="h-[390px] md:h-full" /> */}
       </div>
       {/* Delegate pass and sponsorship */}
       <div className="w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 mt-6">
@@ -669,12 +721,15 @@ const Events = () => {
               className="md:w-[400px] h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 m-4"
             >
               <p className="font-semibold text-5xl text-gray-900">
-                {pass.price}
+                ${pass.discount}
               </p>
-              <p className="font-semibold uppercase text-center text-gray-900 p-2">
+              <del className="font-semibold text-2xl text-gray-400 my-2">
+                ${pass.price}
+              </del>
+              <p className="font-semibold uppercase text-center text-gray-900">
                 {pass.title}
               </p>
-              <div className="flex-grow my-4">
+              <div className="flex-grow my-1">
                 {pass.reasons.map((reason) => (
                   <div key={reason} className="flex items-center md:p-2">
                     <span className="w-[24px] h-[24px] rounded-full bg-[#FBEDFF] mx-3 flex items-center justify-center">
@@ -752,17 +807,44 @@ const Events = () => {
           Some past sponsors and partners
         </p>
         <div className="grid grid-cols-4 gap-10 my-6">
-          <img src={OneLiquidity} alt="OneLiquidity" />
-          <img src={Obiex} alt="Obiex" />
-          <img src={Traders} alt="Traders" />
-          <img src={Boundlesspay} alt="Boundlesspay" />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Oneliquidity%20svg.png"
+            alt="OneLiquidity"
+          />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/obiex.png"
+            alt="Obiex"
+          />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Consummate%20Traders%20svg.png"
+            alt="Traders"
+          />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/boundlesspay.png"
+            alt="Boundlesspay"
+          />
         </div>
         <div className="grid grid-cols-5 gap-10 my-6">
-          <img src={Pluralcode} alt="Pluralcode" />
-          <img src={Sportrex} alt="Sportrex" />
-          <img src={Manilla} alt="Manilla" />
-          <img src={Tekedia} alt="Tekedia" />
-          <img src={Altschool} alt="Altschool" />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/pluralcode.png"
+            alt="Pluralcode"
+          />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/sportrex.png"
+            alt="Sportrex"
+          />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/manilla.png"
+            alt="Manilla"
+          />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/tekedia.png"
+            alt="Tekedia"
+          />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/altSchool.png"
+            alt="Altschool"
+          />
         </div>
       </div>
       {/* mobile view for sponsors */}
@@ -781,22 +863,12 @@ const Events = () => {
             autoplaySpeed={3000}
             cssEase="linear"
           >
-            {[
-              OneLiquidity,
-              Obiex,
-              Traders,
-              Boundlesspay,
-              Pluralcode,
-              Sportrex,
-              Manilla,
-              Tekedia,
-              Altschool,
-            ].map((sponsor, index) => (
+            {sponsors.map((sponsor, index) => (
               <div
                 key={index}
                 className="w-full flex flex-col items-center justify-center"
               >
-                <img src={sponsor} alt={`Sponsor ${index}`} />
+                <img src={sponsor.url} alt={`Sponsor ${index}`} />
               </div>
             ))}
           </Slider>
@@ -809,14 +881,14 @@ const Events = () => {
         </div>
         <div className="md:w-[400px] h-2 bg-[#471A52] mt-2"></div>
         <div className="hidden md:grid grid-cols-4 my-6">
-          <img src={PIX1} />
-          <img src={PIX2} />
-          <img src={PIX3} />
-          <img src={PIX4} />
-          <img src={PIX5} />
-          <img src={PIX6} />
-          <img src={PIX7} />
-          <img src={PIX8} />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment1.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment2.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment3.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment4.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment5.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment6.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment7.jpg" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment8.jpg" />
         </div>
         {/* Display carousel on smaller screens */}
         <div className="md:hidden mt-10">

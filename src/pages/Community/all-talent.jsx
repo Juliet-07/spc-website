@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { TbArrowBackUp } from "react-icons/tb";
 import { TalentData } from "./data";
-import Talent from "./talent.png";
 
 const AllTalents = () => {
   return (
@@ -40,7 +39,7 @@ const AllTalents = () => {
           key={talent.id}
           className="md:w-[302px] bg-white rounded-xl shadow-lg p-4"
         >
-          <img src={Talent} className="w-full" />
+          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/person.png" className="w-full" />
           <h2 className="text-xl font-semibold text-gray-900">{talent.name}</h2>
           <p className="font-semibold text-xs text-[#471A52]">
             {talent.jobDescription}

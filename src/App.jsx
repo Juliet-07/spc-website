@@ -16,7 +16,7 @@ import TalentDetail from "./pages/Community/talent-details";
 import Payment from "./pages/Events/payment-pass";
 import VirtualDelegatePass from "./pages/Events/virtualPass";
 import CountryDelegatePass from "./pages/Events/countryPass";
-import Emails from "./pages/email-template";
+// import Emails from "./pages/email-template";
 import PaymentSuccessful from "./pages/Events/payment-successful";
 import SponsorshipPayment from "./pages/Events/payment-sponsorship";
 
@@ -43,7 +43,7 @@ function App() {
           <Route path="/trainings" element={<Trainings />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact-spc" element={<Contact />} />
-          <Route path="/email-newsletter" element={<Emails />} />
+          {/* <Route path="/email-newsletter" element={<Emails />} /> */}
         </Routes>
       </Layout>
     </>

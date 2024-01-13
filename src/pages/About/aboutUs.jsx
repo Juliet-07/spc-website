@@ -1,8 +1,5 @@
 import React from "react";
-import Hero from "./about-hero.png";
 import Accordion from "../../components/Accordion";
-import Star from "./Stars.png";
-import Story from "./story.jpg"
 
 const About = () => {
   const accordionItems = [
@@ -26,7 +23,10 @@ const About = () => {
   return (
     <>
       <div className="w-full relative flex items-center justify-center">
-        <img src={Hero} className="w-full" />
+        <img
+          src="https://spc-space.ams3.cdn.digitaloceanspaces.com/aboutUs-images/about-hero.png"
+          className="w-full"
+        />
         <div className="md:w-[1180px] 2xl:w-[1400px] absolute flex flex-col md:items-center md:justify-center top-10 md:top-[300px] 2xl:top-[500px] bg-[#471A52] rounded-2xl mx-4 md:mx-0 p-4 md:p-0">
           <p className="font-semibold text-2xl text-[#E9D7FE] py-2 md:py-4">
             About us
@@ -52,7 +52,7 @@ const About = () => {
         </div>
       </div>
       <div className="mt-[200px] md:mt-[100px] pt-[300px] md:pt-0">
-        <img src={Star} />
+        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/aboutUs-images/Stars.png" />
       </div>
       {/* story */}
       <div className="w-full bg-[#F4EBFF] flex flex-col md:flex-row items-center justify-between p-4 md:p-10 2xl:px-20 mt-20">
@@ -117,7 +117,10 @@ const About = () => {
           </p> */}
         </div>
         <div className="w-full md:w-[592px] md:h-[577px] rounded-lg">
-          <img src={Story} className="object-cover rounded-lg md:h-full" />
+          <img
+            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/aboutUs-images/story.jpg"
+            className="object-cover rounded-lg md:h-full"
+          />
         </div>
       </div>
       {/* how we do it */}
@@ -297,9 +300,13 @@ const About = () => {
         </div>
         <div className="flex flex-col">
           <p className="font-semibold text-xl pt-6 md:pt-0">Office</p>
-          <p className="font-normal text-white text-base">Norrsken house Kigali, Rwanda</p>
+          <p className="font-normal text-white text-base">
+            Norrsken house Kigali, Rwanda
+          </p>
           <p className="font-semibold text-xl mt-4">Email</p>
-          <p className="font-normal text-white text-base">support@silverspoonuniverse.com</p>
+          <p className="font-normal text-white text-base">
+            support@silverspoonuniverse.com
+          </p>
         </div>
       </div>
     </>
