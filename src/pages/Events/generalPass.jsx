@@ -53,7 +53,7 @@ const GeneralPass = () => {
     country: "",
     amount: "",
     passType: "",
-    // number_of_passes: "",
+    number_of_passes: "",
   };
   const [formDetails, setFormDetails] = useState(initialValues);
   const {
@@ -63,7 +63,7 @@ const GeneralPass = () => {
     country,
     amount,
     passType,
-    // number_of_passes,
+    number_of_passes,
   } = formDetails;
 
   const handleChange = (e) => {
@@ -223,7 +223,7 @@ const GeneralPass = () => {
                 menuPosition="fixed"
               />
             </div>
-            {/* <div className="mt-4">
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -238,7 +238,7 @@ const GeneralPass = () => {
                 value={number_of_passes}
                 onChange={handleChange}
               />
-            </div> */}
+            </div>
             <div className="mt-4">
               <button
                 type="submit"
@@ -294,12 +294,12 @@ const GeneralPass = () => {
               </span>
               <p className="px-2">{country}</p>
             </div>
-            {/* <div className="flex items-center mx-2">
+            <div className="flex items-center mx-2">
               <span className="block text-sm text-gray-700 font-medium ">
                 Number Of Passes:
               </span>
               <p className="px-2">{number_of_passes}</p>
-            </div> */}
+            </div>
           </div>
           <div className=" flex flex-col items-center justify-center">
             {/* <div className="w-20 md:w-[120px] h-20 md:h-[120px] border-4 rounded-full flex items-center justify-center border-[#00A91B]">
