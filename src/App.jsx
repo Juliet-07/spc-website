@@ -19,6 +19,12 @@ import CountryDelegatePass from "./pages/Events/countryPass";
 // import Emails from "./pages/email-template";
 import PaymentSuccessful from "./pages/Events/payment-successful";
 import SponsorshipPayment from "./pages/Events/payment-sponsorship";
+import CountryVipDelegatePass from "./pages/Events/countryVip";
+import GeneralPass from "./pages/Events/generalPass";
+import VipPass from "./pages/Events/vipPass";
+import ExhibitionPartnerPass from "./pages/Events/exhibitionPartner";
+import ImpactFounder from "./pages/Events/impactFounder";
+import ImpactOrg from "./pages/Events/impactOrg";
 
 function App() {
   return (
@@ -36,10 +42,46 @@ function App() {
           <Route path="/events/details" element={<Pass />} />
           <Route path="/events/partner-details" element={<PartnerPass />} />
           <Route path="/events/payment-details" element={<Payment />} />
-          <Route path="/events/sponsorship-payment-details" element={<SponsorshipPayment />} />
-          <Route path="/events/virtual-delegate-pass" element={<VirtualDelegatePass />} />
-          <Route path="/events/country-delegate-pass" element={<CountryDelegatePass />} />
-          <Route path="/events/payment-sucessful" element={<PaymentSuccessful />} />
+          <Route
+            path="/events/sponsorship-payment-details"
+            element={<SponsorshipPayment />}
+          />
+          <Route
+            path="/events/virtual-delegate-pass"
+            element={<VirtualDelegatePass />}
+          />
+          <Route
+            path="/events/country-delegate-pass"
+            element={<CountryDelegatePass />}
+          />
+          <Route
+            path="/events/country-vip-delegate-pass"
+            element={<CountryVipDelegatePass />}
+          />
+          <Route
+            path="/events/general-all-access-pass"
+            element={<GeneralPass />}
+          />
+          <Route
+            path="/events/vip-all-access-pass"
+            element={<VipPass />}
+          />
+           <Route
+            path="/events/exhibtion-partner-ticket"
+            element={<ExhibitionPartnerPass />}
+          />
+          <Route
+            path="/events/impact-founder-ticket"
+            element={<ImpactFounder />}
+          />
+          <Route
+            path="/events/impact-org-ticket"
+            element={<ImpactOrg />}
+          />
+          <Route
+            path="/events/payment-sucessful"
+            element={<PaymentSuccessful />}
+          />
           <Route path="/trainings" element={<Trainings />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact-spc" element={<Contact />} />

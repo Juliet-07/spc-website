@@ -9,8 +9,9 @@ import makeAnimated from "react-select/animated";
 import Modal from "../../components/Modal";
 import Flutterwave from "./flutterwave.png";
 import CustomFlutterWaveButton from "../../components/Flutterwave";
+import { FaCheck } from "react-icons/fa6";
 
-const CountryDelegatePass = () => {
+const CountryVipDelegatePass = () => {
   const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
   const navigate = useNavigate();
   const { handleSubmit } = useForm();
@@ -33,6 +34,10 @@ const CountryDelegatePass = () => {
     },
     {
       id: 4,
+      text: "Access to VIP networking dinner in the country of the delegate's choice",
+    },
+    {
+      id: 5,
       text: "Certificate of participation at the end of the summit",
     },
   ];
@@ -64,13 +69,13 @@ const CountryDelegatePass = () => {
     try {
       const response = await axios.post(url, {
         ...formDetails,
-        amount: "100",
-        passType: "COUNTRY DELEGATE PASS",
+        amount: "500",
+        passType: "COUNTRY VIP DELEGATE PASS",
       });
 
       console.log(response, "response");
-      let virtualPass = JSON.stringify(response.data.newForm);
-      localStorage.setItem("country-delegate-pass-details", virtualPass);
+      let countryPass = JSON.stringify(response.data.newForm);
+      localStorage.setItem("country-delegate-pass-details", countryPass);
       setModal(true);
     } catch (error) {
       console.error("Error in API call:", error);
@@ -128,10 +133,10 @@ const CountryDelegatePass = () => {
         </div>
         {/* form */}
         <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <p className="font-semibold text-4xl text-gray-900">$100</p>
-          <del className="font-semibold text-2xl text-gray-400">$200</del>
+          <p className="font-semibold text-4xl text-gray-900">$500</p>
+          <del className="font-semibold text-2xl text-gray-400">$1000</del>
           <p className="font-semibold text-gray-900 uppercase">
-            country general delegate pass
+            country vip general delegate pass
           </p>
           <form onSubmit={handleSubmit(handlePassDetails)}>
             <div className="mt-2">
@@ -223,41 +228,66 @@ const CountryDelegatePass = () => {
           setModal(false);
         }}
       >
-        <div className="w-full md:w-[500px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <div className="flex items-center justify-between">
+        <div className="w-full rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
+          <div>
             <div className="flex flex-col">
-              <p className="font-semibold text-4xl text-gray-900">$100</p>
-              <p className="font-semibold text-gray-900 uppercase pt-3">
-                country general delegate pass
+              <p className="font-semibold text-4xl text-gray-900">$500</p>
+              <p className="font-semibold text-gray-900 uppercase">
+                country vip general delegate pass
               </p>
             </div>
-            <div>
+            {/* <div>
               <img src={Flutterwave} alt="Flutterwave Logo" />
-            </div>
+            </div> */}
           </div>
-
-          <div>
-            <div className="mt-4 flex items-center">
+          {/* payment */}
+          <div className="flex items-center my-2">
+            <div className="flex items-center">
               <span className="block text-sm text-gray-700 font-medium ">
                 Full name:
               </span>
-              <p>{fullname}</p>
+              <p className="px-2">{fullname}</p>
             </div>
-            <div className="mt-6 flex items-center">
+            <div className="flex items-center mx-2">
               <span className="block text-sm text-gray-700 font-medium ">
                 Email address:
               </span>
-              <p>{email}</p>
+              <p className="px-2">{email}</p>
             </div>
-            <div className="mt-20">
-              <CustomFlutterWaveButton
-                className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"
-                name={fullname}
-                email={email}
-                amount="100"
-                phone_number={phone_number}
-              />
+            <div className="flex items-center mx-2">
+              <span className="block text-sm text-gray-700 font-medium ">
+                Phone Number:
+              </span>
+              <p className="px-2">{phone_number}</p>
             </div>
+            <div className="flex items-center mx-2">
+              <span className="block text-sm text-gray-700 font-medium ">
+                Country:
+              </span>
+              <p className="px-2">{country}</p>
+            </div>
+          </div>
+          <div className=" flex flex-col items-center justify-center">
+            {/* <div className="w-20 md:w-[120px] h-20 md:h-[120px] border-4 rounded-full flex items-center justify-center border-[#00A91B]">
+              <FaCheck size={50} color="#00A91B" />
+            </div> */}
+            {/* <p className="font-semibold text-gray-800 text-2xl md:text-4xl my-4">
+              Ticket payment successful 🥳
+            </p> */}
+            <p className="text-center md:w-[500px] md:text-xl text-gray-600">
+              Your invoice will be generated and sent to your email within the
+              next 24 hours. Thank you for your payment and participation in the{" "}
+              <b className="text-black">Africa Digital Innovations Summit.</b>
+            </p>
+            <button
+              className="w-[177px] h-[44px] bg-[#471A52] rounded-lg my-4 text-white"
+              onClick={() => {
+                setModal(false);
+                window.location.reload();
+              }}
+            >
+              Continue
+            </button>
           </div>
         </div>
       </Modal>
@@ -265,4 +295,4 @@ const CountryDelegatePass = () => {
   );
 };
 
-export default CountryDelegatePass;
+export default CountryVipDelegatePass;

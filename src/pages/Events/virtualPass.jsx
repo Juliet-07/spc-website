@@ -202,6 +202,7 @@ const VirtualDelegatePass = () => {
                     {option.label}
                   </div>
                 )}
+                menuPosition="fixed"
               />
             </div>
             <div className="my-6">

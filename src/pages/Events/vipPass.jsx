@@ -9,8 +9,9 @@ import makeAnimated from "react-select/animated";
 import Modal from "../../components/Modal";
 import Flutterwave from "./flutterwave.png";
 import CustomFlutterWaveButton from "../../components/Flutterwave";
+import { FaCheck } from "react-icons/fa6";
 
-const CountryDelegatePass = () => {
+const VipPass = () => {
   const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
   const navigate = useNavigate();
   const { handleSubmit } = useForm();
@@ -21,7 +22,7 @@ const CountryDelegatePass = () => {
   const passDetails = [
     {
       id: 1,
-      text: "Access to a physical event in any country of the delegate's choice",
+      text: "Access to all physical event in all countries in the four regions",
     },
     {
       id: 2,
@@ -29,11 +30,27 @@ const CountryDelegatePass = () => {
     },
     {
       id: 3,
-      text: "1-year free membership with Africa Digital Innovation Community",
+      text: "2-years free membership with Africa Digital Innovation Community",
     },
     {
       id: 4,
+      text: "Access to VIP networking dinner in all countries where ADIS physical events are happening",
+    },
+    {
+      id: 5,
       text: "Certificate of participation at the end of the summit",
+    },
+    {
+      id: 6,
+      text: "Access to the grand-finale part of the summit + ADIS VIP AWARD NIGHT",
+    },
+    {
+      id: 7,
+      text: "Access to the Investors forum and private meeting",
+    },
+    {
+      id: 8,
+      text: "3-days paid accomodation in Kigali for the grand finale",
     },
   ];
 
@@ -44,10 +61,18 @@ const CountryDelegatePass = () => {
     country: "",
     amount: "",
     passType: "",
+    // number_of_passes: "",
   };
   const [formDetails, setFormDetails] = useState(initialValues);
-  const { fullname, email, phone_number, country, amount, passType } =
-    formDetails;
+  const {
+    fullname,
+    email,
+    phone_number,
+    country,
+    amount,
+    passType,
+    // number_of_passes,
+  } = formDetails;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -64,13 +89,13 @@ const CountryDelegatePass = () => {
     try {
       const response = await axios.post(url, {
         ...formDetails,
-        amount: "100",
-        passType: "COUNTRY DELEGATE PASS",
+        amount: "2000",
+        passType: "VIP ALL ACCESS PASS",
       });
 
       console.log(response, "response");
-      let virtualPass = JSON.stringify(response.data.newForm);
-      localStorage.setItem("country-delegate-pass-details", virtualPass);
+      let generalPass = JSON.stringify(response.data.newForm);
+      localStorage.setItem("general-pass-details", generalPass);
       setModal(true);
     } catch (error) {
       console.error("Error in API call:", error);
@@ -108,7 +133,7 @@ const CountryDelegatePass = () => {
         <span className="text-gray-600 mx-2">Back</span>
       </Link>
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 my-6">
-        <div className="md:w-[648px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
+        <div className="md:w-[648px] h-[630px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
           <div className="font-semibold text-3xl md:text-4xl text-gray-900">
             Package Benefits
           </div>
@@ -127,11 +152,11 @@ const CountryDelegatePass = () => {
           </div>
         </div>
         {/* form */}
-        <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <p className="font-semibold text-4xl text-gray-900">$100</p>
-          <del className="font-semibold text-2xl text-gray-400">$200</del>
+        <div className="w-full md:w-[593px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
+          <p className="font-semibold text-3xl text-gray-900">$2,000</p>
+          <del className="font-semibold text-2xl text-gray-400">$4,000</del>
           <p className="font-semibold text-gray-900 uppercase">
-            country general delegate pass
+            vip all access pass
           </p>
           <form onSubmit={handleSubmit(handlePassDetails)}>
             <div className="mt-2">
@@ -206,7 +231,23 @@ const CountryDelegatePass = () => {
                 menuPosition="fixed"
               />
             </div>
-            <div className="my-6">
+            {/* <div className="mt-4">
+              <label
+                htmlFor="phone-number"
+                className="block text-sm text-gray-700 font-medium"
+              >
+                Number Of Passess
+              </label>
+              <input
+                type="number"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-[#471A52] focus:ring-[#471A52]/60 focus:outline-none focus:ring focus:ring-opacity-40"
+                placeholder="Enter the number of tickets you would like to purchase"
+                name="number_of_passes"
+                value={number_of_passes}
+                onChange={handleChange}
+              />
+            </div> */}
+            <div className="mt-4">
               <button
                 type="submit"
                 className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"
@@ -223,41 +264,72 @@ const CountryDelegatePass = () => {
           setModal(false);
         }}
       >
-        <div className="w-full md:w-[500px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <div className="flex items-center justify-between">
+        <div className="w-full rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
+          <div>
             <div className="flex flex-col">
-              <p className="font-semibold text-4xl text-gray-900">$100</p>
-              <p className="font-semibold text-gray-900 uppercase pt-3">
-                country general delegate pass
+              <p className="font-semibold text-4xl text-gray-900">$2,000</p>
+              <p className="font-semibold text-gray-900 uppercase">
+                vip all access pass
               </p>
             </div>
-            <div>
+            {/* <div>
               <img src={Flutterwave} alt="Flutterwave Logo" />
-            </div>
+            </div> */}
           </div>
-
-          <div>
-            <div className="mt-4 flex items-center">
+          {/* payment */}
+          <div className="flex items-center my-2">
+            <div className="flex items-center">
               <span className="block text-sm text-gray-700 font-medium ">
                 Full name:
               </span>
-              <p>{fullname}</p>
+              <p className="px-2">{fullname}</p>
             </div>
-            <div className="mt-6 flex items-center">
+            <div className="flex items-center mx-2">
               <span className="block text-sm text-gray-700 font-medium ">
                 Email address:
               </span>
-              <p>{email}</p>
+              <p className="px-2">{email}</p>
             </div>
-            <div className="mt-20">
-              <CustomFlutterWaveButton
-                className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"
-                name={fullname}
-                email={email}
-                amount="100"
-                phone_number={phone_number}
-              />
+            <div className="flex items-center mx-2">
+              <span className="block text-sm text-gray-700 font-medium ">
+                Phone Number:
+              </span>
+              <p className="px-2">{phone_number}</p>
             </div>
+            <div className="flex items-center mx-2">
+              <span className="block text-sm text-gray-700 font-medium ">
+                Country:
+              </span>
+              <p className="px-2">{country}</p>
+            </div>
+            {/* <div className="flex items-center mx-2">
+              <span className="block text-sm text-gray-700 font-medium ">
+                Number Of Passes:
+              </span>
+              <p className="px-2">{number_of_passes}</p>
+            </div> */}
+          </div>
+          <div className=" flex flex-col items-center justify-center">
+            {/* <div className="w-20 md:w-[120px] h-20 md:h-[120px] border-4 rounded-full flex items-center justify-center border-[#00A91B]">
+              <FaCheck size={50} color="#00A91B" />
+            </div> */}
+            {/* <p className="font-semibold text-gray-800 text-2xl md:text-4xl my-4">
+              Ticket payment successful 🥳
+            </p> */}
+            <p className="text-center md:w-[500px] md:text-xl text-gray-600">
+              Your invoice will be generated and sent to your email within the
+              next 24 hours. Thank you for your payment and participation in the{" "}
+              <b className="text-black">Africa Digital Innovations Summit.</b>
+            </p>
+            <button
+              className="w-[177px] h-[44px] bg-[#471A52] rounded-lg my-4 text-white"
+              onClick={() => {
+                setModal(false);
+                window.location.reload();
+              }}
+            >
+              Continue
+            </button>
           </div>
         </div>
       </Modal>
@@ -265,4 +337,4 @@ const CountryDelegatePass = () => {
   );
 };
 
-export default CountryDelegatePass;
+export default VipPass;
