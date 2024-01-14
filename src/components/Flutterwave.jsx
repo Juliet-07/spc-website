@@ -33,7 +33,8 @@ const CustomFlutterWaveButton = ({
 
   const config = {
     // FLWPUBK-c6f724817c1f64161aca009fa198bb17-X
-    public_key: "FLWPUBK_TEST-94613899ad48523e9213a1351b5e9505-X",
+    // FLWPUBK_TEST-94613899ad48523e9213a1351b5e9505-X
+    public_key: "FLWPUBK-c6f724817c1f64161aca009fa198bb17-X",
     tx_ref: Date.now(),
     amount: parseInt(convertAmount()),
     currency: selectedCurrency,
