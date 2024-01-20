@@ -16,7 +16,6 @@ import TalentDetail from "./pages/Community/talent-details";
 import Payment from "./pages/Events/payment-pass";
 import VirtualDelegatePass from "./pages/Events/virtualPass";
 import CountryDelegatePass from "./pages/Events/countryPass";
-// import Emails from "./pages/email-template";
 import PaymentSuccessful from "./pages/Events/payment-successful";
 import SponsorshipPayment from "./pages/Events/payment-sponsorship";
 import CountryVipDelegatePass from "./pages/Events/countryVip";
@@ -25,6 +24,7 @@ import VipPass from "./pages/Events/vipPass";
 import ExhibitionPartnerPass from "./pages/Events/exhibitionPartner";
 import ImpactFounder from "./pages/Events/impactFounder";
 import ImpactOrg from "./pages/Events/impactOrg";
+import Emails from "./pages/email-template";
 
 function App() {
   return (
@@ -62,11 +62,8 @@ function App() {
             path="/events/general-all-access-pass"
             element={<GeneralPass />}
           />
+          <Route path="/events/vip-all-access-pass" element={<VipPass />} />
           <Route
-            path="/events/vip-all-access-pass"
-            element={<VipPass />}
-          />
-           <Route
             path="/events/exhibtion-partner-ticket"
             element={<ExhibitionPartnerPass />}
           />
@@ -74,10 +71,7 @@ function App() {
             path="/events/impact-founder-ticket"
             element={<ImpactFounder />}
           />
-          <Route
-            path="/events/impact-org-ticket"
-            element={<ImpactOrg />}
-          />
+          <Route path="/events/impact-org-ticket" element={<ImpactOrg />} />
           <Route
             path="/events/payment-sucessful"
             element={<PaymentSuccessful />}
@@ -85,7 +79,7 @@ function App() {
           <Route path="/trainings" element={<Trainings />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact-spc" element={<Contact />} />
-          {/* <Route path="/email-newsletter" element={<Emails />} /> */}
+          <Route path="/email-newsletter" element={<Emails />} />
         </Routes>
       </Layout>
     </>

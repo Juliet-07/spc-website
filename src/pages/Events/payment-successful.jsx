@@ -17,7 +17,7 @@ const PaymentSuccessful = () => {
           <b className="text-black">Africa Digital Innovations Summit.</b>
         </p>
         <button className="w-[177px] h-[44px] bg-[#471A52] rounded-lg my-4 text-white">
-          Continue
+          Confirm
         </button>
       </div>
     </div>

@@ -153,9 +153,9 @@ const Events = () => {
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/juliet.png",
-      name: "Juliet Ibrahim",
-      title: "Bilingual Actress",
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/oyin.jpeg",
+      name: "Oyin Selebo",
+      title: "Managing Director, Techstars Lagos",
     },
   ];
   const delegatePass = [
@@ -632,7 +632,7 @@ const Events = () => {
                   className="object-cover rounded"
                 />
               </div>
-              <p className="text-lg md:text-xl text-gray-900 font-semibold">
+              <p className="text-lg md:text-xl text-gray-900 font-semibold pt-3">
                 {speak.name}
               </p>
               <p className="text-sm text-gray-500 font-normal">{speak.title}</p>
