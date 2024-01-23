@@ -141,15 +141,15 @@ const Events = () => {
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kwame.jpeg",
-      name: "Kwame AA Opoku",
-      title: "Futurist, Web 3.0 Builder",
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/william.jpeg",
+      name: "William Senyo",
+      title: "Co-founder and CEO of Impact Hub Accra",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf.png",
-      name: "Yussouf Ntwali",
-      title: "CEO at BAG",
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/vivens.jpg",
+      name: "Vivens Uwizeyimana",
+      title: "CEO Umurava",
     },
     {
       image:
@@ -604,12 +604,12 @@ const Events = () => {
             autoplaySpeed={2000} // Set autoplay speed in milliseconds (e.g., 3000ms or 3s)
           >
             {speakers.map((speak) => (
-              <div className="flex flex-col items-center justify-center">
-                <div className="w-full h-[248.4px]">
+              <div className="flex flex-col items-center justify-center h-[400px]">
+                <div className="w-full h-full">
                   <img
                     src={speak.image}
                     alt={speak.name}
-                    className="object-cover rounded-full"
+                    className="object-cover rounded w-full h-full"
                   />
                 </div>
                 <p className="text-lg md:text-xl text-gray-900 font-semibold">
@@ -629,10 +629,10 @@ const Events = () => {
                 <img
                   src={speak.image}
                   alt={speak.name}
-                  className="object-cover rounded"
+                  className="object-cover rounded w-full h-full"
                 />
               </div>
-              <p className="text-lg md:text-xl text-gray-900 font-semibold pt-3">
+              <p className="text-lg md:text-xl text-gray-900 font-semibold">
                 {speak.name}
               </p>
               <p className="text-sm text-gray-500 font-normal">{speak.title}</p>
@@ -790,7 +790,7 @@ const Events = () => {
                 <img
                   src={speaker.image}
                   alt={speaker.name}
-                  className="object-cover rounded-2xl"
+                  className="object-cover rounded-2xl w-full h-full"
                 />
               </div>
               <p className="font-semibold text-lg md:text-xl text-gray-900 mt-2">
