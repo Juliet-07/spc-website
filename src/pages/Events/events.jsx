@@ -221,17 +221,6 @@ const Events = () => {
   ];
   const delegatePass = [
     {
-      discount: "2",
-      price: "4",
-      title: "Virtual delegate pass",
-      reasons: [
-        "Access to the live-streaming for ADIS across all countries",
-        "6-months free membership with Africa Digital Innovation Community",
-        "Certificate of participation at the end of the summit",
-        "Chance to win an all expense paid ticket to the grand-finale",
-      ],
-    },
-    {
       discount: "40",
       price: "80",
       title: "Virtual delegate pass",
@@ -241,6 +230,7 @@ const Events = () => {
         "Certificate of participation at the end of the summit",
         "Chance to win an all expense paid ticket to the grand-finale",
       ],
+      path: "/events/virtual-delegate-pass",
     },
     {
       discount: "100",
@@ -252,20 +242,22 @@ const Events = () => {
         "1-year free membership with Africa Digital Innovation Community",
         "Certificate of participation at the end of the summit",
       ],
+      path: "/events/country-delegate-pass",
     },
     {
       discount: "500",
-      price: "1000",
+      price: "1,000",
       title: "country vip general delegate pass",
       reasons: [
         "All the benefits in the Country General Delegate Pass",
         "Access to VIP networking dinner in the country of delegates' choice",
         "Certificate of participation at the end of the summit",
       ],
+      path: "/events/country-vip-delegate-pass",
     },
     {
-      discount: "1000",
-      price: "2000",
+      discount: "1,000",
+      price: "2,000",
       title: "General all access pass",
       reasons: [
         "Access to all physical events in the four regions",
@@ -275,16 +267,18 @@ const Events = () => {
         "Certificate of participation at the end of the summit",
         "Access to the grand-finale & VIP Award Night",
       ],
+      path: "/events/general-all-access-pass",
     },
     {
-      discount: "2000",
-      price: "4000",
+      discount: "2,000",
+      price: "4,000",
       title: "vip all access pass",
       reasons: [
         "All benefits in the General All Access Pass ",
         "Access to the investors forum and private meeting.",
         "3-days paid accommodation in Kigali for the grand-finale",
       ],
+      path: "/events/vip-all-access-pass",
     },
   ];
   const partnerPackage = [
@@ -533,7 +527,7 @@ const Events = () => {
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#000000]/40 to-[#1E1E1E]/50 z-[2]"></div>
         <div className="flex flex-col relative z-[3]">
           <p className="text-xl text-gray-300 font-semibold py-2">
-            Africa Digital Innovative Summit . March 2024
+            Africa Digital Innovation Summit . March 2024
           </p>
           <p className="text-4xl font-semibold text-gray-200 w-[574px] mb-2">
             Promoting Africa Free Trade Zone using Digital Transformation.
@@ -790,7 +784,7 @@ const Events = () => {
                 ))}
               </div>
               <button
-                onClick={() => handleViewDetails(pass)}
+                onClick={() => navigate(pass.path)}
                 className="w-full h-[48px] bg-[#471A52] rounded-lg text-white font-semibold"
               >
                 View details

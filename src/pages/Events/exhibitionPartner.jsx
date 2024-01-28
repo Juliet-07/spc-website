@@ -101,7 +101,7 @@ const ExhibitionPartnerPass = () => {
       })
       .then((response) => {
         console.log(response, "response");
-        let partners = JSON.stringify(response.data.newForm);
+        let partners = JSON.stringify(response.data);
         localStorage.setItem("sponsorship-pass-details", partners);
         setModal(true);
       });
@@ -160,7 +160,7 @@ const ExhibitionPartnerPass = () => {
                 required
               />
             </div>
-            <div className="mt-2">
+            <div className="mt-4">
               <label
                 htmlFor="email"
                 className="block text-sm text-gray-700 font-medium "
@@ -177,7 +177,7 @@ const ExhibitionPartnerPass = () => {
                 required
               />
             </div>
-            <div className="mt-2">
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -193,7 +193,7 @@ const ExhibitionPartnerPass = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="mt-2">
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -209,7 +209,7 @@ const ExhibitionPartnerPass = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="mt-2">
+            <div className="mt-4">
               <label
                 htmlFor="countries-of-participation"
                 className="block text-sm text-gray-700 font-medium"
@@ -224,7 +224,7 @@ const ExhibitionPartnerPass = () => {
                 menuPosition="fixed"
               />
             </div>
-            <div className="mt-2">
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -289,7 +289,7 @@ const ExhibitionPartnerPass = () => {
           <div className=" flex flex-col items-center justify-center">
             <p className="text-center md:w-[500px] md:text-xl text-gray-600">
               Your invoice will be generated and sent to your email within the
-              next 24 hours. Thank you for your payment and participation in the{" "}
+              next 48 - 72 hours. Thank you for your payment and participation in the{" "}
               <b className="text-black">Africa Digital Innovations Summit.</b>
             </p>
             <button

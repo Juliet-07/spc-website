@@ -4,6 +4,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
 import { IoMdCheckmark } from "react-icons/io";
 import { useForm } from "react-hook-form";
+import Select from "react-select";
+import Modal from "../../components/Modal";
 
 const PartnerPass = () => {
   const location = useLocation();
@@ -12,6 +14,25 @@ const PartnerPass = () => {
   const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
   const { handleSubmit } = useForm();
   const navigate = useNavigate();
+  const [selectedCountries, setSelectedCountries] = useState(null);
+  const [modal, setModal] = useState(false);
+
+  const countries = [
+    "Morocco",
+    "Ghana",
+    "Nigeria",
+    "South Africa",
+    "Namibia",
+    "Kenya",
+    "Uganda",
+    "Rwanda",
+    "Tanzania",
+    "Mauritius",
+  ];
+  const countriesOptions = countries.map((country) => ({
+    label: country,
+    value: country,
+  }));
 
   const initialValues = {
     company_Name: "",
@@ -20,6 +41,7 @@ const PartnerPass = () => {
     amount: "",
     company_location: "",
     passType: "",
+    countries_of_participation: "",
     brief_description: "",
   };
   const [formDetails, setFormDetails] = useState(initialValues);
@@ -38,21 +60,33 @@ const PartnerPass = () => {
     setFormDetails({ ...formDetails, [name]: value });
   };
 
+  const handleCountryChange = (selectedOptions) => {
+    setSelectedCountries(selectedOptions);
+    const selectedCountriesArray = selectedOptions.map(
+      (option) => option.value
+    );
+    setFormDetails({
+      ...formDetails,
+      countries_of_participation: selectedCountriesArray,
+    });
+  };
+
   const handlePassDetails = async () => {
     const url = `${apiURL}/events/sponsorship`;
     await axios
       .post(url, {
         ...formDetails,
-        amount: passDetails.price,
+        amount: passDetails.discount,
         passType: passDetails.title,
       })
       .then((response) => {
         console.log(response, "response");
-        let partners = JSON.stringify(response.data.newForm);
+        let partners = JSON.stringify(response.data);
         localStorage.setItem("sponsorship-pass-details", partners);
-        navigate("/events/sponsorship-payment-details", {
-          state: { passDetails: passDetails },
-        });
+        // navigate("/events/sponsorship-payment-details", {
+        //   state: { passDetails: passDetails },
+        // });
+        setModal(true);
       });
   };
 
@@ -88,11 +122,11 @@ const PartnerPass = () => {
           </div>
         </div>
         {/* form */}
-        <div className="w-full md:w-[593px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
+        <div className="w-full md:w-[593px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-6">
           <p className="font-semibold text-4xl text-gray-900">
-            {passDetails.price}
+            {passDetails.discount}
           </p>
-          <p className="font-semibold text-gray-900 uppercase pt-3">
+          <p className="font-semibold text-gray-900 uppercase">
             {passDetails.title}
           </p>
           <form onSubmit={handleSubmit(handlePassDetails)}>
@@ -113,7 +147,7 @@ const PartnerPass = () => {
                 required
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
               <label
                 htmlFor="email"
                 className="block text-sm text-gray-700 font-medium "
@@ -130,7 +164,7 @@ const PartnerPass = () => {
                 required
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -146,7 +180,7 @@ const PartnerPass = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -162,7 +196,22 @@ const PartnerPass = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="mt-6">
+            <div className="mt-4">
+              <label
+                htmlFor="countries-of-participation"
+                className="block text-sm text-gray-700 font-medium"
+              >
+                Countries of Participation
+              </label>
+              <Select
+                isMulti
+                options={countriesOptions}
+                value={selectedCountries}
+                onChange={handleCountryChange}
+                menuPosition="fixed"
+              />
+            </div>
+            <div className="mt-4">
               <label
                 htmlFor="phone-number"
                 className="block text-sm text-gray-700 font-medium"
@@ -187,6 +236,63 @@ const PartnerPass = () => {
             </div>
           </form>
         </div>
+        <Modal
+          isVisible={modal}
+          onClose={() => {
+            setModal(false);
+          }}
+        >
+          <div className="w-full rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
+            <div>
+              <div className="flex flex-col">
+                <p className="font-semibold text-4xl text-gray-900">
+                  ${passDetails.discount}
+                </p>
+                <p className="font-semibold text-gray-900 uppercase">
+                  {passDetails.title}
+                </p>
+              </div>
+            </div>
+            {/* invoice */}
+            <div className="flex items-center my-2">
+              <div className="flex items-center">
+                <span className="block text-sm text-gray-700 font-medium ">
+                  Company Name:
+                </span>
+                <p className="px-2">{company_Name}</p>
+              </div>
+              <div className="flex items-center mx-2">
+                <span className="block text-sm text-gray-700 font-medium ">
+                  Email address:
+                </span>
+                <p className="px-2">{company_email}</p>
+              </div>
+              <div className="flex items-center mx-2">
+                <span className="block text-sm text-gray-700 font-medium ">
+                  Country of Participation:
+                </span>
+                <p className="px-2">{company_location}</p>
+              </div>
+            </div>
+            <div className=" flex flex-col items-center justify-center">
+              <p className="text-center md:w-[500px] md:text-xl text-gray-600">
+                Your invoice will be generated and sent to your email within the
+                next 48 - 72 hours. Thank you for your payment and participation
+                in the{" "}
+                <b className="text-black">Africa Digital Innovations Summit.</b>
+              </p>
+              <button
+                className="w-[177px] h-[44px] bg-[#471A52] rounded-lg my-4 text-white"
+                onClick={() => {
+                  setModal(false);
+                  window.location.reload();
+                }}
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </Modal>
       </div>
     </div>
   );

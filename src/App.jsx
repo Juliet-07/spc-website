@@ -64,7 +64,7 @@ function App() {
           />
           <Route path="/events/vip-all-access-pass" element={<VipPass />} />
           <Route
-            path="/events/exhibtion-partner-ticket"
+            path="/events/exhibition-partner-ticket"
             element={<ExhibitionPartnerPass />}
           />
           <Route
