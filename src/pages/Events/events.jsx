@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { IoMdCheckmark } from "react-icons/io";
 import Slider from "react-slick";
@@ -59,6 +59,7 @@ const MomentsCarousel = () => {
 };
 
 const Events = () => {
+  const delegatePassRef = useRef(null);
   const navigate = useNavigate();
   const [countdown, setCountdown] = useState({
     days: 0,
@@ -156,6 +157,66 @@ const Events = () => {
         "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/oyin.jpeg",
       name: "Oyin Selebo",
       title: "Managing Director, Techstars Lagos",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/gbolade",
+      name: "Gbolade Okeowo",
+      title: "Vice President, Kuramo Capital Management",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/solomon.jpeg",
+      name: "Solomon Adjei",
+      title: "President, Association of Ghana Startups",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kevin.jpeg",
+      name: "Kevin Simmons",
+      title: "General Partner, Loftyinc Capital Management",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/maged.jpeg",
+      name: "Maged Harby",
+      title: "General Manager, EdVentures",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/ebenezer.jpeg",
+      name: "Ebenezer Ghanney",
+      title: "Founder & CEO, Wewire Africa",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/ntwali.jpeg",
+      name: "Yussouf Ntwali",
+      title: "CEO of Bag, Convener Startups in Rwanda",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/karen.jpeg",
+      name: "Karen Serem Waithaka",
+      title: "Chief Investment Officer, Catalyst Funds",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/melfi.jpeg",
+      name: "Gian-Marco Melfi",
+      title: "Investment Principal, Onebio Venture Studio",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/davidson.jpeg",
+      name: "Davidson Oturu",
+      title: "Managing Director, Nubia Capital",
+    },
+    {
+      image:
+        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/mark.jpeg",
+      name: "Mark Kleyner",
+      title: "Co-founder, Dream VC",
     },
   ];
   const delegatePass = [
@@ -444,6 +505,12 @@ const Events = () => {
     navigate("/events/partner-details", { state: { pass } });
   };
 
+  const handleScrollToDelegatePass = () => {
+    if (delegatePassRef.current) {
+      delegatePassRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div
@@ -486,7 +553,10 @@ const Events = () => {
               <p className="text-xs font-normal text-gray-400">Seconds</p>
             </div>
           </div>
-          <button className="w-full md:w-[105px] h-10 text-white font-semibold md:font-medium bg-[#471A52] rounded-lg">
+          <button
+            className="w-full md:w-[105px] h-10 text-white font-semibold md:font-medium bg-[#471A52] rounded-lg"
+            onClick={handleScrollToDelegatePass}
+          >
             Get pass
           </button>
         </div>
@@ -531,7 +601,10 @@ const Events = () => {
                   <p className="text-xs font-normal text-gray-400">Seconds</p>
                 </div>
               </div>
-              <button className="w-full h-[48px] text-[#471A52] font-semibold md:font-medium bg-white rounded-xl">
+              <button
+                className="w-full h-[48px] text-[#471A52] font-semibold md:font-medium bg-white rounded-xl"
+                onClick={handleScrollToDelegatePass}
+              >
                 Get Pass
               </button>
             </div>
@@ -664,7 +737,10 @@ const Events = () => {
         <VideoComponent />
       </div>
       {/* Delegate pass and sponsorship */}
-      <div className="w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 mt-6">
+      <div
+        ref={delegatePassRef}
+        className="w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20 mt-6"
+      >
         <div className="font-semibold text-3xl md:text-4xl text-gray-900">
           Delegates pass and Sponsorship packages
         </div>

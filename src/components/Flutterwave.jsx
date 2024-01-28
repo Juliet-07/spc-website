@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FlutterWaveButton, closePaymentModal } from "flutterwave-react-v3";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const CustomFlutterWaveButton = ({
   name,
@@ -15,7 +16,8 @@ const CustomFlutterWaveButton = ({
   // exchangeRates
   const exchangeRates = {
     USD: 1,
-    NGN: 1279,
+    NGN: 1400,
+    // NGN: 1000,
     GHS: 13,
     KES: 167,
     RWF: 1345,
@@ -32,8 +34,7 @@ const CustomFlutterWaveButton = ({
   };
 
   const config = {
-    // FLWPUBK-c6f724817c1f64161aca009fa198bb17-X
-    // FLWPUBK_TEST-94613899ad48523e9213a1351b5e9505-X
+    // public_key: "FLWPUBK_TEST-94613899ad48523e9213a1351b5e9505-X",
     public_key: "FLWPUBK-c6f724817c1f64161aca009fa198bb17-X",
     tx_ref: Date.now(),
     amount: parseInt(convertAmount()),
@@ -51,16 +52,49 @@ const CustomFlutterWaveButton = ({
     },
   };
 
+  // function to send payment notification to the backend
+  const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const handlePaymentCallback = async (response) => {
+    const url = `${apiURL}/events/delegates-pass/update-payment-status`;
+    console.log(response);
+    closePaymentModal(); // this will close the modal programmatically
+    if (response.status === "successful" || response.status === "completed") {
+      try {
+        const paymentData = {
+          status: response.status,
+          fullname: name,
+          email: email,
+          amount: convertAmount(),
+          // amount: parseInt(convertAmount()),
+          // phone_number: phone_number,
+        };
+        // Make an API call to your backend to notify about the payment status
+        await axios.post(url, paymentData);
+        navigate("/events/payment-sucessful");
+      } catch (error) {
+        console.error("Error notifying backend:", error);
+        // Handle error (e.g., display an error message to the user)
+      }
+    }
+  };
+
+  // const fwConfig = {
+  //   ...config,
+  //   text: `Pay ${selectedCurrency}${convertAmount()} with Flutterwave!`,
+  //   callback: (response) => {
+  //     console.log(response);
+  //     closePaymentModal(); // this will close the modal programmatically
+  //     if (response.status === "successful" || "completed") {
+  //       navigate("/events/payment-sucessful");
+  //     }
+  //   },
+  //   onClose: () => {},
+  // };
+
   const fwConfig = {
     ...config,
     text: `Pay ${selectedCurrency}${convertAmount()} with Flutterwave!`,
-    callback: (response) => {
-      console.log(response);
-      closePaymentModal(); // this will close the modal programmatically
-      if (response.status === "successful" || "completed") {
-        navigate("/events/payment-sucessful");
-      }
-    },
+    callback: handlePaymentCallback,
     onClose: () => {},
   };
 

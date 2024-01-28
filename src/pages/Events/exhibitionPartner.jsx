@@ -22,7 +22,7 @@ const ExhibitionPartnerPass = () => {
     },
     {
       id: 2,
-      text: "Access to PCO, to guide you on idfferent exhibition designs to use",
+      text: "Access to PCO, to guide you on different exhibition designs to use",
     },
     {
       id: 3,
