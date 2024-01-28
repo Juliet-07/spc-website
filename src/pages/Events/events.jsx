@@ -221,6 +221,17 @@ const Events = () => {
   ];
   const delegatePass = [
     {
+      discount: "2",
+      price: "4",
+      title: "Virtual delegate pass",
+      reasons: [
+        "Access to the live-streaming for ADIS across all countries",
+        "6-months free membership with Africa Digital Innovation Community",
+        "Certificate of participation at the end of the summit",
+        "Chance to win an all expense paid ticket to the grand-finale",
+      ],
+    },
+    {
       discount: "40",
       price: "80",
       title: "Virtual delegate pass",
