@@ -663,7 +663,7 @@ const Events = () => {
       {/* Host */}
       <div className="flex items-center justify-center my-10 px-4">
         <div className="flex flex-col items-center justify-center">
-          <p className="font-semibold text-3xl md:text-4xl text-gray-900 font-[Exo2] my-4 text-center">Chief Host for African Digital Innovation Summit</p>
+          <p className="font-semibold text-3xl md:text-4xl text-gray-900 font-[Exo2] my-4 text-center">Chief Host for Africa Digital Innovation Summit</p>
           <div className="md:w-[1000px] md:h-[500px] rounded overflow-hidden">
             <img
               src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/blessing.jpeg" // Replace "host_image_url.jpg" with the URL of the host's image
