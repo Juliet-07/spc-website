@@ -660,6 +660,26 @@ const Events = () => {
           </div>
         </div>
       </div>
+      {/* Host */}
+      <div className="flex items-center justify-center my-10 px-4">
+        <div className="flex flex-col items-center justify-center">
+          <p className="font-semibold text-3xl md:text-4xl text-gray-900 font-[Exo2] my-4 text-center">Chief Host for African Digital Innovation Summit</p>
+          <div className="md:w-[1000px] md:h-[500px] rounded overflow-hidden">
+            <img
+              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/blessing.jpeg" // Replace "host_image_url.jpg" with the URL of the host's image
+              alt="Host Name"
+              className="object-contain w-full h-full rounded"
+            />
+          </div>
+          <p className="text-lg md:text-2xl text-gray-900 font-semibold my-2">
+            Blessing Abeng
+          </p>
+          <p className="text-lg text-gray-500 font-normal text-center">
+            Branding and communications Expert, Forbes 30 under 30 Africa.
+          </p>
+        </div>
+      </div>
+
       {/* speakers */}
       <div className="w-full bg-[#F4EBFF] flex flex-col md:items-center md:justify-center p-4 md:p-10 2xl:px-20">
         <div className="font-semibold text-3xl md:text-4xl text-gray-900 font-[Exo2]">
@@ -707,7 +727,7 @@ const Events = () => {
                 <img
                   src={speak.image}
                   alt={speak.name}
-                  className="object-cover rounded w-full h-full"
+                  className="object-fill rounded w-full h-full"
                 />
               </div>
               <p className="text-lg md:text-xl text-gray-900 font-semibold">
