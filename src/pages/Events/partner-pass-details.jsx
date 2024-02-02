@@ -196,7 +196,7 @@ const PartnerPass = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="mt-4">
+            {/* <div className="mt-4">
               <label
                 htmlFor="countries-of-participation"
                 className="block text-sm text-gray-700 font-medium"
@@ -210,7 +210,7 @@ const PartnerPass = () => {
                 onChange={handleCountryChange}
                 menuPosition="fixed"
               />
-            </div>
+            </div> */}
             <div className="mt-4">
               <label
                 htmlFor="phone-number"
@@ -267,12 +267,12 @@ const PartnerPass = () => {
                 </span>
                 <p className="px-2">{company_email}</p>
               </div>
-              <div className="flex items-center mx-2">
+              {/* <div className="flex items-center mx-2">
                 <span className="block text-sm text-gray-700 font-medium ">
                   Country of Participation:
                 </span>
                 <p className="px-2">{company_location}</p>
-              </div>
+              </div> */}
             </div>
             <div className=" flex flex-col items-center justify-center">
               <p className="text-center md:w-[500px] md:text-xl text-gray-600">
