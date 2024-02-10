@@ -70,7 +70,7 @@ const Community = () => {
   const globalExpansion = [
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/research.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/research.png" />
       ),
       title: "Research",
       description:
@@ -78,7 +78,7 @@ const Community = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/go-to.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/go-to.png" />
       ),
       title: "Go-to Market Strategy",
       description:
@@ -86,7 +86,7 @@ const Community = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/business.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/business.png" />
       ),
       title: "Business Incorporation",
       description:
@@ -94,7 +94,7 @@ const Community = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/research.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/research.png" />
       ),
       title: "Office Setup",
       description:
@@ -102,7 +102,7 @@ const Community = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/permit.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/permit.png" />
       ),
       title: "Permit & Immigration",
       description:
@@ -110,7 +110,7 @@ const Community = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/legal.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/legal.png" />
       ),
       title: "Legal Consultancy",
       description:
@@ -118,7 +118,7 @@ const Community = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/account.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/account.png" />
       ),
       title: "Accounting Services",
       description:
@@ -126,7 +126,7 @@ const Community = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/talent.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/talent.png" />
       ),
       title: "Talent Hunting & Hiring",
       description:
@@ -138,7 +138,7 @@ const Community = () => {
       <div
         className="w-full h-[514px] md:h-[671px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
-          backgroundImage: `url(${"https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/community.png"})`,
+          backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>

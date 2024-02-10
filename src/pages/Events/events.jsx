@@ -10,28 +10,28 @@ import VideoComponent from "../../components/VideoComponent";
 const MomentsCarousel = () => {
   const images = [
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment1.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment1.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment2.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment2.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment3.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment3.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment4.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment4.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment5.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment5.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment6.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment6.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment7.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment7.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment8.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment8.jpg",
     },
   ];
 
@@ -70,28 +70,28 @@ const Events = () => {
   const attendees = [
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/market.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/market.png" />
       ),
       title: "Strategic Digital Insights",
       text: "Explore how digital technologies can be strategically leveraged to boost Africa's Free Trade Zone. Uncover the latest trends, strategies, and innovations that can propel your business or initiatives forward.",
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/collaboration.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/collaboration.png" />
       ),
       title: "Fostering collaboration",
       text: "Connect with key players in the digital innovation space, including entrepreneurs, investors, and industry leaders. Forge valuable connections that can open doors to collaboration and new opportunities.",
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/opportunity.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/opportunity.png" />
       ),
       title: "Insightful Discussions",
       text: " Engage in thought-provoking discussions and panels led by industry experts and visionaries. Gain deep insights into how digital transformation can drive and promote Africa's Free Trade Zone.",
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/networking.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/networking.png" />
       ),
       title: "Collaborative Workshop",
       text: "Participate in interactive workshops designed to provide practical skills and actionable strategies. Acquire tools that you can apply to foster digital transformation within your organization or sector.",
@@ -100,121 +100,121 @@ const Events = () => {
   const speakers = [
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/frank.png",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/FRANKLIN PETERS.png",
       name: "Franklin Peters",
       title: "Founder & CEO at BoundlessPay",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/hayden.png",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/CHARMAINE HAYDEN.png",
       name: "Charmaine Hayden",
       title: "Founding Partner at Goodsoil VC",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/david.png",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/KING DAVID.png",
       name: "King David",
       title: "Founder & CEO at SPC Universe",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/janade_du_plessis.jpg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/JANADE DU PLESSIS.png",
       name: "Janade du Plessis",
       title: "Investment Banker/Co-founder at Launch Africa VC",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf_ade.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/YUSUF ADEWALE.png",
       name: "Yusuf Adewale",
       title: "CEO at Altschool Africa",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/nduka.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/NDUKA UKPABI.png",
       name: "Nduka Ukpabi",
       title: "Founder & CEO at Pluralcode",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/rutherford.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/RUTHERFORD ATAYOBO.png",
       name: "Rutherford Atayobo",
       title: "Founder & CEO Manilla Technologies",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/william.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/WILLIAM SENYO.png",
       name: "William Senyo",
       title: "Co-founder and CEO of Impact Hub Accra",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/vivens.jpg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/VIVENS UWIZEYIMANA.png",
       name: "Vivens Uwizeyimana",
       title: "CEO Umurava",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/oyin.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/OYIN SOLEBO.png",
       name: "Oyin Selebo",
       title: "Managing Director, Techstars Lagos",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/gbolade",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/GBOLADE OKEOWO.png",
       name: "Gbolade Okeowo",
       title: "Vice President, Kuramo Capital Management",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/solomon.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/SOLOMON ADJEI.png",
       name: "Solomon Adjei",
       title: "President, Association of Ghana Startups",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kevin.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/KEVIN SIMMONS.png",
       name: "Kevin Simmons",
       title: "General Partner, Loftyinc Capital Management",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/maged.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/MAGED HARBY.png",
       name: "Maged Harby",
       title: "General Manager, EdVentures",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/ebenezer.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/EBENEZER GHANNEY.png",
       name: "Ebenezer Ghanney",
       title: "Founder & CEO, Wewire Africa",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/ntwali.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/YOUSSUF NTWALI.png",
       name: "Yussouf Ntwali",
       title: "CEO of Bag, Convener Startups in Rwanda",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/karen.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/KAREN SEREM WAITHAKA.png",
       name: "Karen Serem Waithaka",
       title: "Chief Investment Officer, Catalyst Funds",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/melfi.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/GIAN-MARCO MELFI.png",
       name: "Gian-Marco Melfi",
       title: "Investment Principal, Onebio Venture Studio",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/davidson.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/DAVIDSON OTURU.png",
       name: "Davidson Oturu",
       title: "Managing Director, Nubia Capital",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/mark.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/MARK KLEYNER.png",
       name: "Mark Kleyner",
       title: "Co-founder, Dream VC",
     },
@@ -444,31 +444,31 @@ const Events = () => {
   ];
   const sponsors = [
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Oneliquidity%20svg.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/Oneliquidity.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/obiex.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/obiex.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Consummate%20Traders%20svg.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/Consummate.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/boundlesspay.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/boundlesspay.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/pluralcode.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/pluralcode.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/sportrex.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/sportrex.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/manilla.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/manilla.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/tekedia.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/Tekedia.png",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/altSchool.png",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/AltSchool.png",
     },
   ];
   useEffect(() => {
@@ -521,7 +521,7 @@ const Events = () => {
       <div
         className="hidden w-full h-[850px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
-          backgroundImage: `url(${"https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/events-hero.png"})`,
+          backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis.png"})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-gradient-to-r from-[#000000]/40 to-[#1E1E1E]/50 z-[2]"></div>
@@ -663,10 +663,12 @@ const Events = () => {
       {/* Host */}
       <div className="flex items-center justify-center my-10 px-4">
         <div className="flex flex-col items-center justify-center">
-          <p className="font-semibold text-3xl md:text-4xl text-gray-900 font-[Exo2] my-4 text-center">Chief Host for Africa Digital Innovation Summit</p>
+          <p className="font-semibold text-3xl md:text-4xl text-gray-900 font-[Exo2] my-4 text-center">
+            Chief Host for Africa Digital Innovation Summit
+          </p>
           <div className="md:w-[1000px] md:h-[500px] rounded overflow-hidden">
             <img
-              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/blessing.jpeg" // Replace "host_image_url.jpg" with the URL of the host's image
+              src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/BLESSING ABENG.png" // Replace "host_image_url.jpg" with the URL of the host's image
               alt="Host Name"
               className="object-contain w-full h-full rounded"
             />
@@ -909,41 +911,41 @@ const Events = () => {
         </p>
         <div className="grid grid-cols-4 gap-10 my-6">
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Oneliquidity%20svg.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/Oneliquidity.png"
             alt="OneLiquidity"
           />
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/obiex.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/obiex.png"
             alt="Obiex"
           />
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/Consummate%20Traders%20svg.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/Consummate.png"
             alt="Traders"
           />
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/boundlesspay.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/boundlesspay.png"
             alt="Boundlesspay"
           />
         </div>
         <div className="grid grid-cols-5 gap-10 my-6">
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/pluralcode.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/pluralcode.png"
             alt="Pluralcode"
           />
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/sportrex.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/sportrex.png"
             alt="Sportrex"
           />
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/manilla.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/manilla.png"
             alt="Manilla"
           />
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/tekedia.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/Tekedia.png"
             alt="Tekedia"
           />
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/altSchool.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/AltSchool.png"
             alt="Altschool"
           />
         </div>
@@ -982,14 +984,14 @@ const Events = () => {
         </div>
         <div className="md:w-[400px] h-2 bg-[#471A52] mt-2"></div>
         <div className="hidden md:grid grid-cols-4 my-6">
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment1.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment2.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment3.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment4.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment5.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment6.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment7.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/moment8.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment1.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment2.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment3.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment4.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment5.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment6.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment7.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/moment8.jpg" />
         </div>
         {/* Display carousel on smaller screens */}
         <div className="md:hidden mt-10">

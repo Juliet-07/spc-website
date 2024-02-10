@@ -24,7 +24,7 @@ const About = () => {
     <>
       <div className="w-full relative flex items-center justify-center">
         <img
-          src="https://spc-space.ams3.cdn.digitaloceanspaces.com/aboutUs-images/about-hero.png"
+          src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/about-hero.png"
           className="w-full"
         />
         <div className="md:w-[1180px] 2xl:w-[1400px] absolute flex flex-col md:items-center md:justify-center top-10 md:top-[300px] 2xl:top-[500px] bg-[#471A52] rounded-2xl mx-4 md:mx-0 p-4 md:p-0">
@@ -52,7 +52,7 @@ const About = () => {
         </div>
       </div>
       <div className="mt-[200px] md:mt-[100px] pt-[300px] md:pt-0">
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/aboutUs-images/Stars.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/Stars.png" />
       </div>
       {/* story */}
       <div className="w-full bg-[#F4EBFF] flex flex-col md:flex-row items-center justify-between p-4 md:p-10 2xl:px-20 mt-20">
@@ -118,7 +118,7 @@ const About = () => {
         </div>
         <div className="w-full md:w-[592px] md:h-[577px] rounded-lg">
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/aboutUs-images/story.jpg"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/our-story.jpg"
             className="object-cover rounded-lg md:h-full"
           />
         </div>

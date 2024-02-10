@@ -8,28 +8,28 @@ import "slick-carousel/slick/slick-theme.css";
 const MomentsCarousel = () => {
   const images = [
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment1.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment1.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment2.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment2.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment3.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment3.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment4.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment4.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment5.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment5.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment6.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment6.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment7.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment7.jpg",
     },
     {
-      url: "https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment8.jpg",
+      url: "https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment8.jpg",
     },
   ];
 
@@ -60,7 +60,7 @@ const Home = () => {
   const todos = [
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/icon-community.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/community.png" />
       ),
       title: "Community",
       text: "Cultivating the world's most collaborative hub for digital innovators to unite with like-minded visionaries, fostering synergy and exchanging shared expertise.",
@@ -68,7 +68,7 @@ const Home = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/icon-events.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/events.png" />
       ),
       title: "Events",
       text: "Curate experiences that transcend borders, uniting innovators globally to inspire and learn.",
@@ -76,7 +76,7 @@ const Home = () => {
     },
     {
       icon: (
-        <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/icon-training.png" />
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/trainings.png" />
       ),
       title: "Trainings",
       text: "Empower individuals with cutting-edge skills and knowledge, breaking barriers for a limitless digital landscape",
@@ -107,7 +107,7 @@ const Home = () => {
           </div>
           <div className="w-[390px] md:w-[500px]">
             <img
-              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/world.png"
+              src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/Landing page image.png"
               alt="Global Ecosystem"
               className="animated-image"
             />
@@ -204,7 +204,7 @@ const Home = () => {
         </div>
         <div className="w-full md:w-[592px] rounded-lg">
           <img
-            src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/whoWeAre.png"
+            src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/whoWeAre.jpg"
             className="object-cover rounded-lg"
           />
         </div>
@@ -220,7 +220,7 @@ const Home = () => {
         <div className="w-full rounded-2xl flex flex-col md:flex-row border my-6">
           <div className="md:w-[432.98px] 2xl:w-[50%]">
             <img
-              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/adis.png"
+              src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/adis.png"
               alt="ADIS"
               className="rounded-xl md:h-full"
             />
@@ -262,14 +262,14 @@ const Home = () => {
         </div>
         <div className="md:w-[400px] h-2 bg-[#471A52] mt-2"></div>
         <div className="hidden md:grid grid-cols-4 my-6">
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment1.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment2.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment3.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment4.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment5.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment6.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment7.jpg" />
-          <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/home-images/moment8.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment1.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment2.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment3.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment4.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment5.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment6.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment7.jpg" />
+          <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/moment8.jpg" />
         </div>
         {/* Display carousel on smaller screens */}
         <div className="md:hidden mt-10">
