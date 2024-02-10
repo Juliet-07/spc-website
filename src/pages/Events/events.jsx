@@ -616,7 +616,7 @@ const Events = () => {
           </div>
           <div>
             <img
-              src="https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/events-hero.png"
+              src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis.png"
               alt="ADIS"
             />
           </div>
