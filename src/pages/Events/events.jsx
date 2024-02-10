@@ -166,9 +166,9 @@ const Events = () => {
     },
     {
       image:
-        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/SOLOMON ADJEI.png",
-      name: "Solomon Adjei",
-      title: "President, Association of Ghana Startups",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/MAYA HORGAN FAMODU.png",
+      name: "Maya Horgan Famodu",
+      title: "Co-founder, Ingressive Capital",
     },
     {
       image:
@@ -214,9 +214,9 @@ const Events = () => {
     },
     {
       image:
-        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/MARK KLEYNER.png",
-      name: "Mark Kleyner",
-      title: "Co-founder, Dream VC",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/ROHAN GOSWAMI.png",
+      name: "Rohan Goswami",
+      title: "Investment and Operations, Nexterra Capital",
     },
   ];
   const delegatePass = [
@@ -725,11 +725,11 @@ const Events = () => {
         <div className="hidden w-full md:grid grid-cols-5 gap-10">
           {speakers.map((speak) => (
             <div className="flex flex-col">
-              <div className="w-[248.4px] h-[248.4px] my-2">
+              <div className="w-[248.4px] h-[248.4px] my-2 rounded-xl bg-blue-300">
                 <img
                   src={speak.image}
                   alt={speak.name}
-                  className="object-fill rounded w-full h-full"
+                  className="object-contain w-full h-full"
                 />
               </div>
               <p className="text-lg md:text-xl text-gray-900 font-semibold">
