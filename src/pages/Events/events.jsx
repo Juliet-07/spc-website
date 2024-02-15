@@ -360,67 +360,67 @@ const Events = () => {
   const pastSpeakers = [
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/frank.png",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/FRANKLIN PETERS.png",
       name: "Franklin Peters",
       title: "Founder & CEO at BoundlessPay",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/chris.jpg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/chris.png",
       name: "Dr. Chris Baryomunsi",
       title: "Minister of ICT & National Guidance, Uganda",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf_ade.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/YUSUF ADEWALE.png",
       name: "Yusuf Adewale",
       title: "CEO at Altschool Africa",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/hayden.png",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/CHARMAINE HAYDEN.png",
       name: "Charmaine Hayden",
       title: "Founding Partner at Goodsoil VC",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/david.png",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/KING DAVID.png",
       name: "King David",
       title: "Founder & CEO at SPC Universe",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/paula.jpg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/paula.png",
       name: "Paula Tavengar",
       title: "Investment Principal SwissBorg Ventures",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/yusuf.png",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/YOUSSUF NTWALI.png",
       name: "Yussouf Ntwali",
       title: "CEO at BAG",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kelechi.jpg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/Kelechi.png",
       name: "Dr. Kelechi Okoro",
       title: "The Healthertainer",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/paul.jpg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/paul.png",
       name: "Paul Ezeafulukwe",
       title: "Co-founder, Mitroplus Labs, CBO Coinsher",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/kwame.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/Kwame.png",
       name: "Kwame AA Opoku",
       title: "Futurist, Web 3.0 Builder",
     },
     {
       image:
-        "https://spc-space.ams3.cdn.digitaloceanspaces.com/events-images/nduka.jpeg",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/NDUKA UKPABI.png",
       name: "Nduka Ukpabi",
       title: "Founder & CEO at Pluralcode",
     },
@@ -889,11 +889,11 @@ const Events = () => {
         <div className="w-full flex gap-4 overflow-x-auto">
           {pastSpeakers.map((speaker) => (
             <div>
-              <div className="w-[296px] h-[296px]">
+              <div className="w-[296px] h-[296px] rounded-2xl bg-blue-300">
                 <img
                   src={speaker.image}
                   alt={speaker.name}
-                  className="object-cover rounded-2xl w-full h-full"
+                  className="object-contain w-full h-full"
                 />
               </div>
               <p className="font-semibold text-lg md:text-xl text-gray-900 mt-2">
