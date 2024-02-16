@@ -63,7 +63,7 @@ const VirtualDelegatePass = () => {
       await axios
         .post(url, {
           ...formDetails,
-          amount: "40",
+          amount: "80",
           passType: "VIRTUAL DELEGATE PASS",
         })
         .then((response) => {
@@ -127,8 +127,8 @@ const VirtualDelegatePass = () => {
         </div>
         {/* form */}
         <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <p className="font-semibold text-4xl text-gray-900">$40</p>
-          <del className="font-semibold text-2xl text-gray-400">$80</del>
+          <p className="font-semibold text-4xl text-gray-900">$80</p>
+          {/* <del className="font-semibold text-2xl text-gray-400">$80</del> */}
           <p className="font-semibold text-gray-900 uppercase">
             virtual delegate pass
           </p>
@@ -225,7 +225,7 @@ const VirtualDelegatePass = () => {
         <div className="w-full md:w-[500px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
-              <p className="font-semibold text-4xl text-gray-900">$40</p>
+              <p className="font-semibold text-4xl text-gray-900">$80</p>
               <p className="font-semibold text-gray-900 uppercase pt-3">
                 virtual delegate pass
               </p>
@@ -253,7 +253,7 @@ const VirtualDelegatePass = () => {
                 className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"
                 name={fullname}
                 email={email}
-                amount="40"
+                amount="80"
                 phone_number={phone_number}
               />
             </div>

@@ -69,7 +69,7 @@ const CountryVipDelegatePass = () => {
     try {
       const response = await axios.post(url, {
         ...formDetails,
-        amount: "500",
+        amount: "1000",
         passType: "COUNTRY VIP DELEGATE PASS",
       });
 
@@ -133,8 +133,8 @@ const CountryVipDelegatePass = () => {
         </div>
         {/* form */}
         <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <p className="font-semibold text-4xl text-gray-900">$500</p>
-          <del className="font-semibold text-2xl text-gray-400">$1000</del>
+          <p className="font-semibold text-4xl text-gray-900">$1,000</p>
+          {/* <del className="font-semibold text-2xl text-gray-400">$1000</del> */}
           <p className="font-semibold text-gray-900 uppercase">
             country vip general delegate pass
           </p>
@@ -231,7 +231,7 @@ const CountryVipDelegatePass = () => {
         <div className="w-full rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
           <div>
             <div className="flex flex-col">
-              <p className="font-semibold text-4xl text-gray-900">$500</p>
+              <p className="font-semibold text-4xl text-gray-900">$1,000</p>
               <p className="font-semibold text-gray-900 uppercase">
                 country vip general delegate pass
               </p>

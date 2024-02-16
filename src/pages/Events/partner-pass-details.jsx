@@ -41,7 +41,7 @@ const PartnerPass = () => {
     amount: "",
     company_location: "",
     passType: "",
-    countries_of_participation: "",
+    countries_of_participation: [],
     brief_description: "",
   };
   const [formDetails, setFormDetails] = useState(initialValues);
@@ -76,7 +76,7 @@ const PartnerPass = () => {
     await axios
       .post(url, {
         ...formDetails,
-        amount: passDetails.discount,
+        amount: passDetails.prices,
         passType: passDetails.title,
       })
       .then((response) => {
@@ -103,7 +103,7 @@ const PartnerPass = () => {
         <span className="text-gray-600 mx-2">Back</span>
       </Link>
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 my-6">
-        <div className="md:w-[648px] md:h-[750px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
+        <div className="md:w-[648px] md:h-[680px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
           <div className="font-semibold text-3xl md:text-4xl text-gray-900">
             Package Benefits
           </div>
@@ -124,7 +124,7 @@ const PartnerPass = () => {
         {/* form */}
         <div className="w-full md:w-[593px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-6">
           <p className="font-semibold text-4xl text-gray-900">
-            {passDetails.discount}
+            {passDetails.price}
           </p>
           <p className="font-semibold text-gray-900 uppercase">
             {passDetails.title}

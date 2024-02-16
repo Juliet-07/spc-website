@@ -110,7 +110,7 @@ const Pass = () => {
         {/* form */}
         <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
           <p className="font-semibold text-4xl text-gray-900">
-            ${passDetails.discount}
+            ${passDetails.price}
           </p>
           <p className="font-semibold text-gray-900 uppercase pt-3">
             {passDetails.title}

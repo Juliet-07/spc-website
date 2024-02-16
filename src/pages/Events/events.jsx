@@ -284,7 +284,8 @@ const Events = () => {
   const partnerPackage = [
     {
       discount: "1500",
-      price: "3000",
+      price: "3,000",
+      prices:"3000",
       title: "Exhibition Partner",
       reasons: [
         "Space to build and setup exhibition stand in any country/countries of choice",
@@ -295,7 +296,8 @@ const Events = () => {
     },
     {
       discount: "5000",
-      price: "10000",
+      price: "10,000",
+      prices:"10000",
       title: "logo partner across the summit",
       reasons: [
         "Logo across all PR materials for the summit",
@@ -307,7 +309,8 @@ const Events = () => {
     },
     {
       discount: "5000",
-      price: "10000",
+      price: "10,000",
+      prices:"10000",
       title: "impact founder partnership",
       reasons: [
         "Slot to speak at region of operation and grand finale",
@@ -319,7 +322,8 @@ const Events = () => {
     },
     {
       discount: "10000",
-      price: "20000",
+      price: "20,000",
+      prices:"20000",
       title: "impact organization partnership",
       reasons: [
         "Access to all physical events in the four regions",
@@ -332,7 +336,8 @@ const Events = () => {
     },
     {
       discount: "25000",
-      price: "50000",
+      price: "50,000",
+      prices:"50000",
       title: "global expansion partner (africa)",
       reasons: [
         "Exhibition space across countries where ADIS is happening.",
@@ -345,7 +350,8 @@ const Events = () => {
     },
     {
       discount: "50000",
-      price: "100000",
+      price: "100,000",
+      prices:"100000",
       title: "global expansion partner (intl)",
       reasons: [
         "Exhibition space across countries where ADIS is happening.",
@@ -471,6 +477,7 @@ const Events = () => {
       url: "https://spcimagestorage001.blob.core.windows.net/spc-events-image/AltSchool.png",
     },
   ];
+
   useEffect(() => {
     const eventDate = new Date("March 1, 2024 00:00:00 GMT+0000").getTime();
 
@@ -772,10 +779,10 @@ const Events = () => {
           Delegates pass and Sponsorship packages
         </div>
         <div className="w-[254px] h-2 bg-[#471A52] my-2"></div>
-        <p className="font-normal text-lg text-orange-800">
+        {/* <p className="font-normal text-lg text-orange-800">
           <b>NB:</b> All offers are on 50% discount till 15th of February, 2024
-        </p>
-        <p className="font-semibold text-2xl md:text-4xl text-[#471A52] mt-2 md:my-4">
+        </p> */}
+        <p className="font-semibold text-2xl md:text-4xl text-[#471A52] my-2 md:my-4">
           Delegates pass
         </p>
         <div className="w-full flex flex-col md:grid md:grid-cols-3 gap-4 overflow-x-auto">
@@ -785,15 +792,15 @@ const Events = () => {
               className="w-full md:w-[400px] md:h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 md:m-4"
             >
               <p className="font-semibold text-5xl text-gray-900">
-                ${pass.discount}
-              </p>
-              <del className="font-semibold text-2xl text-gray-400 my-2">
                 ${pass.price}
-              </del>
+              </p>
+              {/* <del className="font-semibold text-2xl text-gray-400 my-2">
+                ${pass.price}
+              </del> */}
               <p className="font-semibold uppercase text-gray-900 p-2">
                 {pass.title}
               </p>
-              <div className="flex-grow my-4 md:my-6">
+              <div className="flex-grow my-2 md:my-4">
                 {pass.reasons.map((reason) => (
                   <div key={reason} className="flex items-center p-2">
                     <span className="w-[24px] h-[24px] rounded-full bg-[#FBEDFF] mx-3 flex items-center justify-center">
@@ -824,11 +831,11 @@ const Events = () => {
               className="md:w-[400px] h-[600px] rounded-2xl bg-white border border-gray-200 shadow-lg flex flex-col items-center p-4 py-6 m-4"
             >
               <p className="font-semibold text-5xl text-gray-900">
-                ${pass.discount}
-              </p>
-              <del className="font-semibold text-2xl text-gray-400 my-2">
                 ${pass.price}
-              </del>
+              </p>
+              {/* <del className="font-semibold text-2xl text-gray-400 my-2">
+                ${pass.price}
+              </del> */}
               <p className="font-semibold uppercase text-center text-gray-900">
                 {pass.title}
               </p>

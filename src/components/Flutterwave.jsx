@@ -16,7 +16,7 @@ const CustomFlutterWaveButton = ({
   // exchangeRates
   const exchangeRates = {
     USD: 1,
-    NGN: 1400,
+    NGN: 1500,
     // NGN: 1000,
     GHS: 13,
     KES: 167,

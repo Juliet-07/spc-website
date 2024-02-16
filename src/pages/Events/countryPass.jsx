@@ -64,7 +64,7 @@ const CountryDelegatePass = () => {
     try {
       const response = await axios.post(url, {
         ...formDetails,
-        amount: "100",
+        amount: "200",
         passType: "COUNTRY DELEGATE PASS",
       });
 
@@ -128,8 +128,8 @@ const CountryDelegatePass = () => {
         </div>
         {/* form */}
         <div className="w-full md:w-[593px] h-[554px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <p className="font-semibold text-4xl text-gray-900">$100</p>
-          <del className="font-semibold text-2xl text-gray-400">$200</del>
+          <p className="font-semibold text-4xl text-gray-900">$200</p>
+          {/* <del className="font-semibold text-2xl text-gray-400">$200</del> */}
           <p className="font-semibold text-gray-900 uppercase">
             country general delegate pass
           </p>
@@ -226,7 +226,7 @@ const CountryDelegatePass = () => {
         <div className="w-full md:w-[500px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
-              <p className="font-semibold text-4xl text-gray-900">$100</p>
+              <p className="font-semibold text-4xl text-gray-900">$200</p>
               <p className="font-semibold text-gray-900 uppercase pt-3">
                 country general delegate pass
               </p>
@@ -254,7 +254,7 @@ const CountryDelegatePass = () => {
                 className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md hover:bg-[#471A52]/70 focus:outline-none"
                 name={fullname}
                 email={email}
-                amount="100"
+                amount="200"
                 phone_number={phone_number}
               />
             </div>

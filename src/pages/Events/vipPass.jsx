@@ -89,7 +89,7 @@ const VipPass = () => {
     try {
       const response = await axios.post(url, {
         ...formDetails,
-        amount: "2000",
+        amount: "4000",
         passType: "VIP ALL ACCESS PASS",
       });
 
@@ -153,8 +153,8 @@ const VipPass = () => {
         </div>
         {/* form */}
         <div className="w-full md:w-[593px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
-          <p className="font-semibold text-3xl text-gray-900">$2,000</p>
-          <del className="font-semibold text-2xl text-gray-400">$4,000</del>
+          <p className="font-semibold text-3xl text-gray-900">$4,000</p>
+          {/* <del className="font-semibold text-2xl text-gray-400">$4,000</del> */}
           <p className="font-semibold text-gray-900 uppercase">
             vip all access pass
           </p>
@@ -267,7 +267,7 @@ const VipPass = () => {
         <div className="w-full rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4">
           <div>
             <div className="flex flex-col">
-              <p className="font-semibold text-4xl text-gray-900">$2,000</p>
+              <p className="font-semibold text-4xl text-gray-900">$4,000</p>
               <p className="font-semibold text-gray-900 uppercase">
                 vip all access pass
               </p>
