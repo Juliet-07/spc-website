@@ -1,7 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import Hero from "./contact.png";
 
 const Contact = () => {
+  const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const navigate = useNavigate();
+  const { handleSubmit } = useForm();
+
+  const initialValues = {
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone_number: "",
+    message: "",
+  };
+  const [contactDetails, setContactDetails] = useState(initialValues);
+  const { first_name, last_name, email, phone_number, message } =
+    contactDetails;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactDetails({ ...contactDetails, [name]: value });
+  };
+
+  const handleContactForm = async () => {
+    const url = `${apiURL}/contacts`;
+    try {
+      await axios.post(url, contactDetails).then((response) => {
+        console.log(response, "response");
+        // let virtualPass = JSON.stringify(response.data.newForm);
+        // localStorage.setItem("virtual-delegate-pass-details", virtualPass);
+        // setModal(true);
+      });
+    } catch (error) {
+      console.error("Error in API call:", error);
+    }
+  };
+
   return (
     <>
       <div className="w-full">
@@ -13,7 +50,10 @@ const Contact = () => {
         <p className="font-normal text-xl text-gray-500">
           We’d love to hear from you. Please fill out this form.
         </p>
-        <form className="w-full max-w-lg mt-10">
+        <form
+          className="w-full max-w-lg mt-10"
+          onSubmit={handleSubmit(handleContactForm)}
+        >
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
@@ -27,6 +67,9 @@ const Contact = () => {
                 id="grid-first-name"
                 type="text"
                 placeholder="First name"
+                name="first_name"
+                value={first_name}
+                onChange={handleChange}
               />
             </div>
             <div className="w-full md:w-1/2 px-3">
@@ -41,6 +84,9 @@ const Contact = () => {
                 id="grid-last-name"
                 type="text"
                 placeholder="Last name"
+                name="last_name"
+                value={last_name}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -57,24 +103,30 @@ const Contact = () => {
                 id="grid-password"
                 type="email"
                 placeholder="mail@gmail.com"
+                name="email"
+                value={email}
+                onChange={handleChange}
               />
             </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
-             <div className="w-full px-3">
-            <label
-              className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
-              for="grid-password"
-            >
-              Phone Number
-            </label>
-            <input
-              className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-              id="grid-password"
-              type="number"
-              placeholder="(250)1234567654321345"
-            />
-          </div>
+            <div className="w-full px-3">
+              <label
+                className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                for="grid-password"
+              >
+                Phone Number
+              </label>
+              <input
+                className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                id="grid-password"
+                type="number"
+                placeholder="(250)1234567654321345"
+                name="phone_number"
+                value={phone_number}
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
@@ -89,10 +141,18 @@ const Contact = () => {
                 rows="4"
                 className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 // placeholder="Write your thoughts here..."
+                name="message"
+                value={message}
+                onChange={handleChange}
               ></textarea>
             </div>
           </div>
-          <button className="w-full bg-[#471A52] text-white rounded-lg p-4 text-center font-semibold">Send message</button>
+          <button
+            type="submit"
+            className="w-full bg-[#471A52] text-white rounded-lg p-4 text-center font-semibold"
+          >
+            Send message
+          </button>
         </form>
       </div>
       {/* contact details */}
@@ -109,9 +169,13 @@ const Contact = () => {
         </div>
         <div className="flex flex-col">
           <p className="font-semibold text-xl pt-6 md:pt-0">Office</p>
-          <p className="font-normal text-white text-base">Norrsken house Kigali, Rwanda</p>
+          <p className="font-normal text-white text-base">
+            Norrsken house Kigali, Rwanda
+          </p>
           <p className="font-semibold text-xl mt-4">Email</p>
-          <p className="font-normal text-white text-base">support@silverspoonuniverse.com</p>
+          <p className="font-normal text-white text-base">
+            support@silverspoonuniverse.com
+          </p>
         </div>
       </div>
     </>

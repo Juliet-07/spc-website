@@ -251,6 +251,8 @@ const Events = () => {
       reasons: [
         "All the benefits in the Country General Delegate Pass",
         "Access to VIP networking dinner in the country of delegates' choice",
+        "3-days accomodation at the grand finale",
+        "Access to the grand-finale and investors forum",
         "Certificate of participation at the end of the summit",
       ],
       path: "/events/country-vip-delegate-pass",
@@ -285,7 +287,7 @@ const Events = () => {
     {
       discount: "1500",
       price: "3,000",
-      prices:"3000",
+      prices: "3000",
       title: "Exhibition Partner",
       reasons: [
         "Space to build and setup exhibition stand in any country/countries of choice",
@@ -297,7 +299,7 @@ const Events = () => {
     {
       discount: "5000",
       price: "10,000",
-      prices:"10000",
+      prices: "10000",
       title: "logo partner across the summit",
       reasons: [
         "Logo across all PR materials for the summit",
@@ -310,7 +312,7 @@ const Events = () => {
     {
       discount: "5000",
       price: "10,000",
-      prices:"10000",
+      prices: "10000",
       title: "impact founder partnership",
       reasons: [
         "Slot to speak at region of operation and grand finale",
@@ -323,7 +325,7 @@ const Events = () => {
     {
       discount: "10000",
       price: "20,000",
-      prices:"20000",
+      prices: "20000",
       title: "impact organization partnership",
       reasons: [
         "Access to all physical events in the four regions",
@@ -337,7 +339,7 @@ const Events = () => {
     {
       discount: "25000",
       price: "50,000",
-      prices:"50000",
+      prices: "50000",
       title: "global expansion partner (africa)",
       reasons: [
         "Exhibition space across countries where ADIS is happening.",
@@ -351,7 +353,7 @@ const Events = () => {
     {
       discount: "50000",
       price: "100,000",
-      prices:"100000",
+      prices: "100000",
       title: "global expansion partner (intl)",
       reasons: [
         "Exhibition space across countries where ADIS is happening.",

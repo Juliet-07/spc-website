@@ -38,7 +38,15 @@ const CountryVipDelegatePass = () => {
     },
     {
       id: 5,
+      text: "3-days accomodation at the grand finale",
+    },
+    {
+      id: 6,
       text: "Certificate of participation at the end of the summit",
+    },
+    {
+      id: 7,
+      text: "Access to the grand-finale and investors forum",
     },
   ];
 

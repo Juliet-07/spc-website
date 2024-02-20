@@ -124,7 +124,7 @@ const PartnerPass = () => {
         {/* form */}
         <div className="w-full md:w-[593px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-6">
           <p className="font-semibold text-4xl text-gray-900">
-            {passDetails.price}
+            ${passDetails.price}
           </p>
           <p className="font-semibold text-gray-900 uppercase">
             {passDetails.title}
@@ -246,7 +246,7 @@ const PartnerPass = () => {
             <div>
               <div className="flex flex-col">
                 <p className="font-semibold text-4xl text-gray-900">
-                  ${passDetails.discount}
+                  ${passDetails.price}
                 </p>
                 <p className="font-semibold text-gray-900 uppercase">
                   {passDetails.title}
@@ -254,32 +254,37 @@ const PartnerPass = () => {
               </div>
             </div>
             {/* invoice */}
-            <div className="flex items-center my-2">
+            <div className="flex flex-col md:flex-row md:items-center my-2">
               <div className="flex items-center">
-                <span className="block text-sm text-gray-700 font-medium ">
+                <p className="text-sm text-gray-700 font-medium ">
                   Company Name:
-                </span>
+                </p>
                 <p className="px-2">{company_Name}</p>
               </div>
-              <div className="flex items-center mx-2">
-                <span className="block text-sm text-gray-700 font-medium ">
+              <div className="flex items-center md:mx-2">
+                <p className=" text-sm text-gray-700 font-medium ">
                   Email address:
-                </span>
+                </p>
                 <p className="px-2">{company_email}</p>
               </div>
-              {/* <div className="flex items-center mx-2">
-                <span className="block text-sm text-gray-700 font-medium ">
+              <div className="flex items-center md:mx-2">
+                <p className=" text-sm text-gray-700 font-medium">
                   Country of Participation:
-                </span>
+                </p>
                 <p className="px-2">{company_location}</p>
-              </div> */}
+              </div>
             </div>
             <div className=" flex flex-col items-center justify-center">
-              <p className="text-center md:w-[500px] md:text-xl text-gray-600">
-                Your invoice will be generated and sent to your email within the
-                next 48 - 72 hours. Thank you for your payment and participation
-                in the{" "}
-                <b className="text-black">Africa Digital Innovations Summit.</b>
+              <p className="md:text-center md:w-[600px] text-gray-600">
+                Your request has been received, your invoice will be generated
+                and sent to you within 24 hours. Upon completion of payment,
+                kindly share proof of payment to{" "}
+                <a>events@silverspoonuniverse.com</a> for your pass to be issued
+                to you.
+                <br />
+                <br />
+                Thank you for your payment and participation in the{" "}
+                <b className="text-black">Africa Digital Innovation Summit.</b>
               </p>
               <button
                 className="w-[177px] h-[44px] bg-[#471A52] rounded-lg my-4 text-white"

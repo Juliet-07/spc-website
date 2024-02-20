@@ -125,7 +125,7 @@ const GeneralPass = () => {
         <span className="text-gray-600 mx-2">Back</span>
       </Link>
       <div className="w-full flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0 my-6">
-        <div className="md:w-[648px] h-[630px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
+        <div className="md:w-[648px] h-[600px] rounded-xl border border-gray-200 border-t-[16px] border-t-[#471A52] flex flex-col p-4 md:p-10">
           <div className="font-semibold text-3xl md:text-4xl text-gray-900">
             Package Benefits
           </div>
