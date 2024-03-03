@@ -541,7 +541,7 @@ const Events = () => {
           <p className="text-4xl font-semibold text-gray-200 w-[574px] mb-2">
             Promoting Africa Free Trade Zone using Digital Transformation.
           </p>
-          <div className="w-[344px] grid grid-cols-4 gap-0 mb-4">
+          {/* <div className="w-[344px] grid grid-cols-4 gap-0 mb-4">
             <div className="flex flex-col items-center justify-center w-[77px] h-[77px] rounded-xl bg-gray-700">
               <p className="text-2xl font-semibold text-white">
                 {countdown.days}
@@ -566,7 +566,7 @@ const Events = () => {
               </p>
               <p className="text-xs font-normal text-gray-400">Seconds</p>
             </div>
-          </div>
+          </div> */}
           <button
             className="w-full md:w-[105px] h-10 text-white font-semibold md:font-medium bg-[#471A52] rounded-lg"
             onClick={handleScrollToDelegatePass}
