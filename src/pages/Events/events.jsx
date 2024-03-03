@@ -203,8 +203,8 @@ const Events = () => {
     {
       image:
         "https://spcimagestorage001.blob.core.windows.net/spc-events-image/GIAN-MARCO MELFI.png",
-      name: "Gian-Marco Melfi",
-      title: "Investment Principal, Onebio Venture Studio",
+      name: "Gian-marco Melfi",
+      title: "Investment Partner, Onebio Venture Studio",
     },
     {
       image:
