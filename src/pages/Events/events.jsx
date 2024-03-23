@@ -206,17 +206,23 @@ const Events = () => {
       name: "Gian-marco Melfi",
       title: "Investment Partner, Onebio Venture Studio",
     },
-    {
-      image:
-        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/DAVIDSON OTURU.png",
-      name: "Davidson Oturu",
-      title: "Managing Director, Nubia Capital",
-    },
+    // {
+    //   image:
+    //     "https://spcimagestorage001.blob.core.windows.net/spc-events-image/DAVIDSON OTURU.png",
+    //   name: "Davidson Oturu",
+    //   title: "Managing Director, Nubia Capital",
+    // },
     {
       image:
         "https://spcimagestorage001.blob.core.windows.net/spc-events-image/ROHAN GOSWAMI.png",
       name: "Rohan Goswami",
       title: "Investment and Operations, Nexterra Capital",
+    },
+    {
+      image:
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/yakama.png",
+      name: "Yakama Manty Jones",
+      title: "Project Leader and Country Head, Delivery Associates",
     },
   ];
   const delegatePass = [
