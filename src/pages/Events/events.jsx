@@ -673,21 +673,21 @@ const Events = () => {
       <div className="flex items-center justify-center my-10 px-4">
         <div className="flex flex-col items-center justify-center">
           <p className="font-semibold text-3xl md:text-4xl text-gray-900 font-[Exo2] my-4 text-center">
-            Chief Host for Africa Digital Innovation Summit
+             Hosts for Africa Digital Innovation Summit
           </p>
           <div className="md:w-[1000px] md:h-[500px] rounded overflow-hidden">
             <img
-              src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/BLESSING ABENG.png" // Replace "host_image_url.jpg" with the URL of the host's image
+              src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/ADIS_HOST.png" // Replace "host_image_url.jpg" with the URL of the host's image
               alt="Host Name"
               className="object-contain w-full h-full rounded"
             />
           </div>
-          <p className="text-lg md:text-2xl text-gray-900 font-semibold my-2">
+          {/* <p className="text-lg md:text-2xl text-gray-900 font-semibold my-2">
             Blessing Abeng
           </p>
           <p className="text-lg text-gray-500 font-normal text-center">
             Branding and communications Expert, Forbes 30 under 30 Africa.
-          </p>
+          </p> */}
         </div>
       </div>
 
