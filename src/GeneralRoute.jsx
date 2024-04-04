@@ -25,6 +25,7 @@ import ExhibitionPartnerPass from "./pages/Events/exhibitionPartner";
 import ImpactFounder from "./pages/Events/impactFounder";
 import ImpactOrg from "./pages/Events/impactOrg";
 import Emails from "./pages/email-template";
+import StartupNetwork from "./pages/Community/startup-network";
 
 const GeneralRoute = () => {
   return (
@@ -35,6 +36,7 @@ const GeneralRoute = () => {
           <Route path="/about-spc" element={<About />} />
           <Route path="/community" element={<Community />} />
           <Route path="/community/all-startups" element={<AllStartUps />} />
+          <Route path="/community/startups-network" element={<StartupNetwork />} />
           <Route path="/community/all-talents" element={<AllTalents />} />
           <Route path="/community/startup/:id" element={<StartupDetail />} />
           <Route path="/community/talent/:id" element={<TalentDetail />} />

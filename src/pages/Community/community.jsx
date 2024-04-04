@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { StartUpDataComponent, TalentDataComponent } from "./dataComponent";
 import Modal from "../../components/Modal";
 
@@ -57,7 +58,11 @@ const Community = () => {
           </button>
         </div>
         <button className="w-[200px] h-[48px] bg-gray-50 border border-gray-300 rounded-xl mt-4 md:mt-0 text-gray-800 font-semibold">
-          {registerButtonText}
+          {activeTab === 1 ? (
+            <Link to="/community/startups-network">{registerButtonText}</Link>
+          ) : (
+            <Link to="/community/talent-network">{registerButtonText}</Link>
+          )}
         </button>
       </div>
       <div className="w-full p-4 md:px-10 2xl:px-20">
@@ -136,13 +141,13 @@ const Community = () => {
   return (
     <>
       <div
-        className="w-full h-[514px] md:h-[671px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
+        className="w-full h-[400px] md:h-[500px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
           backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>
-        <div className="w-full flex flex-col items-center justify-center relative z-[3] p-4 pt-[200px] md:mt-4">
+        <div className="w-full flex flex-col items-center justify-center relative z-[3] p-4 pt-[100px] md:mt-4">
           <p className="text-3xl md:text-6xl font-semibold text-gray-200 md:w-[625px] mb-2 text-center">
             Global Digital Innovation Commnuity
           </p>

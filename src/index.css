@@ -4,9 +4,34 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;500&display=swap");
 
-
 @layer base {
   body {
     @apply font-[Exo2];
   }
+}
+
+@font-face {
+  font-family: "Thin";
+  src: local("Exo2-Thin"), url("./fonts/Exo2-Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Regular";
+  src: local("Exo2-Regular"), url("./fonts/Exo2-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Medium";
+  src: local("Exo2-Medium"), url("./fonts/Exo2-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Bold";
+  src: local("Exo2-Bold"), url("./fonts/Exo2-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SemiBold";
+  src: local("Exo2-SemiBold"),
+    url("./fonts/Exo2-SemiBold.ttf") format("truetype");
 }
