@@ -3,13 +3,39 @@ import { MdOutlineCancel } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const StartupNetwork = () => {
+  const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
   const navigate = useNavigate();
   const [modal, setModal] = useState(false);
-  const [formData, setFormData] = useState({
-    company_Name: "",
+  const [file, setFile] = useState({});
+
+  const initialValues = {
+    company_name: "",
     company_email: "",
-    // Add other form fields as needed
-  });
+    company_size: "",
+    location: "",
+    country: "",
+    website_url: "",
+    linkedin_url: "",
+    brief_description: "",
+  };
+
+  const [startupMembership, setStartupMembership] = useState(initialValues);
+
+  const {
+    company_name,
+    company_email,
+    company_size,
+    location,
+    country,
+    website_url,
+    linkedin_url,
+    brief_description,
+  } = startupMembership;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setStartupMembership({ ...startupMembership, [name]: value });
+  };
 
   const handleRegisterClick = () => {
     setModal(true);
@@ -28,6 +54,7 @@ const StartupNetwork = () => {
     // setModal(false);
     navigate("/thankYou");
   };
+
   const benefits = [
     {
       icon: (
@@ -111,7 +138,7 @@ const StartupNetwork = () => {
       <div
         className="w-full h-[300px] md:h-[500px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
-          backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
+          backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/network-hero.jpeg"})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>
@@ -152,7 +179,7 @@ const StartupNetwork = () => {
               Join our network and enjoy our numerous benefits
             </p>
             <div className="w-[125px] md:h-10 border border-white rounded-lg text-center font-primarySemibold text-white text-lg md:text-2xl">
-              $2000
+              $1,000
               <span className="text-[#D0D5DD] font-primaryRegular text-xs">
                 /year
               </span>
