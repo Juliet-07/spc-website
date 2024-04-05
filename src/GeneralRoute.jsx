@@ -26,6 +26,7 @@ import ImpactFounder from "./pages/Events/impactFounder";
 import ImpactOrg from "./pages/Events/impactOrg";
 import Emails from "./pages/email-template";
 import StartupNetwork from "./pages/Community/startup-network";
+import ThankYou from "./components/ThankYou";
 
 const GeneralRoute = () => {
   return (
@@ -82,6 +83,7 @@ const GeneralRoute = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/contact-spc" element={<Contact />} />
           <Route path="/email-newsletter" element={<Emails />} />
+          <Route path="/thankYou" element={<ThankYou />} />
         </Routes>
       </Layout>
     </>

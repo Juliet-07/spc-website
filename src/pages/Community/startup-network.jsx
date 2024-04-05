@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { MdOutlineCancel } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 const StartupNetwork = () => {
+  const navigate = useNavigate();
   const [modal, setModal] = useState(false);
   const [formData, setFormData] = useState({
     company_Name: "",
@@ -23,7 +25,8 @@ const StartupNetwork = () => {
       // Reset other form fields as needed
     });
     // Close the modal after registration
-    setModal(false);
+    // setModal(false);
+    navigate("/thankYou");
   };
   const benefits = [
     {
@@ -130,7 +133,7 @@ const StartupNetwork = () => {
           Benefits for your Startup
         </div>
         <div className="w-[280px] md:w-[532px] h-1 bg-[#471A52]"></div>
-        <div className="grid grid-cols-2 md:grid-cols-6 my-4 gap-4 py-4 px-10">
+        <div className="grid grid-cols-2 md:grid-cols-6 my-4 gap-4 py-4 px-4 md:px-10">
           {benefits.map((benefit) => (
             <div>
               <div className="w-10 h-10">{benefit.icon}</div>
@@ -339,18 +342,18 @@ const StartupNetwork = () => {
         <div className="my-4">Join the community</div>
       </div>
       <Modal isVisible={modal} onClose={() => setModal(false)}>
-        <div className="md:w-[400px] h-[250px] rounded-lg border">
+        <div className="md:w-[400px] h-[260px] rounded-lg border">
           <div className="flex items-center justify-center font-primarySemibold mb-4 text-lg md:text-2xl text-white h-[50px] md:h-[60px] bg-[#471A52] rounded">
             Confirm
           </div>
           <div className="text-center p-2 text-lg md:text-xl font-primaryRegular">
             {/* <p> */}
-              Your Startup will be added to our pool of Startups for all the
-              available benefits. It can all be change if necessary
+            Your Startup will be added to our pool of Startups for all the
+            available benefits. It can all be change if necessary
             {/* </p> */}
           </div>
-          
-          <div className="mt-6 flex items-center justify-between px-4">
+
+          <div className="my-4 md:mt-8 flex items-center justify-between px-4">
             <button
               type="button"
               className="px-4 py-2 bg-gray-200 rounded-md mr-4"
