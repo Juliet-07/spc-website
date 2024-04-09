@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { StartUpDataComponent, TalentDataComponent } from "./dataComponent";
+import { MdOutlinePhotoCamera } from "react-icons/md";
 import Modal from "../../components/Modal";
 
 const Community = () => {
@@ -42,7 +43,7 @@ const Community = () => {
               activeTab === 1
                 ? "border-b-4 md:border-b-8 border-b-[#471A52] text-gray-900"
                 : "bg-transparent text-gray-500"
-            } p-2 py-2 font-semibold text-lg md:text-4xl flex-1 text-center transition-colors outline-none border-0 focus:outline-none whitespace-nowrap mr-4`}
+            } p-2 py-2 font-primarySemibold text-lg md:text-4xl flex-1 text-center transition-colors outline-none border-0 focus:outline-none whitespace-nowrap mr-4`}
           >
             Our Startup partners
           </button>
@@ -52,12 +53,12 @@ const Community = () => {
               activeTab === 2
                 ? "border-b-4 md:border-b-8 border-b-[#471A52] text-gray-900"
                 : "bg-transparent text-gray-500"
-            } p-2 py-2 font-semibold text-lg md:text-4xl flex-1 text-center transition-colors outline-none border-0 focus:outline-none whitespace-nowrap`}
+            } p-2 py-2 font-primarySemibold text-lg md:text-4xl flex-1 text-center transition-colors outline-none border-0 focus:outline-none whitespace-nowrap`}
           >
             Talent Ecosystem
           </button>
         </div>
-        <button className="w-[200px] h-[48px] bg-gray-50 border border-gray-300 rounded-xl mt-4 md:mt-0 text-gray-800 font-semibold">
+        <button className="w-[200px] h-[48px] bg-gray-50 border border-gray-300 rounded-xl mt-4 md:mt-0 text-gray-800 font-primarySemibold">
           {activeTab === 1 ? (
             <Link to="/community/startups-network">{registerButtonText}</Link>
           ) : (
@@ -69,6 +70,14 @@ const Community = () => {
         {activeTab === 1 && <StartUpDataComponent />}
         {activeTab === 2 && <TalentDataComponent />}
         {/* {activeTab === 3 && <ClosedPage />} */}
+      </div>
+      <div className="w-full flex items-center justify-center my-10">
+        <Link
+          to="/community/all-startups"
+          className="w-full md:w-[191px] h-[48px] mx-4 md:mx-0 bg-[#471A52] font-primarySemibold text-white rounded-lg flex items-center justify-center"
+        >
+          View more
+        </Link>
       </div>
     </>
   );
@@ -95,7 +104,7 @@ const Community = () => {
       ),
       title: "Business Incorporation",
       description:
-        "Seamless facilitation of the business incorporation process, guiding you through legal requirements and paperwork to establish a solid foundation for operations.iption",
+        "Seamless facilitation of the business incorporation process, guiding you through legal requirements and paperwork to establish a solid foundation for operations.",
     },
     {
       icon: (
@@ -148,16 +157,16 @@ const Community = () => {
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>
         <div className="w-full flex flex-col items-center justify-center relative z-[3] p-4 pt-[100px] md:mt-4">
-          <p className="text-3xl md:text-6xl font-semibold text-gray-200 md:w-[625px] mb-2 text-center">
+          <p className="text-3xl md:text-6xl font-primarySemibold text-gray-200 md:w-[777px] mb-2 text-center">
             Global Digital Innovation Commnuity
           </p>
-          <p className="md:text-xl font-normal text-gray-100 text-center">
+          <p className="md:text-xl font-primaryRegular text-gray-100 text-center">
             Building the world's largest and most collaborative community for
             digital innovators
           </p>
           <button
             onClick={() => handleBecomeMemberClick()}
-            className="w-full md:w-[177px] h-[48px] text-white font-semibold md:font-medium bg-[#471A52] rounded-lg my-4"
+            className="w-full md:w-[177px] h-[48px] text-white font-primarySemibold md:font-medium bg-[#471A52] rounded-lg my-4"
           >
             Become a member
           </button>
@@ -166,21 +175,23 @@ const Community = () => {
       <div>{viewToRender}</div>
       {/* global expansion */}
       <div className="w-full bg-[#471A52] flex flex-col mt-6 p-4 md:p-10 2xl:px-20">
-        <div className="font-semibold text-3xl md:text-4xl text-white">
+        <div className="font-primarySemibold text-3xl md:text-4xl text-white">
           Global Expansion
         </div>
         <div className="w-[277px] h-1 bg-white mt-2"></div>
-        <p className="font-normal text-xl text-white mt-3">
+        <p className="font-primaryRegular text-xl text-white mt-3">
           Soft-landing as a service. Select what you need, let’s make it happen.
         </p>
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-10 my-10">
           {globalExpansion.map((global) => (
             <div className="bg-white md:w-[300px] rounded-xl flex flex-col items-center justify-center border border-gray-50">
-              <div className="w-[52px] h-[52px] my-4">{global.icon}</div>
-              <p className="text-center p-1 text-sm md:text-2xl font-semibold text-black">
+              <div className="w-[52px] h-[52px] my-2 md:my-4">
+                {global.icon}
+              </div>
+              <p className="text-center p-1 text-sm md:text-2xl font-primarySemibold text-black">
                 {global.title}
               </p>
-              <p className="text-center p-2 text-black text-xs md:text-sm">
+              <p className="text-center p-2 text-black text-xs md:text-sm font-primaryRegular">
                 {global.description}
               </p>
             </div>
@@ -189,26 +200,23 @@ const Community = () => {
         <div className="w-full flex items-center justify-center">
           <div
             onClick={() => handleWorkWithYouClick()}
-            className="bg-white w-[189px] h-[48px] border rounded-lg flex items-center justify-center text-[#471A52] font-semibold cursor-pointer"
+            className="bg-white w-[189px] h-[48px] border rounded-lg flex items-center justify-center text-[#471A52] font-primarySemibold cursor-pointer"
           >
             Lets work with you
           </div>
         </div>
       </div>
       {/* read to explore */}
-      <div className="w-full bg-gray-50 flex flex-col items-center justify-center mt-6 p-4 md:p-10 2xl:px-20">
-        <p className="font-semibold text-2xl md:text-4xl text-gray-900">
+      <div className="w-full bg-white flex flex-col items-center justify-center my-0 md:my-20 p-4 md:p-10 2xl:px-20">
+        <p className="font-primarySemibold text-2xl md:text-4xl text-gray-900">
           Ready to explore?
         </p>
-        <p className="text-lg md:text-xl font-normal text-gray-600 text-center">
+        <p className="w-full md:w-[768px] text-lg md:text-xl font-primaryRegular text-gray-600 text-center my-4">
           Through our various infrastructures, we are able to build on new
           transformative and digital solutions.
         </p>
-        <div
-          // to="/community"
-          className="w-full md:w-[173px] bg-[#471A52] h-10 rounded-xl p-2 m-6 font-semibold text-white flex items-center justify-center"
-        >
-          Become a member
+        <div className="w-full md:w-[120px] bg-[#471A52] h-10 rounded-xl p-2 mt-4 font-primarySemibold text-white flex items-center justify-center">
+          Get Started
         </div>
       </div>
       <Modal
@@ -217,7 +225,7 @@ const Community = () => {
       >
         <div className="flex items-center justify-center">
           <div className="flex flex-col px-6 py-4 border border-t-8 border-t-[#471A52] md:w-[664px] rounded-xl">
-            <p className="font-semibold text-2xl text-gray-900">
+            <p className="font-primarySemibold text-2xl text-gray-900">
               Global Expansion
             </p>
             <p className="font-normal text-gray-500">
@@ -322,10 +330,10 @@ const Community = () => {
                   </div>
                 </div>
                 <div className="w-full flex items-center justify-between">
-                  <button className="w-[129px] bg-gray-300 text-white rounded-lg p-3 text-center font-semibold">
+                  <button className="w-[129px] bg-gray-300 text-white rounded-lg p-3 text-center font-primarySemibold">
                     Cancel
                   </button>
-                  <button className="w-[129px] bg-[#471A52] text-white rounded-lg p-3 text-center font-semibold">
+                  <button className="w-[129px] bg-[#471A52] text-white rounded-lg p-3 text-center font-primarySemibold">
                     Submit
                   </button>
                 </div>
@@ -339,7 +347,9 @@ const Community = () => {
         onClose={() => setShowBecomeMemberModal(false)}
       >
         <div className="flex flex-col items-center justify-center">
-          <p className="font-semibold text-2xl text-gray-900">Membership</p>
+          <p className="font-primarySemibold text-2xl text-gray-900">
+            Membership
+          </p>
           <p className="font-normal text-gray-500">
             Become a member and enjoy our numerous benefits
           </p>
@@ -376,7 +386,7 @@ const Community = () => {
             </div>
           </div>
           <div className="w-[110px] h-10 border border-[#471A52] rounded-xl flex items-center justify-center">
-            <p className="font-semibold text-2xl text-[#471A52]">$200</p>
+            <p className="font-primarySemibold text-2xl text-[#471A52]">$200</p>
             <span className="text-gray-600 font-medium">/year</span>
           </div>
           <div>
@@ -392,27 +402,490 @@ const Community = () => {
 
 const StartupForm = () => {
   return (
-    <div className="my-10">
-      {/* Form fields for startup */}
-      <p>Startup Form Here</p>
+    <div className="md:w-[576px]">
+      <form>
+        <div className="relative my-4 bg-[#E9D7FE] w-[64px] h-[64px] rounded-full flex items-center justify-center">
+          <label
+            htmlFor="file-input"
+            className="flex items-center justify-center rounded p-4 cursor-pointer"
+          >
+            <MdOutlinePhotoCamera size={20} />
+            {/* <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M3 6a2 2 0 012-2h2.8a2 2 0 001.4-.6l1.58-1.58a2 2 0 011.4-.58h4.24a2 2 0 011.4.58L17.8 3.4a2 2 0 001.4.6H20a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6z"
+                ></path>
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg> */}
+          </label>
+
+          <input
+            type="file"
+            id="file-input"
+            className="hidden"
+            name="file"
+            // value={file}
+            // onChange={fileUploadHandler}
+          />
+        </div>
+        <div className="mt-4">
+          <label
+            htmlFor="full-name"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Company name
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="Enter full name"
+            name="company_name"
+            // value={company_name}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Company email
+          </label>
+          <input
+            type="email"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="@example.com"
+            name="company_email"
+            // value={company_email}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Company size
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="no. of employees"
+            name="company_size"
+            // value={company_size}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2 flex flex-wrap">
+          <div className="w-full md:w-1/2 md:pr-2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-gray-700 font-primaryRegular"
+            >
+              Location
+            </label>
+            <input
+              type="text"
+              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+              placeholder="Enter company location"
+              name="location"
+              // value={location}
+              // onChange={handleChange}
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-gray-700 font-primaryRegular"
+            >
+              Country
+            </label>
+            <input
+              type="text"
+              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+              placeholder="Enter country of incorporation"
+              name="country"
+              // value={country}
+              // onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div className="mt-2 flex flex-wrap">
+          <div className="w-full md:w-1/2 md:pr-2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-gray-700 font-primaryRegular"
+            >
+              Website URL
+            </label>
+            <input
+              type="text"
+              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+              placeholder="www.company.com"
+              name="website_url"
+              // value={website_url}
+              // onChange={handleChange}
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-gray-700 font-primaryRegular"
+            >
+              Linked URL
+            </label>
+            <input
+              type="text"
+              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+              placeholder="https://linkedin.com/company_name"
+              name="linkedin_url"
+              // value={linkedin_url}
+              // onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="phone-number"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Brief description
+          </label>
+          <textarea
+            className="block w-full px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            name="brief_description"
+            // value={brief_description}
+            // onChange={handleChange}
+          ></textarea>
+        </div>
+
+        <div className="w-full flex items-center justify-between mt-10">
+          <button
+            type="button"
+            className="w-[129px] h-[48px] px-4 py-2 font-primarySemibold tracking-wide transition-colors duration-200 transform bg-gray-50 rounded-md  text-gray-900 border border-gray-300"
+            // onClick={() => setLoading(!loading)}
+            // onClick={handleRegisterClick}
+          >
+            Cancel
+          </button>
+          <button
+            type="button"
+            className="w-[191px] h-[48px] px-4 py-2 tracking-wide transition-colors duration-200 transform bg-[#471A52] rounded-md font-primarySemibold text-[#ffffff]"
+            // onClick={() => setLoading(!loading)}
+            // onClick={handleRegisterClick}
+          >
+            Proceed to checkout
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
 
 const TalentForm = () => {
   return (
-    <div className="my-10">
-      {/* Form fields for talent */}
-      <p>Talent Form Here</p>
+    <div className="md:w-[576px]">
+      <form>
+        <div className="relative my-4 bg-[#E9D7FE] w-[64px] h-[64px] rounded-full flex items-center justify-center">
+          <label
+            htmlFor="file-input"
+            className="flex items-center justify-center rounded p-4 cursor-pointer"
+          >
+            <MdOutlinePhotoCamera size={20} />
+            {/* <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M3 6a2 2 0 012-2h2.8a2 2 0 001.4-.6l1.58-1.58a2 2 0 011.4-.58h4.24a2 2 0 011.4.58L17.8 3.4a2 2 0 001.4.6H20a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6z"
+            ></path>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+            ></path>
+          </svg> */}
+          </label>
+
+          <input
+            type="file"
+            id="file-input"
+            className="hidden"
+            name="file"
+            // value={file}
+            // onChange={fileUploadHandler}
+          />
+        </div>
+        <div className="mt-4">
+          <label
+            htmlFor="full-name"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Full name
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="Enter full name"
+            name="company_name"
+            // value={company_name}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="@example.com"
+            name="company_email"
+            // value={company_email}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Profession
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="Profession"
+            name="company_size"
+            // value={company_size}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Skills
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="skills"
+            name="company_size"
+            // value={company_size}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Portfolio Links
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="www.portfolio.com"
+            name="company_size"
+            // value={company_size}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2 flex flex-wrap">
+          <div className="w-full md:w-1/2 md:pr-2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-gray-700 font-primaryRegular"
+            >
+              Linkedin Profile
+            </label>
+            <input
+              type="text"
+              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+              placeholder="www.company.com"
+              name="website_url"
+              // value={website_url}
+              // onChange={handleChange}
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-gray-700 font-primaryRegular"
+            >
+              Other Links
+            </label>
+            <input
+              type="text"
+              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+              placeholder="https://linkedin.com/company_name"
+              name="linkedin_url"
+              // value={linkedin_url}
+              // onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="phone-number"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Brief description
+          </label>
+          <textarea
+            className="block w-full px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            name="brief_description"
+            // value={brief_description}
+            // onChange={handleChange}
+          ></textarea>
+        </div>
+
+        <div className="w-full flex items-center justify-between mt-10">
+          <button
+            type="button"
+            className="w-[129px] h-[48px] px-4 py-2 font-primarySemibold tracking-wide transition-colors duration-200 transform bg-gray-50 rounded-md  text-gray-900 border border-gray-300"
+            // onClick={() => setLoading(!loading)}
+            // onClick={handleRegisterClick}
+          >
+            Cancel
+          </button>
+          <button
+            type="button"
+            className="w-[191px] h-[48px] px-4 py-2 tracking-wide transition-colors duration-200 transform bg-[#471A52] rounded-md font-primarySemibold text-[#ffffff]"
+            // onClick={() => setLoading(!loading)}
+            // onClick={handleRegisterClick}
+          >
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 };
 
 const OthersForm = () => {
   return (
-    <div className="my-10">
-      {/* Form fields for others */}
-      <p>Others Form Here</p>
+    <div className="md:w-[576px]">
+      <form>
+        <div className="mt-4">
+          <label
+            htmlFor="full-name"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Full name
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="Enter full name"
+            name="company_name"
+            // value={company_name}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Email
+          </label>
+          <input
+            type="email"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="@example.com"
+            name="company_email"
+            // value={company_email}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Phone Number
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="Enter phone number"
+            name="company_size"
+            // value={company_size}
+            // onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="phone-number"
+            className="block text-sm text-gray-700 font-primaryRegular"
+          >
+            Country
+          </label>
+          <input
+            type="text"
+            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
+            placeholder="Select Country"
+            name="website_url"
+            // value={website_url}
+            // onChange={handleChange}
+          />
+        </div>
+        <div className="w-full flex items-center justify-between mt-10">
+          <button
+            type="button"
+            className="w-[129px] h-[48px] px-4 py-2 font-primarySemibold tracking-wide transition-colors duration-200 transform bg-gray-50 rounded-md  text-gray-900 border border-gray-300"
+            // onClick={() => setLoading(!loading)}
+            // onClick={handleRegisterClick}
+          >
+            Cancel
+          </button>
+          <button
+            type="button"
+            className="w-[191px] h-[48px] px-4 py-2 tracking-wide transition-colors duration-200 transform bg-[#471A52] rounded-md font-primarySemibold text-[#ffffff]"
+            // onClick={() => setLoading(!loading)}
+            // onClick={handleRegisterClick}
+          >
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

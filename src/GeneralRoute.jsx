@@ -27,6 +27,7 @@ import ImpactOrg from "./pages/Events/impactOrg";
 import Emails from "./pages/email-template";
 import StartupNetwork from "./pages/Community/startup-network";
 import ThankYou from "./components/ThankYou";
+import PostEvents from "./pages/Events/post-events";
 
 const GeneralRoute = () => {
   return (
@@ -41,7 +42,7 @@ const GeneralRoute = () => {
           <Route path="/community/all-talents" element={<AllTalents />} />
           <Route path="/community/startup/:id" element={<StartupDetail />} />
           <Route path="/community/talent/:id" element={<TalentDetail />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<PostEvents />} />
           <Route path="/events/details" element={<Pass />} />
           <Route path="/events/partner-details" element={<PartnerPass />} />
           <Route path="/events/payment-details" element={<Payment />} />

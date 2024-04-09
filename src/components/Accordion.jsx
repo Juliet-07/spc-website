@@ -15,10 +15,10 @@ const AccordionItem = ({ title, content }) => {
         className="flex justify-between items-center p-4 cursor-pointer"
         onClick={toggleAccordion}
       >
-        <div className="font-semibold">{title}</div>
+        <div className="font-primarySemibold">{title}</div>
         <div>{isOpen ? <GrSubtractCircle size={20} /> : <MdAddCircleOutline size={20} />}</div>
       </div>
-      {isOpen && <div className="px-4 py-2">{content}</div>}
+      {isOpen && <div className="px-4 py-2 font-primaryRegular">{content}</div>}
     </div>
   );
 };

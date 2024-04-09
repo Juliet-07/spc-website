@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="w-[148px] h-[38px]">
         <img src={Logo} alt="SPC Logo" />
       </div>
-      <nav className="text-gray-600 hidden md:flex">
+      <nav className="text-gray-600 font-primaryRegular hidden md:flex">
         <NavLink to="/" style={activeStyle} className="p-2">
           Home
         </NavLink>
@@ -72,7 +72,7 @@ const Navbar = () => {
             : "fixed left-[-100%]"
         }
       >
-        <div className="grid grid-cols-1 gap-4 px-4 font-semibold">
+        <div className="grid grid-cols-1 gap-4 px-4 font-primarySemibold">
           <NavLink
             to="/"
             style={activeStyleMobile}
@@ -130,14 +130,6 @@ const Navbar = () => {
             Contact us
           </NavLink>
         </div>
-        {/* <div className="w-[352px] h-[60px] p-4 m-6 bg-[#057d99] text-center text-white font-bold text-sm rounded-md">
-          {" "}
-          <NavLink to="/signup">Register</NavLink>
-        </div>
-        <div className="w-[352px] h-[60px] p-4 m-6 border border-[#057d99] text-center text-[#057d99] font-bold text-sm">
-          {" "}
-          <NavLink to="/signin">Log in</NavLink>
-        </div> */}
       </div>
     </div>
   );

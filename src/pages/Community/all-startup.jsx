@@ -12,14 +12,14 @@ const AllStartUps = () => {
         className="flex items-center p-2 w-[85px] h-10 border border-gray-100 rounded-lg"
       >
         <TbArrowBackUp color="#475467" />
-        <span className="text-gray-600 mx-2">Back</span>
+        <span className="text-gray-600 mx-2 font-primaryRegular">Back</span>
       </Link>
-      <div className="font-semibold text-lg md:text-4xl text-gray-900 mt-3">
+      <div className="font-primarySemibold text-lg md:text-4xl text-gray-900 mt-3">
         Our Startup partners
       </div>
       <div className="w-[174px] md:w-[334px] h-1 bg-[#471A52] mt-3"></div>
-      <div className="w-full flex flex-col md:flex-row md:items-center justify-between pt-3">
-        <p className="text-base md:text-xl text-gray-500 font-normal">
+      <div className="w-full flex flex-col md:flex-row md:items-center justify-between pt-3 mb-4">
+        <p className="text-base md:text-xl text-gray-500 font-primaryRegular">
           List of companies with the highest possible momentum and return
         </p>
         <div className="mt-2 md:mt-0 relative">
@@ -39,36 +39,39 @@ const AllStartUps = () => {
             key={startup.id}
             className="md:w-[400px] bg-white rounded-xl shadow-lg p-4"
           >
-            <img src="https://spc-space.ams3.cdn.digitaloceanspaces.com/community-images/startUp.png" />
-            <h2 className="text-xl font-semibold text-gray-900 py-2">
+            <div>{startup.image}</div>
+            <h2 className="text-xl font-primarySemibold text-gray-900 py-2">
               {startup.name}
             </h2>
-            <p className="font-normal text-xs text-gray-500">
+            <p className="font-primaryRegular text-xs text-gray-500">
               {startup.description}
             </p>
-            <div className="w-full grid grid-cols-3 py-4">
+            {/* <div className="w-full grid grid-cols-3 py-4">
               <p className="flex flex-col">
                 <span>{startup.amountRaised}</span>
-                <span className="font-normal text-xs text-gray-500">
+                <span className="font-primaryRegular text-xs text-gray-500">
                   Raised
                 </span>
               </p>
               <p className="flex flex-col">
                 <span>{startup.numOfInvestors}</span>
-                <span className="font-normal text-xs text-gray-500">
+                <span className="font-primaryRegular text-xs text-gray-500">
                   Investors
                 </span>
               </p>
               <p className="flex flex-col">
                 <span>{startup.minInvestments}</span>
-                <span className="font-normal text-xs text-gray-500">
+                <span className="font-primaryRegular text-xs text-gray-500">
                   Min. Investments
                 </span>
               </p>
-            </div>
-            <Link to="/community/all-startups" className="w-full flex items-center justify-center font-semibold text-[#471A52]">
-            View details
-          </Link>
+            </div> */}
+            <Link
+              to="/community/all-startups"
+              className="w-full flex items-center justify-center font-primarySemibold text-[#471A52] my-2"
+            >
+              View details
+            </Link>
           </div>
         ))}
       </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../assets/spc-logo.png";
+import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -11,7 +13,7 @@ const Footer = () => {
             <div className="w-[260px] h-[60px]">
               <img src={Logo} alt="SPC Logo" />
             </div>
-            <div className="flex mt-4 text-gray-600">
+            <div className="flex mt-4 text-gray-600 font-primaryRegular">
               <p className="p-2">About us</p>
               <p className="p-2">Community</p>
               <p className="p-2">Events</p>
@@ -21,7 +23,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            <p className="text-sm font-semibold py-2">
+            <p className="text-sm font-primarySemibold py-2">
               Subscribe to our Newsletter
             </p>
             <div className="flex">
@@ -40,10 +42,23 @@ const Footer = () => {
         <div className="border-b-2 border-white w-full my-4"></div>
         {/* 3 */}
         <div className="w-full flex items-center justify-between">
-          <div className="text-gray-600">
+          <div className="text-gray-600 font-primaryRegular">
             {new Date().getFullYear()} SPC Universe. All rights reserved
           </div>
-          <div>socials</div>
+          <div className="flex items-center gap-4">
+            <div>
+              <FaXTwitter size={20} />
+            </div>
+            <a
+              href="https://www.linkedin.com/company/spc-universe/"
+              target="_blank"
+            >
+              <FaLinkedin size={20} />
+            </a>
+            <div>
+              <FaFacebook size={20} />
+            </div>
+          </div>
         </div>
       </div>
       {/* mobile view */}
@@ -51,7 +66,7 @@ const Footer = () => {
         <div className="w-[260px] h-[60px]">
           <img src={Logo} alt="SPC Logo" />
         </div>
-        <div className="grid grid-cols-2 mt-4 text-gray-600">
+        <div className="grid grid-cols-2 mt-4 text-gray-600 font-primaryRegular">
           <p className="p-2">About us</p>
           <p className="p-2">Community</p>
           <p className="p-2">Events</p>
@@ -60,19 +75,35 @@ const Footer = () => {
           <p className="p-2">Contact us</p>
         </div>
         <div className="flex flex-col w-full border border-gray-200 rounded-xl p-4">
-          <p className="font-semibold py-2">Subscribe to our Newsletter</p>
+          <p className="font-primarySemibold py-2">
+            Subscribe to our Newsletter
+          </p>
           <input
             className="shadow appearance-none rounded w-full py-2 px-3 text-gray-600 leading-tight focus:outline-none focus:shadow-outline"
             type="email"
             placeholder="Enter your email"
           />
-          <button className="bg-[#471A52] w-full h-10 rounded-lg my-3 text-white font-semibold">
+          <button className="bg-[#471A52] w-full h-10 rounded-lg my-3 text-white font-primarySemibold">
             Subscribe
           </button>
         </div>
         <div className="border-b-2 border-white w-full my-4"></div>
-        <div className="flex items-center justify-center">socials</div>
-        <div className="text-gray-600 text-center">
+        <div className="flex items-center justify-center my-3 gap-4">
+          <div>
+            <FaXTwitter size={20} />
+          </div>
+          <a
+            href="https://www.linkedin.com/company/spc-universe/"
+            target="_blank"
+          >
+            <FaLinkedin size={20} />
+          </a>
+          <div>
+            <FaFacebook size={20} />
+          </div>
+        </div>
+
+        <div className="text-gray-600 font-primaryRegular text-center">
           {new Date().getFullYear()} SPC Universe. All rights reserved
         </div>
       </div>

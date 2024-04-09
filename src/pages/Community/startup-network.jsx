@@ -1,10 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { MdOutlineCancel } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+
+const Modal = ({ isVisible, onClose, children }) => {
+  if (!isVisible) return null;
+
+  const handleClose = (e) => {
+    if (e.target.id === "wrapper") onClose();
+  };
+
+  return (
+    <div
+      id="wrapper"
+      className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center z-10"
+      onClick={handleClose}
+    >
+      <div className="mx-4 bg-white rounded-lg shadow-md p-4">
+        <div className="flex justify-end">
+          <MdOutlineCancel
+            size={30}
+            color="black"
+            className="cursor-pointer"
+            onClick={() => onClose()}
+          />
+        </div>
+        <div className="mt-4">{children}</div>
+      </div>
+    </div>
+  );
+};
 
 const StartupNetwork = () => {
   const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const registerFormRef = useRef(null);
   const navigate = useNavigate();
+  const { handleSubmit } = useForm();
   const [modal, setModal] = useState(false);
   const [file, setFile] = useState({});
 
@@ -37,28 +69,56 @@ const StartupNetwork = () => {
     setStartupMembership({ ...startupMembership, [name]: value });
   };
 
+  const fileUploadHandler = (e) => {
+    console.log(e.target.files);
+    const docx = e.target.files[0];
+    console.log(docx.name);
+    setFile(docx);
+  };
+
   const handleRegisterClick = () => {
     setModal(true);
   };
 
+  const handleScrollToRegisterForm = () => {
+    registerFormRef.current.scrollIntoView({ behavior: "smooth" }); // Step 4
+  };
+
   const handleConfirmRegistration = () => {
-    // Add your registration logic here
-    console.log("Registration confirmed");
-    // Reset form data after registration
-    setFormData({
-      company_Name: "",
-      company_email: "",
-      // Reset other form fields as needed
-    });
-    // Close the modal after registration
-    // setModal(false);
-    navigate("/thankYou");
+    const url = `${apiURL}/member-startup`;
+
+    const formData = new FormData();
+
+    formData.append("company_name", company_name);
+    formData.append("company_email", company_email);
+    formData.append("company_size", company_size);
+    formData.append("location", location);
+    formData.append("country", country);
+    formData.append("likeden_url", linkedin_url);
+    formData.append("website_url", website_url);
+    formData.append("brief_description", brief_description);
+    formData.append("company_image", file);
+    formData.append("amount", 1000);
+
+    axios
+      .post(url, formData)
+      .then((response) => {
+        console.log(response.data, "response from startup reg.");
+        navigate("/thankYou");
+      })
+      .catch((error) => {
+        // Handle error responses here
+        console.error("Error:", error);
+      });
   };
 
   const benefits = [
     {
       icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/research.png" />
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/talents.jpg"
+          className="w-[319.95px] h-[193.16px] md:w-[376px] md:h-[227px] rounded-lg"
+        />
       ),
       title: "Talents",
       message:
@@ -66,22 +126,31 @@ const StartupNetwork = () => {
     },
     {
       icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/research.png" />
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investors.jpg"
+          className="w-[319.95px] h-[193.16px] md:w-[380px] md:h-[227px] rounded-lg"
+        />
+      ),
+      title: "Mentors",
+      message:
+        "Access to a pool of well-known mentors who can guide you on different paths (Legal, sales & marketing, investment readiness, product, etc).",
+    },
+    {
+      icon: (
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/meet-up.jpg"
+          className="w-[319.95px] h-[193.16px] md:w-[380px] md:h-[227px] rounded-lg"
+        />
       ),
       title: "Meet-ups",
       message: "Access to our mentor roundtable meetings.",
     },
     {
       icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/business.png" />
-      ),
-      title: "Mentors",
-      message:
-        "Access to a pool of well-known mentors who can guide you on different paths (Legal, sales & marketing, investment readiness, product, etc), including access to our mentor roundtable meetings.",
-    },
-    {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/go-to.png" />
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investors.jpg"
+          className="w-[319.95px] h-[193.16px] md:w-[380px] md:h-[227px] rounded-lg"
+        />
       ),
       title: "Investors",
       message:
@@ -89,7 +158,10 @@ const StartupNetwork = () => {
     },
     {
       icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/permit.png" />
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/expand.jpg"
+          className="w-[319.95px] h-[193.16px] md:w-[380px] md:h-[227px] rounded-lg"
+        />
       ),
       title: "Global Expansion",
       message:
@@ -97,7 +169,10 @@ const StartupNetwork = () => {
     },
     {
       icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/legal.png" />
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/event.jpg"
+          className="w-[319.95px] h-[193.16px] md:w-[380px] md:h-[227px] rounded-lg"
+        />
       ),
       title: "Event Discount",
       message:
@@ -105,53 +180,29 @@ const StartupNetwork = () => {
     },
   ];
 
-  const Modal = ({ isVisible, onClose, children }) => {
-    if (!isVisible) return null;
-
-    const handleClose = (e) => {
-      if (e.target.id === "wrapper") onClose();
-    };
-
-    return (
-      <div
-        id="wrapper"
-        className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center z-10"
-        onClick={handleClose}
-      >
-        <div className="mx-4 bg-white rounded-lg shadow-md p-4">
-          <div className="flex justify-end">
-            <MdOutlineCancel
-              size={30}
-              color="black"
-              className="cursor-pointer"
-              onClick={() => onClose()}
-            />
-          </div>
-          <div className="mt-4">{children}</div>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <>
       <div
         className="w-full h-[300px] md:h-[500px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
-          backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/network-hero.jpeg"})`,
+          backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>
-        <div className="w-full flex flex-col items-center justify-center relative z-[3] p-4 pt-[100px] md:mt-4">
+        <div className="w-full flex flex-col items-center justify-center relative z-[3] p-4 pt-[50px] md:pt-[100px] md:mt-4">
           <p className="text-3xl md:text-6xl font-primarySemibold text-[#FCFCFD] mb-2 text-center">
             Welcome to our Startup Network
           </p>
-          {/* <button
-            onClick={() => handleBecomeMemberClick()}
-            className="w-full md:w-[177px] h-[48px] text-white font-semibold md:font-medium bg-[#471A52] rounded-lg my-4"
+          <p className="md:w-[600px] text-white font-primaryRegular text-center md:text-xl">
+            Access resources, expert guidance, and global opportunities.
+            <br /> Elevate your startup game today!"
+          </p>
+          <button
+            className="block md:hidden w-[196px] h-[48px] bg-[#471A52] font-primaryMedium text-white rounded-lg m-4"
+            onClick={handleScrollToRegisterForm}
           >
-            Become a member
-          </button> */}
+            Register
+          </button>
         </div>
       </div>
       {/* Benefits */}
@@ -160,17 +211,20 @@ const StartupNetwork = () => {
           Benefits for your Startup
         </div>
         <div className="w-[280px] md:w-[532px] h-1 bg-[#471A52]"></div>
-        <div className="grid grid-cols-2 md:grid-cols-6 my-4 gap-4 py-4 px-4 md:px-10">
+        <div className="grid md:grid-cols-3 my-4 gap-4 md:gap-10 py-4 px-4 md:px-10">
           {benefits.map((benefit) => (
-            <div>
-              <div className="w-10 h-10">{benefit.icon}</div>
-              <p className="font-primarySemibold py-2">{benefit.title}</p>
-              <p className="font-primaryThin">{benefit.message}</p>
+            <div className="w-[340.37px] h-[340px] md:w-[400px] md:h-[378px] border border-[#E9D7FE] rounded-xl p-4">
+              <div>{benefit.icon}</div>
+              <p className="font-primarySemibold">{benefit.title}</p>
+              <p className="font-primaryRegular py-2 md:py-3">{benefit.message}</p>
             </div>
           ))}
         </div>
         {/* Register */}
-        <div className="w-full bg-[#471A52] flex flex-col items-center justify-center p-4 md:p-6">
+        <div
+          ref={registerFormRef}
+          className="w-full bg-[#471A52] flex flex-col items-center justify-center p-4 md:p-6"
+        >
           <div className="md:w-[664px] flex flex-col items-center justify-center border border-[#667085] rounded-lg p-2 md:p-4">
             <p className="text-2xl md:text-4xl font-primarySemibold text-[#FFFFFF]">
               Register as a Startup
@@ -178,14 +232,14 @@ const StartupNetwork = () => {
             <p className="text-sm md:text-xl font-primaryRegular text-[#EAECF0] p-2">
               Join our network and enjoy our numerous benefits
             </p>
-            <div className="w-[125px] md:h-10 border border-white rounded-lg text-center font-primarySemibold text-white text-lg md:text-2xl">
+            {/* <div className="w-[125px] md:h-10 border border-white rounded-lg text-center font-primarySemibold text-white text-lg md:text-2xl">
               $1,000
               <span className="text-[#D0D5DD] font-primaryRegular text-xs">
                 /year
               </span>
-            </div>
+            </div> */}
             <div className="md:w-[576px]">
-              <form>
+              <form onSubmit={handleSubmit(handleRegisterClick)}>
                 <div className="mt-4">
                   <label
                     htmlFor="full-name"
@@ -197,9 +251,9 @@ const StartupNetwork = () => {
                     type="text"
                     className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                     placeholder="Enter company name"
-                    name="company_Name"
-                    // value={company_Name}
-                    // onChange={handleChange}
+                    name="company_name"
+                    value={company_name}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -215,8 +269,8 @@ const StartupNetwork = () => {
                     className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                     placeholder="@example.com"
                     name="company_email"
-                    // value={company_email}
-                    // onChange={handleChange}
+                    value={company_email}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -231,9 +285,9 @@ const StartupNetwork = () => {
                     type="text"
                     className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                     placeholder="no. of employees"
-                    name="company_email"
-                    // value={company_email}
-                    // onChange={handleChange}
+                    name="company_size"
+                    value={company_size}
+                    onChange={handleChange}
                     required
                   />
                 </div>
@@ -249,9 +303,9 @@ const StartupNetwork = () => {
                       type="text"
                       className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                       placeholder="Enter company location"
-                      name="company_location"
-                      // value={company_location}
-                      // onChange={handleChange}
+                      name="location"
+                      value={location}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="w-full md:w-1/2">
@@ -265,9 +319,9 @@ const StartupNetwork = () => {
                       type="text"
                       className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                       placeholder="Enter country of incorporation"
-                      name="company_location"
-                      // value={company_location}
-                      // onChange={handleChange}
+                      name="country"
+                      value={country}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -283,9 +337,9 @@ const StartupNetwork = () => {
                       type="text"
                       className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                       placeholder="www.company.com"
-                      name="company_location"
-                      // value={company_location}
-                      // onChange={handleChange}
+                      name="website_url"
+                      value={website_url}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="w-full md:w-1/2">
@@ -299,9 +353,9 @@ const StartupNetwork = () => {
                       type="text"
                       className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                       placeholder="https://linkedin.com/company_name"
-                      name="company_location"
-                      // value={company_location}
-                      // onChange={handleChange}
+                      name="linkedin_url"
+                      value={linkedin_url}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -315,8 +369,8 @@ const StartupNetwork = () => {
                   <textarea
                     className="block w-full px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
                     name="brief_description"
-                    // value={brief_description}
-                    // onChange={handleChange}
+                    value={brief_description}
+                    onChange={handleChange}
                   ></textarea>
                 </div>
                 <div className="relative my-4 bg-[#E9D7FE] h-20 rounded-md flex flex-col items-center justify-center">
@@ -347,16 +401,17 @@ const StartupNetwork = () => {
                     type="file"
                     id="file-input"
                     className="hidden"
-                    // onChange={handleFileChange}
+                    name="file"
+                    // value={file}
+                    onChange={fileUploadHandler}
                   />
                 </div>
                 <div className="mt-6 mb-2">
                   <button
-                    // type="submit"
-                    type="button"
+                    type="submit"
                     className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide transition-colors duration-200 transform bg-[#FFFFFF] rounded-md font-primarySemibold text-[#471A52]"
                     // onClick={() => setLoading(!loading)}
-                    onClick={handleRegisterClick}
+                    // onClick={handleRegisterClick}
                   >
                     Register
                   </button>
@@ -366,7 +421,17 @@ const StartupNetwork = () => {
           </div>
         </div>
         {/* Join the community */}
-        <div className="my-4">Join the community</div>
+        <div className="w-full md:h-[206px] my-4 md:mx-10 bg-gray-50 flex flex-col items-center justify-center">
+          <p className="font-primarySemibold text-2xl md:text-4xl text-gray-900">
+            Join the community
+          </p>
+          <p className="md:w-[768px] p-3 text-gray-600 font-primaryRegular md:text-xl text-center">
+            Through our various infrastructures, we are able to build on new
+            transformative and digital solutions. Through our various
+            infrastructures, we are able to build on new transformative and
+            digital solutions.
+          </p>
+        </div>
       </div>
       <Modal isVisible={modal} onClose={() => setModal(false)}>
         <div className="md:w-[400px] h-[260px] rounded-lg border">
@@ -389,7 +454,7 @@ const StartupNetwork = () => {
               Cancel
             </button>
             <button
-              type="button"
+              type="submit"
               className="px-4 py-2 bg-[#471A52] text-white rounded-md"
               onClick={handleConfirmRegistration}
             >

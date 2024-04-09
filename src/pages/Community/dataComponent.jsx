@@ -21,10 +21,10 @@ export const StartUpDataComponent = () => {
         >
           {/* <img src={Startup} /> */}
           <div>{startup.image}</div>
-          <h2 className="text-xl font-semibold text-gray-900 py-2">
+          <h2 className="text-xl font-primarySemibold text-gray-900 py-2">
             {startup.name}
           </h2>
-          <p className="font-normal text-xs text-gray-500 pb-2">
+          <p className="font-primaryRegular text-xs text-gray-500 pb-2">
             {startup.description}
           </p>
           {/* <div className="w-full grid grid-cols-3 py-4">
@@ -47,7 +47,7 @@ export const StartUpDataComponent = () => {
           </div> */}
           <div
             onClick={() => handleViewDetails(startup)}
-            className="w-full flex items-center justify-center font-semibold text-[#471A52] cursor-pointer mt-4"
+            className="w-full flex items-center justify-center font-primarySemibold text-[#471A52] cursor-pointer mt-4"
           >
             View details
           </div>
