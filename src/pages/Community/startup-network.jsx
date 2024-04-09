@@ -39,6 +39,7 @@ const StartupNetwork = () => {
   const { handleSubmit } = useForm();
   const [modal, setModal] = useState(false);
   const [file, setFile] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const initialValues = {
     company_name: "",
@@ -85,6 +86,7 @@ const StartupNetwork = () => {
   };
 
   const handleConfirmRegistration = () => {
+    setLoading(true);
     const url = `${apiURL}/member-startup`;
 
     const formData = new FormData();
@@ -109,6 +111,10 @@ const StartupNetwork = () => {
       .catch((error) => {
         // Handle error responses here
         console.error("Error:", error);
+      })
+      .finally(() => {
+        setLoading(false); // Stop loading indicator after response
+        setModal(false); // Close modal after response
       });
   };
 
@@ -216,7 +222,9 @@ const StartupNetwork = () => {
             <div className="w-[340.37px] h-[340px] md:w-[400px] md:h-[378px] border border-[#E9D7FE] rounded-xl p-4">
               <div>{benefit.icon}</div>
               <p className="font-primarySemibold">{benefit.title}</p>
-              <p className="font-primaryRegular py-2 md:py-3">{benefit.message}</p>
+              <p className="font-primaryRegular py-2 md:py-3">
+                {benefit.message}
+              </p>
             </div>
           ))}
         </div>
@@ -457,8 +465,9 @@ const StartupNetwork = () => {
               type="submit"
               className="px-4 py-2 bg-[#471A52] text-white rounded-md"
               onClick={handleConfirmRegistration}
+              disabled={loading}
             >
-              Confirm
+              {loading ? "Registering..." : "Confirm"}
             </button>
           </div>
         </div>
