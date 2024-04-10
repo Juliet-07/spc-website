@@ -46,8 +46,10 @@ const Contact = () => {
       </div>
       {/* form proper */}
       <div className="flex flex-col items-center justify-center my-10 p-4">
-        <p className="font-semibold text-[#471A52] text-4xl">Get in touch</p>
-        <p className="font-normal text-xl text-gray-500">
+        <p className="font-primarySemibold text-[#471A52] text-4xl">
+          Get in touch
+        </p>
+        <p className="font-primaryRegular text-xl text-gray-500">
           We’d love to hear from you. Please fill out this form.
         </p>
         <form
@@ -57,13 +59,13 @@ const Contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label
-                className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                 for="grid-first-name"
               >
                 First name
               </label>
               <input
-                className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                className="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-primaryRegular"
                 id="grid-first-name"
                 type="text"
                 placeholder="First name"
@@ -74,13 +76,13 @@ const Contact = () => {
             </div>
             <div className="w-full md:w-1/2 px-3">
               <label
-                className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                 for="grid-last-name"
               >
                 Last Name
               </label>
               <input
-                className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white font-primaryRegular"
                 id="grid-last-name"
                 type="text"
                 placeholder="Last name"
@@ -93,13 +95,13 @@ const Contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                 for="grid-password"
               >
                 Email
               </label>
               <input
-                className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-primaryRegular"
                 id="grid-password"
                 type="email"
                 placeholder="mail@gmail.com"
@@ -112,13 +114,13 @@ const Contact = () => {
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full px-3">
               <label
-                className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                 for="grid-password"
               >
                 Phone Number
               </label>
               <input
-                className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-primaryRegular"
                 id="grid-password"
                 type="number"
                 placeholder="(250)1234567654321345"
@@ -132,14 +134,14 @@ const Contact = () => {
             <div className="w-full px-3">
               <label
                 for="message"
-                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                class="block mb-2 text-sm font-primaryMedium text-gray-900 dark:text-white"
               >
                 Message
               </label>
               <textarea
                 id="message"
                 rows="4"
-                className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                className="block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white font-primaryRegular"
                 // placeholder="Write your thoughts here..."
                 name="message"
                 value={message}
@@ -149,7 +151,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full bg-[#471A52] text-white rounded-lg p-4 text-center font-semibold"
+            className="w-full bg-[#471A52] text-white rounded-lg p-4 text-center font-primarySemibold"
           >
             Send message
           </button>
@@ -158,22 +160,26 @@ const Contact = () => {
       {/* contact details */}
       <div className="w-full bg-[#471A52] p-4 md:p-10 text-white flex flex-col md:flex-row md:items-center md:justify-around">
         <div className="flex flex-col">
-          <p className="font-semibold text-3xl">Our Contact Details</p>
-          <p>Let's connect.</p>
+          <p className="font-primarySemibold text-3xl">Our Contact Details</p>
+          <p className="font-primaryRegular">Let's connect.</p>
         </div>
         <div className="flex flex-col">
-          <p className="font-semibold text-xl pt-6 md:pt-0">Telephone</p>
-          <p className="font-normal text-white text-base">(+250) 792108551</p>
-          <p className="font-semibold text-xl mt-4">Whatsapp</p>
-          <p className="font-normal text-white text-base">(+250) 792108551</p>
+          <p className="font-primarySemibold text-xl pt-6 md:pt-0">Telephone</p>
+          <p className="font-primaryRegular text-white text-base">
+            (+250) 792108551
+          </p>
+          <p className="font-primarySemibold text-xl mt-4">Whatsapp</p>
+          <p className="font-primaryRegular text-white text-base">
+            (+250) 792108551
+          </p>
         </div>
         <div className="flex flex-col">
-          <p className="font-semibold text-xl pt-6 md:pt-0">Office</p>
-          <p className="font-normal text-white text-base">
+          <p className="font-primarySemibold text-xl pt-6 md:pt-0">Office</p>
+          <p className="font-primaryRegular text-white text-base">
             Norrsken house Kigali, Rwanda
           </p>
-          <p className="font-semibold text-xl mt-4">Email</p>
-          <p className="font-normal text-white text-base">
+          <p className="font-primarySemibold text-xl mt-4">Email</p>
+          <p className="font-primaryRegular text-white text-base">
             support@silverspoonuniverse.com
           </p>
         </div>

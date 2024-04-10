@@ -379,10 +379,10 @@ const PostEvents = () => {
                   className="object-contain w-full h-full"
                 />
               </div>
-              <p className="text-lg md:text-xl text-gray-900 font-semibold">
+              <p className="text-lg md:text-xl text-gray-900 font-primarySemibold">
                 {speak.name}
               </p>
-              <p className="text-sm text-gray-500 font-normal">{speak.title}</p>
+              <p className="text-sm text-gray-500 font-primaryRegular">{speak.title}</p>
             </div>
           ))}
         </div>
@@ -420,7 +420,7 @@ const PostEvents = () => {
       </div> */}
       {/* sponsors */}
       <div className="hidden w-full md:flex flex-col items-center justify-center p-4 md:p-10 2xl:px-20">
-        <p className="font-semibold text-2xl text-gray-500">
+        <p className="font-primarySemibold text-2xl text-gray-500">
           Some past sponsors and partners
         </p>
         <div className="grid grid-cols-4 gap-10 my-6">
@@ -493,10 +493,10 @@ const PostEvents = () => {
       </div>
       {/* moments */}
       <div className="w-full bg-white flex flex-col p-4 md:p-10 2xl:px-20">
-        <div className="font-semibold text-3xl md:text-4xl text-gray-900">
+        <div className="font-primarySemibold text-3xl md:text-4xl text-gray-900">
           Moment captured from past events
         </div>
-        <div className="md:w-[400px] h-2 bg-[#471A52] mt-2"></div>
+        <div className="md:w-[600px] h-2 bg-[#471A52] mt-2"></div>
         <div className="hidden md:grid grid-cols-4 my-6">
           <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis1.jpg" />
           <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis2.jpg" />
