@@ -154,7 +154,7 @@ const StartupNetwork = () => {
     {
       icon: (
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investors.jpg"
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investing.jpg"
           className="w-[319.95px] h-[193.16px] md:w-[380px] md:h-[227px] rounded-lg"
         />
       ),
