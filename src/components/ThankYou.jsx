@@ -13,8 +13,8 @@ const ThankYou = () => {
           Registeration successful 🥳
         </p>
         <p className="font-primaryMedium text-center px-4 md:w-[607px] md:text-2xl text-gray-600">
-          Congratulations, you have been successfully added to the startup
-          network.
+          Thank you for your application submission. Our team will review it and
+          respond within 3-5 business days
         </p>
         <Link
           to="/community"

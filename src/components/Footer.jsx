@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/spc-logo.png";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,12 +15,24 @@ const Footer = () => {
               <img src={Logo} alt="SPC Logo" />
             </div>
             <div className="flex mt-4 text-gray-600 font-primaryRegular">
-              <p className="p-2">About us</p>
-              <p className="p-2">Community</p>
-              <p className="p-2">Events</p>
-              <p className="p-2">Trainings</p>
-              <p className="p-2">Team</p>
-              <p className="p-2">Contact us</p>
+              <Link to="/about-spc" className="p-2">
+                About us
+              </Link>
+              <Link to="/community" className="p-2">
+                Community
+              </Link>
+              <Link to="events" className="p-2">
+                Events
+              </Link>
+              <Link to="/trainings" className="p-2">
+                Trainings
+              </Link>
+              <Link to="/team" className="p-2">
+                Team
+              </Link>
+              <Link to="/contact-spc" className="p-2">
+                Contact us
+              </Link>
             </div>
           </div>
           <div className="flex flex-col">
@@ -67,12 +80,24 @@ const Footer = () => {
           <img src={Logo} alt="SPC Logo" />
         </div>
         <div className="grid grid-cols-2 mt-4 text-gray-600 font-primaryRegular">
-          <p className="p-2">About us</p>
-          <p className="p-2">Community</p>
-          <p className="p-2">Events</p>
-          <p className="p-2">Trainings</p>
-          <p className="p-2">Team</p>
-          <p className="p-2">Contact us</p>
+          <Link to="/about-spc" className="p-2">
+            About us
+          </Link>
+          <Link to="/community" className="p-2">
+            Community
+          </Link>
+          <Link to="events" className="p-2">
+            Events
+          </Link>
+          <Link to="/trainings" className="p-2">
+            Trainings
+          </Link>
+          <Link to="/team" className="p-2">
+            Team
+          </Link>
+          <Link to="/contact-spc" className="p-2">
+            Contact us
+          </Link>
         </div>
         <div className="flex flex-col w-full border border-gray-200 rounded-xl p-4">
           <p className="font-primarySemibold py-2">

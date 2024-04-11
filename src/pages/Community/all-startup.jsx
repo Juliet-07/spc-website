@@ -15,12 +15,12 @@ const AllStartUps = () => {
         <span className="text-gray-600 mx-2 font-primaryRegular">Back</span>
       </Link>
       <div className="font-primarySemibold text-lg md:text-4xl text-gray-900 mt-3">
-        Our Startup partners
+        Our Startup network
       </div>
       <div className="w-[174px] md:w-[334px] h-1 bg-[#471A52] mt-3"></div>
       <div className="w-full flex flex-col md:flex-row md:items-center justify-between pt-3 mb-4">
         <p className="text-base md:text-xl text-gray-500 font-primaryRegular">
-          List of companies with the highest possible momentum and return
+          {/* List of companies with the highest possible momentum and return */}
         </p>
         <div className="mt-2 md:mt-0 relative">
           <input

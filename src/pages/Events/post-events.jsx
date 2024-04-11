@@ -130,12 +130,6 @@ const PostEvents = () => {
     },
     {
       image:
-        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/KEVIN SIMMONS.png",
-      name: "Kevin Simmons",
-      title: "General Partner, Loftyinc Capital Management",
-    },
-    {
-      image:
         "https://spcimagestorage001.blob.core.windows.net/spc-events-image/NDUKA UKPABI.png",
       name: "Nduka Ukpabi",
       title: "Founder & CEO at Pluralcode",
@@ -148,16 +142,27 @@ const PostEvents = () => {
     },
     {
       image:
-        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/CHARMAINE HAYDEN.png",
-      name: "Charmaine Hayden",
-      title: "Founding Partner at Goodsoil VC",
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/KEVIN SIMMONS.png",
+      name: "Kevin Simmons",
+      title: "General Partner, Loftyinc Capital Management",
     },
-
+    {
+      image:
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/mohammed.png",
+      name: "Sadraoui Mohamed",
+      title: "Directeur Cabinet Africa IT Innovation",
+    },
     {
       image:
         "https://spcimagestorage001.blob.core.windows.net/spc-events-image/VIVENS UWIZEYIMANA.png",
       name: "Vivens Uwizeyimana",
       title: "CEO Umurava",
+    },
+    {
+      image:
+        "https://spcimagestorage001.blob.core.windows.net/spc-events-image/CHARMAINE HAYDEN.png",
+      name: "Charmaine Hayden",
+      title: "Founding Partner at Goodsoil VC",
     },
     {
       image:
@@ -382,7 +387,9 @@ const PostEvents = () => {
               <p className="text-lg md:text-xl text-gray-900 font-primarySemibold">
                 {speak.name}
               </p>
-              <p className="text-sm text-gray-500 font-primaryRegular">{speak.title}</p>
+              <p className="text-sm text-gray-500 font-primaryRegular">
+                {speak.title}
+              </p>
             </div>
           ))}
         </div>

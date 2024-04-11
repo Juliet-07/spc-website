@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import LandingPage from "../../assets/home.png"
 
 const MomentsCarousel = () => {
   // const images = [
@@ -167,6 +168,7 @@ const Home = () => {
           <div className="w-[390px] md:w-[500px]">
             <img
               src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/Landing page image.png"
+              // src={LandingPage}
               alt="Global Ecosystem"
               className="animated-image"
             />

@@ -45,9 +45,9 @@ const Community = () => {
                 : "bg-transparent text-gray-500"
             } p-2 py-2 font-primarySemibold text-lg md:text-4xl flex-1 text-center transition-colors outline-none border-0 focus:outline-none whitespace-nowrap mr-4`}
           >
-            Our Startup partners
+            Our Startup network
           </button>
-          <button
+          {/* <button
             onClick={() => handleTabClick(2)}
             className={`${
               activeTab === 2
@@ -56,7 +56,7 @@ const Community = () => {
             } p-2 py-2 font-primarySemibold text-lg md:text-4xl flex-1 text-center transition-colors outline-none border-0 focus:outline-none whitespace-nowrap`}
           >
             Talent Ecosystem
-          </button>
+          </button> */}
         </div>
         <button className="w-[200px] h-[48px] bg-gray-50 border border-gray-300 rounded-xl mt-4 md:mt-0 text-gray-800 font-primarySemibold">
           {activeTab === 1 ? (
@@ -158,18 +158,18 @@ const Community = () => {
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>
         <div className="w-full flex flex-col items-center justify-center relative z-[3] p-4 pt-[100px] md:mt-4">
           <p className="text-3xl md:text-6xl font-primarySemibold text-gray-200 md:w-[777px] mb-2 text-center">
-            Global Digital Innovation Commnuity
+            Global Digital Innovation Community
           </p>
           <p className="md:text-xl font-primaryRegular text-gray-100 text-center">
             Building the world's largest and most collaborative community for
             digital innovators
           </p>
-          <button
+          {/* <button
             onClick={() => handleBecomeMemberClick()}
-            className="w-full md:w-[177px] h-[48px] text-white font-primarySemibold md:font-medium bg-[#471A52] rounded-lg my-4"
+            className="w-full md:w-[177px] h-[48px] text-white font-primarySemibold md:font-primaryMedium bg-[#471A52] rounded-lg my-4"
           >
             Become a member
-          </button>
+          </button> */}
         </div>
       </div>
       <div>{viewToRender}</div>
@@ -215,9 +215,9 @@ const Community = () => {
           Through our various infrastructures, we are able to build on new
           transformative and digital solutions.
         </p>
-        <div className="w-full md:w-[120px] bg-[#471A52] h-10 rounded-xl p-2 mt-4 font-primarySemibold text-white flex items-center justify-center">
+        {/* <div className="w-full md:w-[120px] bg-[#471A52] h-10 rounded-xl p-2 mt-4 font-primarySemibold text-white flex items-center justify-center">
           Get Started
-        </div>
+        </div> */}
       </div>
       <Modal
         isVisible={showWorkWithYouModal}
@@ -228,7 +228,7 @@ const Community = () => {
             <p className="font-primarySemibold text-2xl text-gray-900">
               Global Expansion
             </p>
-            <p className="font-normal text-gray-500">
+            <p className="font-primaryRegular text-gray-500">
               Become a member and enjoy our numerous benefits
             </p>
             <div>
@@ -236,13 +236,13 @@ const Community = () => {
                 <div className="flex flex-wrap -mx-3 mb-3">
                   <div className="w-full px-3">
                     <label
-                      className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                      className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                       for="grid-password"
                     >
                       What do you want us to work on?
                     </label>
                     <input
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-password"
                       type="text"
                       placeholder="Choose"
@@ -252,13 +252,13 @@ const Community = () => {
                 <div className="flex flex-wrap -mx-3 mb-3">
                   <div className="w-full px-3">
                     <label
-                      className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                      className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                       for="grid-password"
                     >
                       Company Name
                     </label>
                     <input
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-password"
                       type="text"
                       placeholder="Enter company name"
@@ -268,13 +268,13 @@ const Community = () => {
                 <div className="flex flex-wrap -mx-3 mb-3">
                   <div className="w-full px-3">
                     <label
-                      className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                      className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                       for="grid-password"
                     >
                       Company Email
                     </label>
                     <input
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-password"
                       type="email"
                       placeholder="you@company.com"
@@ -284,13 +284,13 @@ const Community = () => {
                 <div className="flex flex-wrap -mx-3 mb-3">
                   <div className="w-full px-3">
                     <label
-                      className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                      className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                       for="grid-password"
                     >
                       Contact Number
                     </label>
                     <input
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-password"
                       type="number"
                       placeholder="(+250)45654321345"
@@ -300,13 +300,13 @@ const Community = () => {
                 <div className="flex flex-wrap -mx-3 mb-3">
                   <div className="w-full px-3">
                     <label
-                      className="block tracking-wide text-gray-700 text-sm font-medium mb-2"
+                      className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
                       for="grid-password"
                     >
                       Location
                     </label>
                     <input
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       id="grid-password"
                       type="text"
                       placeholder="Enter current location"
@@ -317,14 +317,14 @@ const Community = () => {
                   <div className="w-full px-3">
                     <label
                       for="message"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      class="block mb-2 text-sm font-primaryMedium text-gray-900 dark:text-white"
                     >
                       Message
                     </label>
                     <textarea
                       id="message"
                       rows="4"
-                      className="appearance-none block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                      className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       // placeholder="Write your thoughts here..."
                     ></textarea>
                   </div>
@@ -350,7 +350,7 @@ const Community = () => {
           <p className="font-primarySemibold text-2xl text-gray-900">
             Membership
           </p>
-          <p className="font-normal text-gray-500">
+          <p className="font-primaryRegular text-gray-500">
             Become a member and enjoy our numerous benefits
           </p>
           <div className="flex items-center justify-center my-4">
@@ -387,7 +387,7 @@ const Community = () => {
           </div>
           <div className="w-[110px] h-10 border border-[#471A52] rounded-xl flex items-center justify-center">
             <p className="font-primarySemibold text-2xl text-[#471A52]">$200</p>
-            <span className="text-gray-600 font-medium">/year</span>
+            <span className="text-gray-600 font-primaryMedium">/year</span>
           </div>
           <div>
             {selectedOption === "startup" && <StartupForm />}

@@ -45,12 +45,12 @@ export const StartUpDataComponent = () => {
               </span>
             </p>
           </div> */}
-          <div
+          {/* <div
             onClick={() => handleViewDetails(startup)}
             className="w-full flex items-center justify-center font-primarySemibold text-[#471A52] cursor-pointer mt-4"
           >
             View details
-          </div>
+          </div> */}
         </div>
       ))}
     </div>

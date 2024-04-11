@@ -355,7 +355,7 @@ const StartupNetwork = () => {
                       htmlFor="phone-number"
                       className="block text-sm text-[#D0D5DD] font-primaryMedium"
                     >
-                      Linked URL
+                      Linkedin URL
                     </label>
                     <input
                       type="text"
@@ -434,10 +434,8 @@ const StartupNetwork = () => {
             Join the community
           </p>
           <p className="md:w-[768px] p-3 text-gray-600 font-primaryRegular md:text-xl text-center">
-            Through our various infrastructures, we are able to build on new
-            transformative and digital solutions. Through our various
-            infrastructures, we are able to build on new transformative and
-            digital solutions.
+            We leverage our diverse infrastructures to implement innovative
+            digital solutions that drive transformation.
           </p>
         </div>
       </div>
