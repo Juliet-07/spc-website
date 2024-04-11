@@ -249,7 +249,7 @@ const Home = () => {
           </div>
           <div className="w-[170px] md:w-[200px] h-2 bg-[#471A52]"></div>
           <div className="text-2xl md:text-4xl font-primaryMedium text-gray-900 py-4">
-            3+ years of providing innovative digital solutions
+            4+ years of providing innovative digital solutions
           </div>
           <p className="font-primaryRegular md:text-lg text-gray-700">
             SPC UNIVERSE is an eco-system building company on a mission to build
