@@ -40,6 +40,7 @@ const StartupNetwork = () => {
   const [modal, setModal] = useState(false);
   const [file, setFile] = useState({});
   const [loading, setLoading] = useState(false);
+  const [filePreview, setFilePreview] = useState("");
 
   const initialValues = {
     company_name: "",
@@ -50,6 +51,12 @@ const StartupNetwork = () => {
     website_url: "",
     linkedin_url: "",
     brief_description: "",
+    company_phone: "",
+    company_person_name: "",
+    company_person_title: "",
+    company_person_whatsapp_number: "",
+    company_stage: "",
+    membership_fee: "",
   };
 
   const [startupMembership, setStartupMembership] = useState(initialValues);
@@ -60,9 +67,14 @@ const StartupNetwork = () => {
     company_size,
     location,
     country,
-    website_url,
-    linkedin_url,
     brief_description,
+    company_image,
+    company_phone,
+    company_person_name,
+    company_person_title,
+    company_person_whatsapp_number,
+    company_stage,
+    membership_fee,
   } = startupMembership;
 
   const handleChange = (e) => {
@@ -75,6 +87,7 @@ const StartupNetwork = () => {
     const docx = e.target.files[0];
     console.log(docx.name);
     setFile(docx);
+    setFilePreview(URL.createObjectURL(docx));
   };
 
   const handleRegisterClick = () => {
@@ -96,11 +109,17 @@ const StartupNetwork = () => {
     formData.append("company_size", company_size);
     formData.append("location", location);
     formData.append("country", country);
-    formData.append("likeden_url", linkedin_url);
-    formData.append("website_url", website_url);
     formData.append("brief_description", brief_description);
     formData.append("company_image", file);
-    formData.append("amount", 1000);
+    formData.append("company_phone", company_phone);
+    formData.append("company_person_name", company_person_name);
+    formData.append("company_person_title", company_person_title);
+    formData.append(
+      "company_person_whatsapp_number",
+      company_person_whatsapp_number
+    );
+    formData.append("company_stage", company_stage);
+    formData.append("membership_fee", membership_fee);
 
     axios
       .post(url, formData)
@@ -248,7 +267,7 @@ const StartupNetwork = () => {
             </div> */}
             <div className="md:w-[576px]">
               <form onSubmit={handleSubmit(handleRegisterClick)}>
-                <div className="mt-4">
+                <div className="my-2">
                   <label
                     htmlFor="full-name"
                     className="block text-sm text-[#D0D5DD] font-primaryMedium"
@@ -265,22 +284,41 @@ const StartupNetwork = () => {
                     required
                   />
                 </div>
-                <div className="mt-2">
-                  <label
-                    htmlFor="email"
-                    className="block text-sm text-[#D0D5DD] font-primaryMedium"
-                  >
-                    Company email
-                  </label>
-                  <input
-                    type="email"
-                    className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
-                    placeholder="@example.com"
-                    name="company_email"
-                    value={company_email}
-                    onChange={handleChange}
-                    required
-                  />
+                <div className="flex flex-wrap -mx-3 mb-4">
+                  <div className="w-full md:w-1/2 px-3">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                    >
+                      Company email
+                    </label>
+                    <input
+                      type="email"
+                      className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
+                      placeholder="@example.com"
+                      name="company_email"
+                      value={company_email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 px-3">
+                    <label
+                      htmlFor="full-name"
+                      className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                    >
+                      Company phone
+                    </label>
+                    <input
+                      type="number"
+                      className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
+                      placeholder="Enter company name"
+                      name="company_phone"
+                      value={company_phone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
                 <div className="mt-2">
                   <label
@@ -329,43 +367,103 @@ const StartupNetwork = () => {
                       placeholder="Enter country of incorporation"
                       name="country"
                       value={country}
+                      company_person_whatsapp_number
                       onChange={handleChange}
                     />
                   </div>
                 </div>
-                <div className="mt-2 flex flex-wrap">
-                  <div className="w-full md:w-1/2 md:pr-2">
+                <div class="flex flex-wrap -mx-3 my-2">
+                  <div class="block w-full md:w-1/3 px-3 mb-6 md:mb-0">
                     <label
-                      htmlFor="phone-number"
                       className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                      for="grid-city"
                     >
-                      Website URL
+                      Contact Person Name
                     </label>
                     <input
                       type="text"
+                      id="grid-city"
+                      placeholder="Contact Name"
                       className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
-                      placeholder="www.company.com"
-                      name="website_url"
-                      value={website_url}
+                      name="company_person_name"
+                      value={company_person_name}
                       onChange={handleChange}
+                      required
                     />
                   </div>
-                  <div className="w-full md:w-1/2">
+                  <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                     <label
-                      htmlFor="phone-number"
                       className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                      for="grid-state"
                     >
-                      Linkedin URL
+                      Contact Person Title
                     </label>
                     <input
                       type="text"
+                      id="grid-city"
+                      placeholder="Title"
                       className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
-                      placeholder="https://linkedin.com/company_name"
-                      name="linkedin_url"
-                      value={linkedin_url}
+                      name="company_person_title"
+                      value={company_person_title}
                       onChange={handleChange}
+                      required
                     />
                   </div>
+                  <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    <label
+                      className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                      for="grid-zip"
+                    >
+                      Contact Person Number
+                    </label>
+                    <input
+                      type="number"
+                      placeholder="Whatsapp Number"
+                      className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
+                      id="grid-zip"
+                      name="company_person_whatsapp_number"
+                      value={company_person_whatsapp_number}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                </div>
+                <div className="mt-2">
+                  <label
+                    htmlFor="stage-of-company"
+                    className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                  >
+                    Stage of company:
+                  </label>
+                  <select
+                    id="stage-of-company"
+                    className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
+                    name="company_stage"
+                    value={company_stage}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">Select one...</option>
+                    <option value="pre-revenue">Pre-revenue</option>
+                    <option value="revenue-stage">Revenue stage</option>
+                  </select>
+                </div>
+                <div className="mt-2">
+                  <label
+                    htmlFor="full-name"
+                    className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                  >
+                    Company Website or Social Media URL
+                  </label>
+                  <input
+                    type="text"
+                    className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
+                    placeholder="Enter company name"
+                    name="website_url"
+                    // value={company_name}
+                    onChange={handleChange}
+                    // required
+                  />
                 </div>
                 <div className="mt-2">
                   <label
@@ -410,16 +508,44 @@ const StartupNetwork = () => {
                     id="file-input"
                     className="hidden"
                     name="file"
-                    // value={file}
                     onChange={fileUploadHandler}
                   />
+                </div>
+                {filePreview && (
+                  <div className="mt-4">
+                    <img
+                      src={filePreview}
+                      alt="Selected file"
+                      className="max-w-full h-auto"
+                    />
+                  </div>
+                )}
+                <div className="mt-2">
+                  <label
+                    htmlFor="membership-fees"
+                    className="block text-sm text-[#D0D5DD] font-primaryMedium"
+                  >
+                    If the team reviews your application and you qualify to join
+                    the network, can you afford $500-$1,000 in lifetime
+                    membership fees?
+                  </label>
+                  <select
+                    id="membership-fees"
+                    className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 bg-[#E9D7FE] border rounded-md font-primaryRegular"
+                    name="membership_fee"
+                    value={membership_fee}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">Select one...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
                 </div>
                 <div className="mt-6 mb-2">
                   <button
                     type="submit"
                     className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide transition-colors duration-200 transform bg-[#FFFFFF] rounded-md font-primarySemibold text-[#471A52]"
-                    // onClick={() => setLoading(!loading)}
-                    // onClick={handleRegisterClick}
                   >
                     Register
                   </button>
