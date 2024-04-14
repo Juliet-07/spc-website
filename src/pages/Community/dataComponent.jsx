@@ -2,7 +2,6 @@ import { Link, useNavigate } from "react-router-dom";
 import ComingSoon from "../../components/ComingSoon";
 import { StartUpData, TalentData } from "./data";
 
-
 // startUpData component
 export const StartUpDataComponent = () => {
   const navigate = useNavigate();
@@ -24,7 +23,10 @@ export const StartUpDataComponent = () => {
           <h2 className="text-xl font-primarySemibold text-gray-900 py-2">
             {startup.name}
           </h2>
-          <p className="font-primaryRegular text-xs text-gray-500 pb-2">
+          <p
+            className="font-primaryRegular text-xs text-gray-500 pb-2"
+            style={{ maxHeight: "6em", overflow: "hidden" }}
+          >
             {startup.description}
           </p>
           {/* <div className="w-full grid grid-cols-3 py-4">

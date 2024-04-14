@@ -71,14 +71,14 @@ const Community = () => {
         {activeTab === 2 && <TalentDataComponent />}
         {/* {activeTab === 3 && <ClosedPage />} */}
       </div>
-      <div className="w-full flex items-center justify-center my-10">
+      {/* <div className="w-full flex items-center justify-center my-10">
         <Link
           to="/community/all-startups"
           className="w-full md:w-[191px] h-[48px] mx-4 md:mx-0 bg-[#471A52] font-primarySemibold text-white rounded-lg flex items-center justify-center"
         >
           View more
         </Link>
-      </div>
+      </div> */}
     </>
   );
   const globalExpansion = [

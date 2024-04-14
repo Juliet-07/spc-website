@@ -2,7 +2,10 @@ export const StartUpData = [
   {
     id: 1,
     image: (
-      <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/boundlesspay.png" />
+      <img
+        src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/boundlesspay.png"
+        className="w-[376px] h-[200px] rounded-lg"
+      />
     ),
     name: "BoundlessPay",
     description:
@@ -14,7 +17,10 @@ export const StartUpData = [
   {
     id: 2,
     image: (
-      <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/manilla.png" />
+      <img
+        src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/manilla.png"
+        className="w-[376px] h-[200px] rounded-lg"
+      />
     ),
     name: "Manilla Technologies",
     description:
@@ -26,7 +32,10 @@ export const StartUpData = [
   {
     id: 3,
     image: (
-      <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/pluralcode.png" />
+      <img
+        src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/pluralcode.png"
+        className="w-[376px] h-[200px] rounded-lg"
+      />
     ),
     name: "Pluralcode Institute",
     description:

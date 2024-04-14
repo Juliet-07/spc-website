@@ -41,9 +41,9 @@ const Navbar = () => {
         <NavLink to="/trainings" style={activeStyle} className="p-2">
           Trainings
         </NavLink>
-        <NavLink to="/team" style={activeStyle} className="p-2">
+        {/* <NavLink to="/team" style={activeStyle} className="p-2">
           Team
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/contact-spc" style={activeStyle} className="p-2">
           Contact us
         </NavLink>
@@ -113,14 +113,14 @@ const Navbar = () => {
           >
             Trainings
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/team"
             style={activeStyleMobile}
             className="p-2"
             onClick={() => setNav(false)}
           >
             Team
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/contact-spc"
             style={activeStyleMobile}
