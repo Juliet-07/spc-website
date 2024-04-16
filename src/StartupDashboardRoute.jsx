@@ -2,6 +2,10 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Layout from "./pages/Startup/Layout";
 import Dashboard from "./pages/Startup/Dashboard";
+import Talents from "./pages/Startup/Talents";
+import Mentors from "./pages/Startup/Mentors";
+import GlobalExpansion from "./pages/Startup/Expansion";
+import Profile from "./pages/Startup/Profile";
 
 const StartupDashboardRoute = () => {
   return (
@@ -9,13 +13,10 @@ const StartupDashboardRoute = () => {
       <Layout>
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
-          {/* <Route path="/agenda" element={<Agenda />} />
-          <Route path="/live" element={<Live />} />
-          <Route path="/network" element={<Network />} />
-          <Route path="/speakers" element={<Speakers />} />
-          <Route path="/announcements" element={<Announcement />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/explore" element={<Explore />} /> */}
+          <Route path="/talents" element={<Talents />} />
+          <Route path="/mentors" element={<Mentors />} />
+          <Route path="/expansion" element={<GlobalExpansion />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Layout>
     </>

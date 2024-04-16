@@ -1,5 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
+import { IoIosNotifications } from "react-icons/io";
 
 const Header = () => {
   const location = useLocation();
@@ -12,20 +13,14 @@ const Header = () => {
     switch (pathname) {
       case "/startup/dashboard":
         return "Dashboard";
-      case "/startup/agenda":
-        return "Agenda";
-      case "/startup/live":
-        return "Live now";
-      case "/startup/network":
-        return "Networking";
-      case "/startup/speakers":
-        return "Speakers";
-      case "/startup/announcements":
-        return "Announcements";
-      case "/startup/partners":
-        return "Partners";
-      case "/startup/explore":
-        return "Explore";
+      case "/startup/talents":
+        return "Talents";
+      case "/startup/mentors":
+        return "Mentors / Investors";
+      case "/startup/expansion":
+        return "Global Expansion";
+      case "/startup/profile":
+        return "Profile";
       default:
         return "Unknown"; // Default title for unknown paths
     }
@@ -35,9 +30,14 @@ const Header = () => {
 
   return (
     <>
-      <div className="w-full h-20 bg-gray-500 border flex items-center justify-between px-6">
-        <div className="font-semibold text-black text-3xl">{title}</div>
-        <div>inputs and notification</div>
+      <div className="w-full h-20 border flex items-center justify-between px-6">
+        <div className="font-primarySemibold text-black text-2xl">{title}</div>
+        <div className="w-[200px] flex items-center justify-around">
+          <div>
+            <IoIosNotifications size={20} color="gray" />
+          </div>
+          <p className="font-primaryMedium">company name</p>
+        </div>
       </div>
     </>
   );

@@ -1,13 +1,11 @@
 // https://preline.co/docs/sidebar.html
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { SlHome } from "react-icons/sl";
-import { TfiAgenda } from "react-icons/tfi";
-import { MdDashboard, MdLiveTv } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { FaMoneyBill1Wave } from "react-icons/fa6";
+import { MdSpaceDashboard } from "react-icons/md";
 import { LuNetwork } from "react-icons/lu";
 import { IoIosPeople } from "react-icons/io";
-import { GrAnnounce } from "react-icons/gr";
-import { FaPeopleLine, FaWpexplorer } from "react-icons/fa6";
 import Icon from "../../assets/spc-logo.png";
 import Header from "./Header";
 
@@ -17,34 +15,34 @@ const Layout = ({ children }) => {
   const Menus = [
     {
       title: "Dashboard",
-      icon: <SlHome />,
+      icon: <MdSpaceDashboard />,
       path: "/startup/dashboard",
     },
     {
       title: "Talents",
       icon: <IoIosPeople />,
-      path: "/startup/agenda",
+      path: "/startup/talents",
     },
     {
       title: "Mentors / Investors",
-      icon: <MdLiveTv />,
-      path: "/startup/live",
+      icon: <FaMoneyBill1Wave />,
+      path: "/startup/mentors",
     },
     {
       title: "Global Expansion",
       icon: <LuNetwork />,
-      path: "/startup/network",
+      path: "/startup/expansion",
     },
     {
       title: "Profile",
-      path: "/startup/announcements",
-      icon: <GrAnnounce />,
+      path: "/startup/profile",
+      icon: <CgProfile />,
     },
   ];
   const activeLink =
-    "mx-4 flex justify-start items-center text-white text-2xl space-x-1 font-bold bg-[#471A52] rounded-xl";
+    "mx-4 flex justify-start items-center text-white text-2xl space-x-1 font-primaryBold bg-[#471A52] rounded-xl";
   const normalLink =
-    "hover:bg-[#471A52]/50 mt-3 mx-4 flex justify-start items-center text-gray-600 text-base space-x-1 font-semibold";
+    "hover:bg-[#471A52]/50 mt-3 mx-4 flex justify-start items-center text-gray-600 text-base space-x-1 font-primarySemibold";
 
   const SidebarLinks = ({ menu }) => {
     return (
@@ -53,13 +51,13 @@ const Layout = ({ children }) => {
         className={({ isActive }) => (isActive ? activeLink : normalLink)}
       >
         <li
-          className={` flex items-center gap-x-2 cursor-pointer p-2.5 hover:bg-[#471A52]/50 hover:text-white hover:font-semibold rounded-md mt-2`}
+          className={` flex items-center gap-x-2 cursor-pointer p-2.5 hover:bg-[#471A52]/50 hover:text-white hover:font-primarySemibold rounded-md mt-2`}
         >
           <span className="text-xl block float-left">
             {menu.icon ? menu.icon : <MdDashboard />}
           </span>
           <span
-            className={`text-base font-medium duration-200 ${
+            className={`text-base font-primaryMedium duration-200 ${
               !open && "hidden"
             }`}
           >
@@ -104,7 +102,7 @@ const Layout = ({ children }) => {
         {/* Content */}
         <div className="w-full">
           <Header />
-          <main className="bg-gray-50 p-6">{children}</main>
+          <main className="bg-gray-50 p-6 font-primaryRegular">{children}</main>
         </div>
       </div>
     </div>
