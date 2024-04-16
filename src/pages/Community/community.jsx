@@ -3,11 +3,13 @@ import { Link } from "react-router-dom";
 import { StartUpDataComponent, TalentDataComponent } from "./dataComponent";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import Modal from "../../components/Modal";
+import Select from "react-select";
 
 const Community = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [showWorkWithYouModal, setShowWorkWithYouModal] = useState(false);
   const [showBecomeMemberModal, setShowBecomeMemberModal] = useState(false);
+  const [reason, setReason] = useState("");
 
   const handleTabClick = (tabNumber) => {
     setActiveTab(tabNumber);
@@ -147,6 +149,46 @@ const Community = () => {
         "Strategic talent acquisition services to build a skilled and diverse team, including recruitment strategies, talent identification, and hiring processes tailored to your industry.",
     },
   ];
+
+  const options = [
+    {
+      value: "research",
+      label: "Research",
+    },
+    {
+      value: "market strategy",
+      label: "Go-to Market Strategy",
+    },
+    {
+      value: "business incorporation",
+      label: "Business Incorporation",
+    },
+    {
+      value: "office setup",
+      label: "Office Setup",
+    },
+    {
+      value: "permit",
+      label: "Permit & Immigration",
+    },
+    {
+      value: "legal",
+      label: "Legal Consultancy",
+    },
+    {
+      value: "accounting services",
+      label: "Accounting Services",
+    },
+    {
+      value: "talent hunting",
+      label: "Talent Hunting & Hiring",
+    },
+  ];
+
+  const handleSelectChange = (value) => {
+    setReason(value.value);
+    console.log(value, "values");
+  };
   return (
     <>
       <div
@@ -241,11 +283,12 @@ const Community = () => {
                     >
                       What do you want us to work on?
                     </label>
-                    <input
-                      className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-password"
-                      type="text"
-                      placeholder="Choose"
+                    <Select
+                      options={options}
+                      defaultValue={reason}
+                      onChange={handleSelectChange}
+                      isSearchable
+                      isMulti
                     />
                   </div>
                 </div>
