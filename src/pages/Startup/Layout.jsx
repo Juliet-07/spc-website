@@ -1,6 +1,7 @@
 // https://preline.co/docs/sidebar.html
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { BsArrowLeftShort } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { MdSpaceDashboard } from "react-icons/md";
@@ -33,11 +34,11 @@ const Layout = ({ children }) => {
       icon: <LuNetwork />,
       path: "/startup/expansion",
     },
-    {
-      title: "Profile",
-      path: "/startup/profile",
-      icon: <CgProfile />,
-    },
+    // {
+    //   title: "Profile",
+    //   path: "/startup/profile",
+    //   icon: <CgProfile />,
+    // },
   ];
   const activeLink =
     "mx-4 flex justify-start items-center text-white text-2xl space-x-1 font-primaryBold bg-[#471A52] rounded-xl";
@@ -68,6 +69,20 @@ const Layout = ({ children }) => {
     );
   };
 
+  // Close the dashboard on mobile view
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div className="w-full h-full">
       <div className="flex">
