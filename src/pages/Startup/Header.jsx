@@ -17,7 +17,9 @@ const Header = () => {
       case "/startup/talents":
         return "Talents";
       case "/startup/mentors":
-        return "Mentors / Investors";
+        return "Mentors";
+      case "/startup/investors":
+        return "Investors";
       case "/startup/expansion":
         return "Global Expansion";
       case "/startup/profile":
@@ -53,13 +55,13 @@ const Header = () => {
               </p>
               <div className="w-[348px] h-[120px] border border-gray-200 rounded-xl py-2">
                 <p className="block p-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
-                  Event 1
+                  Notification 1
                 </p>
                 <p className="block p-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
-                  Event 2
+                  Notification 2
                 </p>
                 <p className="block p-2 text-gray-800 hover:bg-gray-200 cursor-pointer">
-                  Event 3
+                  Notification 3
                 </p>
               </div>
             </div>

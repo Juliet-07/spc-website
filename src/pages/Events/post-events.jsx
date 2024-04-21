@@ -97,28 +97,28 @@ const PostEvents = () => {
         <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/market.png" />
       ),
       title: "Global expansion accross markets",
-      text: "Explore how digital technologies can be strategically leveraged to boost Africa's Free Trade Zone. Uncover the latest trends, strategies, and innovations that can propel your business or initiatives forward.",
+      text: "Participants delved into leveraging digital technologies strategically to bolster Africa's Free Trade Zone. They uncovered cutting-edge trends, strategies, and innovations, propelling businesses and initiatives forward while exploring avenues for market expansion guided by industry experts.",
     },
     {
       icon: (
         <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/collaboration.png" />
       ),
       title: "Fostering collaboration",
-      text: "Connect with key players in the digital innovation space, including entrepreneurs, investors, and industry leaders. Forge valuable connections that can open doors to collaboration and new opportunities.",
+      text: "Leaders in the digital innovation sphere, including entrepreneurs, investors, and industry stalwarts, united to nurture collaboration. They established invaluable connections, opening doors to novel partnerships and opportunities. Through shared insights and expertise, they tackled challenges head-on, driving innovation forward.",
     },
     {
       icon: (
         <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/opportunity.png" />
       ),
       title: "Softlanding Opportunities",
-      text: " Engage in thought-provoking discussions and panels led by industry experts and visionaries. Gain deep insights into how digital transformation can drive and promote Africa's Free Trade Zone.",
+      text: " Engaging in insightful discussions and panels led by industry luminaries, attendees gained profound insights into how digital transformation drives and advocates for Africa's Free Trade Zone. They delved into soft landing opportunities and devised sustainable growth strategies in the digital age.",
     },
     {
       icon: (
         <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/networking.png" />
       ),
       title: "Building Social Capital",
-      text: "Participate in interactive workshops designed to provide practical skills and actionable strategies. Acquire tools that you can apply to foster digital transformation within your organization or sector.",
+      text: "Active participation in interactive workshops equipped participants with practical skills and actionable strategies. Armed with tools and insights, they championed digital transformation within their organizations or sectors. Through networking and collaboration, they cultivated social capital, fostering professional growth and development.",
     },
   ];
   const speakers = [
@@ -300,21 +300,13 @@ const PostEvents = () => {
         </div>
       </div>
       {/* Our Goals */}
-      <div className="w-full flex flex-col md:flex-row justify-between p-4 md:p-10 2xl:px-20 my-6">
-        <div className="flex flex-col md:w-[400px]">
-          <div className="font-primarySemibold text-3xl md:text-4xl text-gray-900">
-            Our Goals
-          </div>
-          <div className="w-[140px] h-1 md:w-[165px] md:h-2 bg-[#471A52]"></div>
-          <p className="font-primaryRegular md:text-lg text-gray-500 py-4">
-            Join us at the Africa Digital Innovation Summit for an unparalleled
-            experience that promises to shape the future of digital
-            transformation on the continent. Here's why your attendance is
-            crucial:
-          </p>
+      <div className="w-full p-4 md:p-10 2xl:px-20 my-6">
+        <div className="font-primarySemibold text-xl md:text-3xl text-gray-900">
+          Outcome & Highlights
         </div>
+        <div className="w-[200px] h-1 md:w-[300px] md:h-2 bg-[#471A52]"></div>
         <div>
-          <div className="w-full grid md:grid-cols-2 gap-10 md:px-10 2xl:px-20">
+          <div className="w-full grid md:grid-cols-4 gap-10 mt-6">
             {attendees.map((attend) => (
               <div className="border border-[#471A52] md:w-[348.18px] rounded-xl flex flex-col items-center justify-center shadow-xl">
                 <div className="w-[52.23px] h-[52.23px] my-2 md:my-4">

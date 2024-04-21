@@ -25,9 +25,14 @@ const Layout = ({ children }) => {
       path: "/startup/talents",
     },
     {
-      title: "Mentors / Investors",
-      icon: <FaMoneyBill1Wave />,
+      title: "Mentors",
+      icon: <IoIosPeople />,
       path: "/startup/mentors",
+    },
+    {
+      title: "Investors",
+      icon: <FaMoneyBill1Wave />,
+      path: "/startup/investors",
     },
     {
       title: "Global Expansion",

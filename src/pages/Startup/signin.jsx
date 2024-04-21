@@ -80,7 +80,7 @@ const Signin = () => {
             </div>
             <div className="w-[600px] h-[600px] p-12">
               <div className="w-[485px] h-[492px] flex flex-col p-10">
-                <div className="text-center font-primaryprimarySemibold text-3xl">
+                <div className="text-center font-primarySemibold text-3xl">
                   Login
                 </div>
                 <form onSubmit={handleSubmit(handleLoginValidation)}>
@@ -134,7 +134,7 @@ const Signin = () => {
                   <div className="mt-20">
                     <button
                       type="submit"
-                      className="w-full px-4 py-2 font-medium tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md"
+                      className="w-full px-4 py-2 font-primaryMedium tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md"
                       // onClick={() => setLoading(!loading)}
                     >
                       Login

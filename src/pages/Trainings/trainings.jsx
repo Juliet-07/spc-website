@@ -1,5 +1,4 @@
 import React from "react";
-import ComingSoon from "../../components/ComingSoon";
 
 const Trainings = () => {
   const colors = ["#521A25", "#25521A", "#1A4152", "#471A52"];
@@ -37,7 +36,7 @@ const Trainings = () => {
       icon: (
         <img src="https://spcimagestorage001.blob.core.windows.net/spc-training/courses.png" />
       ),
-      title: "Cyber Security",
+      title: "Software Engineering",
       description:
         "The programs have a mentorship and internship structure that allows practical execution of every knowledge that our students have gained.",
       price: "$100",
@@ -47,7 +46,7 @@ const Trainings = () => {
       icon: (
         <img src="https://spcimagestorage001.blob.core.windows.net/spc-training/courses.png" />
       ),
-      title: "Product Designing",
+      title: "Sales & Marketing",
       description:
         "During their internship phase, we are able to fix you with various organizations and talents that will retain you upon completion of the programs.",
       price: "$100",
@@ -57,13 +56,47 @@ const Trainings = () => {
       icon: (
         <img src="https://spcimagestorage001.blob.core.windows.net/spc-training/courses.png" />
       ),
-      title: "Software Engineering",
+      title: "Cyber Security",
       description:
         "Our scholarship structure allows students access our educational infrastructure without having issues of financial restraints.",
       price: "$100",
       duration: "6 months",
     },
   ];
+
+  const acceleratorProgram = [
+    {
+      icon: (
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-training/courses.png" />
+      ),
+      title: "Software Accelerator Program",
+      description:
+        "Our University is structured to prepare students in line with the future of digital transformation across all Faculties and departments.",
+      price: "$100",
+      duration: "6 months",
+    },
+    {
+      icon: (
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-training/courses.png" />
+      ),
+      title: "Digital Sales Mastery Accelerator Program",
+      description:
+        "The programs have a mentorship and internship structure that allows practical execution of every knowledge that our students have gained.",
+      price: "$100",
+      duration: "6 months",
+    },
+    {
+      icon: (
+        <img src="https://spcimagestorage001.blob.core.windows.net/spc-training/courses.png" />
+      ),
+      title: "Venture Capital Accelerator Program",
+      description:
+        "During their internship phase, we are able to fix you with various organizations and talents that will retain you upon completion of the programs.",
+      price: "$100",
+      duration: "6 months",
+    },
+  ];
+  
   return (
     <>
       <div
@@ -139,7 +172,7 @@ const Trainings = () => {
           </div>
           <div className="hidden md:block w-[160px] md:w-[200px] h-1 md:h-2 bg-[#471A52]"></div>
           <div>
-            <div className="w-full md:grid md:grid-cols-4 gap-4 md:gap-10 py-4">
+            <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 py-4">
               {technologies.map((technology, index) => (
                 <div
                   key={index}
@@ -180,7 +213,43 @@ const Trainings = () => {
           <div className="font-primarySemibold text-3xl md:text-4xl text-gray-900">
             Accelerator Programs
           </div>
-          <div className="w-[250px] md:w-[300px] h-1 md:h-2 bg-[#471A52]"></div>
+          <div className="w-[310px] md:w-[370px] h-1 md:h-2 bg-[#471A52]"></div>
+          <div>
+            <div className="w-full grid md:grid-cols-4 gap-4 md:gap-10 py-4">
+              {acceleratorProgram.map((technology, index) => (
+                <div
+                  key={index}
+                  className="w-full md:w-[302px] h-[405px] border border-gray-200 bg-white rounded-xl flex flex-col shadow my-4 p-4"
+                >
+                  <div className="w-full">{technology.icon}</div>
+                  <p className="text-lg text-gray-900 font-primarySemibold my-2">
+                    {technology.title}
+                  </p>
+                  <p className="text-sm text-gray-500 font-primaryRegular">
+                    {technology.description}
+                  </p>
+                  <div className="w-full flex items-center justify-between mt-2">
+                    <div className="flex flex-col">
+                      <p className="text-xs font-primaryRegular text-gray-400">
+                        Price
+                      </p>
+                      <p className="font-primarySemibold text-gray-900">
+                        {technology.price}
+                      </p>
+                    </div>
+                    <div className="flex flex-col">
+                      <p className="text-xs font-primaryRegular text-gray-400">
+                        Duration
+                      </p>
+                      <p className="font-primarySemibold text-gray-900">
+                        {technology.duration}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
       {/* read to explore */}
