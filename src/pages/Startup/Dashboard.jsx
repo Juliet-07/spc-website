@@ -60,7 +60,7 @@ const Dashboard = () => {
             View all
           </NavLink>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {talents.map((talent) => (
             <div className="w-[330px] border border-gray-200 rounded-lg p-2 my-4 flex flex-col items-center">
               <div className="w-[302px] h-[192px] bg-[#D9D9D9] rounded-xl"></div>
@@ -68,7 +68,7 @@ const Dashboard = () => {
                 <p className="text-gray-900 text-xl font-primarySemibold">
                   {talent.name}
                 </p>
-                <p className="text-gray-500 text-sm">{talent.title}</p>
+                <p className="text-gray-500 text-sm font-primaryRegular">{talent.title}</p>
                 <div className="border border-dashed border-gray-200 mt-2"></div>
                 <div className="w-full flex items-center justify-between mt-4">
                   <div className="flex flex-col">
@@ -108,7 +108,7 @@ const Dashboard = () => {
             View all
           </NavLink>
         </div>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-4">
           {mentors.map((mentor) => (
             <div className="w-[330px] border border-gray-200 rounded-lg p-2 my-4 flex flex-col items-center">
               <div className="w-[302px] h-[192px] bg-[#D9D9D9] rounded-xl"></div>
@@ -116,7 +116,7 @@ const Dashboard = () => {
                 <p className="text-gray-900 text-xl font-primarySemibold">
                   {mentor.name}
                 </p>
-                <p className="text-gray-500 text-sm">{mentor.title}</p>
+                <p className="text-gray-500 text-sm font-primaryRegular">{mentor.title}</p>
                 <div className="border border-dashed border-gray-200 mt-2"></div>
                 <div className="w-full flex items-center justify-between mt-4">
                   <div className="flex items-center">

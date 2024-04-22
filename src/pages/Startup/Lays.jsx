@@ -1,19 +1,19 @@
-// https://preline.co/docs/sidebar.html
 import React, { useState, useEffect } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { BsArrowLeftShort } from "react-icons/bs";
-import { CgProfile } from "react-icons/cg";
-import { FaMoneyBill1Wave } from "react-icons/fa6";
 import { MdSpaceDashboard } from "react-icons/md";
-import { LuNetwork } from "react-icons/lu";
 import { IoIosPeople } from "react-icons/io";
-import Icon from "../../assets/spc-logo.png";
+import { FaMoneyBill1Wave } from "react-icons/fa6";
+import { LuNetwork } from "react-icons/lu";
+import { CgProfile } from "react-icons/cg";
 import Header from "./Header";
+import Icon from "../../assets/spc-logo.png";
+import { BsArrowLeftShort } from "react-icons/bs";
 
 const Layout = ({ children }) => {
   const navigate = useNavigate();
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
   const Menus = [
     {
       title: "Dashboard",
@@ -40,44 +40,20 @@ const Layout = ({ children }) => {
       icon: <LuNetwork />,
       path: "/startup/expansion",
     },
-    // {
-    //   title: "Profile",
-    //   path: "/startup/profile",
-    //   icon: <CgProfile />,
-    // },
+    {
+      title: "Profile",
+      path: "/startup/profile",
+      icon: <CgProfile />,
+    },
   ];
-  const activeLink =
-    "mx-4 flex justify-start items-center text-white text-2xl space-x-1 font-primaryBold bg-[#471A52] rounded-xl";
-  const normalLink =
-    "hover:bg-[#471A52]/50 mt-3 mx-4 flex justify-start items-center text-gray-600 text-base space-x-1 font-primarySemibold";
 
-  const SidebarLinks = ({ menu }) => {
-    return (
-      <NavLink
-        to={menu.path}
-        className={({ isActive }) => (isActive ? activeLink : normalLink)}
-      >
-        <li
-          className={` flex items-center gap-x-2 cursor-pointer p-2.5 hover:bg-[#471A52]/50 hover:text-white hover:font-primarySemibold rounded-md mt-2`}
-        >
-          <span className="text-xl block float-left">
-            {menu.icon ? menu.icon : <MdDashboard />}
-          </span>
-          <span
-            className={`text-base font-primaryMedium duration-200 ${
-              !open && "hidden"
-            }`}
-          >
-            {menu.title}
-          </span>
-        </li>
-      </NavLink>
-    );
+  const toggleSidebar = () => {
+    setOpen(!open);
   };
 
-  // Close the dashboard on mobile view
   useEffect(() => {
     const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
       if (window.innerWidth <= 768) {
         setOpen(false);
       }
@@ -89,20 +65,21 @@ const Layout = ({ children }) => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
   return (
     <div className="w-full h-full">
       <div className="flex">
         {/* Sidebar */}
         <div
           className={`h-screen pt-8 ${
-            open ? "w-[272px]" : "w-16"
+            open ? "w-[272px]" : "w-[100px]"
           } duration-300 relative`}
         >
           <BsArrowLeftShort
-            className={`bg-[#471A52] text-white text-3xl rounded-full absolute -right-3 top-9 border border-[#471A52] cursor-pointer ${
+            className={`bg-red-600 text-white text-3xl rounded-full absolute -right-3 top-9 border border-red-600 cursor-pointer ${
               !open && "rotate-180"
             } ${isMobile ? "block" : "hidden"}`}
-            onClick={() => setOpen(!open)}
+            onClick={toggleSidebar}
           />
           <div className="inline-flex  mx-2">
             <img
@@ -115,15 +92,31 @@ const Layout = ({ children }) => {
           </div>
           <ul className="my-4">
             {Menus.map((menu, index) => (
-              <SidebarLinks key={index} menu={menu} />
+              <NavLink
+                key={index}
+                to={menu.path}
+                className="hover:bg-[#471A52]/50 hover:text-white hover:font-primarySemibold rounded-md mt-2"
+              >
+                <li className=" flex items-center gap-x-2 cursor-pointer p-2.5 hover:bg-[#471A52]/50 hover:text-white hover:font-primarySemibold rounded-md mt-2">
+                  <span className="text-xl block float-left">
+                    {menu.icon ? menu.icon : <MdSpaceDashboard />}
+                  </span>
+                  <span
+                    className={`text-base font-primaryMedium duration-200 ${
+                      !open && "hidden"
+                    }`}
+                  >
+                    {menu.title}
+                  </span>
+                </li>
+              </NavLink>
             ))}
           </ul>
-          {/* <Footer /> */}
         </div>
         {/* Content */}
         <div className="w-full">
           <Header />
-          <main className="bg-gray-50 p-2 md:p-6 font-primaryRegular">{children}</main>
+          <main className="bg-gray-50 p-6 font-primaryRegular">{children}</main>
         </div>
       </div>
     </div>

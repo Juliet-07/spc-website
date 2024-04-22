@@ -44,7 +44,7 @@ const GlobalExpansion = () => {
   };
   return (
     <div className="flex items-center justify-center">
-      <div className="flex flex-col px-6 py-4 border border-t-8 border-t-[#471A52] md:w-[664px] rounded-xl">
+      <div className="w-full flex flex-col px-6 py-4 border border-t-8 border-t-[#471A52] md:w-[664px] rounded-xl">
         <div>
           <form className="w-full my-4">
             <div className="flex flex-wrap -mx-3 mb-3">
@@ -64,7 +64,7 @@ const GlobalExpansion = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-3">
+            {/* <div className="flex flex-wrap -mx-3 mb-3">
               <div className="w-full px-3">
                 <label
                   className="block tracking-wide text-gray-700 text-sm font-primaryMedium mb-2"
@@ -95,7 +95,7 @@ const GlobalExpansion = () => {
                   placeholder="you@company.com"
                 />
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-wrap -mx-3 mb-3">
               <div className="w-full px-3">
                 <label
@@ -144,11 +144,8 @@ const GlobalExpansion = () => {
                 ></textarea>
               </div>
             </div>
-            <div className="w-full flex items-center justify-between">
-              <button className="w-[129px] bg-gray-300 text-white rounded-lg p-3 text-center font-primarySemibold">
-                Cancel
-              </button>
-              <button className="w-[129px] bg-[#471A52] text-white rounded-lg p-3 text-center font-primarySemibold">
+            <div className="w-full flex items-center justify-center">
+              <button className="w-full bg-[#471A52] text-white rounded-lg p-2 text-center font-primarySemibold shadow-md">
                 Submit
               </button>
             </div>

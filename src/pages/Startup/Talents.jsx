@@ -41,7 +41,7 @@ const Talents = () => {
   ];
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
         {talents.map((talent) => (
           <div
             key={talent.name}

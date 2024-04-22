@@ -49,7 +49,7 @@ const Investors = () => {
   ];
   return (
     <>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-3 gap-4">
         {investors.map((investor) => (
           <div className="w-[330px] border border-gray-200 rounded-lg p-2 my-4 flex flex-col items-center">
             <div className="w-[302px] h-[192px] bg-[#D9D9D9] rounded-xl"></div>
