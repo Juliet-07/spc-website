@@ -55,7 +55,7 @@ const Signin = () => {
       <img
         // src={Logo}
         src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"
-        className="absolute inset-0 z-0 h-full w-full bg-contain object-cover"
+        className="absolute inset-0 z-0 h-full w-full bg-contain object-cover rounded-2xl"
         alt="SPC Universe"
       />
       <div className="absolute inset-0 z-[2] bg-[#1C1C1C]/25 w-full h-full" />
@@ -68,7 +68,7 @@ const Signin = () => {
           <div className="flex bg-gray-200 shadow-2xl rounded-2xl">
             <div className="relative">
               <img
-                className="w-[600px] h-[600px] object-cover"
+                className="w-[500px] h-[500px] object-cover"
                 // src={LoginImage}
                 src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"
                 alt="PremiumImage"
@@ -78,8 +78,8 @@ const Signin = () => {
                 {/* premium <font color="text-red-600">connect</font> */}
               </div>
             </div>
-            <div className="w-[600px] h-[600px] p-12">
-              <div className="w-[485px] h-[492px] flex flex-col p-10">
+            <div className="w-[500px] h-[500px] p-10">
+              <div className="w-[400px] h-[400px] flex flex-col">
                 <div className="text-center font-primarySemibold text-3xl">
                   Login
                 </div>
@@ -101,7 +101,7 @@ const Signin = () => {
                       required
                     />
                   </div>
-                  <div className="mt-10">
+                  <div className="mt-6">
                     <label
                       htmlFor="password"
                       className="block text-lg text-gray-800 font-primaryMedium"
@@ -116,7 +116,7 @@ const Signin = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="mt-10">
+                  <div className="mt-6">
                     <label
                       htmlFor="password"
                       className="block text-lg text-gray-800 font-primaryMedium"
@@ -131,7 +131,7 @@ const Signin = () => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="mt-20">
+                  <div className="mt-10">
                     <button
                       type="submit"
                       className="w-full px-4 py-2 font-primaryMedium tracking-wide text-white transition-colors duration-200 transform bg-[#471A52] rounded-md"
@@ -167,31 +167,31 @@ const Signin = () => {
               </label>
               <input
                 type="email"
-                className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
               />
             </div>
             <div className="mb-3">
               <label
-                for="email"
+                for="password"
                 className="block text-sm font-primarySemibold text-gray-800"
               >
                 Password
               </label>
               <input
-                type="email"
-                className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                type="password"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
               />
             </div>
             <div className="mb-3">
               <label
-                for="email"
+                for="confirm_passowrd"
                 className="block text-sm font-primarySemibold text-gray-800"
               >
                 Confirm Password
               </label>
               <input
-                type="email"
-                className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                type="password"
+                className="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
               />
             </div>
             <div className="mt-6">
