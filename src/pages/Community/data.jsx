@@ -9,7 +9,7 @@ export const StartUpData = [
     ),
     name: "BoundlessPay",
     description:
-      "Introducing BoundlessPay, a revolutionary application that transforms your smartphone into a powerful mobile bank. Seamlessly integrating a pre-installed digital wallet and debit card, BoundlessPay empowers you to store and spend digital currencies effortlessly at merchants worldwide. The key features are Global Transactions, Crypto Loans,Utility Payments, Digital Currency Investments, Decentralized Finance (DeFi) Features. Elevate your financial experience by making BoundlessPay your go-to mobile banking app.",
+      "Welcome to the future of banking with BoundlessPay! Seamlessly integrating a digital wallet and debit card, BoundlessPay empowers you to store and spend digital currencies effortlessly worldwide. With features like Global Transactions, Crypto Loans, Utility Payments, Digital Currency Investments, and Decentralized Finance (DeFi) Features, elevate your financial experience today. Join us and make BoundlessPay your go-to mobile banking app!",
     amountRaised: "$19.2M",
     numOfInvestors: "100",
     minInvestments: "$500",
@@ -24,7 +24,7 @@ export const StartUpData = [
     ),
     name: "Manilla Technologies",
     description:
-      "Embark on a transformative financial journey with Manilla Technologies, the ultimate bridge connecting traditional fintech to the revolutionary realm of Web 3.0. Our cutting-edge payment solutions redefine the way you manage your finances, providing a seamless transition from the conventional to the future of decentralized finance. Manilla Technologies is more than just a fintech solution; it's a gateway to a future where finance is decentralized, secure, and tailored to your individual preferences.",
+      "Embark on a transformative financial journey with Manilla Technologies, the ultimate bridge connecting traditional fintech to the revolutionary realm of Web 3.0. Our cutting-edge payment solutions redefine the way you manage your finances, transitioning from the conventional to the future of decentralized finance. It is the gateway to a future where finance is decentralized, secure, and tailored to your individual preferences.",
     amountRaised: "$19.2M",
     numOfInvestors: "100",
     minInvestments: "$500",
@@ -39,7 +39,7 @@ export const StartUpData = [
     ),
     name: "Pluralcode Institute",
     description:
-      "At Pluralcode, we are driven by a profound mission: to build solutions for global impact. Dedicated to individuals, organizations, and corporates across Africa and beyond, we are pioneering a transformative journey to bridge the global talent gap. Our commitment is clear — to establish the largest and most impactful tech talent incubator on the continent, showcasing unparalleled skills and expertise to the world stage. At Pluralcode, we are not just building a talent pool; we are nurturing a community of innovators poised to shape the future. ",
+      "At Pluralcode, we are driven by a profound mission: to build solutions for global impact. Dedicated to individuals, organizations, and corporates across Africa and beyond, we are pioneering a transformative journey to bridge the global talent gap. At Pluralcode, we are not just building a talent pool; we are nurturing a community of innovators poised to shape the future. ",
     amountRaised: "$19.2M",
     numOfInvestors: "100",
     minInvestments: "$500",

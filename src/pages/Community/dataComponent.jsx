@@ -24,8 +24,8 @@ export const StartUpDataComponent = () => {
             {startup.name}
           </h2>
           <p
-            className="font-primaryRegular text-xs text-gray-500 pb-2"
-            style={{ maxHeight: "6em", overflow: "hidden" }}
+            className="font-primaryRegular text-sm text-gray-500"
+            // style={{ maxHeight: "6em", overflow: "hidden" }}
           >
             {startup.description}
           </p>

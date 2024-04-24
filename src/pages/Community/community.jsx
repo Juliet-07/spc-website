@@ -1,15 +1,22 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
 import { StartUpDataComponent, TalentDataComponent } from "./dataComponent";
 import { MdOutlinePhotoCamera } from "react-icons/md";
 import Modal from "../../components/Modal";
+import SqueezePage from "../../components/SqueezePage";
 import Select from "react-select";
+import axios from "axios";
 
 const Community = () => {
+  const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const { handleSubmit } = useForm();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(1);
   const [showWorkWithYouModal, setShowWorkWithYouModal] = useState(false);
   const [showBecomeMemberModal, setShowBecomeMemberModal] = useState(false);
-  const [reason, setReason] = useState("");
+  const [showSqueezePage, setShowSqueezePage] = useState(false);
+  const [reason, setReason] = useState([]);
 
   const handleTabClick = (tabNumber) => {
     setActiveTab(tabNumber);
@@ -185,12 +192,61 @@ const Community = () => {
     },
   ];
 
-  const handleSelectChange = (value) => {
-    setReason(value.value);
-    console.log(value, "values");
+  const handleSelectChange = (selectedOptions) => {
+    // Extracting only values from selectedOptions array
+    const selectedValues = selectedOptions.map((option) => option.value);
+    setReason(selectedValues);
+    console.log(reason, "selected options");
   };
+
+  const initialValues = {
+    company_email: "",
+    company_name: "",
+    contact_number: "",
+    location: "",
+    any_other_thing: "",
+  };
+
+  const [expansionValues, setExpansionValues] = useState(initialValues);
+
+  const {
+    company_name,
+    company_email,
+    contact_number,
+    location,
+    any_other_thing,
+  } = expansionValues;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setExpansionValues({ ...expansionValues, [name]: value });
+  };
+
+  useEffect(() => {
+    console.log(reason, "inside useeffect");
+  }, [reason]);
+
+  const handleWorkWithUs = () => {
+    const url = `${apiURL}/community/global-expansion`;
+    const payload = {
+      work_with_us: reason,
+      ...expansionValues,
+    };
+    axios.post(url, payload).then((response) => {
+      console.log(response);
+      navigate("/thankYou");
+    });
+  };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSqueezePage(true);
+    }, 5000); // Display after 5 seconds
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
+      {showSqueezePage && <SqueezePage />}
       <div
         className="w-full h-[400px] md:h-[500px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
@@ -222,7 +278,8 @@ const Community = () => {
         </div>
         <div className="w-[277px] h-1 bg-white mt-2"></div>
         <p className="font-primaryRegular text-xl text-white mt-3">
-          Soft-landing as a service. Select what you need, let’s make it happen.
+          Your smooth transition, our expertise. Tell us your needs, and we'll
+          handle the rest.
         </p>
         <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-10 my-10">
           {globalExpansion.map((global) => (
@@ -274,7 +331,10 @@ const Community = () => {
               Become a member and enjoy our numerous benefits
             </p>
             <div>
-              <form className="w-full my-4">
+              <form
+                className="w-full my-4"
+                onSubmit={handleSubmit(handleWorkWithUs)}
+              >
                 <div className="flex flex-wrap -mx-3 mb-3">
                   <div className="w-full px-3">
                     <label
@@ -285,7 +345,10 @@ const Community = () => {
                     </label>
                     <Select
                       options={options}
-                      defaultValue={reason}
+                      defaultValue={reason.map((value) => ({
+                        value,
+                        label: value,
+                      }))}
                       onChange={handleSelectChange}
                       isSearchable
                       isMulti
@@ -305,6 +368,9 @@ const Community = () => {
                       id="grid-password"
                       type="text"
                       placeholder="Enter company name"
+                      name="company_name"
+                      value={company_name}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -321,6 +387,9 @@ const Community = () => {
                       id="grid-password"
                       type="email"
                       placeholder="you@company.com"
+                      name="company_email"
+                      value={company_email}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -337,6 +406,9 @@ const Community = () => {
                       id="grid-password"
                       type="number"
                       placeholder="(+250)45654321345"
+                      name="contact_number"
+                      value={contact_number}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -353,6 +425,9 @@ const Community = () => {
                       id="grid-password"
                       type="text"
                       placeholder="Enter current location"
+                      name="location"
+                      value={location}
+                      onChange={handleChange}
                     />
                   </div>
                 </div>
@@ -369,6 +444,9 @@ const Community = () => {
                       rows="4"
                       className="font-primaryRegular block w-full bg-white text-gray-700 border border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                       // placeholder="Write your thoughts here..."
+                      name="any_other_thing"
+                      value={any_other_thing}
+                      onChange={handleChange}
                     ></textarea>
                   </div>
                 </div>
@@ -376,7 +454,10 @@ const Community = () => {
                   <button className="w-[129px] bg-gray-300 text-white rounded-lg p-3 text-center font-primarySemibold">
                     Cancel
                   </button>
-                  <button className="w-[129px] bg-[#471A52] text-white rounded-lg p-3 text-center font-primarySemibold">
+                  <button
+                    type="submit"
+                    className="w-[129px] bg-[#471A52] text-white rounded-lg p-3 text-center font-primarySemibold"
+                  >
                     Submit
                   </button>
                 </div>
