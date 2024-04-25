@@ -207,7 +207,7 @@ const Home = () => {
         </div>
       </div>
       {/* something for everyone */}
-      <div className="w-full my-10 md:py-6">
+      <div className="w-full my-16 md:my-20 md:py-6">
         <div className="flex flex-col items-center justify-center">
           <div className="font-primarySemibold text-3xl md:text-4xl text-gray-900">
             Something for everyone
@@ -217,7 +217,7 @@ const Home = () => {
             pillars
           </p>
           <div className="w-full flex items-center justify-center">
-            <div className="w-full grid md:grid-cols-3 gap-4 md:gap-10 p-4 md:px-10 2xl:px-20">
+            <div className="w-full grid md:grid-cols-3 gap-4 md:gap-10 p-4 mt-4 md:px-10 2xl:px-20">
               {todos.map((todo) => (
                 <div className="bg-[#6E2880] md:w-[400px] rounded-xl flex flex-col items-center justify-center">
                   <div className="w-[52px] h-[52px] bg-[#F4EBFF] rounded-full flex items-center justify-center my-4">

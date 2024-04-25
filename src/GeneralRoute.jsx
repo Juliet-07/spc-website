@@ -28,6 +28,8 @@ import Emails from "./pages/email-template";
 import StartupNetwork from "./pages/Community/startup-network";
 import ThankYou from "./components/ThankYou";
 import PostEvents from "./pages/Events/post-events";
+import TalentNetwork from "./pages/Community/talent-network";
+import MentorsNetwork from "./pages/Community/mentors-network";
 
 const GeneralRoute = () => {
   return (
@@ -38,10 +40,21 @@ const GeneralRoute = () => {
           <Route path="/about-spc" element={<About />} />
           <Route path="/community" element={<Community />} />
           <Route path="/community/all-startups" element={<AllStartUps />} />
-          <Route path="/community/startups-network" element={<StartupNetwork />} />
+          <Route
+            path="/community/startups-network"
+            element={<StartupNetwork />}
+          />
           <Route path="/community/all-talents" element={<AllTalents />} />
           <Route path="/community/startup/:id" element={<StartupDetail />} />
           <Route path="/community/talent/:id" element={<TalentDetail />} />
+          <Route
+            path="/community/startup-network/talents"
+            element={<TalentNetwork />}
+          />
+          <Route
+            path="/community/startup-network/mentors"
+            element={<MentorsNetwork />}
+          />
           <Route path="/events" element={<PostEvents />} />
           <Route path="/events/details" element={<Pass />} />
           <Route path="/events/partner-details" element={<PartnerPass />} />

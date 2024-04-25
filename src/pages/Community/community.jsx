@@ -157,6 +157,76 @@ const Community = () => {
     },
   ];
 
+  const benefits = [
+    {
+      icon: (
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/talents.jpg"
+          className="w-full h-[193.16px] md:w-[376px] md:h-[200px] rounded-lg"
+        />
+      ),
+      title: "Talents",
+      message:
+        "Access to a pool of qualified talents from across the African Continent.",
+      path: "/community/startup-network/talents",
+    },
+    {
+      icon: (
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investors.jpg"
+          className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
+        />
+      ),
+      title: "Mentors",
+      message:
+        "Access to a pool of well-known mentors who can guide you on different paths (Legal, sales & marketing, investment readiness, product, etc).",
+      path: "/community/startup-network/mentors",
+    },
+    {
+      icon: (
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/meet-up.jpg"
+          className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
+        />
+      ),
+      title: "Venture Accelerator",
+      message: "Access to our mentor roundtable meetings.",
+    },
+    {
+      icon: (
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investing.jpg"
+          className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
+        />
+      ),
+      title: "Investors",
+      message:
+        "Access to Angel Investors, Venture Capital Fund Managers, and Limited Partners (i.e. High Networth Individuals, Institutional LPs & Family Offices).",
+    },
+    {
+      icon: (
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/expand.jpg"
+          className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
+        />
+      ),
+      title: "Global Expansion",
+      message:
+        "Access to Global Expansion as a service without additional charges.",
+    },
+    {
+      icon: (
+        <img
+          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/event.jpg"
+          className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
+        />
+      ),
+      title: "Events Discount",
+      message:
+        "Fair discount prices to events hosted by us directly and indirectly.",
+    },
+  ];
+
   const options = [
     {
       value: "research",
@@ -271,12 +341,35 @@ const Community = () => {
         </div>
       </div>
       <div>{viewToRender}</div>
+      {/* <div className="w-full bg-[#F4EBFF] flex flex-col mt-6 p-4 md:p-10 2xl:px-20">
+        <div className="font-primarySemibold text-[#12141D] text-2xl md:text-4xl">
+          Benefits for your Startup
+        </div>
+        <div className="w-[280px] md:w-[410px] h-1 bg-[#471A52]"></div>
+        <div className="grid md:grid-cols-3 my-4 gap-4 md:gap-10">
+          {benefits.map((benefit) => (
+            <div className="w-full md:w-[400px] h-[340px] md:h-[378px] bg-white border border-[#E9D7FE] rounded-xl shadow-xl p-2">
+              <div>{benefit.icon}</div>
+              <p className="font-primarySemibold py-2 md:text-lg">
+                {benefit.title}
+              </p>
+              <p className="font-primaryRegular text-sm">{benefit.message}</p>
+              <Link to={benefit.path}>
+                <button className="w-full flex items-center justify-center mt-2">
+                  View More
+                </button>
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div> */}
+
       {/* global expansion */}
       <div className="w-full bg-[#471A52] flex flex-col mt-6 p-4 md:p-10 2xl:px-20">
-        <div className="font-primarySemibold text-3xl md:text-4xl text-white">
+        <div className="font-primarySemibold text-2xl md:text-4xl text-white">
           Global Expansion
         </div>
-        <div className="w-[277px] h-1 bg-white mt-2"></div>
+        <div className="w-[200px] md:w-[277px] h-1 bg-white mt-2"></div>
         <p className="font-primaryRegular text-xl text-white mt-3">
           Your smooth transition, our expertise. Tell us your needs, and we'll
           handle the rest.
@@ -287,10 +380,10 @@ const Community = () => {
               <div className="w-[52px] h-[52px] my-2 md:my-4">
                 {global.icon}
               </div>
-              <p className="text-center p-1 text-sm md:text-2xl font-primarySemibold text-black">
+              <p className="text-center text-sm md:text-2xl font-primarySemibold text-black">
                 {global.title}
               </p>
-              <p className="text-center p-2 text-black text-xs md:text-sm font-primaryRegular">
+              <p className="text-center py-2 text-black text-xs md:text-sm font-primaryRegular">
                 {global.description}
               </p>
             </div>

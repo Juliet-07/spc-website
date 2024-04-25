@@ -1,4 +1,4 @@
-// StartupDetail.js
+// TalentDetail.js
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
