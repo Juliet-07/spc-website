@@ -167,7 +167,7 @@ const Home = () => {
           </div>
           <div className="w-[390px] md:w-[500px]">
             <img
-              src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/Landing page image.png"
+              src="https://drive.google.com/file/d/1Q4LNil7RMZb51iTJK_k4XRiwBvHamhNv/view?usp=drive_link"
               // src={LandingPage}
               alt="Global Ecosystem"
               className="animated-image"
@@ -269,7 +269,7 @@ const Home = () => {
         </div>
         <div className="w-full md:w-[592px] rounded-lg">
           <img
-            src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/whoWeAre.jpg"
+            src="https://drive.google.com/file/d/14Sh9Z1Vc15VYLkPPpD8l5BbCK_hoV1lH/view?usp=drive_link"
             className="object-cover rounded-lg"
           />
         </div>

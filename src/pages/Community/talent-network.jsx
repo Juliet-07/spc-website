@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
-import Rep from "../../assets/represent.png";
+import Talent from "../../assets/talent.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
 
 const TalentNetwork = () => {
@@ -90,13 +90,15 @@ const TalentNetwork = () => {
       </Link>
       <div className="w-full h-[552.62px] md:h-[478px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col md:flex-row items-center justify-evenly 2xl:justify-between p-4">
         <div className="w-[555px] h-[256px]">
-          <p>1</p>
+          <p className="font-primarySemibold text-gray-900 text-4xl">
+            Attract and Retain Top Talent
+          </p>
           <p>2</p>
           <p>3</p>
           <button>register</button>
         </div>
         <div>
-          <img src={Rep} className="w-[571px] md:h-[430px] rounded-lg" />
+          <img src={Talent} className="w-[571px] md:h-[430px] rounded-lg" />
         </div>
       </div>
       {/* story */}
