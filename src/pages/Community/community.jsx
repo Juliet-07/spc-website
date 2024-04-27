@@ -216,6 +216,7 @@ const Community = () => {
       title: "Venture Accelerator",
       message:
         "Accelerators play a pivotal role in providing startups with the resources, mentorship, and network needed to accelerate their growth. Our network partners with leading venture accelerators across Africa, offering startups access to intensive programs designed to fast-track their success. From mentorship and workspace to funding opportunities and industry connections, our venture accelerators provide startups with the support they need to thrive in a competitive market.",
+      path: "/community/startup-network/accelerator",
     },
     {
       icon: (
@@ -241,6 +242,7 @@ const Community = () => {
       title: "Global Expansion",
       message:
         "Scaling your startup beyond borders opens up new opportunities for growth, innovation, and market reach. Our network provides startups with the resources and support needed to expand globally, whether you're looking to enter new markets, establish international partnerships, or access cross-border investment opportunities. From market research and expansion strategies to international networking and partnerships, we help startups navigate the complexities of global expansion and unlock new growth opportunities.",
+      path: "/community/startup-network/globalExpansion",
     },
     {
       icon: (
@@ -253,6 +255,7 @@ const Community = () => {
       title: "Thought Leadership Events",
       message:
         "Networking and learning opportunities are essential for startup founders looking to expand their knowledge, connect with industry peers, and stay updated on the latest trends. As a member of our startup network, you gain access to exclusive discounts and perks for startup events, conferences, workshops, and seminars. Whether you're looking to attend a networking event, pitch competition, or industry summit, our network ensures that you can access valuable opportunities at discounted rates.",
+      path: "/community/startup-network/events",
     },
   ];
 

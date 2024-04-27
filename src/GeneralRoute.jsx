@@ -31,6 +31,9 @@ import PostEvents from "./pages/Events/post-events";
 import TalentNetwork from "./pages/Community/talent-network";
 import MentorsNetwork from "./pages/Community/mentors-network";
 import InvestorsNetwork from "./pages/Community/investors-network";
+import VentureAccelerator from "./pages/Community/ventureAccelerator";
+import GlobalExpansionNetwork from "./pages/Community/globalExpansion";
+import EventNetwork from "./pages/Community/event-network";
 
 const GeneralRoute = () => {
   return (
@@ -59,6 +62,18 @@ const GeneralRoute = () => {
           <Route
             path="/community/startup-network/investors"
             element={<InvestorsNetwork />}
+          />
+          <Route
+            path="/community/startup-network/accelerator"
+            element={<VentureAccelerator />}
+          />
+          <Route
+            path="/community/startup-network/globalExpansion"
+            element={<GlobalExpansionNetwork />}
+          />
+          <Route
+            path="/community/startup-network/events"
+            element={<EventNetwork />}
           />
           <Route path="/events" element={<PostEvents />} />
           <Route path="/events/details" element={<Pass />} />
