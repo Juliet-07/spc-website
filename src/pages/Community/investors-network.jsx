@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
-import Talent from "../../assets/talent.png";
+import Mentors from "../../assets/mentors.png";
+import Community from "../../assets/community.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import Woman from "../../assets/woman.png";
 import Man from "../../assets/man.png";
@@ -130,7 +131,7 @@ const InvestorsNetwork = () => {
   };
   return (
     <>
-      {/* Attract talents */}
+      {/* investors network */}
       <div className="w-full flex flex-col p-4 md:p-10">
         <Link
           to="/community"
@@ -139,23 +140,24 @@ const InvestorsNetwork = () => {
           <TbArrowBackUp color="#475467" />
           <span className="text-gray-600 mx-2">Back</span>
         </Link>
-        <div className="w-full h-[650px] md:h-[500px] bg-gradient-to-r from-[#FCF1FF] via-[rgb(253,246,255)] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
-          <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl">
-            Attract and Retain Top Talent
+        <div className="w-full h-[600px] md:h-[600px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
+          <div className="md:w-[473px] font-primarySemibold text-gray-900 text-2xl md:text-4xl">
+            Simplified Investment Plan to Boost Your Startup
           </div>
           <div className="w-full h-full flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-[555px] h-full">
               <p className="font-primaryRegular md:text-xl text-gray-700 py-3 leading-8 md:leading-[60px]">
-                We possess an acute understanding of exceptional candidate
-                experience. We have the capability to refine your Employer Value
-                Proposition (EVP) and employer brand align with your hiring
-                objectives. With access to extensive industry insights and a
-                talent acquisition experts, we can help you achieve your most
-                ambitious hiring goals.
+                We understand the unique challenges and opportunities that come
+                with building and scaling a startup. Our platform is dedicated
+                to helping you navigate the exciting yet complex journey of
+                startup growth through mentorship, guidance, and support.
               </p>
             </div>
             <div>
-              <img src={Talent} className="w-[571px] md:h-[430px] rounded-lg" />
+              <img
+                src={Mentors}
+                className="w-[571px] md:h-[430px] rounded-lg"
+              />
             </div>
           </div>
           {/* <button
@@ -167,8 +169,105 @@ const InvestorsNetwork = () => {
         </div>
       </div>
       {/* info hub */}
+      <div className="w-full bg-[#F0B5FF]/[12%] p-4 md:p-10">
+        <p className="md:w-[709px] text-lg md:text-2xl font-primaryMedium md:font-primarySemibold text-gray-900">
+          SPC Universe: Where startups meet investors for funding and growth.
+        </p>
+        <div className="w-full grid md:grid-cols-2 2xl:grid-cols-3 gap-10 md:gap-20 my-10">
+          <div>
+            <img src={Community} />
+          </div>
+          <div className="md:w-[516px] h-full flex flex-col items-center">
+            <p className="font-primarySemibold text-2xl text-gray-900">
+              Diversed Funding Opportunities
+            </p>
+            <p className="font-primaryRegular leading-8 md:leading-[55px]">
+              Our investor network spans a wide spectrum of funding sources,
+              including angel investors, venture capitalists, corporate venture
+              arms, and strategic partners. Whether you're seeking seed funding
+              to kickstart your venture, Series A investment to scale
+              operations, or growth capital to expand into new markets, our
+              platform offers access to a diverse range of funding opportunities
+              tailored to the unique needs and goals of your startup.
+            </p>
+          </div>
+          <div className="md:w-[516px] h-full flex flex-col items-center">
+            <p className="font-primarySemibold text-2xl text-gray-900">
+              Strategic Partnership
+            </p>
+            <p className="font-primaryRegular leading-8 md:leading-[55px]">
+              Beyond capital, our investor network brings strategic value to
+              startups through partnerships, industry expertise, and market
+              insights. From established corporations seeking to collaborate
+              with innovative startups to seasoned investors with deep domain
+              knowledge, our platform facilitates connections with investors who
+              offer more than just funding—they offer strategic guidance,
+              mentorship, and access to invaluable resources that can help
+              propel your startup to new heights
+            </p>
+          </div>
+          <div>
+            <img src={Community} />
+          </div>
+          <div>
+            <img src={Community} />
+          </div>
+          <div className="md:w-[516px] h-full flex flex-col items-center">
+            <p className="font-primarySemibold text-2xl text-gray-900">
+              Due Diligence Support
+            </p>
+            <p className="font-primaryRegular leading-8 md:leading-[55px]">
+              Navigating the fundraising process can be complex and daunting,
+              especially for early-stage startups. Our platform provides
+              startups with the support and guidance needed to navigate the due
+              diligence process effectively, ensuring that they are
+              well-prepared to engage with potential investors and secure the
+              funding they need to fuel their growth. From crafting compelling
+              pitch decks to conducting financial analysis and market research,
+              our team of experts is here to help startups put their best foot
+              forward and make a compelling case to investors.
+            </p>
+          </div>
+          <div className="md:w-[516px] h-full flex flex-col items-center">
+            <p className="font-primarySemibold text-2xl text-gray-900">
+              Investor Matching
+            </p>
+            <p className="font-primaryRegular leading-8 md:leading-[55px]">
+              Finding the right investor can be a challenge, but with SPC
+              Universe, startups can leverage our advanced matchmaking
+              algorithms and personalized recommendations to connect with
+              investors who align with their vision, values, and goals. Whether
+              you're looking for investors with industry-specific expertise, a
+              track record of success in your target market, or a shared passion
+              for social impact, our platform helps startups find the perfect
+              match to fuel their growth journey.
+            </p>
+          </div>
+          <div>
+            <img src={Community} />
+          </div>
+          <div>
+            <img src={Community} />
+          </div>
+          <div className="md:w-[516px] h-full flex flex-col items-center">
+            <p className="font-primarySemibold text-2xl text-gray-900">
+              Global Reach
+            </p>
+            <p className="font-primaryRegular leading-8 md:leading-[55px]">
+              In today's interconnected world, startups have the opportunity to
+              access capital from investors around the globe. Our platform
+              provides startups with access to a global network of investors,
+              opening up new possibilities for cross-border investment,
+              international expansion, and global partnerships. Whether you're
+              based in Africa or beyond, our platform connects you with
+              investors who are eager to support promising ventures wherever
+              they may be.
+            </p>
+          </div>
+        </div>
+      </div>
       {/* get started*/}
-      <div className="flex items-center justify-center my-10">
+      <div className="hidden md:flex items-center justify-center my-10">
         <img src={InvestorFrame} />
       </div>
       {/* how to help you */}
