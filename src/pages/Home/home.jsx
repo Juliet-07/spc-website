@@ -4,7 +4,14 @@ import { Link, NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import LandingPage from "../../assets/home.png"
+import LandingPage from "../../assets/landingPageImage.png";
+import WhoWeAre from "../../assets/whoWeAre.jpg";
+import Story1 from "../../assets/story1.jpg";
+import Story2 from "../../assets/story2.jpg";
+import Story3 from "../../assets/story3.png";
+import Story4 from "../../assets/story4.jpg";
+import Story5 from "../../assets/story5.jpg";
+import Story6 from "../../assets/story6.jpg";
 
 const MomentsCarousel = () => {
   // const images = [
@@ -141,6 +148,45 @@ const Home = () => {
       path: "/trainings",
     },
   ];
+
+  const moments = [
+    {
+      image: <img src={Story1} className="w-full h-[200px] rounded-lg" />,
+      title: "Elite Speakers From Across Africa",
+      message:
+        " In the heart of our vibrant event, the stage was graced by a lineup of elite speakers, each a beacon of inspiration drawn from the diverse tapestry of Africa. From the bustling streets of Lagos to the serene landscapes of Nairobi, these visionary leaders shared their journeys, insights, and wisdom with a captivated audience. Their stories illuminated the path for aspiring entrepreneurs, showcasing the power of resilience, innovation, and collaboration in driving change and shaping the future of Africa's startup ecosystem. ",
+    },
+    {
+      image: <img src={Story2} className="w-full h-[200px] rounded-lg" />,
+      title: "Startup Pitch",
+      message:
+        "Amidst the buzz and anticipation, founders took to the stage to pitch their ideas, each presentation a testament to the ingenuity and passion of Africa's entrepreneurial spirit. From disruptive innovations to bold visions for social impact, these startups captivated the audience with their creativity, determination, and ambition. As the pitches unfolded, a sense of excitement filled the air, sparking conversations, connections, and possibilities for collaboration that would ripple far beyond the confines of the event.",
+    },
+    {
+      image: <img src={Story3} className="w-full h-[200px] rounded-lg" />,
+      title: " ADIS Morrocco",
+      message:
+        "Nestled within the historic city of Marrakech, ADIS Morocco provided a vibrant backdrop for a convergence of minds, ideas, and cultures. Against the backdrop of ancient medinas and bustling souks, entrepreneurs from across Africa and beyond gathered to explore the rich tapestry of Morocco's startup ecosystem. From spirited discussions in rooftop cafes to networking sessions in bustling marketplaces, ADIS Morocco offered a unique blend of tradition and innovation, fostering connections and collaborations that transcended borders and boundaries.",
+    },
+    {
+      image: <img src={Story4} className="w-full h-[200px] rounded-lg" />,
+      title: "Ecosystem Mixer",
+      message:
+        "In the heart of the city, our ecosystem mixer brought together a diverse array of stakeholders—entrepreneurs, investors, mentors, and policymakers—for an evening of connection, collaboration, and celebration. Against the backdrop of city lights and urban skyline, conversations flowed freely, ideas were exchanged, and partnerships were forged. From impromptu pitches to chance encounters, the mixer epitomized the vibrant energy and collaborative spirit of Africa's startup ecosystem, laying the groundwork for future innovation and growth.",
+    },
+    {
+      image: <img src={Story5} className="w-full h-[200px] rounded-lg" />,
+      title: "Refreshments",
+      message:
+        "Amidst the hustle and bustle of the event, a moment of respite awaited attendees at the refreshments corner. From steaming cups of coffee to delectable treats and snacks, the refreshments provided a welcome opportunity to recharge and refuel. Against the backdrop of lively conversations and networking, attendees savored the flavors of Africa, fostering connections and camaraderie over shared experiences and shared aspirations.",
+    },
+    {
+      image: <img src={Story6} className="w-full h-[200px] rounded-lg" />,
+      title: "Panel Discussions",
+      message:
+        "At the heart of our event, panel discussions sparked thought-provoking conversations and deepened understanding of key issues shaping Africa's startup landscape. From discussions on emerging trends to debates on pressing challenges, panelists offered diverse perspectives, insights, and solutions to inspire action and drive change. Against the backdrop of engaged audiences and spirited debates, panel discussions served as a catalyst for collaboration, innovation, and collective action in driving Africa's startup ecosystem forward.",
+    },
+  ];
   return (
     <>
       <div className="w-full relative">
@@ -167,8 +213,8 @@ const Home = () => {
           </div>
           <div className="w-[390px] md:w-[500px]">
             <img
-              src="https://drive.google.com/file/d/1Q4LNil7RMZb51iTJK_k4XRiwBvHamhNv/view?usp=drive_link"
-              // src={LandingPage}
+              // src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/Landing page image.png"
+              src={LandingPage}
               alt="Global Ecosystem"
               className="animated-image"
             />
@@ -269,7 +315,8 @@ const Home = () => {
         </div>
         <div className="w-full md:w-[592px] rounded-lg">
           <img
-            src="https://drive.google.com/file/d/14Sh9Z1Vc15VYLkPPpD8l5BbCK_hoV1lH/view?usp=drive_link"
+            // src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/whoWeAre.jpg"
+            src={WhoWeAre}
             className="object-cover rounded-lg"
           />
         </div>
@@ -340,20 +387,23 @@ const Home = () => {
           Moments captured from past events
         </div>
         <div className="w-full md:w-[600px] h-2 bg-[#471A52] mt-2"></div>
-        <div className="hidden md:grid grid-cols-4 my-6">
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis1.jpg" />
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis2.jpg" />
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis3.jpg" />
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis4.jpg" />
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis5.jpg" />
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis6.jpg" />
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis7.jpg" />
-          <img src="https://spcimagestorage001.blob.core.windows.net/spc-events-image/adis13.jpg" />
+        <div className="w-full grid md:grid-cols-3 gap-10 my-10">
+          {moments.map((moment) => (
+            <div className="md:w-[400px] h-full bg-white border border-[#000000]/[20%] rounded-lg shadow-xl p-4">
+              <div>{moment.image}</div>
+              <div className="font-primarySemibold text-lg md:text-2xl border-l-4 border-l-[#471A52] p-1 my-2">
+                {moment.title}
+              </div>
+              <p className="font-primaryRegular pb-4 md:text-lg leading-8 md:leading-10">
+                {moment.message}
+              </p>
+            </div>
+          ))}
         </div>
         {/* Display carousel on smaller screens */}
-        <div className="md:hidden mt-10">
+        {/* <div className="md:hidden mt-10">
           <MomentsCarousel />
-        </div>
+        </div> */}
       </div>
       {/* read to explore */}
       <div className="w-full bg-white flex flex-col items-center justify-center my-0 md:my-20 p-4 md:p-10 2xl:px-20">

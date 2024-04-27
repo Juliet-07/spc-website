@@ -195,9 +195,9 @@ const Navbar = () => {
             </>
           )}
         </Popover> */}
-        <NavLink to="/trainings" style={activeStyle} className="p-2">
+        {/* <NavLink to="/trainings" style={activeStyle} className="p-2">
           Trainings
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/contact-spc" style={activeStyle} className="p-2">
           Contact us
         </NavLink>
@@ -269,14 +269,14 @@ const Navbar = () => {
               </>
             )}
           </Popover> */}
-          <NavLink
+          {/* <NavLink
             to="/trainings"
             style={activeStyleMobile}
             className="p-2"
             onClick={() => setNav(false)}
           >
             Trainings
-          </NavLink>
+          </NavLink> */}
           <NavLink
             to="/contact-spc"
             style={activeStyleMobile}

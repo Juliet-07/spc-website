@@ -7,6 +7,13 @@ import Modal from "../../components/Modal";
 import SqueezePage from "../../components/SqueezePage";
 import Select from "react-select";
 import axios from "axios";
+import Talents from "../../assets/talents.jpg";
+import Investors from "../../assets/investors.jpg";
+import Accelerator from "../../assets/accelerator.jpg";
+import Expansion from "../../assets/expand.jpg";
+import CommunityImage from "../../assets/community.png";
+import CommunityHero from "../../assets/communityHero.png";
+import Mentors from "../../assets/mentors.jpg";
 
 const Community = () => {
   const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
@@ -15,6 +22,7 @@ const Community = () => {
   const [activeTab, setActiveTab] = useState(1);
   const [showWorkWithYouModal, setShowWorkWithYouModal] = useState(false);
   const [showBecomeMemberModal, setShowBecomeMemberModal] = useState(false);
+  const [registerStartup, setRegisterStartup] = useState(false);
   const [showSqueezePage, setShowSqueezePage] = useState(false);
   const [reason, setReason] = useState([]);
 
@@ -24,6 +32,10 @@ const Community = () => {
 
   const handleWorkWithYouClick = () => {
     setShowWorkWithYouModal(true);
+  };
+
+  const handleRegisterStartupClick = () => {
+    setRegisterStartup(true);
   };
 
   const handleBecomeMemberClick = () => {
@@ -67,9 +79,18 @@ const Community = () => {
             Talent Ecosystem
           </button> */}
         </div>
-        <button className="w-[200px] h-[48px] bg-gray-50 border border-gray-300 rounded-xl mt-4 md:mt-0 text-gray-800 font-primarySemibold">
+        {/* <button className="w-[200px] h-[48px] bg-gray-50 border border-gray-300 rounded-xl mt-4 md:mt-0 text-gray-800 font-primarySemibold">
           {activeTab === 1 ? (
             <Link to="/community/startups-network">{registerButtonText}</Link>
+          ) : (
+            <Link to="/community/talent-network">{registerButtonText}</Link>
+          )}
+        </button> */}
+        <button className="w-[200px] h-[48px] bg-gray-50 border border-gray-300 rounded-xl mt-4 md:mt-0 text-gray-800 font-primarySemibold">
+          {activeTab === 1 ? (
+            <div onClick={() => handleRegisterStartupClick()}>
+              {registerButtonText}
+            </div>
           ) : (
             <Link to="/community/talent-network">{registerButtonText}</Link>
           )}
@@ -161,69 +182,77 @@ const Community = () => {
     {
       icon: (
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/talents.jpg"
+          // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/talents.jpg"
+          src={Talents}
           className="w-full h-[193.16px] md:w-[376px] md:h-[200px] rounded-lg"
         />
       ),
       title: "Talents",
       message:
-        "Access to a pool of qualified talents from across the African Continent.",
+        "Our startup network provides access to a diverse pool of talented individuals. Whether you're looking for skilled developers, creative designers, or savvy marketers, our platform connects you with the right talent to fuel the growth of your startup. From technical expertise to business acumen, our network ensures that you have access to the resources needed to build a strong team and drive innovation.",
       path: "/community/startup-network/talents",
     },
     {
       icon: (
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investors.jpg"
+          // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investors.jpg"
+          src={Mentors}
           className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
         />
       ),
       title: "Mentors",
       message:
-        "Access to a pool of well-known mentors who can guide you on different paths (Legal, sales & marketing, investment readiness, product, etc).",
+        "Success in the startup world often requires guidance from experienced mentors who have navigated similar challenges. Through our network, you gain access to seasoned professionals and industry veterans who offer invaluable insights, advice, and support. Whether you need help refining your business strategy, overcoming obstacles, or making critical decisions, our mentors are here to provide guidance and mentorship every step of the way.",
       path: "/community/startup-network/mentors",
     },
     {
       icon: (
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/meet-up.jpg"
+          // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/meet-up.jpg"
+          src={Accelerator}
           className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
         />
       ),
       title: "Venture Accelerator",
-      message: "Access to our mentor roundtable meetings.",
+      message:
+        "Accelerators play a pivotal role in providing startups with the resources, mentorship, and network needed to accelerate their growth. Our network partners with leading venture accelerators across Africa, offering startups access to intensive programs designed to fast-track their success. From mentorship and workspace to funding opportunities and industry connections, our venture accelerators provide startups with the support they need to thrive in a competitive market.",
     },
     {
       icon: (
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investing.jpg"
+          // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/investing.jpg"
+          src={Investors}
           className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
         />
       ),
       title: "Investors",
       message:
-        "Access to Angel Investors, Venture Capital Fund Managers, and Limited Partners (i.e. High Networth Individuals, Institutional LPs & Family Offices).",
+        "Securing funding is crucial for the growth and scalability of your startup. Our network connects you with a diverse range of investors, including angel investors, venture capitalists, and corporate partners, who are eager to invest in promising ventures. From seed funding to Series A rounds, we facilitate connections between startups and investors to help you raise the capital needed to take your business to the next level.",
+      path: "/community/startup-network/investors",
     },
     {
       icon: (
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/expand.jpg"
+          // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/expand.jpg"
+          src={Expansion}
           className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
         />
       ),
       title: "Global Expansion",
       message:
-        "Access to Global Expansion as a service without additional charges.",
+        "Scaling your startup beyond borders opens up new opportunities for growth, innovation, and market reach. Our network provides startups with the resources and support needed to expand globally, whether you're looking to enter new markets, establish international partnerships, or access cross-border investment opportunities. From market research and expansion strategies to international networking and partnerships, we help startups navigate the complexities of global expansion and unlock new growth opportunities.",
     },
     {
       icon: (
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/event.jpg"
+          // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/event.jpg"
+          src={CommunityImage}
           className="w-full h-[193.16px] md:w-[380px] md:h-[200px] rounded-lg"
         />
       ),
-      title: "Events Discount",
+      title: "Thought Leadership Events",
       message:
-        "Fair discount prices to events hosted by us directly and indirectly.",
+        "Networking and learning opportunities are essential for startup founders looking to expand their knowledge, connect with industry peers, and stay updated on the latest trends. As a member of our startup network, you gain access to exclusive discounts and perks for startup events, conferences, workshops, and seminars. Whether you're looking to attend a networking event, pitch competition, or industry summit, our network ensures that you can access valuable opportunities at discounted rates.",
     },
   ];
 
@@ -316,11 +345,12 @@ const Community = () => {
   }, []);
   return (
     <>
-      {showSqueezePage && <SqueezePage />}
+      {/* {showSqueezePage && <SqueezePage />} */}
       <div
         className="w-full h-[400px] md:h-[500px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
-          backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
+          // backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
+          backgroundImage: `url(${CommunityHero})`,
         }}
       >
         <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div>
@@ -341,28 +371,28 @@ const Community = () => {
         </div>
       </div>
       <div>{viewToRender}</div>
-      {/* <div className="w-full bg-[#F4EBFF] flex flex-col mt-6 p-4 md:p-10 2xl:px-20">
+      <div className="w-full bg-[#F4EBFF] flex flex-col mt-6 p-4 md:p-10 2xl:px-20">
         <div className="font-primarySemibold text-[#12141D] text-2xl md:text-4xl">
           Benefits for your Startup
         </div>
         <div className="w-[280px] md:w-[410px] h-1 bg-[#471A52]"></div>
         <div className="grid md:grid-cols-3 my-4 gap-4 md:gap-10">
           {benefits.map((benefit) => (
-            <div className="w-full md:w-[400px] h-[340px] md:h-[378px] bg-white border border-[#E9D7FE] rounded-xl shadow-xl p-2">
+            <div className="w-full md:w-[400px] bg-white border border-[#E9D7FE] rounded-xl shadow-xl p-2">
               <div>{benefit.icon}</div>
               <p className="font-primarySemibold py-2 md:text-lg">
                 {benefit.title}
               </p>
               <p className="font-primaryRegular text-sm">{benefit.message}</p>
               <Link to={benefit.path}>
-                <button className="w-full flex items-center justify-center mt-2">
+                <button className="w-full flex items-center justify-center mt-2 font-primarySemibold text-[#471A52]">
                   View More
                 </button>
               </Link>
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
       {/* global expansion */}
       <div className="w-full bg-[#471A52] flex flex-col mt-6 p-4 md:p-10 2xl:px-20">
@@ -613,40 +643,340 @@ const Community = () => {
           </div>
         </div>
       </Modal>
+      <Modal
+        isVisible={registerStartup}
+        onClose={() => setRegisterStartup(false)}
+      >
+        <div className="flex flex-col items-center justify-center">
+          <StartupForm />
+        </div>
+      </Modal>
     </>
   );
 };
 
 const StartupForm = () => {
+  const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
+  const navigate = useNavigate();
+  const { handleSubmit } = useForm();
+  const [file, setFile] = useState({});
+  const [filePreview, setFilePreview] = useState("");
+  const initialValues = {
+    company_name: "",
+    company_email: "",
+    company_size: "",
+    location: "",
+    country: "",
+    brief_description: "",
+    company_phone: "",
+    company_person_name: "",
+    company_person_title: "",
+    company_person_whatsapp_number: "",
+    company_stage: "",
+    membership_fee: "",
+  };
+
+  const [startupMembership, setStartupMembership] = useState(initialValues);
+
+  const {
+    company_name,
+    company_email,
+    company_size,
+    location,
+    country,
+    brief_description,
+    company_image,
+    company_phone,
+    company_person_name,
+    company_person_title,
+    company_person_whatsapp_number,
+    company_stage,
+    membership_fee,
+  } = startupMembership;
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setStartupMembership({ ...startupMembership, [name]: value });
+  };
+
+  const fileUploadHandler = (e) => {
+    console.log(e.target.files);
+    const docx = e.target.files[0];
+    console.log(docx.name);
+    setFile(docx);
+    setFilePreview(URL.createObjectURL(docx));
+  };
+
+  const handleConfirmRegistration = () => {
+    const url = `${apiURL}/member-startup`;
+
+    const formData = new FormData();
+
+    formData.append("company_name", company_name);
+    formData.append("company_email", company_email);
+    formData.append("company_size", company_size);
+    formData.append("location", location);
+    formData.append("country", country);
+    formData.append("brief_description", brief_description);
+    formData.append("company_image", file);
+    formData.append("company_phone", company_phone);
+    formData.append("company_person_name", company_person_name);
+    formData.append("company_person_title", company_person_title);
+    formData.append(
+      "company_person_whatsapp_number",
+      company_person_whatsapp_number
+    );
+    formData.append("company_stage", company_stage);
+    formData.append("membership_fee", membership_fee);
+
+    axios
+      .post(url, formData)
+      .then((response) => {
+        console.log(response.data, "response from startup reg.");
+        navigate("/thankYou");
+      })
+      .catch((error) => {
+        // Handle error responses here
+        console.error("Error:", error);
+      });
+  };
   return (
-    <div className="md:w-[576px]">
-      <form>
-        <div className="relative my-4 bg-[#E9D7FE] w-[64px] h-[64px] rounded-full flex items-center justify-center">
+    <div className="md:w-[600px] p-4 shadow-xl shadow-[#E9D7FE] border border-t-8 border-t-[#471A52] rounded-lg">
+      <form onSubmit={handleSubmit(handleConfirmRegistration)}>
+        {/* <form> */}
+        <div className="my-2">
+          <label
+            htmlFor="full-name"
+            className="block text-sm text-[#D0D5DD] font-primaryMedium"
+          >
+            Company name
+          </label>
+          <input
+            type="text"
+            className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+            placeholder="Enter company name"
+            name="company_name"
+            value={company_name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="flex flex-wrap -mx-3 mb-4">
+          <div className="w-full md:w-1/2 px-3">
+            <label
+              htmlFor="email"
+              className="block text-sm text-[#D0D5DD] font-primaryMedium"
+            >
+              Company email
+            </label>
+            <input
+              type="email"
+              className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+              placeholder="@example.com"
+              name="company_email"
+              value={company_email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="w-full md:w-1/2 px-3">
+            <label
+              htmlFor="full-name"
+              className="block text-sm text-[#D0D5DD] font-primaryMedium"
+            >
+              Company phone
+            </label>
+            <input
+              type="number"
+              className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+              placeholder="Enter company name"
+              name="company_phone"
+              value={company_phone}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="email"
+            className="block text-sm text-[#D0D5DD] font-primaryMedium"
+          >
+            Company size
+          </label>
+          <input
+            type="text"
+            className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+            placeholder="no. of employees"
+            name="company_size"
+            value={company_size}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="mt-2 flex flex-wrap">
+          <div className="w-full md:w-1/2 md:pr-2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-[#D0D5DD] font-primaryMedium"
+            >
+              Location
+            </label>
+            <input
+              type="text"
+              className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+              placeholder="Enter company location"
+              name="location"
+              value={location}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="w-full md:w-1/2">
+            <label
+              htmlFor="phone-number"
+              className="block text-sm text-[#D0D5DD] font-primaryMedium"
+            >
+              Country
+            </label>
+            <input
+              type="text"
+              className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+              placeholder="Enter country of incorporation"
+              name="country"
+              value={country}
+              onChange={handleChange}
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap -mx-3 my-2">
+          <div class="block w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label
+              className="block text-sm text-[#D0D5DD] font-primaryMedium"
+              for="grid-city"
+            >
+              Contact Person Name
+            </label>
+            <input
+              type="text"
+              id="grid-city"
+              placeholder="Contact Name"
+              className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+              name="company_person_name"
+              value={company_person_name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label
+              className="block text-sm text-[#D0D5DD] font-primaryMedium"
+              for="grid-state"
+            >
+              Contact Person Title
+            </label>
+            <input
+              type="text"
+              id="grid-city"
+              placeholder="Title"
+              className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+              name="company_person_title"
+              value={company_person_title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+            <label
+              className="block text-sm text-[#D0D5DD] font-primaryMedium"
+              for="grid-zip"
+            >
+              Contact Person Number
+            </label>
+            <input
+              type="number"
+              placeholder="Whatsapp Number"
+              className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+              id="grid-zip"
+              name="company_person_whatsapp_number"
+              value={company_person_whatsapp_number}
+              onChange={handleChange}
+              required
+            />
+          </div>
+        </div>
+        <div className="mt-2">
+          <label
+            htmlFor="stage-of-company"
+            className="block text-sm text-[#D0D5DD] font-primaryMedium"
+          >
+            Stage of company:
+          </label>
+          <select
+            id="stage-of-company"
+            className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+            name="company_stage"
+            value={company_stage}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select one...</option>
+            <option value="pre-revenue">Pre-revenue</option>
+            <option value="revenue-stage">Revenue stage</option>
+          </select>
+        </div>
+        {/* <div className="mt-2">
+          <label
+            htmlFor="full-name"
+            className="block text-sm text-[#D0D5DD] font-primaryMedium"
+          >
+            Company Website or Social Media URL
+          </label>
+          <input
+            type="text"
+            className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] border rounded-md font-primaryRegular"
+            placeholder="Enter company name"
+            name="website_url"
+            // value={company_name}
+            // onChange={handleChange}
+            // required
+          />
+        </div> */}
+        <div className="mt-2">
+          <label
+            htmlFor="phone-number"
+            className="block text-sm text-[#D0D5DD] font-primaryMedium"
+          >
+            Brief description
+          </label>
+          <textarea
+            className="block w-full px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+            name="brief_description"
+            value={brief_description}
+            onChange={handleChange}
+          ></textarea>
+        </div>
+        <div className="relative my-4 border border-[#E9D7FE] h-20 rounded-md flex flex-col items-center justify-center">
           <label
             htmlFor="file-input"
-            className="flex items-center justify-center rounded p-4 cursor-pointer"
+            className="flex items-center justify-center border border-gray-300 rounded p-4 cursor-pointer"
           >
-            <MdOutlinePhotoCamera size={20} />
-            {/* <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 6a2 2 0 012-2h2.8a2 2 0 001.4-.6l1.58-1.58a2 2 0 011.4-.58h4.24a2 2 0 011.4.58L17.8 3.4a2 2 0 001.4.6H20a2 2 0 012 2v12a2 2 0 01-2 2H5a2 2 0 01-2-2V6z"
-                ></path>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
-                ></path>
-              </svg> */}
+            <svg
+              className="w-6 h-6 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M12 4v16m8-8H4"
+              ></path>
+            </svg>
+            <span className="text-[#471A52] font-primarySemibold">
+              Select a picture to upload
+            </span>
           </label>
 
           <input
@@ -654,160 +984,45 @@ const StartupForm = () => {
             id="file-input"
             className="hidden"
             name="file"
-            // value={file}
-            // onChange={fileUploadHandler}
+            onChange={fileUploadHandler}
           />
         </div>
-        <div className="mt-4">
-          <label
-            htmlFor="full-name"
-            className="block text-sm text-gray-700 font-primaryRegular"
-          >
-            Company name
-          </label>
-          <input
-            type="text"
-            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-            placeholder="Enter full name"
-            name="company_name"
-            // value={company_name}
-            // onChange={handleChange}
-            required
-          />
-        </div>
+        {filePreview && (
+          <div className="mt-4">
+            <img
+              src={filePreview}
+              alt="Selected file"
+              className="max-w-full h-auto"
+            />
+          </div>
+        )}
         <div className="mt-2">
           <label
-            htmlFor="email"
-            className="block text-sm text-gray-700 font-primaryRegular"
+            htmlFor="membership-fees"
+            className="block text-sm text-[#D0D5DD] font-primaryMedium"
           >
-            Company email
+            If the team reviews your application and you qualify to join the
+            network, can you afford $500-$1,000 in lifetime membership fees?
           </label>
-          <input
-            type="email"
-            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-            placeholder="@example.com"
-            name="company_email"
-            // value={company_email}
-            // onChange={handleChange}
+          <select
+            id="membership-fees"
+            className="block w-full h-10 px-4 py-2 mt-2 text-gray-700 border border-[#E9D7FE] rounded-md font-primaryRegular"
+            name="membership_fee"
+            value={membership_fee}
+            onChange={handleChange}
             required
-          />
-        </div>
-        <div className="mt-2">
-          <label
-            htmlFor="email"
-            className="block text-sm text-gray-700 font-primaryRegular"
           >
-            Company size
-          </label>
-          <input
-            type="text"
-            className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-            placeholder="no. of employees"
-            name="company_size"
-            // value={company_size}
-            // onChange={handleChange}
-            required
-          />
+            <option value="">Select one...</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
         </div>
-        <div className="mt-2 flex flex-wrap">
-          <div className="w-full md:w-1/2 md:pr-2">
-            <label
-              htmlFor="phone-number"
-              className="block text-sm text-gray-700 font-primaryRegular"
-            >
-              Location
-            </label>
-            <input
-              type="text"
-              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-              placeholder="Enter company location"
-              name="location"
-              // value={location}
-              // onChange={handleChange}
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <label
-              htmlFor="phone-number"
-              className="block text-sm text-gray-700 font-primaryRegular"
-            >
-              Country
-            </label>
-            <input
-              type="text"
-              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-              placeholder="Enter country of incorporation"
-              name="country"
-              // value={country}
-              // onChange={handleChange}
-            />
-          </div>
-        </div>
-        <div className="mt-2 flex flex-wrap">
-          <div className="w-full md:w-1/2 md:pr-2">
-            <label
-              htmlFor="phone-number"
-              className="block text-sm text-gray-700 font-primaryRegular"
-            >
-              Website URL
-            </label>
-            <input
-              type="text"
-              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-              placeholder="www.company.com"
-              name="website_url"
-              // value={website_url}
-              // onChange={handleChange}
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <label
-              htmlFor="phone-number"
-              className="block text-sm text-gray-700 font-primaryRegular"
-            >
-              Linked URL
-            </label>
-            <input
-              type="text"
-              className="block w-full h-[48px] px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-              placeholder="https://linkedin.com/company_name"
-              name="linkedin_url"
-              // value={linkedin_url}
-              // onChange={handleChange}
-            />
-          </div>
-        </div>
-        <div className="mt-2">
-          <label
-            htmlFor="phone-number"
-            className="block text-sm text-gray-700 font-primaryRegular"
-          >
-            Brief description
-          </label>
-          <textarea
-            className="block w-full px-4 py-2 mt-2 text-gray-700 border border-gray-300 rounded-md font-primaryRegular focus:outline-none"
-            name="brief_description"
-            // value={brief_description}
-            // onChange={handleChange}
-          ></textarea>
-        </div>
-
-        <div className="w-full flex items-center justify-between mt-10">
+        <div className="mt-6 mb-2">
           <button
-            type="button"
-            className="w-[129px] h-[48px] px-4 py-2 font-primarySemibold tracking-wide transition-colors duration-200 transform bg-gray-50 rounded-md  text-gray-900 border border-gray-300"
-            // onClick={() => setLoading(!loading)}
-            // onClick={handleRegisterClick}
+            type="submit"
+            className="w-full h-[48px] px-4 py-2 font-semibold tracking-wide transition-colors duration-200 transform bg-[#471A52] rounded-md font-primarySemibold text-[#FFFFFF]"
           >
-            Cancel
-          </button>
-          <button
-            type="button"
-            className="w-[191px] h-[48px] px-4 py-2 tracking-wide transition-colors duration-200 transform bg-[#471A52] rounded-md font-primarySemibold text-[#ffffff]"
-            // onClick={() => setLoading(!loading)}
-            // onClick={handleRegisterClick}
-          >
-            Proceed to checkout
+            Register
           </button>
         </div>
       </form>
@@ -819,7 +1034,7 @@ const TalentForm = () => {
   return (
     <div className="md:w-[576px]">
       <form>
-        <div className="relative my-4 bg-[#E9D7FE] w-[64px] h-[64px] rounded-full flex items-center justify-center">
+        <div className="relative my-4 border border-[#E9D7FE] w-[64px] h-[64px] rounded-full flex items-center justify-center">
           <label
             htmlFor="file-input"
             className="flex items-center justify-center rounded p-4 cursor-pointer"

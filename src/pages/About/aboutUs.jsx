@@ -1,5 +1,7 @@
 import React from "react";
 import Accordion from "../../components/Accordion";
+import AboutUs from "../../assets/aboutUs.png";
+import Stars from "../../assets/Stars.png";
 
 const About = () => {
   const accordionItems = [
@@ -24,7 +26,8 @@ const About = () => {
     <>
       <div className="w-full relative flex items-center justify-center">
         <img
-          src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/about-hero.png"
+          // src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/about-hero.png"
+          src={AboutUs}
           className="w-full"
         />
         <div className="md:w-[1180px] 2xl:w-[1400px] absolute flex flex-col md:items-center md:justify-center top-10 md:top-[300px] 2xl:top-[500px] bg-[#471A52] rounded-2xl mx-4 md:mx-0 p-4 md:p-0">
@@ -51,11 +54,12 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="mt-[200px] md:mt-[100px] pt-[300px] md:pt-0">
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/Stars.png" />
-      </div>
+      {/* <div className="mt-[300px] pt-[400px] md:pt-0"> */}
+      {/* <img src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/Stars.png" /> */}
+      {/* <img src={Stars} alt="stars" /> */}
+      {/* </div> */}
       {/* story */}
-      <div className="w-full bg-[#F4EBFF] flex flex-col md:flex-row items-center justify-between p-4 md:p-10 2xl:px-20 mt-20">
+      <div className="w-full bg-[#F4EBFF] flex flex-col md:flex-row items-center justify-between p-4 md:p-10 2xl:px-20 mt-[650px] md:mt-[250px]">
         <div className="md:w-[600px] rounded-lg flex flex-col">
           <div className="font-primarySemibold text-3xl md:text-4xl text-gray-900">
             Our Story

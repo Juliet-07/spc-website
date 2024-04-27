@@ -30,6 +30,7 @@ import ThankYou from "./components/ThankYou";
 import PostEvents from "./pages/Events/post-events";
 import TalentNetwork from "./pages/Community/talent-network";
 import MentorsNetwork from "./pages/Community/mentors-network";
+import InvestorsNetwork from "./pages/Community/investors-network";
 
 const GeneralRoute = () => {
   return (
@@ -54,6 +55,10 @@ const GeneralRoute = () => {
           <Route
             path="/community/startup-network/mentors"
             element={<MentorsNetwork />}
+          />
+          <Route
+            path="/community/startup-network/investors"
+            element={<InvestorsNetwork />}
           />
           <Route path="/events" element={<PostEvents />} />
           <Route path="/events/details" element={<Pass />} />

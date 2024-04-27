@@ -1,9 +1,14 @@
+import BoundlessPay from "../../assets/boundlesspay.png";
+import Manilla from "../../assets/manilla.png";
+import Pluralcode from "../../assets/pluralcode.png";
+
 export const StartUpData = [
   {
     id: 1,
     image: (
       <img
-        src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/boundlesspay.png"
+        // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/boundlesspay.png"
+        src={BoundlessPay}
         className="w-[376px] h-[200px] rounded-lg"
       />
     ),
@@ -18,7 +23,8 @@ export const StartUpData = [
     id: 2,
     image: (
       <img
-        src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/manilla.png"
+        // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/manilla.png"
+        src={Manilla}
         className="w-[376px] h-[200px] rounded-lg"
       />
     ),
@@ -33,7 +39,8 @@ export const StartUpData = [
     id: 3,
     image: (
       <img
-        src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/pluralcode.png"
+        // src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/pluralcode.png"
+        src={Pluralcode}
         className="w-[376px] h-[200px] rounded-lg"
       />
     ),
