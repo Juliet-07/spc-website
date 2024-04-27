@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
-import Talent from "../../assets/talent.png";
+import Mentors from "../../assets/mentors.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import One from "../../assets/people.png";
 import Two from "../../assets/partner.png";
@@ -19,6 +19,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "../../components/Modal";
 import Mentoring from "../../assets/mentoring.png";
+import Community from "../../assets/community.png";
 
 const TestimonialCarousel = () => {
   const testimonials = [
@@ -163,80 +164,101 @@ const MentorsNetwork = () => {
   };
   return (
     <>
-      <div className="w-full flex flex-col">
+      {/* Fueling Growth */}
+      <div className="w-full flex flex-col p-4 md:p-10">
         <Link
           to="/community"
-          className="flex items-center p-2 w-[85px] h-10 border border-gray-100 rounded-lg m-4"
+          className="flex items-center p-2 w-[85px] h-10 border border-gray-100 rounded-lg"
         >
           <TbArrowBackUp color="#475467" />
           <span className="text-gray-600 mx-2">Back</span>
         </Link>
-        <div className="w-full h-[600px] md:h-[500px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col md:flex-row items-center justify-between md:justify-evenly 2xl:justify-between p-4">
-          <div className="md:w-[563px] h-[280px]">
-            <p className="font-primarySemibold text-gray-900 text-2xl md:text-4xl">
-              Mentorship: Fueling Growth
+        <div className="w-full h-[600px] md:h-[500px] bg-gradient-to-r from-white via-[#471A52]/[100%] to-[#F0B5FF]/[100%] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
+          <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl">
+            Mentorship: Fueling Growth
+          </div>
+          <div className="w-full h-full flex flex-col md:flex-row items-center justify-between">
+            <div className="md:w-[555px] h-full">
+              <p className="font-primaryRegular md:text-xl text-gray-700 py-3 leading-8 md:leading-[60px]">
+                We understand the unique challenges and opportunities that come
+                with building and scaling a startup. Our platform is dedicated
+                to helping you navigate the exciting yet complex journey of
+                startup growth through mentorship, guidance, and support.
+              </p>
+            </div>
+            <div>
+              <img
+                src={Mentors}
+                className="w-[571px] md:h-[430px] rounded-lg"
+              />
+            </div>
+          </div>
+          {/* <button
+              onClick={() => handleModal()}
+              className="w-[115px] h-[44px] rounded-lg bg-[#471A52] mt-3 md:mt-6 text-white font-primaryMedium"
+            >
+              Register
+            </button> */}
+        </div>
+      </div>
+      {/* mentorship background */}
+      <div
+        className="w-full h-[400px] md:h-[600px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center my-6"
+        style={{
+          // backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
+          backgroundImage: `url(${Mentoring})`,
+        }}
+      ></div>
+      {/* vibrant hub */}
+      <div className="w-full bg-[#F0B5FF]/[12%] p-4 md:p-10">
+        <p className="md:w-[835px] text-lg md:text-2xl font-primaryMedium md:font-primarySemibold text-gray-900">
+          SPC platform connects aspiring startup founders with experienced
+          mentors who offer invaluable insights, advice, and support to help
+          navigate the complexities of building a successful venture.
+        </p>
+        {/* <div className="w-full grid md:grid-cols-2 gap-10 my-10">
+          {talentBenefits.map((talent) => (
+            <div className="md:w-[587px] h-full bg-white border border-[#000000]/[20%] rounded-lg shadow-lg">
+              <div>{talent.image}</div>
+              <p className="text-center py-4 font-primarySemibold text-lg md:text-2xl">
+                {talent.title}
+              </p>
+              <p className="font-primaryRegular px-4 pb-4 md:text-lg leading-8 md:leading-[50px]">
+                {talent.message}
+              </p>
+            </div>
+          ))}
+        </div> */}
+      </div>
+      {/* join the community */}
+      <div className="w-full flex flex-col p-4 md:p-10 my-4">
+        <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl text-center md:text-left">
+          <font color="#BE33E0">Join</font> The Community
+        </div>
+        <div className="w-full flex flex-col md:flex-row items-center justify-between">
+          <div className="md:w-[469px] md:h-[436px] md:text-xl py-4">
+            <p className="font-primaryRegular leading-8 md:leading-[50px]">
+              Join the SPC Universe community today and unlock access to a world
+              of opportunity. Whether you're a startup founder in search of your
+              next team member or a talented individual eager to contribute your
+              skills to a groundbreaking venture, your journey begins here.
+              Together, let's build the future of innovation, one collaboration
+              at a time.
             </p>
-            <p className="font-primaryRegular md:text-xl text-gray-700 py-3">
-              We understand the unique challenges and opportunities that come
-              with building and scaling a startup. Our platform is dedicated to
-              helping you navigate the exciting yet complex journey of startup
-              growth through mentorship, guidance, and support.
-            </p>
-
             <button
               onClick={() => handleModal()}
               className="w-[115px] h-[44px] rounded-lg bg-[#471A52] mt-3 md:mt-6 text-white font-primaryMedium"
             >
-              Get a mentor
+              Join now
             </button>
           </div>
           <div>
-            <img src={Talent} className="w-[571px] md:h-[430px] rounded-lg" />
+            <img src={Community} />
           </div>
         </div>
-        <div
-          className="w-full h-[400px] md:h-[600px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center my-6"
-          style={{
-            // backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
-            backgroundImage: `url(${Mentoring})`,
-          }}
-        >
-          {/* <div className="absolute top-0 left-0 right-0 bottom-0 bg-[#1C1C1C]/75 z-[2]"></div> */}
-        </div>
-        {/* stand out */}
-        <div className="w-full flex flex-col items-center justify-center my-10">
-          <div className="font-primarySemibold text-2xl md:text-4xl py-2">
-            <font color="#BE33E0">How</font> We Stand Out
-          </div>
-        </div>
-        <div>
-          <TestimonialCarousel />
-        </div>
-        {/* why choose us */}
-        <div className="w-full flex flex-col my-4 p-4 md:p-10 2xl:px-20">
-          <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl text-center md:text-left">
-            <font color="#BE33E0">Why</font> Choose Us
-          </div>
-          <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between my-4">
-            <div>
-              <img src={WhyUs} />
-            </div>
-            <div className="md:w-[560px] px-10 2xl:px-0">
-              {" "}
-              <div className="w-full grid grid-cols-2 gap-10 md:gap-20">
-                {reasons.map((reason) => (
-                  <div className="w-full flex flex-col items-center justify-center">
-                    <div>{reason.image}</div>
-                    <p className="font-primaryRegular py-2 text-[#000000] md:text-2xl text-center">
-                      {reason.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* testimonials */}
+      </div>
+      {/* testimonials */}
+      <div className="bg-[#D9D9D9] px-2 md:px-6">
         <div className="w-full flex flex-col items-center justify-center my-10">
           <p className="font-primaryRegular text-xl text-[#000000]">
             Testimonial
@@ -245,10 +267,11 @@ const MentorsNetwork = () => {
             What Our <font color="#BE33E0">Clients Say</font>
           </div>
         </div>
-        <div>
+        <div className="pb-10">
           <TestimonialCarousel />
         </div>
       </div>
+
       <Modal isVisible={modal} onClose={() => setModal(false)}>
         <div className="flex flex-col items-center justify-center">
           <StartupForm />
