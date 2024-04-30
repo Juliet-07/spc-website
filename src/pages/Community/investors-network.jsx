@@ -13,6 +13,10 @@ import Expert from "../../assets/expert.png";
 import Matchmaking from "../../assets/matchMaking.png";
 import CommunityHero from "../../assets/communityHero.png";
 import InvestorFrame from "../../assets/investorFrame.png";
+import Funding from "../../assets/diverse_funding.jpg";
+import DueDiligence from "../../assets/diligence.jpg";
+import GlobalReach from "../../assets/globalReach.jpg";
+import Matched from "../../assets/investorMatching.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "../../components/Modal";
@@ -175,7 +179,10 @@ const InvestorsNetwork = () => {
         </p>
         <div className="w-full grid md:grid-cols-2 gap-10 md:gap-20 my-10">
           <div>
-            <img src={Community} />
+            <img
+              src={Funding}
+              className="md:w-[635px] md:h-[442.94px] rounded-xl"
+            />
           </div>
           <div className="md:w-[516px] h-full flex flex-col items-center">
             <p className="font-primarySemibold text-2xl text-gray-900">
@@ -210,7 +217,10 @@ const InvestorsNetwork = () => {
             <img src={Community} />
           </div>
           <div>
-            <img src={Community} />
+            <img
+              src={DueDiligence}
+              className="md:w-[635px] md:h-[442.94px] rounded-xl"
+            />
           </div>
           <div className="md:w-[516px] h-full flex flex-col items-center">
             <p className="font-primarySemibold text-2xl text-gray-900">
@@ -244,10 +254,13 @@ const InvestorsNetwork = () => {
             </p>
           </div>
           <div>
-            <img src={Community} />
+            <img src={Matched} className="md:w-[635px] md:h-[442.94px] rounded-xl" />
           </div>
           <div>
-            <img src={Community} />
+            <img
+              src={GlobalReach}
+              className="md:w-[635px] md:h-[442.94px] rounded-xl"
+            />
           </div>
           <div className="md:w-[516px] h-full flex flex-col items-center">
             <p className="font-primarySemibold text-2xl text-gray-900">

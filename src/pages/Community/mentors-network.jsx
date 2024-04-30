@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
-import Mentors from "../../assets/mentors.png";
+import Mentors from "../../assets/fueling.jpg";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import Mentor1 from "../../assets/mentor1.png";
 import Mentor2 from "../../assets/mentor2.png";
@@ -15,6 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Modal from "../../components/Modal";
 import Mentoring from "../../assets/mentoring.png";
 import Community from "../../assets/community.png";
+import Support from "../../assets/support.jpg";
 
 const TestimonialCarousel = () => {
   const testimonials = [
@@ -142,7 +143,7 @@ const MentorsNetwork = () => {
           <TbArrowBackUp color="#475467" />
           <span className="text-gray-600 mx-2">Back</span>
         </Link>
-        <div className="w-full h-[600px] md:h-[500px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
+        <div className="w-full h-[550px] md:h-[500px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
           <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl">
             Mentorship: Fueling Growth
           </div>
@@ -158,7 +159,7 @@ const MentorsNetwork = () => {
             <div>
               <img
                 src={Mentors}
-                className="w-[571px] md:h-[430px] rounded-lg"
+                className="w-[571px] rounded-lg"
               />
             </div>
           </div>
@@ -220,7 +221,7 @@ const MentorsNetwork = () => {
             <img src={Community} />
           </div>
           <div>
-            <img src={Community} />
+            <img src={Support} className="md:w-[635px] md:h-[442.94px] rounded-xl" />
           </div>
           <div className="md:w-[516px] h-full flex flex-col items-center">
             <p className="font-primarySemibold text-2xl text-gray-900">
