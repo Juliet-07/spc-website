@@ -12,6 +12,9 @@ import Story3 from "../../assets/story3.png";
 import Story4 from "../../assets/story4.jpg";
 import Story5 from "../../assets/story5.jpg";
 import Story6 from "../../assets/story6.jpg";
+import { CgCommunity } from "react-icons/cg";
+import { MdEventAvailable } from "react-icons/md";
+import { FaUserGraduate } from "react-icons/fa6";
 
 const MomentsCarousel = () => {
   // const images = [
@@ -124,25 +127,19 @@ const MomentsCarousel = () => {
 const Home = () => {
   const todos = [
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/community.png" />
-      ),
+      icon: <CgCommunity size={30} color="#471A52" />,
       title: "Community",
       text: "Cultivating the world's most collaborative hub for digital innovators to unite with like-minded visionaries, fostering synergy and exchanging shared expertise.",
       path: "/community",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/events.png" />
-      ),
+      icon: <MdEventAvailable size={30} color="#471A52" />,
       title: "Events",
       text: "Curate experiences that transcend borders, uniting innovators globally to inspire and learn.",
       path: "/events",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-home-images/trainings.png" />
-      ),
+      icon: <FaUserGraduate size={30} color="#471A52" />,
       title: "Trainings",
       text: "Empower individuals with cutting-edge skills and knowledge, breaking barriers for a limitless digital landscape",
       path: "/trainings",

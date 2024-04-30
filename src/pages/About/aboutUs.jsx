@@ -1,6 +1,7 @@
 import React from "react";
 import Accordion from "../../components/Accordion";
 import AboutUs from "../../assets/aboutUs.png";
+import Story from "../../assets/communityHero.png";
 import Stars from "../../assets/Stars.png";
 
 const About = () => {
@@ -94,7 +95,8 @@ const About = () => {
         </div>
         <div className="w-full md:w-[592px] md:h-[577px] rounded-lg">
           <img
-            src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/our-story.jpg"
+            // src="https://spcimagestorage001.blob.core.windows.net/spc-about-images/our-story.jpg"
+            src={Story}
             className="object-cover rounded-lg md:h-full"
           />
         </div>

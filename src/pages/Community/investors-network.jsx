@@ -173,13 +173,13 @@ const InvestorsNetwork = () => {
         <p className="md:w-[709px] text-lg md:text-2xl font-primaryMedium md:font-primarySemibold text-gray-900">
           SPC Universe: Where startups meet investors for funding and growth.
         </p>
-        <div className="w-full grid md:grid-cols-2 2xl:grid-cols-3 gap-10 md:gap-20 my-10">
+        <div className="w-full grid md:grid-cols-2 gap-10 md:gap-20 my-10">
           <div>
             <img src={Community} />
           </div>
           <div className="md:w-[516px] h-full flex flex-col items-center">
             <p className="font-primarySemibold text-2xl text-gray-900">
-              Diversed Funding Opportunities
+              Diverse Funding Opportunities
             </p>
             <p className="font-primaryRegular leading-8 md:leading-[55px]">
               Our investor network spans a wide spectrum of funding sources,

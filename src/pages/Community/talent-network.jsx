@@ -27,28 +27,28 @@ import Modal from "../../components/Modal";
 const TestimonialCarousel = () => {
   const testimonials = [
     {
-      image: <img src={Woman} />,
+      image: <img src={Woman} className="w-[65px] h-[65px] md:w-[100px] md:h-[100px]" />,
       name: "Leslie Alex",
       title: "CEO, iStock Global",
       message:
         "I was able to acquire the best talents on this platform.I will say I have the best team so far",
     },
     {
-      image: <img src={Man} className="w-[100px] h-[100px] rounded-full" />,
+      image: <img src={Man} className="w-[65px] h-[65px] md:w-[100px] md:h-[100px]"  />,
       name: "Lee Thompson",
       title: "Venture Capitalist",
       message:
         "I was able to acquire the best talents on this platform.I will say I have the best team so far",
     },
     {
-      image: <img src={Woman} />,
+      image: <img src={Woman} className="w-[65px] h-[65px] md:w-[100px] md:h-[100px]"  />,
       name: "Leslie Alex",
       title: "CEO, iStock Global",
       message:
         "I was able to acquire the best talents on this platform.I will say I have the best team so far",
     },
     {
-      image: <img src={Man} className="w-[100px] h-[100px] rounded-full" />,
+      image: <img src={Man} className="w-[65px] h-[65px] md:w-[100px] md:h-[100px]"  />,
       name: "Lee Thompson",
       title: "Venture Capitalist",
       message:
@@ -85,11 +85,11 @@ const TestimonialCarousel = () => {
       {testimonials.map((testimonial, index) => (
         <div key={index} className="w-full">
           {/* <div className="md:w-[calc(50% - 20px)] flex flex-col items-center bg-red-500 rounded-3xl py-2 mx-2"> */}
-          <div className="md:w-[519px] 2xl:w-[calc(50% - 20px)] flex flex-col items-center justify-center bg-white rounded-3xl shadow-xl py-4">
+          <div className="w-full md:w-[519px] 2xl:w-[calc(50% - 20px)] flex flex-col items-center justify-center bg-white rounded-3xl shadow-xl py-4">
             {" "}
             {/* Adjust width for two cards */}
             <div className="w-full flex items-center justify-between">
-              <div className="w-[150px] md:w-[185px] h-[130px] md:h-[166px] flex items-center justify-center bg-[#471A52] rounded-r-full">
+              <div className="w-[120.32px] md:w-[185px] h-[107.96px] md:h-[166px] flex items-center justify-center bg-[#471A52] rounded-r-full">
                 {testimonial.image}
               </div>
               <div className="flex flex-col items-center justify-center">
@@ -105,7 +105,7 @@ const TestimonialCarousel = () => {
                 <RiDoubleQuotesL color="#471A52" size={20} />
               </div>
             </div>
-            <div className="w-[376px] font-primaryRegular text-center text-[#746F6F] p-2">
+            <div className="w-[245px] md:w-[376px] font-primaryRegular text-center text-[#746F6F] p-2">
               {testimonial.message}
             </div>
           </div>
@@ -192,7 +192,7 @@ const TalentNetwork = () => {
   const handleModal = () => {
     setModal(true);
   };
-  
+
   return (
     <>
       {/* Attract talents */}
@@ -256,13 +256,13 @@ const TalentNetwork = () => {
         <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl text-center md:text-left">
           <font color="#BE33E0">Why</font> Choose Us
         </div>
-        <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between my-4">
-          <div>
+        <div className="w-full flex flex-col md:flex-row items-center justify-between my-4">
+          <div className="my-6 md:my-0">
             <img src={WhyUs} />
           </div>
           <div className="md:w-[560px] px-10 2xl:px-0">
             {" "}
-            <div className="w-full grid grid-cols-2 gap-10 md:gap-20">
+            <div className="w-full grid md:grid-cols-2 gap-10 md:gap-20">
               {reasons.map((reason) => (
                 <div className="w-full flex flex-col items-center justify-center">
                   <div>{reason.image}</div>
@@ -277,10 +277,10 @@ const TalentNetwork = () => {
       </div>
       {/* join the community */}
       <div className="w-full flex flex-col p-4 md:p-10 my-4">
-        <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl text-center md:text-left">
+        <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl text-center md:text-left my-6 md:my-0">
           <font color="#BE33E0">Join</font> The Community
         </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between">
+        <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between">
           <div className="md:w-[469px] md:h-[436px] md:text-xl py-4">
             <p className="font-primaryRegular leading-8 md:leading-[50px]">
               Join the SPC Universe community today and unlock access to a world

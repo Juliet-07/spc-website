@@ -10,10 +10,18 @@ import axios from "axios";
 import Talents from "../../assets/talents.jpg";
 import Investors from "../../assets/investors.jpg";
 import Accelerator from "../../assets/accelerator.jpg";
+import Mentors from "../../assets/mentors.jpg";
 import Expansion from "../../assets/expand.jpg";
 import CommunityImage from "../../assets/community.png";
 import CommunityHero from "../../assets/communityHero.png";
-import Mentors from "../../assets/mentors.jpg";
+import Research from "../../assets/research.png";
+import Goto from "../../assets/goto.png";
+import Business from "../../assets/business.png";
+import Office from "../../assets/research.png";
+import Permit from "../../assets/permit.png";
+import Legal from "../../assets/legal.png";
+import Accounting from "../../assets/accounting.png";
+import Person from "../../assets/person.png";
 
 const Community = () => {
   const apiURL = import.meta.env.VITE_REACT_APP_BASE_URL;
@@ -113,65 +121,49 @@ const Community = () => {
   );
   const globalExpansion = [
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/research.png" />
-      ),
+      icon: <img src={Research} />,
       title: "Research",
       description:
         "In-depth market research tailored to your industry, providing valuable insights to inform strategic decision-making for a successful global expansion.",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/go-to.png" />
-      ),
+      icon: <img src={Goto} />,
       title: "Go-to Market Strategy",
       description:
         "Customized strategies designed to effectively position your business in new markets, ensuring a strong and targeted approach to maximize growth.",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/business.png" />
-      ),
+      icon: <img src={Business} />,
       title: "Business Incorporation",
       description:
         "Seamless facilitation of the business incorporation process, guiding you through legal requirements and paperwork to establish a solid foundation for operations.",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/research.png" />
-      ),
+      icon: <img src={Office} />,
       title: "Office Setup",
       description:
         "Full-service support for establishing your physical presence, including office space acquisition, design, and setup tailored to your specific business needs.",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/permit.png" />
-      ),
+      icon: <img src={Permit} />,
       title: "Permit & Immigration",
       description:
         "Expert assistance in navigating the complex landscape of permits and immigration processes, ensuring compliance and a smooth transition for your team.",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/legal.png" />
-      ),
+      icon: <img src={Legal} />,
       title: "Legal Consultancy",
       description:
         "Comprehensive legal guidance to safeguard your business interests, offering expert advice on contracts, regulations, and compliance in the new market.",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/account.png" />
-      ),
+      icon: <img src={Accounting} />,
       title: "Accounting Services",
       description:
         "Professional accounting services to manage financial aspects seamlessly, from tax planning and compliance to financial reporting, ensuring fiscal responsibility.",
     },
     {
-      icon: (
-        <img src="https://spcimagestorage001.blob.core.windows.net/spc-community-images/talent.png" />
-      ),
+      icon: <img src={Person} />,
       title: "Talent Hunting & Hiring",
       description:
         "Strategic talent acquisition services to build a skilled and diverse team, including recruitment strategies, talent identification, and hiring processes tailored to your industry.",

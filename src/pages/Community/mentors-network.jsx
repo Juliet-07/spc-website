@@ -142,7 +142,7 @@ const MentorsNetwork = () => {
           <TbArrowBackUp color="#475467" />
           <span className="text-gray-600 mx-2">Back</span>
         </Link>
-        <div className="w-full h-[600px] md:h-[500px] bg-gradient-to-r from-white via-[#471A52]/[100%] to-[#F0B5FF]/[100%] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
+        <div className="w-full h-[600px] md:h-[500px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
           <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl">
             Mentorship: Fueling Growth
           </div>
@@ -185,7 +185,7 @@ const MentorsNetwork = () => {
           mentors who offer invaluable insights, advice, and support to help
           navigate the complexities of building a successful venture.
         </p>
-        <div className="w-full grid md:grid-cols-2 2xl:grid-cols-3 gap-10 md:gap-20 my-10">
+        <div className="w-full grid md:grid-cols-2 gap-10 md:gap-20 my-10">
           <div>
             <img src={Community} />
           </div>
