@@ -17,8 +17,8 @@ import Man from "../../assets/man.png";
 import Community from "../../assets/community.png";
 import Diverse from "../../assets/diverse.jpg";
 import Seamless from "../../assets/seamless.jpg";
-import Shared from "../../assets/shared.png";
-import Growth from "../../assets/growth.png";
+import Shared from "../../assets/shared_vision.jpg";
+import Growth from "../../assets/growth.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -330,7 +330,7 @@ const TalentNetwork = () => {
       </div>
 
       {/* testimonials */}
-      <div className="bg-[#D9D9D9] px-2 md:px-6">
+      <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
         <div className="w-full flex flex-col items-center justify-center my-10">
           <p className="font-primaryRegular text-xl text-[#000000]">
             Testimonial

@@ -4,17 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
 import Accelerator from "../../assets/accelerator.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import One from "../../assets/people.png";
-import Two from "../../assets/partner.png";
-import Three from "../../assets/method.png";
-import WhyUs from "../../assets/whyUs.png";
-import Pricing from "../../assets/pricing.png";
-import Experience from "../../assets/experience.png";
-import Award from "../../assets/award.png";
-import Team from "../../assets/team.png";
+import Focus from "../../assets/focus.png";
+import CallStartup from "../../assets/callStartup.png";
+import Curriculum from "../../assets/curriculum.png";
+import Networking from "../../assets/networking.png";
+import Pitch from "../../assets/pitch.png";
+import AccelerationSupport from "../../assets/accelerationSupport.png";
 import Woman from "../../assets/woman.png";
 import Man from "../../assets/man.png";
-import Community from "../../assets/community.png";
 import Intensive from "../../assets/intensive.png";
 import Support from "../../assets/support.png";
 import Access from "../../assets/access.png";
@@ -117,50 +114,6 @@ const TestimonialCarousel = () => {
 
 const VentureAccelerator = () => {
   const [modal, setModal] = useState(false);
-  const processess = [
-    {
-      image: <img src={One} />,
-      title: "People",
-      message:
-        "Our global team of talent experts is ready  to make a real impact on your hiring needs.",
-    },
-    {
-      image: <img src={Two} />,
-
-      title: "Partnership",
-      message:
-        "We work closely with creative and tech industries to boost growth for global brands, and corporates.",
-    },
-    {
-      image: <img src={Three} />,
-
-      title: "Methodology",
-      message:
-        "Tailored solutions for your business needs, from talent acquisition to streamlined processes",
-    },
-  ];
-
-  const reasons = [
-    {
-      image: <img src={Pricing} />,
-      text: "Affordable Pricing",
-    },
-    {
-      image: <img src={Experience} />,
-
-      text: "Years of Experience",
-    },
-    {
-      image: <img src={Award} />,
-
-      text: " Award Winning",
-    },
-    {
-      image: <img src={Team} />,
-
-      text: "Professional Team",
-    },
-  ];
 
   const acceleratorBenefits = [
     {
@@ -186,6 +139,45 @@ const VentureAccelerator = () => {
       title: "Investors Connection",
       message:
         "Raising capital is a critical milestone for startups, and our venture accelerators help facilitate connections with investors interested in supporting promising ventures. Through pitch events, demo days, and investor introductions, startups in our accelerator programs have the opportunity to showcase their progress and attract investment from angel investors, venture capitalists, and corporate partners.",
+    },
+  ];
+
+  const processess = [
+    {
+      title: "Defining the focus area",
+      image: <img src={Focus} />,
+      message:
+        "We meet with our partners and they share with us their challenges and technology focus areas.",
+    },
+    {
+      title: "Calling for startups",
+      image: <img src={CallStartup} />,
+      message:
+        "Based on our partner's needs, we call for applications and source startups globally.",
+    },
+    {
+      title: "Structured Curriculum",
+      image: <img src={Curriculum} />,
+      message:
+        "Accepted startups participate in a structured curriculum or series of workshops covering various aspect of business development.",
+    },
+    {
+      title: "Mentorship & Networking",
+      image: <img src={Networking} />,
+      message:
+        "Startups are paired with mentors who provide guidance, advice and industry connections through the program.",
+    },
+    {
+      title: "Demo days & Pitch Events",
+      image: <img src={Pitch} />,
+      message:
+        "After the accelerator program, startups present their progress and pitch to investors and potential partners at demo days.",
+    },
+    {
+      title: "Post-Acceleration Support",
+      image: <img src={AccelerationSupport} />,
+      message:
+        "Alumni startups recieve support through mentorship, events and communities beyond the program.",
     },
   ];
 
@@ -255,99 +247,46 @@ const VentureAccelerator = () => {
           ))}
         </div>
       </div>
-      {/* why choose us */}
-      <div className="w-full flex flex-col p-4 md:p-10 my-4">
-        <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl text-center md:text-left">
-          <font color="#BE33E0">Why</font> Choose Us
+      {/* join an accelerator */}
+      <div className="hidden w-full p-4 md:p-10 my-4">
+        <div className="h-[515px] bg-[#9D1A88] rounded-3xl p-10 flex items-center justify-between">
+          <div>cards</div>
+          <div>message</div>
         </div>
-        <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between my-4">
-          <div>
-            <img src={WhyUs} />
-          </div>
-          <div className="md:w-[560px] px-10 2xl:px-0">
-            {" "}
-            <div className="w-full grid grid-cols-2 gap-10 md:gap-20">
-              {reasons.map((reason) => (
-                <div className="w-full flex flex-col items-center justify-center">
-                  <div>{reason.image}</div>
-                  <p className="font-primaryRegular py-2 text-[#000000] md:text-2xl text-center">
-                    {reason.text}
-                  </p>
-                </div>
-              ))}
+      </div>
+      {/* how does it work */}
+      <div className="w-full flex flex-col p-4 md:p-10">
+        <p className="font-primarySemibold text-xl md:text-3xl text-[#000000] my-6 md:my-10">
+          How Our Innovation Program works
+        </p>
+        <div className="grid md:grid-cols-3 gap-4 md:gap-10">
+          {processess.map((process) => (
+            <div className="w-full md:w-[393.58px] flex flex-col p-4 bg-[#9D1A88]">
+              <p className="font-primarySemibold py-2 text-white text-xl text-center">
+                {process.title}
+              </p>
+              <div>{process.image}</div>
+              <p className="font-primaryRegular text-white text-center md:text-left p-4">
+                {process.message}
+              </p>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-      {/* join the community */}
-      <div className="w-full flex flex-col p-4 md:p-10 my-4">
-        <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl text-center md:text-left">
-          <font color="#BE33E0">Join</font> The Community
-        </div>
-        <div className="w-full flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-[469px] md:h-[436px] md:text-xl py-4">
-            <p className="font-primaryRegular leading-8 md:leading-[50px]">
-              Join the SPC Universe community today and unlock access to a world
-              of opportunity. Whether you're a startup founder in search of your
-              next team member or a talented individual eager to contribute your
-              skills to a groundbreaking venture, your journey begins here.
-              Together, let's build the future of innovation, one collaboration
-              at a time.
-            </p>
-            <button
-              onClick={() => handleModal()}
-              className="w-[115px] h-[44px] rounded-lg bg-[#471A52] mt-3 md:mt-6 text-white font-primaryMedium"
-            >
-              Join now
-            </button>
-          </div>
-          <div>
-            <img src={Community} />
-          </div>
-        </div>
-      </div>
-      {/* process */}
-      <div className="w-full">
-        <div className="w-full flex flex-col items-center justify-center my-10">
-          <p className="font-primaryRegular text-xl text-[#000000]">
-            Our Process
-          </p>
-          <div className="font-primarySemibold text-2xl md:text-4xl py-2">
-            Here's <font color="#BE33E0">How it Works</font>
-          </div>
-        </div>{" "}
-        <div className="w-full flex items-center justify-center">
-          <div className="grid md:grid-cols-3 gap-4 md:gap-10">
-            {processess.map((process) => (
-              <div className="w-full md:w-[349px] h-[233px] md:h-[300px] flex flex-col items-center p-2">
-                <div>{process.image}</div>
-                <p className="font-primarySemibold py-2 text-[#000000] text-xl">
-                  {process.title}
-                </p>
-                <p className="font-primaryRegular text-center px-4">
-                  {process.message}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* testimonials */}
-      <div className="bg-[#D9D9D9] px-2 md:px-6">
+      <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
         <div className="w-full flex flex-col items-center justify-center my-10">
           <p className="font-primaryRegular text-xl text-[#000000]">
             Testimonial
           </p>
           <div className="font-primarySemibold text-2xl md:text-4xl py-2">
-            What Our <font color="#BE33E0">Clients Say</font>
+            Our Benefactor's <font color="#BE33E0">Success Story</font>
           </div>
         </div>
         <div className="pb-10">
           <TestimonialCarousel />
         </div>
       </div>
-
       <Modal isVisible={modal} onClose={() => setModal(false)}>
         <div className="flex flex-col items-center justify-center">
           <StartupForm />

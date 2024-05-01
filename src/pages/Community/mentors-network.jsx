@@ -14,8 +14,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "../../components/Modal";
 import Mentoring from "../../assets/mentoring.png";
+import MobileMentoring from "../../assets/mobileMentoring.png";
 import Community from "../../assets/community.png";
 import Support from "../../assets/support.jpg";
+import Opportunities from "../../assets/networkOpportunities.jpg";
+import Seasoned from "../../assets/seasonedWisdom.jpg";
 
 const TestimonialCarousel = () => {
   const testimonials = [
@@ -157,10 +160,7 @@ const MentorsNetwork = () => {
               </p>
             </div>
             <div>
-              <img
-                src={Mentors}
-                className="w-[571px] rounded-lg"
-              />
+              <img src={Mentors} className="w-[571px] rounded-lg" />
             </div>
           </div>
           {/* <button
@@ -173,87 +173,110 @@ const MentorsNetwork = () => {
       </div>
       {/* mentorship background */}
       <div
-        className="w-full h-[400px] md:h-[600px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center my-6"
+        className="hideen w-full md:h-[550px] 2xl:h-[800px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center my-6"
         style={{
-          // backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
           backgroundImage: `url(${Mentoring})`,
+        }}
+      ></div>
+      <div
+        className="flex items-center md:hidden w-full h-[745px] relative bg-cover md:px-10 2xl:px-20 my-6"
+        style={{
+          backgroundImage: `url(${MobileMentoring})`,
         }}
       ></div>
       {/* vibrant hub */}
       <div className="w-full bg-[#F0B5FF]/[12%] p-4 md:p-10">
-        <p className="md:w-[835px] text-lg md:text-2xl font-primaryMedium md:font-primarySemibold text-gray-900">
+        <p className="md:w-[835px] text-xl md:text-2xl leading-10 font-primarySemibold text-gray-900">
           SPC platform connects aspiring startup founders with experienced
           mentors who offer invaluable insights, advice, and support to help
           navigate the complexities of building a successful venture.
         </p>
-        <div className="w-full grid md:grid-cols-2 gap-10 md:gap-20 my-10">
-          <div>
-            <img src={Community} />
+        <div className="w-full grid grid-cols-1 gap-10 md:gap-20 my-10">
+          {/* 1 */}
+          <div className="w-full flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <img
+                src={Seasoned}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
+            </div>
+            <div className="md:w-[516px] h-full flex flex-col items-center  my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Seasoned Wisdom
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                Our mentor network comprises seasoned entrepreneurs, industry
+                veterans, and subject matter experts with years of hands-on
+                experience in the startup ecosystem. From serial entrepreneurs
+                who have launched and scaled multiple ventures to industry
+                leaders at the forefront of innovation, our mentors bring a
+                wealth of knowledge, wisdom, and perspective to the table.
+              </p>
+            </div>
           </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Seasoned Wisdom
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              Our mentor network comprises seasoned entrepreneurs, industry
-              veterans, and subject matter experts with years of hands-on
-              experience in the startup ecosystem. From serial entrepreneurs who
-              have launched and scaled multiple ventures to industry leaders at
-              the forefront of innovation, our mentors bring a wealth of
-              knowledge, wisdom, and perspective to the table.
-            </p>
+          {/* 2 */}
+          <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between">
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Tailored Guidance
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                No two startup journeys are alike, which is why our mentorship
+                program is highly personalized and tailored to the unique needs
+                and challenges of each founder. Whether you're grappling with
+                strategic decisions, facing roadblocks in product development,
+                or navigating the intricacies of fundraising, our mentors
+                provide tailored guidance and support to help you overcome
+                obstacles and achieve your goals.
+              </p>
+            </div>
+            <div>
+              <img src={Community} />
+            </div>
           </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Tailored Guidance
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              No two startup journeys are alike, which is why our mentorship
-              program is highly personalized and tailored to the unique needs
-              and challenges of each founder. Whether you're grappling with
-              strategic decisions, facing roadblocks in product development, or
-              navigating the intricacies of fundraising, our mentors provide
-              tailored guidance and support to help you overcome obstacles and
-              achieve your goals.
-            </p>
+          {/* 3 */}
+          <div className="w-full flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <img src={Community} />
+            </div>
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Inspirational Support
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                Building a startup is not just about overcoming challenges; it's
+                also about staying motivated and inspired in the face of
+                adversity. Our mentors serve as trusted confidants and sources
+                of inspiration, offering encouragement, motivation, and
+                reassurance during the inevitable ups and downs of the
+                entrepreneurial journey. With their unwavering support and
+                belief in your vision, you'll find the courage and resilience to
+                persevere through even the toughest of times.
+              </p>
+            </div>
           </div>
-          <div>
-            <img src={Community} />
-          </div>
-          <div>
-            <img src={Support} className="md:w-[635px] md:h-[442.94px] rounded-xl" />
-          </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Inspirational Support
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              Building a startup is not just about overcoming challenges; it's
-              also about staying motivated and inspired in the face of
-              adversity. Our mentors serve as trusted confidants and sources of
-              inspiration, offering encouragement, motivation, and reassurance
-              during the inevitable ups and downs of the entrepreneurial
-              journey. With their unwavering support and belief in your vision,
-              you'll find the courage and resilience to persevere through even
-              the toughest of times.
-            </p>
-          </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Network Opportunities
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              Beyond their role as mentors, our network of experienced
-              professionals also serves as invaluable connectors, opening doors
-              to new opportunities, partnerships, and collaborations. Whether
-              it's introductions to potential investors, strategic partners, or
-              industry influencers, our mentors leverage their extensive
-              networks to help founders expand their reach and accelerate their
-              growth.
-            </p>
-          </div>
-          <div>
-            <img src={Community} />
+          {/* 4 */}
+          <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between">
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Network Opportunities
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                Beyond their role as mentors, our network of experienced
+                professionals also serves as invaluable connectors, opening
+                doors to new opportunities, partnerships, and collaborations.
+                Whether it's introductions to potential investors, strategic
+                partners, or industry influencers, our mentors leverage their
+                extensive networks to help founders expand their reach and
+                accelerate their growth.
+              </p>
+            </div>
+            <div>
+              <img
+                src={Opportunities}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -303,7 +326,7 @@ const MentorsNetwork = () => {
         </div>
       </div>
       {/* testimonials */}
-      <div className="bg-[#D9D9D9] px-2 md:px-6">
+      <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
         <div className="w-full flex flex-col items-center justify-center my-10">
           <p className="font-primaryRegular text-xl text-[#000000]">
             Testimonial

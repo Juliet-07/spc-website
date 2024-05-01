@@ -172,116 +172,159 @@ const InvestorsNetwork = () => {
             </button> */}
         </div>
       </div>
+      {/* label */}
+      <div className="hidden w-full h-[292px] bg-[#471A52] my-10 md:flex items-center justify-around">
+        <div className="w-[248px] h-[96px] text-4xl leading-[50px] text-white font-primarySemibold">
+          Diverse Founders Fund
+        </div>
+        <div className="w-[700px] flex items-center justify-evenly">
+          <div className="flex flex-col items-center justify-center w-[200px] h-[201px] rounded-full border-[10px] border-r-[#F1B51B] border-t-[#F1B51B]">
+            <p className="text-[#F1B51B] font-primaryBold text-4xl">35%</p>
+            <p className="text-gray-100 font-primarySemibold text-lg">
+              Venture capital
+              <br /> funds
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center w-[200px] h-[201px] rounded-full border-[10px] border-r-[#12B022] border-t-[#12B022] border-l-[#12B022]">
+            <p className="text-[#12B022] font-primaryBold text-4xl">55%</p>
+            <p className="text-gray-100 font-primarySemibold text-lg">
+              Corporate <br />
+              investors
+            </p>
+          </div>
+          <div className="flex flex-col items-center justify-center w-[200px] h-[201px] rounded-full border-[10px] border-r-[#5AB5B5] border-b-[#5AB5B5]">
+            <p className="text-[#5AB5B5] font-primaryBold text-4xl">45%</p>
+            <p className="text-gray-100 font-primarySemibold text-lg">
+              Angel Investors
+            </p>
+          </div>
+        </div>
+      </div>
       {/* info hub */}
       <div className="w-full bg-[#F0B5FF]/[12%] p-4 md:p-10">
         <p className="md:w-[709px] text-lg md:text-2xl font-primaryMedium md:font-primarySemibold text-gray-900">
           SPC Universe: Where startups meet investors for funding and growth.
         </p>
-        <div className="w-full grid md:grid-cols-2 gap-10 md:gap-20 my-10">
-          <div>
-            <img
-              src={Funding}
-              className="md:w-[635px] md:h-[442.94px] rounded-xl"
-            />
+        <div className="w-full grid grid-cols-1 gap-10 md:gap-20 my-10">
+          {/* 1 */}
+          <div className="w-full flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <img
+                src={Funding}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
+            </div>
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Diverse Funding Opportunities
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                Our investor network spans a wide spectrum of funding sources,
+                including angel investors, venture capitalists, corporate
+                venture arms, and strategic partners. Whether you're seeking
+                seed funding to kickstart your venture, Series A investment to
+                scale operations, or growth capital to expand into new markets,
+                our platform offers access to a diverse range of funding
+                opportunities tailored to the unique needs and goals of your
+                startup.
+              </p>
+            </div>
           </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Diverse Funding Opportunities
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              Our investor network spans a wide spectrum of funding sources,
-              including angel investors, venture capitalists, corporate venture
-              arms, and strategic partners. Whether you're seeking seed funding
-              to kickstart your venture, Series A investment to scale
-              operations, or growth capital to expand into new markets, our
-              platform offers access to a diverse range of funding opportunities
-              tailored to the unique needs and goals of your startup.
-            </p>
+          {/* 2 */}
+          <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between">
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Strategic Partnership
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                Beyond capital, our investor network brings strategic value to
+                startups through partnerships, industry expertise, and market
+                insights. From established corporations seeking to collaborate
+                with innovative startups to seasoned investors with deep domain
+                knowledge, our platform facilitates connections with investors
+                who offer more than just funding—they offer strategic guidance,
+                mentorship, and access to invaluable resources that can help
+                propel your startup to new heights
+              </p>
+            </div>
+            <div>
+              <img src={Community} />
+            </div>
           </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Strategic Partnership
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              Beyond capital, our investor network brings strategic value to
-              startups through partnerships, industry expertise, and market
-              insights. From established corporations seeking to collaborate
-              with innovative startups to seasoned investors with deep domain
-              knowledge, our platform facilitates connections with investors who
-              offer more than just funding—they offer strategic guidance,
-              mentorship, and access to invaluable resources that can help
-              propel your startup to new heights
-            </p>
+          {/* 3 */}
+          <div className="w-full flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <img
+                src={DueDiligence}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
+            </div>
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Due Diligence Support
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                Navigating the fundraising process can be complex and daunting,
+                especially for early-stage startups. Our platform provides
+                startups with the support and guidance needed to navigate the
+                due diligence process effectively, ensuring that they are
+                well-prepared to engage with potential investors and secure the
+                funding they need to fuel their growth. From crafting compelling
+                pitch decks to conducting financial analysis and market
+                research, our team of experts is here to help startups put their
+                best foot forward and make a compelling case to investors.
+              </p>
+            </div>
           </div>
-          <div>
-            <img src={Community} />
+          {/* 4 */}
+          <div className="w-full flex flex-col-reverse md:flex-row items-center justify-between">
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Investor Matching
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                Finding the right investor can be a challenge, but with SPC
+                Universe, startups can leverage our advanced matchmaking
+                algorithms and personalized recommendations to connect with
+                investors who align with their vision, values, and goals.
+                Whether you're looking for investors with industry-specific
+                expertise, a track record of success in your target market, or a
+                shared passion for social impact, our platform helps startups
+                find the perfect match to fuel their growth journey.
+              </p>
+            </div>
+            <div>
+              <img
+                src={Matched}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
+            </div>
           </div>
-          <div>
-            <img
-              src={DueDiligence}
-              className="md:w-[635px] md:h-[442.94px] rounded-xl"
-            />
-          </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Due Diligence Support
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              Navigating the fundraising process can be complex and daunting,
-              especially for early-stage startups. Our platform provides
-              startups with the support and guidance needed to navigate the due
-              diligence process effectively, ensuring that they are
-              well-prepared to engage with potential investors and secure the
-              funding they need to fuel their growth. From crafting compelling
-              pitch decks to conducting financial analysis and market research,
-              our team of experts is here to help startups put their best foot
-              forward and make a compelling case to investors.
-            </p>
-          </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Investor Matching
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              Finding the right investor can be a challenge, but with SPC
-              Universe, startups can leverage our advanced matchmaking
-              algorithms and personalized recommendations to connect with
-              investors who align with their vision, values, and goals. Whether
-              you're looking for investors with industry-specific expertise, a
-              track record of success in your target market, or a shared passion
-              for social impact, our platform helps startups find the perfect
-              match to fuel their growth journey.
-            </p>
-          </div>
-          <div>
-            <img src={Matched} className="md:w-[635px] md:h-[442.94px] rounded-xl" />
-          </div>
-          <div>
-            <img
-              src={GlobalReach}
-              className="md:w-[635px] md:h-[442.94px] rounded-xl"
-            />
-          </div>
-          <div className="md:w-[516px] h-full flex flex-col items-center">
-            <p className="font-primarySemibold text-2xl text-gray-900">
-              Global Reach
-            </p>
-            <p className="font-primaryRegular leading-8 md:leading-[55px]">
-              In today's interconnected world, startups have the opportunity to
-              access capital from investors around the globe. Our platform
-              provides startups with access to a global network of investors,
-              opening up new possibilities for cross-border investment,
-              international expansion, and global partnerships. Whether you're
-              based in Africa or beyond, our platform connects you with
-              investors who are eager to support promising ventures wherever
-              they may be.
-            </p>
+          {/* 5 */}
+          <div className="w-full flex flex-col md:flex-row items-center justify-between">
+            <div>
+              <img
+                src={GlobalReach}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
+            </div>
+            <div className="md:w-[516px] h-full flex flex-col items-center my-4 md:my-0">
+              <p className="font-primarySemibold text-2xl text-gray-900">
+                Global Reach
+              </p>
+              <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
+                In today's interconnected world, startups have the opportunity
+                to access capital from investors around the globe. Our platform
+                provides startups with access to a global network of investors,
+                opening up new possibilities for cross-border investment,
+                international expansion, and global partnerships. Whether you're
+                based in Africa or beyond, our platform connects you with
+                investors who are eager to support promising ventures wherever
+                they may be.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      {/* get started*/}
-      <div className="hidden md:flex items-center justify-center my-10">
-        <img src={InvestorFrame} />
       </div>
       {/* how to help you */}
       <div className="w-full flex flex-col p-4 md:p-10 my-4 bg-gradient-to-r from-[#BE33E0]/50 via-white to-[#F0B5FF]/20">
@@ -301,7 +344,7 @@ const InvestorsNetwork = () => {
       </div>
       {/* join the community */}
       <div
-        className="w-full h-[400px] md:h-[500px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
+        className="w-full h-[400px] md:h-[700px] relative bg-cover md:px-10 2xl:px-20 md:flex items-center"
         style={{
           // backgroundImage: `url(${"https://spcimagestorage001.blob.core.windows.net/spc-community-images/community-hero.png"})`,
           backgroundImage: `url(${CommunityHero})`,
@@ -329,7 +372,7 @@ const InvestorsNetwork = () => {
         </div>
       </div>
       {/* testimonials */}
-      <div className="bg-[#D9D9D9] px-2 md:px-6">
+      <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
         <div className="w-full flex flex-col items-center justify-center my-10">
           <p className="font-primaryRegular text-xl text-[#000000]">
             Testimonial
