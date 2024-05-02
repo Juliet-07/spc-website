@@ -51,7 +51,7 @@ const EventNetwork = () => {
       image: <img src={Discount} />,
       title: "Exclusive Discounts",
       message:
-        "SPC Universe startup network offers members discount on events, conferences, and workshops, Benefit from reduced rates. VIP access, and special promotions to enhance to enhance your startup journey.",
+        "SPC Universe startup network offers members discount on events, conferences, and workshops, Benefit from reduced rates. VIP access, and special promotions to enhance your startup journey.",
     },
   ];
 
