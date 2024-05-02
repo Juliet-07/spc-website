@@ -7,7 +7,7 @@ import { RiDoubleQuotesL } from "react-icons/ri";
 import One from "../../assets/people.png";
 import Two from "../../assets/partner.png";
 import Three from "../../assets/method.png";
-import WhyUs from "../../assets/whyUs.png";
+import WhyUs from "../../assets/whyUs.jpg";
 import Pricing from "../../assets/pricing.png";
 import Experience from "../../assets/experience.png";
 import Award from "../../assets/award.png";
@@ -258,7 +258,7 @@ const TalentNetwork = () => {
         </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-between my-4">
           <div className="my-6 md:my-0">
-            <img src={WhyUs} />
+            <img src={WhyUs} className="w-[343px] h-[254px] md:w-[566px] md:h-[432px] rounded-lg" />
           </div>
           <div className="md:w-[560px] px-10 2xl:px-0">
             {" "}

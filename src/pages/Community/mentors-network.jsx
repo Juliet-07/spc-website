@@ -16,7 +16,7 @@ import Modal from "../../components/Modal";
 import Mentoring from "../../assets/mentoring.png";
 import MobileMentoring from "../../assets/mobileMentoring.png";
 import Community from "../../assets/community.png";
-import Support from "../../assets/support.jpg";
+import Guidance from "../../assets/tailoredGuidance.jpg";
 import Opportunities from "../../assets/networkOpportunities.jpg";
 import Seasoned from "../../assets/seasonedWisdom.jpg";
 
@@ -231,7 +231,10 @@ const MentorsNetwork = () => {
               </p>
             </div>
             <div>
-              <img src={Community} />
+              <img
+                src={Guidance}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
             </div>
           </div>
           {/* 3 */}

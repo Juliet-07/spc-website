@@ -12,7 +12,7 @@ import Network from "../../assets/network.png";
 import Expert from "../../assets/expert.png";
 import Matchmaking from "../../assets/matchMaking.png";
 import CommunityHero from "../../assets/communityHero.png";
-import InvestorFrame from "../../assets/investorFrame.png";
+import Strategy from "../../assets/strategy.jpg";
 import Funding from "../../assets/diverse_funding.jpg";
 import DueDiligence from "../../assets/diligence.jpg";
 import GlobalReach from "../../assets/globalReach.jpg";
@@ -173,28 +173,28 @@ const InvestorsNetwork = () => {
         </div>
       </div>
       {/* label */}
-      <div className="hidden w-full h-[292px] bg-[#471A52] my-10 md:flex items-center justify-around">
-        <div className="w-[248px] h-[96px] text-4xl leading-[50px] text-white font-primarySemibold">
+      <div className="w-full h-full md:h-[292px] bg-[#471A52] my-10 flex flex-col md:flex-row items-center justify-around">
+        <div className="md:w-[248px] md:h-[96px] text-xl md:text-4xl leading-[50px] text-white font-primarySemibold">
           Diverse Founders Fund
         </div>
-        <div className="w-[700px] flex items-center justify-evenly">
-          <div className="flex flex-col items-center justify-center w-[200px] h-[201px] rounded-full border-[10px] border-r-[#F1B51B] border-t-[#F1B51B]">
-            <p className="text-[#F1B51B] font-primaryBold text-4xl">35%</p>
-            <p className="text-gray-100 font-primarySemibold text-lg">
+        <div className="w-[700px] grid gap-4 md:flex items-center justify-evenly py-4 md:py-0">
+          <div className="flex flex-col items-center justify-center w-[159.61px] md:w-[200px] h-[159.61px] md:h-[201px] rounded-full border-[8px] md:border-[10px] border-r-[#F1B51B] border-t-[#F1B51B]">
+            <p className="text-[#F1B51B] font-primaryBold text-xl md:text-4xl">35%</p>
+            <p className="text-gray-100 font-primarySemibold md:text-lg">
               Venture capital
               <br /> funds
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-[200px] h-[201px] rounded-full border-[10px] border-r-[#12B022] border-t-[#12B022] border-l-[#12B022]">
-            <p className="text-[#12B022] font-primaryBold text-4xl">55%</p>
-            <p className="text-gray-100 font-primarySemibold text-lg">
+          <div className="flex flex-col items-center justify-center w-[159.61px] md:w-[200px] h-[159.61px] md:h-[201px] rounded-full border-[8px] md:border-[10px] border-r-[#12B022] border-t-[#12B022] border-l-[#12B022]">
+            <p className="text-[#12B022] font-primaryBold text-xl md:text-4xl">55%</p>
+            <p className="text-gray-100 font-primarySemibold md:text-lg">
               Corporate <br />
               investors
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-[200px] h-[201px] rounded-full border-[10px] border-r-[#5AB5B5] border-b-[#5AB5B5]">
-            <p className="text-[#5AB5B5] font-primaryBold text-4xl">45%</p>
-            <p className="text-gray-100 font-primarySemibold text-lg">
+          <div className="flex flex-col items-center justify-center w-[159.61px] md:w-[200px] h-[159.61px] md:h-[201px] rounded-full border-[8px] md:border-[10px] border-r-[#5AB5B5] border-b-[#5AB5B5]">
+            <p className="text-[#5AB5B5] font-primaryBold text-xl md:text-4xl">45%</p>
+            <p className="text-gray-100 font-primarySemibold md:text-lg">
               Angel Investors
             </p>
           </div>
@@ -248,7 +248,10 @@ const InvestorsNetwork = () => {
               </p>
             </div>
             <div>
-              <img src={Community} />
+              <img
+                src={Strategy}
+                className="md:w-[635px] md:h-[442.94px] rounded-xl"
+              />
             </div>
           </div>
           {/* 3 */}
