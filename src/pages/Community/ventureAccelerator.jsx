@@ -12,10 +12,10 @@ import Pitch from "../../assets/pitch.png";
 import AccelerationSupport from "../../assets/accelerationSupport.png";
 import Woman from "../../assets/woman.png";
 import Man from "../../assets/man.png";
-import Intensive from "../../assets/intensive.png";
-import Support from "../../assets/support.png";
+import Intensive from "../../assets/intensive.jpg";
+import Support from "../../assets/support.jpg";
 import Access from "../../assets/access.png";
-import Connection from "../../assets/connection.png";
+import Connection from "../../assets/investors_connection.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -248,7 +248,7 @@ const VentureAccelerator = () => {
         </div>
       </div>
       {/* join an accelerator */}
-      <div className="w-full p-4 md:p-10 my-4">
+      {/* <div className="w-full p-4 md:p-10 my-4">
         <div className="h-full md:h-[515px] bg-[#9D1A88] rounded-3xl p-10 flex flex-col md:flex-row items-center justify-center md:justify-between shadow-lg">
           <div className="grid grid-cols-2 gap-10">
             <div className="w-[125px] md:w-[201px] h-[101.99px] md:h-[162px] bg-white rounded-xl shadow-lg flex flex-col items-center justify-center">
@@ -278,17 +278,15 @@ const VentureAccelerator = () => {
             </div>
           </div>
           <div className="md:w-[395px] grid gap-4 py-4 md:gap-10">
-            {/* <div> */}
             <div className="font-primaryBold text-white text-xl md:text-2xl">
               Join An Accelerator
             </div>
             <div className="text-white font-primaryRegular leading-10 md:text-xl">
-              Each year, we choose more than 500 early stage companies to join
-              pne of our 3- month, mentorship driven accelerators, investing
-              $120k and providing hands on mentorship and access to SPC network
+              Each year, we choose more than 100 early stage companies to join
+              one of our 3-month, mentorship driven accelerators, investing
+              $120k+ and providing hands on mentorship and access to SPC network
               for life.
             </div>
-            {/* </div> */}
             <button
               onClick={() => handleModal()}
               className="w-[211px] h-[44px] bg-[#471A52] text-white font-primarySemibold rounded-lg"
@@ -297,7 +295,7 @@ const VentureAccelerator = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* how does it work */}
       <div className="w-full flex flex-col p-4 md:p-10">
         <p className="font-primarySemibold text-xl md:text-3xl text-[#000000] my-6 md:my-10">
@@ -318,7 +316,7 @@ const VentureAccelerator = () => {
         </div>
       </div>
       {/* testimonials */}
-      <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
+      {/* <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
         <div className="w-full flex flex-col items-center justify-center my-10">
           <p className="font-primaryRegular text-xl text-[#000000]">
             Testimonial
@@ -330,7 +328,7 @@ const VentureAccelerator = () => {
         <div className="pb-10">
           <TestimonialCarousel />
         </div>
-      </div>
+      </div> */}
       <Modal isVisible={modal} onClose={() => setModal(false)}>
         <div className="flex flex-col items-center justify-center">
           <StartupForm />

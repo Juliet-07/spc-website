@@ -330,7 +330,7 @@ const TalentNetwork = () => {
       </div>
 
       {/* testimonials */}
-      <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
+      {/* <div className="bg-[#D9D9D9] py-2 md:py-4 px-2 md:px-6">
         <div className="w-full flex flex-col items-center justify-center my-10">
           <p className="font-primaryRegular text-xl text-[#000000]">
             Testimonial
@@ -342,7 +342,7 @@ const TalentNetwork = () => {
         <div className="pb-10">
           <TestimonialCarousel />
         </div>
-      </div>
+      </div> */}
 
       <Modal isVisible={modal} onClose={() => setModal(false)}>
         <div className="flex flex-col items-center justify-center">
