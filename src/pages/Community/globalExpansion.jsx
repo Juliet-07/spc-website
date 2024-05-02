@@ -169,6 +169,7 @@ const GlobalExpansionNetwork = () => {
   const handleModal = () => {
     setModal(true);
   };
+  
   return (
     <>
       {/* Breaking Borders */}
