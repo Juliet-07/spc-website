@@ -248,10 +248,54 @@ const VentureAccelerator = () => {
         </div>
       </div>
       {/* join an accelerator */}
-      <div className="hidden w-full p-4 md:p-10 my-4">
-        <div className="h-[515px] bg-[#9D1A88] rounded-3xl p-10 flex items-center justify-between">
-          <div>cards</div>
-          <div>message</div>
+      <div className="w-full p-4 md:p-10 my-4">
+        <div className="h-full md:h-[515px] bg-[#9D1A88] rounded-3xl p-10 flex flex-col md:flex-row items-center justify-center md:justify-between shadow-lg">
+          <div className="grid grid-cols-2 gap-10">
+            <div className="w-[125px] md:w-[201px] h-[101.99px] md:h-[162px] bg-white rounded-xl shadow-lg flex flex-col items-center justify-center">
+              <p className="font-primarySemibold text-xl md:text-4xl">6000+</p>
+              <p className="font-primaryRegular md:text-xl p-2">SPC Founders</p>
+            </div>
+            <div className="w-[125px] md:w-[201px] h-[101.99px] md:h-[162px] bg-white rounded-xl shadow-lg flex flex-col items-center justify-center">
+              {" "}
+              <p className="font-primarySemibold text-xl md:text-4xl">$1.03M</p>
+              <p className="font-primaryRegular md:text-xl p-2 text-center">
+                Avg, first raise program
+              </p>
+            </div>
+            <div className="w-[125px] md:w-[201px] h-[101.99px] md:h-[162px] bg-white rounded-xl shadow-lg flex flex-col items-center justify-center">
+              {" "}
+              <p className="font-primarySemibold text-xl md:text-4xl">$123M</p>
+              <p className="font-primaryRegular md:text-xl p-2">
+                Total Funding
+              </p>
+            </div>
+            <div className="w-[125px] md:w-[201px] h-[101.99px] md:h-[162px] bg-white rounded-xl shadow-lg flex flex-col items-center justify-center">
+              {" "}
+              <p className="font-primarySemibold text-xl md:text-4xl">$12M</p>
+              <p className="font-primaryRegular md:text-xl p-2">
+                All grad market cap.
+              </p>
+            </div>
+          </div>
+          <div className="md:w-[395px] grid gap-4 py-4 md:gap-10">
+            {/* <div> */}
+            <div className="font-primaryBold text-white text-xl md:text-2xl">
+              Join An Accelerator
+            </div>
+            <div className="text-white font-primaryRegular leading-10 md:text-xl">
+              Each year, we choose more than 500 early stage companies to join
+              pne of our 3- month, mentorship driven accelerators, investing
+              $120k and providing hands on mentorship and access to SPC network
+              for life.
+            </div>
+            {/* </div> */}
+            <button
+              onClick={() => handleModal()}
+              className="w-[211px] h-[44px] bg-[#471A52] text-white font-primarySemibold rounded-lg"
+            >
+              Join
+            </button>
+          </div>
         </div>
       </div>
       {/* how does it work */}
