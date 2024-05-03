@@ -167,6 +167,9 @@ const Navbar = () => {
         <NavLink to="/community" style={activeStyle} className="p-2">
           Community
         </NavLink>
+        <NavLink to="/spcAngels" style={activeStyle} className="p-2">
+          Silverspoon Angels
+        </NavLink>
         {/* <Popover className="relative">
           {({ open }) => (
             <>
@@ -238,6 +241,14 @@ const Navbar = () => {
             onClick={() => setNav(false)}
           >
             Community
+          </NavLink>
+          <NavLink
+            to="/spcAngels"
+            style={activeStyleMobile}
+            className="p-2"
+            onClick={() => setNav(false)}
+          >
+            Silverspoon Angels
           </NavLink>
           {/* <Popover className="relative">
             {({ open }) => (

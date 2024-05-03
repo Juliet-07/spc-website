@@ -34,6 +34,7 @@ import InvestorsNetwork from "./pages/Community/investors-network";
 import VentureAccelerator from "./pages/Community/ventureAccelerator";
 import GlobalExpansionNetwork from "./pages/Community/globalExpansion";
 import EventNetwork from "./pages/Community/event-network";
+import SPCAngels from "./pages/SPCAngels/spcAngels";
 
 const GeneralRoute = () => {
   return (
@@ -118,6 +119,7 @@ const GeneralRoute = () => {
           <Route path="/contact-spc" element={<Contact />} />
           <Route path="/email-newsletter" element={<Emails />} />
           <Route path="/thankYou" element={<ThankYou />} />
+          <Route path="/spcAngels" element={<SPCAngels />} />
         </Routes>
       </Layout>
     </>
