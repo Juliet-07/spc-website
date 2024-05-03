@@ -145,16 +145,18 @@ const InvestorsNetwork = () => {
           <span className="text-gray-600 mx-2">Back</span>
         </Link>
         <div className="w-full h-[600px] md:h-[600px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
-          <div className="md:w-[473px] font-primarySemibold text-gray-900 text-2xl md:text-4xl">
+          <div className="md:w-[473px] font-primarySemibold text-gray-900 text-2xl md:text-4xl leading-10">
             Simplified Investment Plan to Boost Your Startup
           </div>
           <div className="w-full h-full flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-[555px] h-full">
               <p className="font-primaryRegular md:text-xl text-gray-700 py-3 leading-8 md:leading-[60px]">
-                We understand the unique challenges and opportunities that come
-                with building and scaling a startup. Our platform is dedicated
-                to helping you navigate the exciting yet complex journey of
-                startup growth through mentorship, guidance, and support.
+                We believe that securing funding marks a pivotal milestone in
+                the startup journey. It is not just about obtaining financial
+                support; it is about gaining validation, expanding horizons, and
+                accelerating growth. That's why this startyo network plays a
+                crucial role in connecting innovative ventures with a diverse
+                network of investors.
               </p>
             </div>
             <div>
@@ -179,21 +181,27 @@ const InvestorsNetwork = () => {
         </div>
         <div className="w-[700px] grid gap-4 md:flex items-center justify-evenly py-4 md:py-0">
           <div className="flex flex-col items-center justify-center w-[159.61px] md:w-[200px] h-[159.61px] md:h-[201px] rounded-full border-[8px] md:border-[10px] border-r-[#F1B51B] border-t-[#F1B51B]">
-            <p className="text-[#F1B51B] font-primaryBold text-xl md:text-4xl">35%</p>
+            <p className="text-[#F1B51B] font-primaryBold text-xl md:text-4xl">
+              35%
+            </p>
             <p className="text-gray-100 font-primarySemibold md:text-lg">
               Venture capital
               <br /> funds
             </p>
           </div>
           <div className="flex flex-col items-center justify-center w-[159.61px] md:w-[200px] h-[159.61px] md:h-[201px] rounded-full border-[8px] md:border-[10px] border-r-[#12B022] border-t-[#12B022] border-l-[#12B022]">
-            <p className="text-[#12B022] font-primaryBold text-xl md:text-4xl">55%</p>
+            <p className="text-[#12B022] font-primaryBold text-xl md:text-4xl">
+              55%
+            </p>
             <p className="text-gray-100 font-primarySemibold md:text-lg">
               Corporate <br />
               investors
             </p>
           </div>
           <div className="flex flex-col items-center justify-center w-[159.61px] md:w-[200px] h-[159.61px] md:h-[201px] rounded-full border-[8px] md:border-[10px] border-r-[#5AB5B5] border-b-[#5AB5B5]">
-            <p className="text-[#5AB5B5] font-primaryBold text-xl md:text-4xl">45%</p>
+            <p className="text-[#5AB5B5] font-primaryBold text-xl md:text-4xl">
+              45%
+            </p>
             <p className="text-gray-100 font-primarySemibold md:text-lg">
               Angel Investors
             </p>
@@ -244,7 +252,7 @@ const InvestorsNetwork = () => {
                 knowledge, our platform facilitates connections with investors
                 who offer more than just funding—they offer strategic guidance,
                 mentorship, and access to invaluable resources that can help
-                propel your startup to new heights
+                propel your startup to new heights.
               </p>
             </div>
             <div>
@@ -359,12 +367,11 @@ const InvestorsNetwork = () => {
             <font color="#BE33E0">Join The</font> Funding Ecosystem
           </div>
           <p className="md:w-[1040px] text-center font-primaryRegular leading-8 md:leading-10 text-gray-100">
-            Join the SPC Universe community today and unlock access to a world
-            of opportunity. Whether you're a startup founder in search of your
-            next team member or a talented individual eager to contribute your
-            skills to a groundbreaking venture, your journey begins here.
-            Together, let's build the future of innovation, one collaboration at
-            a time.
+            Join the SPC Universe funding ecosystem today and unlock access to a
+            world of opportunity. Whether you are a visionary founder seeking
+            funding or an investor looking to discover the next big thing, your
+            journey starts here. Together, let's fuel innovation, drive growth,
+            and build a brighter future, one investment at a time.
           </p>
           <button
             onClick={() => handleModal()}

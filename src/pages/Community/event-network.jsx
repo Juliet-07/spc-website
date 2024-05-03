@@ -70,21 +70,22 @@ const EventNetwork = () => {
           <TbArrowBackUp color="#475467" />
           <span className="text-gray-600 mx-2">Back</span>
         </Link>
-        <div className="w-full h-full md:h-[500px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
+        <div className="w-full h-full bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
           <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl leading-10">
             Unleash Your Potential With
             <br />
-            Exclusive Event Discount
+            Access To Exclusive Events
           </div>
           <div className="w-full h-full flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-[555px] h-full">
               <p className="font-primaryRegular md:text-xl text-gray-700 py-3 leading-8 md:leading-[60px]">
-                Join us for an exclusive event discount tailor-made for startups
-                like yours! At SPC Universe we are passionate about helping
-                startups thrive. Whether you are looking to network with
-                industry leaders, gain valuable insights from experts, or
-                showcase your innovative products, our event is the perfect
-                platform for your success.
+                SPC Universe is where innovation meets inspiration and one of
+                the ways we achieve this for our startup community is through
+                exclusive events. Networking, learning, and collaboration are
+                essential components of the startup journey, and our network
+                offers startups access to a wide range of events, conferences,
+                and workshops designed to connect, educate, and empower
+                entrepreneurs across Africa and beyond.
               </p>
             </div>
             <div>

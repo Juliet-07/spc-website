@@ -167,7 +167,7 @@ const TalentNetwork = () => {
       image: <img src={Diverse} />,
       title: "Diverse Expertise",
       message:
-        " From technical wizards proficient in coding languages to creative visionaries adept at crafting compelling brand narratives, our talent pool boasts a diverse array of expertise across various disciplines. Whether you're seeking developers, designers, marketers, or business strategists, you'll find no shortage of skilled  professionals eager to contribute their talents to your startup's success. ",
+        " From technical wizards proficient in programming languages to creative visionaries adept at crafting compelling brand narratives, our talent pool is a diverse array of expertise across various disciplines. Whether you seek software developers, product designers, marketers, or business strategists, you will find no shortage of skilled  professionals eager to contribute their talents to your startup's success. ",
     },
     {
       image: <img src={Seamless} />,
@@ -179,7 +179,7 @@ const TalentNetwork = () => {
       image: <img src={Shared} />,
       title: " Shared Vision",
       message:
-        "Success in the startup world is not just about individual talent; it's about collective vision and shared passion. Our platform fosters a community of like-minded individuals driven by a common goal: to innovate, disrupt, and make a meaningful impact on the world. Whether you're a seasoned entrepreneur or a first-time founder, you'll find a supportive network of peers who share your ambition and enthusiasm for building something extraordinary.",
+        "Success in the startup world is not just about individual talent; it is about collective vision and shared passion. Our platform fosters a community of like-minded individuals driven by a common goal: to innovate, disrupt, and make a meaningful impact on the world. Whether you are a seasoned entrepreneur or a first-time founder, you will find a supportive network of peers who share your ambition and enthusiasm for building something extraordinary.",
     },
     {
       image: <img src={Growth} />,
@@ -213,8 +213,8 @@ const TalentNetwork = () => {
               <p className="font-primaryRegular md:text-xl text-gray-700 py-3 leading-8 md:leading-[60px]">
                 We possess an acute understanding of exceptional candidate
                 experience. We have the capability to refine your Employer Value
-                Proposition (EVP) and employer brand align with your hiring
-                objectives. With access to extensive industry insights and a
+                Proposition (EVP) and  align with your hiring
+                objectives. With access to extensive industry insights and
                 talent acquisition experts, we can help you achieve your most
                 ambitious hiring goals.
               </p>

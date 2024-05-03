@@ -187,7 +187,7 @@ const MentorsNetwork = () => {
       {/* vibrant hub */}
       <div className="w-full bg-[#F0B5FF]/[12%] p-4 md:p-10">
         <p className="md:w-[835px] text-xl md:text-2xl leading-10 font-primarySemibold text-gray-900">
-          SPC platform connects aspiring startup founders with experienced
+          SPC startup network connects aspiring startup founders with experienced
           mentors who offer invaluable insights, advice, and support to help
           navigate the complexities of building a successful venture.
         </p>
@@ -205,7 +205,7 @@ const MentorsNetwork = () => {
                 Seasoned Wisdom
               </p>
               <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
-                Our mentor network comprises seasoned entrepreneurs, industry
+                Our mentor network comprises of seasoned entrepreneurs, industry
                 veterans, and subject matter experts with years of hands-on
                 experience in the startup ecosystem. From serial entrepreneurs
                 who have launched and scaled multiple ventures to industry
@@ -223,7 +223,7 @@ const MentorsNetwork = () => {
               <p className="font-primaryRegular md:text-xl leading-8 md:leading-[55px]">
                 No two startup journeys are alike, which is why our mentorship
                 program is highly personalized and tailored to the unique needs
-                and challenges of each founder. Whether you're grappling with
+                and challenges of each founder. Whether you are grappling with
                 strategic decisions, facing roadblocks in product development,
                 or navigating the intricacies of fundraising, our mentors
                 provide tailored guidance and support to help you overcome

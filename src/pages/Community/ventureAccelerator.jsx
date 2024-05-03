@@ -120,7 +120,7 @@ const VentureAccelerator = () => {
       image: <img src={Intensive} />,
       title: "Intensive Programs",
       message:
-        "Join our venture accelerators for a fast-track to startup success. Get mentorship, workshops, networking and hands-on support from industry ‘s experts, tailored to your startup’s needs at any stage  ",
+        "Join our venture accelerators for a fast-track to startup success. Get mentorship, workshops, networking and hands-on support from industry ‘s experts, tailored to your startup’s needs at any stage. ",
     },
     {
       image: <img src={Support} />,
@@ -203,14 +203,13 @@ const VentureAccelerator = () => {
           <div className="w-full h-full flex flex-col md:flex-row items-center justify-between">
             <div className="md:w-[555px] h-full">
               <p className="font-primaryRegular md:text-xl text-gray-700 py-3 leading-8 md:leading-[60px]">
-                At SPC, we're the launchpad for your boldest innovations. Our
+                At SPC, we are the launchpad for your big and bold innovations. Our
                 mission is to propel groundbreaking ideas into tomorrow's
                 success stories. With a focus on accelerating innovation, we
                 provide unparalleled support, resources, and expertise to help
                 startups thrive in today's dynamic market. From strategic
-                guidance to hands-on mentorship, we're committed to driving your
-                venture forward at full speed. Join us at Velocity Ventures and
-                let's shape the future together. Accelerate your vision,
+                guidance to hands-on mentorship, we are committed to driving your
+                venture forward at full speed. Accelerate your vision,
                 accelerate your growth, accelerate with us.
               </p>
             </div>
