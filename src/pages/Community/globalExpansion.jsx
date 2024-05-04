@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
-import Mentors from "../../assets/fueling.jpg";
+import Borders from "../../assets/breakingBorders.png";
 import { RiDoubleQuotesL } from "react-icons/ri";
-import Mentor1 from "../../assets/mentor1.png";
-import Mentor2 from "../../assets/mentor2.png";
-import Mentor3 from "../../assets/mentor3.png";
+import Assessment from "../../assets/needsAssessment.jpg";
+import Planning from "../../assets/strategicPlanning.jpg";
+import Validation from "../../assets/marketValidation.jpg";
+import Network from "../../assets/accessNetworks.jpg";
+import Support from "../../assets/businessSupport.jpg";
+import Funding from "../../assets/accessFunding.jpg";
 import Woman from "../../assets/woman.png";
 import Man from "../../assets/man.png";
 import Slider from "react-slick";
@@ -117,7 +120,10 @@ const GlobalExpansionNetwork = () => {
   const globalReach = [
     {
       image: (
-        <img src={Mentor1} className="w-[140.82px] h-[140.82px] rounded-full" />
+        <img
+          src={Assessment}
+          className="w-[140.82px] h-[140.82px] rounded-full"
+        />
       ),
       title: "Needs Assessment",
       message:
@@ -125,7 +131,10 @@ const GlobalExpansionNetwork = () => {
     },
     {
       image: (
-        <img src={Mentor2} className="w-[140.82px] h-[140.82px] rounded-full" />
+        <img
+          src={Planning}
+          className="w-[140.82px] h-[140.82px] rounded-full"
+        />
       ),
       title: "Strategic Planning",
       message:
@@ -133,7 +142,10 @@ const GlobalExpansionNetwork = () => {
     },
     {
       image: (
-        <img src={Mentor3} className="w-[140.82px] h-[140.82px] rounded-full" />
+        <img
+          src={Validation}
+          className="w-[140.82px] h-[140.82px] rounded-full"
+        />
       ),
       title: "Market Validation",
       message:
@@ -141,7 +153,7 @@ const GlobalExpansionNetwork = () => {
     },
     {
       image: (
-        <img src={Mentor1} className="w-[140.82px] h-[140.82px] rounded-full" />
+        <img src={Network} className="w-[140.82px] h-[140.82px] rounded-full" />
       ),
       title: "Access to Network",
       message:
@@ -149,7 +161,7 @@ const GlobalExpansionNetwork = () => {
     },
     {
       image: (
-        <img src={Mentor2} className="w-[140.82px] h-[140.82px] rounded-full" />
+        <img src={Support} className="w-[140.82px] h-[140.82px] rounded-full" />
       ),
       title: "Business Support",
       message:
@@ -157,7 +169,7 @@ const GlobalExpansionNetwork = () => {
     },
     {
       image: (
-        <img src={Mentor3} className="w-[140.82px] h-[140.82px] rounded-full" />
+        <img src={Funding} className="w-[140.82px] h-[140.82px] rounded-full" />
       ),
       title: "Access to Funding",
       message:
@@ -168,7 +180,7 @@ const GlobalExpansionNetwork = () => {
   const handleModal = () => {
     setModal(true);
   };
-  
+
   return (
     <>
       {/* Breaking Borders */}
@@ -180,8 +192,8 @@ const GlobalExpansionNetwork = () => {
           <TbArrowBackUp color="#475467" />
           <span className="text-gray-600 mx-2">Back</span>
         </Link>
-        <div className="w-full h-full md:h-[500px] bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
-          <div className="font-primarySemibold text-gray-900 text-2xl md:text-4xl">
+        <div className="w-full h-full bg-gradient-to-r from-[#FCF1FF] via-[#FDF6FF] to-[#F0B5FF] border border-gray-200 rounded-xl my-4 flex flex-col p-4">
+          <div className="font-primarySemibold text-gray-900 text-2xl md:text-3xl 2xl:text-4xl">
             Breaking Borders: Igniting Global Growth
           </div>
           <div className="w-full h-full flex flex-col md:flex-row items-center justify-between">
@@ -197,7 +209,7 @@ const GlobalExpansionNetwork = () => {
               </p>
             </div>
             <div>
-              <img src={Mentors} className="w-[571px] rounded-lg" />
+              <img src={Borders} className="md:w-[600px] rounded-lg" />
             </div>
           </div>
           {/* <button
@@ -227,8 +239,12 @@ const GlobalExpansionNetwork = () => {
                   <div>{reach.image}</div>
                 </div>
                 <div className="mt-16 md:mt-20 flex flex-col items-center justify-center">
-                  <div className="text-black font-primarySemibold text-lg md:text-2xl p-4 border-l-2 border-black">{reach.title}</div>
-                  <p className="font-primaryMedium leading-10 p-4">{reach.message}</p>
+                  <div className="text-black font-primarySemibold text-lg md:text-2xl p-4 border-l-2 border-black">
+                    {reach.title}
+                  </div>
+                  <p className="font-primaryMedium leading-10 p-4">
+                    {reach.message}
+                  </p>
                 </div>
               </div>
             ))}

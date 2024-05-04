@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
 import Woman from "../../assets/woman.png";
 import Man from "../../assets/man.png";
-import Mentor3 from "../../assets/mentor3.png";
+import IndustryConference from "../../assets/industryConference.jpg";
 import Networking from "../../assets/networkOpportunities.jpg";
 import Workshop from "../../assets/workshop.png";
 import Pitch from "../../assets/story2.jpg";
@@ -123,7 +123,7 @@ const EventNetwork = () => {
         "Elevate your startup skills with our actionable workshops. Learn business strategy, marketing tactics, and more from industry experts",
     },
     {
-      image: <img src={Mentor3} />,
+      image: <img src={IndustryConference} className="md:w-[558px] md:h-[350px]" />,
       title: "Industry Conference",
       message:
         "Access diverse industry conferences to stay informed, showcase your products, and connect with key players. Discover events in tech, finance, healthcare, energy, and beyond",
