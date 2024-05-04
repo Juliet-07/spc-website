@@ -53,8 +53,8 @@ const SPCAngels = () => {
         <div className="w-full h-full flex justify-between z-[3]">
           <div className="w-[518px] grid py-10">
             <div className="text-[#E1E3E8] font-primarySemibold text-4xl">
-              Investing and providing the first cheque for Africa’s earliest stage
-              founders through our venture studio.
+              Investing and providing the first cheque for Africa’s earliest
+              stage founders through our venture studio.
             </div>
             <p className="text-[#F3F5F8] text-xl my-4 font-primaryRegular">
               SPC Universe fuels innovation and entrepreneurship in Africa,
@@ -79,8 +79,8 @@ const SPCAngels = () => {
         <div className="w-full h-full flex flex-col-reverse items-center justify-between z-[3]">
           <div className="w-[288px] grid gap-4 py-4">
             <div className="text-[#E1E3E8] font-primarySemibold text-xl">
-              Investing and Providing the First Cheque for Africa’s early Stage
-              Founders Through our Venture
+              Investing and providing the first cheque for Africa’s earliest
+              stage founders through our venture studio.
             </div>
             <p className="text-[#F3F5F8] my-4 font-primaryRegular">
               SPC Universe fuels innovation and entrepreneurship in Africa,
@@ -147,12 +147,12 @@ const SPCAngels = () => {
                 Early-Stage Funding:
               </div>
               <p className="font-primaryRegular md:text-xl leading-8">
-                Silverspoon Angels specialize in providing early-stage funding to
-                startups when they need it most. Our angel investors understand
-                the challenges that founders face in securing capital at the
-                outset of their entrepreneurial journey, and they're committed
-                to providing the financial resources needed to get startups off
-                the ground.
+                Silverspoon Angels specialize in providing early-stage funding
+                to startups when they need it most. Our angel investors
+                understand the challenges that founders face in securing capital
+                at the outset of their entrepreneurial journey, and they're
+                committed to providing the financial resources needed to get
+                startups off the ground.
               </p>
             </div>
           </div>
@@ -169,11 +169,11 @@ const SPCAngels = () => {
                 Seed Capital for Growth:
               </div>
               <p className="font-primaryRegular md:text-xl leading-8">
-                The first cheque from our angel investors serves as the first capital
-                for startups to fuel their growth and development. Whether it's
-                building a prototype, hiring key team members, or launching a
-                marketing campaign, this initial funding is essential for laying
-                the foundation for success.
+                The first cheque from our angel investors serves as the first
+                capital for startups to fuel their growth and development.
+                Whether it's building a prototype, hiring key team members, or
+                launching a marketing campaign, this initial funding is
+                essential for laying the foundation for success.
               </p>
             </div>
           </div>
