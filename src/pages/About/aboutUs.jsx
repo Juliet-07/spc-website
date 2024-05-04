@@ -2,7 +2,6 @@ import React from "react";
 import Accordion from "../../components/Accordion";
 import AboutUs from "../../assets/aboutUs.png";
 import Story from "../../assets/communityHero.png";
-import Stars from "../../assets/Stars.png";
 
 const About = () => {
   const accordionItems = [

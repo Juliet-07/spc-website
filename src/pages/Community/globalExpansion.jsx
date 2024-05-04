@@ -13,7 +13,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "../../components/Modal";
-import Mentoring from "../../assets/mentoring.png";
 import ExpansionBG from "../../assets/expansionBG.png";
 import Community from "../../assets/community.png";
 import Guidance from "../../assets/tailoredGuidance.jpg";

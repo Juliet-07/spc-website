@@ -2,22 +2,109 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
+import Woman from "../../assets/woman.png";
+import Man from "../../assets/man.png";
 import Mentor3 from "../../assets/mentor3.png";
 import Networking from "../../assets/networkOpportunities.jpg";
 import Workshop from "../../assets/workshop.png";
 import Pitch from "../../assets/story2.jpg";
 import Discount from "../../assets/discount.png";
+import Community from "../../assets/community.png";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "../../components/Modal";
-import Mentoring from "../../assets/mentoring.png";
-import ExpansionBG from "../../assets/expansionBG.png";
-import Community from "../../assets/community.png";
-import Guidance from "../../assets/tailoredGuidance.jpg";
-import Opportunities from "../../assets/networkOpportunities.jpg";
-import Seasoned from "../../assets/seasonedWisdom.jpg";
-import CommunityHero from "../../assets/communityHero.png";
+
+const TestimonialCarousel = () => {
+  const testimonials = [
+    {
+      image: <img src={Woman} />,
+      name: "Leslie Alex",
+      title: "CEO, iStock Global",
+      message:
+        "I was able to acquire the best talents on this platform.I will say I have the best team so far",
+    },
+    {
+      image: <img src={Man} className="w-[100px] h-[100px] rounded-full" />,
+      name: "Lee Thompson",
+      title: "Venture Capitalist",
+      message:
+        "I was able to acquire the best talents on this platform.I will say I have the best team so far",
+    },
+    {
+      image: <img src={Woman} />,
+      name: "Leslie Alex",
+      title: "CEO, iStock Global",
+      message:
+        "I was able to acquire the best talents on this platform.I will say I have the best team so far",
+    },
+    {
+      image: <img src={Man} className="w-[100px] h-[100px] rounded-full" />,
+      name: "Lee Thompson",
+      title: "Venture Capitalist",
+      message:
+        "I was able to acquire the best talents on this platform. I will say I have the best team so far",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2, // Show two testimonial cards at once
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    responsive: [
+      {
+        breakpoint: 768, // Adjust breakpoint for tablet view
+        settings: {
+          slidesToShow: 1, // Show one testimonial card at a time on tablet
+        },
+      },
+      {
+        breakpoint: 480, // Adjust breakpoint for mobile view
+        settings: {
+          slidesToShow: 1, // Show one testimonial card at a time on mobile
+        },
+      },
+    ],
+  };
+
+  return (
+    <Slider {...settings} className="mb-4">
+      {testimonials.map((testimonial, index) => (
+        <div key={index} className="w-full">
+          {/* <div className="md:w-[calc(50% - 20px)] flex flex-col items-center bg-red-500 rounded-3xl py-2 mx-2"> */}
+          <div className="md:w-[519px] 2xl:w-[calc(50% - 20px)] flex flex-col items-center justify-center bg-white rounded-3xl shadow-xl py-4">
+            {" "}
+            {/* Adjust width for two cards */}
+            <div className="w-full flex items-center justify-between">
+              <div className="w-[150px] md:w-[185px] h-[130px] md:h-[166px] flex items-center justify-center bg-[#471A52] rounded-r-full">
+                {testimonial.image}
+              </div>
+              <div className="flex flex-col items-center justify-center">
+                <p className="font-primarySemibold mt-3 md:text-xl">
+                  {testimonial.name}
+                </p>
+                <p className="font-primaryMedium pt-1 text-gray-500">
+                  {testimonial.title}
+                </p>
+                <p>stars</p>
+              </div>
+              <div className="w-10 md:w-[60px] h-10 md:h-[60px] flex items-center justify-center rounded-full bg-[#D9D9D9] m-4">
+                <RiDoubleQuotesL color="#471A52" size={20} />
+              </div>
+            </div>
+            <div className="w-[376px] font-primaryRegular text-center text-[#746F6F] p-2">
+              {testimonial.message}
+            </div>
+          </div>
+        </div>
+      ))}
+    </Slider>
+  );
+};
 
 const EventNetwork = () => {
   const [modal, setModal] = useState(false);

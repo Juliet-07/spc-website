@@ -6,11 +6,12 @@ import Investment from "../../assets/investment.png";
 import Support from "../../assets/users-line.png";
 import Network from "../../assets/networkVector.png";
 import Approach from "../../assets/approachImage.png";
-import EarlyStage from "../../assets/earlyStage.png";
+import ApproachMobile from "../../assets/approachImage.jpg";
+import EarlyStage from "../../assets/earlyStage.jpg";
 import Growth from "../../assets/capitalGrowth.png";
-import Guidance from "../../assets/expertGuidance.png";
-import Access from "../../assets/networkAccess.png";
-import Catalyst from "../../assets/catalyst.png";
+import Guidance from "../../assets/expertGuidance.jpg";
+import Access from "../../assets/networkAccess.jpg";
+import Catalyst from "../../assets/catalyst.jpg";
 
 const SPCAngels = () => {
   const approaches = [
@@ -52,8 +53,8 @@ const SPCAngels = () => {
         <div className="w-full h-full flex justify-between z-[3]">
           <div className="w-[518px] grid py-10">
             <div className="text-[#E1E3E8] font-primarySemibold text-4xl">
-              Investing and Providing the First Cheque for Africa’s early Stage
-              Founders Through our Venture
+              Investing and providing the first cheque for Africa’s earliest stage
+              founders through our venture studio.
             </div>
             <p className="text-[#F3F5F8] text-xl my-4 font-primaryRegular">
               SPC Universe fuels innovation and entrepreneurship in Africa,
@@ -61,7 +62,7 @@ const SPCAngels = () => {
               succeed.
             </p>
             <div className="w-[207px] h-[44px] bg-[#471A52] rounded flex items-center justify-center text-white font-primaryMedium">
-              Register as an investor
+              Register as an Angel
             </div>
           </div>
           <div className="text-white"></div>
@@ -118,8 +119,11 @@ const SPCAngels = () => {
               ))}
             </div>
           </div>
-          <div className="md:w-[574px] my-4 md:my-0">
-            <img src={Approach} />
+          <div className="hidden md:block md:w-[574px] md:h-[650px] my-4 md:my-0">
+            <img src={Approach} className="h-full rounded-xl" />
+          </div>
+          <div className="block md:hidden md:w-[574px] md:h-[650px] my-4 md:my-0">
+            <img src={ApproachMobile} className="h-full rounded-xl" />
           </div>
         </div>
       </div>
@@ -143,7 +147,7 @@ const SPCAngels = () => {
                 Early-Stage Funding:
               </div>
               <p className="font-primaryRegular md:text-xl leading-8">
-                SPC Universe specialize in providing early-stage funding to
+                Silverspoon Angels specialize in providing early-stage funding to
                 startups when they need it most. Our angel investors understand
                 the challenges that founders face in securing capital at the
                 outset of their entrepreneurial journey, and they're committed
@@ -165,7 +169,7 @@ const SPCAngels = () => {
                 Seed Capital for Growth:
               </div>
               <p className="font-primaryRegular md:text-xl leading-8">
-                The first cheque from our angel investors serves as seed capital
+                The first cheque from our angel investors serves as the first capital
                 for startups to fuel their growth and development. Whether it's
                 building a prototype, hiring key team members, or launching a
                 marketing campaign, this initial funding is essential for laying

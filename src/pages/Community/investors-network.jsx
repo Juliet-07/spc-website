@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { TbArrowBackUp } from "react-icons/tb";
-import Mentors from "../../assets/mentors.png";
-import Community from "../../assets/community.png";
+import Mentors from "../../assets/mentors.png"
 import { RiDoubleQuotesL } from "react-icons/ri";
 import Woman from "../../assets/woman.png";
 import Man from "../../assets/man.png";
