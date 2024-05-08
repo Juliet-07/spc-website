@@ -125,11 +125,12 @@
 
 // export default Navbar;
 
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/spc-logo.png";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Popover } from "@headlessui/react";
+import { Menu, Transition } from "@headlessui/react";
+import { BiChevronDown } from "react-icons/bi";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -161,43 +162,65 @@ const Navbar = () => {
         <NavLink to="/" style={activeStyle} className="p-2">
           Home
         </NavLink>
-        <NavLink to="/about-spc" style={activeStyle} className="p-2">
+        {/* <NavLink to="/about-spc" style={activeStyle} className="p-2">
           About us
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/community" style={activeStyle} className="p-2">
           Community
         </NavLink>
+        {/* <NavLink to="/events" style={activeStyle} className="p-2">
+          Events
+        </NavLink> */}
         <NavLink to="/spcAngels" style={activeStyle} className="p-2">
           Silverspoon Angels
         </NavLink>
-        {/* <Popover className="relative">
-          {({ open }) => (
-            <>
-              <Popover.Button
-                // style={activeStyle}
-                className={`p-2 ${open ? "font-bold" : ""}`}
-              >
-                Events
-              </Popover.Button>
-              <Popover.Panel className="absolute z-10 bg-white text-gray-600 py-2 mt-2 rounded shadow-md">
+        <Menu as="div" className="relative inline-block text-left p-2">
+          <div>
+            <Menu.Button className="inline-flex items-center justify-between">
+              Company
+              <BiChevronDown className="h-5 w-5" aria-hidden="true" />
+            </Menu.Button>
+          </div>
+          <Transition
+            as={Fragment}
+            enter="transition ease-out duration-100"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <Menu.Items className="absolute right-0 z-10 mt-2 w-[200px] origin-top-right rounded-md bg-white grid gap-4 p-2 shadow-lg">
+              <Menu.Item>
                 <NavLink
-                  to="/event1"
+                  to="/about-spc"
                   style={activeStyle}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
-                  Event 1
+                  About Us
                 </NavLink>
+              </Menu.Item>
+              <Menu.Item>
                 <NavLink
-                  to="/event2"
+                  to="/events"
                   style={activeStyle}
                   className="block px-4 py-2 hover:bg-gray-100"
                 >
-                  Event 2
+                  Events
                 </NavLink>
-              </Popover.Panel>
-            </>
-          )}
-        </Popover> */}
+              </Menu.Item>
+              <Menu.Item>
+                <NavLink
+                  to="/trainings"
+                  style={activeStyle}
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  Trainings
+                </NavLink>
+              </Menu.Item>
+            </Menu.Items>
+          </Transition>
+        </Menu>
         {/* <NavLink to="/trainings" style={activeStyle} className="p-2">
           Trainings
         </NavLink> */}
@@ -250,36 +273,53 @@ const Navbar = () => {
           >
             Silverspoon Angels
           </NavLink>
-          {/* <Popover className="relative">
-            {({ open }) => (
-              <>
-                <Popover.Button
-                  // style={activeStyle}
-                  className={`p-2 ${open ? "font-bold" : ""}`}
-                >
-                  Events
-                </Popover.Button>
-                <Popover.Panel className="absolute z-10 bg-white text-gray-600 py-2 mt-2 rounded shadow-md">
+          <Menu as="div" className="relative inline-block text-left p-2">
+            <div>
+              <Menu.Button className="inline-flex items-center justify-between">
+                Company
+                <BiChevronDown className="h-5 w-5" aria-hidden="true" />
+              </Menu.Button>
+            </div>
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items className="absolute right-0 z-10 mt-2 w-[200px] origin-top-right rounded-md bg-white grid gap-4 p-2 shadow-lg">
+                <Menu.Item>
                   <NavLink
-                    to="/event1"
-                    style={activeStyle}
+                    to="/about-spc"
+                    style={activeStyleMobile}
                     className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setNav(false)}
                   >
-                    Event 1
+                    About Us
                   </NavLink>
+                </Menu.Item>
+                <Menu.Item>
                   <NavLink
-                    to="/event2"
-                    style={activeStyle}
+                    to="/events"
+                    style={activeStyleMobile}
                     className="block px-4 py-2 hover:bg-gray-100"
-                    onClick={() => setNav(false)}
                   >
-                    Event 2
+                    Events
                   </NavLink>
-                </Popover.Panel>
-              </>
-            )}
-          </Popover> */}
+                </Menu.Item>
+                <Menu.Item>
+                  <NavLink
+                    to="/trainings"
+                    style={activeStyleMobile}
+                    className="block px-4 py-2 hover:bg-gray-100"
+                  >
+                    Trainings
+                  </NavLink>
+                </Menu.Item>
+              </Menu.Items>
+            </Transition>
+          </Menu>
           {/* <NavLink
             to="/trainings"
             style={activeStyleMobile}

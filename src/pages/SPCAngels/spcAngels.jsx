@@ -122,8 +122,8 @@ const SPCAngels = () => {
           <div className="hidden md:block md:w-[574px] md:h-[650px] my-4 md:my-0">
             <img src={Approach} className="h-full rounded-xl" />
           </div>
-          <div className="block md:hidden md:w-[574px] md:h-[650px] my-4 md:my-0">
-            <img src={ApproachMobile} className="h-full rounded-xl" />
+          <div className="block md:hidden my-4">
+            <img src={ApproachMobile} className="rounded-xl" />
           </div>
         </div>
       </div>
@@ -247,7 +247,7 @@ const SPCAngels = () => {
             To Join Our Syndicate Send Us a Mail
           </p>
           <p className="underline text-[#9F3AB8] md:text-xl font-primaryRegular py-4">
-            partnership@silverspoonuniverse.com
+            partnerships@silverspoonuniverse.com
           </p>
         </div>
       </div>
