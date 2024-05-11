@@ -174,6 +174,7 @@ const Navbar = () => {
         <NavLink to="/spcAngels" style={activeStyle} className="p-2">
           Silverspoon Angels
         </NavLink>
+        {/* dropdown */}
         <Menu as="div" className="relative inline-block text-left p-2">
           <div>
             <Menu.Button className="inline-flex items-center justify-between">
@@ -200,7 +201,7 @@ const Navbar = () => {
                   About Us
                 </NavLink>
               </Menu.Item>
-              <Menu.Item>
+              {/* <Menu.Item>
                 <NavLink
                   to="/events"
                   style={activeStyle}
@@ -208,8 +209,8 @@ const Navbar = () => {
                 >
                   Events
                 </NavLink>
-              </Menu.Item>
-              <Menu.Item>
+              </Menu.Item> */}
+              {/* <Menu.Item>
                 <NavLink
                   to="/trainings"
                   style={activeStyle}
@@ -217,7 +218,7 @@ const Navbar = () => {
                 >
                   Trainings
                 </NavLink>
-              </Menu.Item>
+              </Menu.Item> */}
             </Menu.Items>
           </Transition>
         </Menu>
@@ -273,6 +274,7 @@ const Navbar = () => {
           >
             Silverspoon Angels
           </NavLink>
+          {/* dropdown */}
           <Menu as="div" className="relative inline-block text-left p-2">
             <div>
               <Menu.Button className="inline-flex items-center justify-between">
@@ -299,7 +301,7 @@ const Navbar = () => {
                     About Us
                   </NavLink>
                 </Menu.Item>
-                <Menu.Item>
+                {/* <Menu.Item>
                   <NavLink
                     to="/events"
                     style={activeStyleMobile}
@@ -316,7 +318,7 @@ const Navbar = () => {
                   >
                     Trainings
                   </NavLink>
-                </Menu.Item>
+                </Menu.Item> */}
               </Menu.Items>
             </Transition>
           </Menu>
