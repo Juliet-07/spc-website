@@ -25,11 +25,12 @@ const peopleList = [
   "Madugba Marysylvia",
   "Akpaka Onyinyechi",
   "Oparaji Rita",
+  "Adigo Chizorom",
   "Okoroanyanwu Chioma",
   "Ekene Agonmuo",
   "Nwachukwu Lynda Amarachi",
   "Adiele Lynda",
-  "Nwachukwu Camela",
+  "Nwachukwu Camela Amarachi",
   "Eke Rosemary",
   "Nnodim Chiamaka",
   "Onuchukwu Deborah",
@@ -40,7 +41,6 @@ const peopleList = [
   "Jovita Uzosike",
   "Miriam Osondu",
   "Omemgboji Mercy",
-  "Chioma",
   "Omenogu Chinemerem",
   "Nneji Chiamaka",
   "Ogu Georgia",
@@ -52,7 +52,6 @@ const peopleList = [
   "Okorienta Jennifer",
   "Ukaegbu Jessica",
   "Anyanwu Julitha",
-  "Kesty Joseph",
   "Kosi Okechukwu",
   "Ireoji Juliet",
   "Chiamaka Okoro",
@@ -86,6 +85,9 @@ const peopleList = [
   "Ndu-egbuchulem Onyinyechi",
   "Chikwendu Mirabel",
   "Ifunanya Loveth",
+  "Assumpta Diala",
+  "Ojilere Chinonso",
+  "Ogbonna Chisom"
 ];
 
 const People = () => {
